@@ -11,7 +11,9 @@ _Last synced from Alpaca: **never** — see research_log.md 2026-05-19 for block
 | Account status | _unknown_ |
 
 ## Open positions
-_No data yet — Alpaca API credentials missing in this session._
+_No data yet — Alpaca API host `paper-api.alpaca.markets` is not in the
+remote environment's outbound network allowlist. Credentials were supplied
+in the session prompt but cannot be used until the host is allowlisted._
 
 | Symbol | Qty | Avg entry | Mkt value | Unrealized P/L | Weight |
 |---|---|---|---|---|---|
