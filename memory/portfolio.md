@@ -1,6 +1,8 @@
 # Portfolio
 
-_Last synced from Alpaca: **never** — see research_log.md 2026-05-19 for blocker._
+_Last synced from Alpaca: **never** — Alpaca credentials still
+missing as of the 2026-05-19 pre-market re-attempt. See
+research_log.md for details._
 
 ## Account
 | Field | Value |
