@@ -12,7 +12,7 @@ Last Updated: 2026-05-19 12:28 ET (pre-market session)
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
 - Benchmark (SPY) Return Since Start: [track manually — baseline TBD on first SPY purchase]
-- Bull Return Since Start: 0.00% (no positions opened yet)
+- Dexter Return Since Start: 0.00% (no positions opened yet)
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]

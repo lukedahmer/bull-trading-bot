@@ -1,4 +1,4 @@
-# Bull Trading Strategy
+# Dexter Trading Strategy
 
 ## Primary Goal
 Beat the S&P 500 (SPY) over the long term using a mix of thematic ETFs and high-conviction growth stocks.

@@ -1,4 +1,4 @@
-# Bull — AI Trading Agent
+# Dexter — AI Trading Agent
 
 A 24/7 autonomous trading agent built with Claude Code routines and the Alpaca API. Goal: beat the S&P 500.
 

@@ -1,6 +1,6 @@
 # Weekly Review Log
 
-Every Friday at market close, Bull writes a full weekly review here and sends it to ClickUp.
+Every Friday at market close, Dexter writes a full weekly review here and sends it to ClickUp.
 
 ## Format
 ```
