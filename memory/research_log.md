@@ -15,6 +15,45 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-05-19 End of Day
+
+**Account snapshot (Alpaca EOD)**:
+- Equity: $100,000.00 (last equity $100,000.00)
+- Cash: $100,000.00 | Buying power: $200,000.00
+- Open positions: none
+- Filled orders today: none (zero trades executed this session)
+
+**Performance**:
+- Portfolio today: 0.00% (flat, undeployed)
+- SPY today: ~-0.79% (close ~$732.84 vs prior close $738.65; intraday range $731.56-$737.62)
+- Relative: +79 bps vs SPY by virtue of being entirely in cash
+
+**Market Conditions**: SPX/NDX closed broadly red into Wednesday's NVDA
+print. Risk-off / de-risking ahead of the AI-tape catalyst rather than a
+macro shock — no CPI/PPI/NFP/FOMC today. New Residential Construction and
+NAR Pending Home Sales prints were not tape-moving.
+
+**Observations**:
+- First session with live Alpaca credentials confirmed at EOD. Account
+  ACTIVE (PA39FINFSDLL); $100K cash; zero positions; zero filled orders.
+- The pre-market run drafted three starter ideas (QTUM/SPY/QQQ at ~3%
+  each) but the playbook was hold-only for this session, so the cash
+  stayed parked. That happened to outperform a -0.79% SPY tape.
+- No catalyst occurred today that would alter the pre-market thesis. The
+  trade plan into NVDA AMC tomorrow stands: stay out of NVDA/AMD until
+  after the print; deploy SPY/QQQ/QTUM baseline tomorrow if conditions
+  permit.
+
+**Next session (2026-05-20 pre-market)**:
+- Execute the QTUM/SPY/QQQ starter entries (3% each, ~$3,000 each).
+- Re-check Alpaca clock + macro calendar before trading.
+- Hold NVDA/AMD untouched until Thursday pre-market (after Wed AMC print).
+- Confirm IONQ pullback status; still wait for 10–15% retrace.
+
+**ClickUp notification**: EOD ping sent per protocol.
+
+---
+
 ### 2026-05-19 Pre-Market
 
 **Account snapshot (Alpaca)**: Equity $100,000 / Cash $100,000 / BP $200,000.

@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-05-19 12:28 ET (pre-market session)
+Last Updated: 2026-05-19 16:00 ET (end-of-day session)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper)
@@ -8,6 +8,8 @@ Last Updated: 2026-05-19 12:28 ET (pre-market session)
 - Total Portfolio Value: $100,000.00
 - Buying Power: $200,000.00 (Reg-T 2x; not used per strategy)
 - Long Market Value: $0.00
+- Last Equity (prior close): $100,000.00
+- Today's P/L: $0.00 (0.00%) — flat, no positions deployed
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
@@ -20,6 +22,10 @@ Last Updated: 2026-05-19 12:28 ET (pre-market session)
 | Symbol | Shares | Avg Entry | Current Price | P&L % | Stop Loss | Thesis |
 |--------|--------|-----------|---------------|--------|-----------|--------|
 | —      | —      | —         | —             | —      | —         | —      |
+
+## Sector exposure
+- Cash: 100%
+- Equities: 0%
 
 ## Watchlist
 Stocks/ETFs being monitored but not yet purchased:
@@ -52,3 +58,7 @@ Stocks/ETFs being monitored but not yet purchased:
 - Alpaca clock reported market OPEN at 12:28 ET this run despite "pre-market"
   framing; flagged in research_log.md so next session knows to recheck
   timing.
+- EOD 2026-05-19: zero filled orders for the day; still 100% cash. SPY
+  closed ~-0.79%, so flat-in-cash outperformed the tape by ~79 bps but
+  contributed nothing. Tomorrow's pre-market should execute the drafted
+  QTUM/SPY/QQQ starters.
