@@ -4,6 +4,40 @@ Newest entries first.
 
 ---
 
+## 2026-05-19 — Market Open (BLOCKED)
+
+**Session:** Market-open trading run.
+
+**Status:** Unable to execute trading workflow. No credentials available in
+this remote execution environment:
+
+- `ALPACA_API_KEY` — missing
+- `ALPACA_SECRET_KEY` — missing
+- `ALPACA_BASE_URL` — missing
+- `PERPLEXITY_API_KEY` — missing
+- `CLICKUP_API_TOKEN` — missing
+- `CLICKUP_LIST_ID` — missing
+
+`secrets.md` does not exist in the repository root.
+
+**Actions taken:**
+- Read strategy.md, portfolio.md, trade_log.md, research_log.md — all current.
+- Did **not** call Alpaca `/v2/account` or `/v2/positions` — no credentials.
+- Did **not** evaluate trade ideas — no portfolio snapshot available.
+- Did **not** check stop-loss thresholds — no position data available.
+- Did **not** place any orders.
+- Did **not** send a ClickUp notification — no credentials and no trades placed.
+
+**Trade ideas drafted:** None. Fabricated data will not be written here.
+
+**Next session unblocker:**
+Set the six environment variables in the environment's Variables/Secrets
+settings (see https://code.claude.com/docs/en/claude-code-on-the-web), then
+re-run. Alternatively, create `secrets.md` in the repo root with the keys
+(treat it as a secret file — add to `.gitignore` to avoid committing credentials).
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
