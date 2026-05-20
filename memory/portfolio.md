@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-05-19 16:00 ET (end-of-day session)
+Last Updated: 2026-05-20 16:00 ET (end-of-day session)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper)
@@ -13,7 +13,7 @@ Last Updated: 2026-05-19 16:00 ET (end-of-day session)
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
-- Benchmark (SPY) Return Since Start: [track manually — baseline TBD on first SPY purchase]
+- Benchmark (SPY) Return Since Start: tape ~+0.13% cumulative over the last two sessions (−0.79% on 5/19, +0.92% on 5/20); Dexter baseline still TBD on first SPY purchase
 - Dexter Return Since Start: 0.00% (no positions opened yet)
 
 ## Current Positions
@@ -46,19 +46,18 @@ Stocks/ETFs being monitored but not yet purchased:
 - Deploy cash gradually, not all at once
 
 ## Notes from Last Session
-- Account is fresh and 100% cash — first deployment session.
-- NVDA reports earnings Wed 2026-05-20 AMC. Per strategy.md "avoid anything
-  with earnings in the next 48 hours". This rules out a pre-print NVDA entry
-  and discourages a leveraged AMD entry that would trade as an NVDA proxy.
-- Plan for next session: start the SPY + QQQ + QTUM baseline (each at the
-  3–5% starter band per strategy.md), which gives diversified exposure
-  while waiting for NVDA print to resolve.
+- EOD 2026-05-20: still 100% cash. Zero filled orders today; the drafted
+  QTUM/SPY/QQQ starters from the 2026-05-19 pre-market plan were NOT
+  executed this session.
+- Today's tape was green (+0.92% SPY) — flat-in-cash underperformed the
+  tape by ~92 bps. Two consecutive EODs of no deployment have now cost
+  ~13 bps net vs SPY (outperformed −0.79% Mon, underperformed +0.92% Wed).
+- NVDA reports AMC tonight (Wed 2026-05-20). Per strategy "avoid anything
+  with earnings in the next 48 hours" — no NVDA/AMD entries this session.
+  The print resolves after the close; Thursday pre-market should re-grade
+  NVDA/AMD based on result + tape reaction.
 - Cash floor (20%) is currently irrelevant — we are at 100% cash. Deploy
   gradually; don't blow the budget in the first session.
-- Alpaca clock reported market OPEN at 12:28 ET this run despite "pre-market"
-  framing; flagged in research_log.md so next session knows to recheck
-  timing.
-- EOD 2026-05-19: zero filled orders for the day; still 100% cash. SPY
-  closed ~-0.79%, so flat-in-cash outperformed the tape by ~79 bps but
-  contributed nothing. Tomorrow's pre-market should execute the drafted
-  QTUM/SPY/QQQ starters.
+- Action item carried forward: execute QTUM + SPY + QQQ starters (3% each,
+  ~$3,000) at the open on 2026-05-21 unless macro/NVDA reaction creates a
+  reason to delay.

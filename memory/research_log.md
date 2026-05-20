@@ -15,6 +15,54 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-05-20 End of Day
+
+**Account snapshot (Alpaca EOD)**:
+- Equity: $100,000.00 (last equity $100,000.00)
+- Cash: $100,000.00 | Buying power: $200,000.00
+- Long market value: $0.00 | Open positions: none
+- Filled orders today: none (zero trades executed)
+
+**Performance**:
+- Portfolio today: 0.00% (flat — still 100% cash)
+- SPY today: +0.92% (intraday range $731.53–$737.65, open $734.78)
+- Relative: −92 bps vs SPY today (opportunity cost of being un-deployed
+  on a green tape)
+- Two-session running tally: SPY −0.79% then +0.92% (≈+0.13% cumulative);
+  Dexter 0.00% both days → roughly flat-of-flat vs the tape on the week
+  but contributing zero to the strategy goal of beating SPY long-term.
+
+**Market Conditions**: Broad market closed higher into NVDA's AMC print —
+SPY +0.92%. Risk-on rebound off Tuesday's de-risking; no macro tape-bombs
+(no CPI/PPI/NFP/FOMC today). All eyes on NVDA Q1 FY27 release after the
+bell.
+
+**Observations**:
+- The drafted starter trades (QTUM/SPY/QQQ at 3% each) were NOT executed
+  today. The account remains 100% cash. This is the second consecutive
+  session where the pre-market plan was not actioned — flag for the next
+  pre-market run.
+- Being in cash on a +0.92% SPY day is a clean miss; the cumulative drag
+  vs SPY since funding is now small (~13 bps) but the opportunity cost
+  compounds the longer we stay un-deployed.
+- NVDA reports AMC tonight. The 48-hour earnings guardrail still rules
+  out an NVDA/AMD entry before the print. AMC tape reaction will set the
+  tone for Thursday's open.
+
+**Next session (2026-05-21 pre-market)**:
+- Re-grade NVDA print: beat-and-raise = consider 3% NVDA starter; in-line
+  = wait; guide-down = pass and reassess AMD.
+- Execute the carried-forward QTUM + SPY + QQQ baseline starters (3%
+  each, ~$3,000) unless the NVDA tape reaction creates a reason to
+  delay.
+- Re-check IONQ for the 10–15% pullback condition.
+- Confirm Alpaca `/v2/clock` is_open behavior matches expected session
+  framing before placing orders.
+
+**ClickUp notification**: EOD ping sent per protocol.
+
+---
+
 ### 2026-05-19 End of Day
 
 **Account snapshot (Alpaca EOD)**:
