@@ -1,20 +1,32 @@
 # Portfolio
 
-_Last synced from Alpaca: **never** — see research_log.md 2026-05-19 for blocker._
+_Last synced from Alpaca: **2026-05-21 04:54 ET** (pre-market)._
 
 ## Account
 | Field | Value |
 |---|---|
-| Equity | _unknown_ |
-| Cash | _unknown_ |
-| Buying power | _unknown_ |
-| Account status | _unknown_ |
+| Account # | PA39FINFSDLL (paper) |
+| Status | ACTIVE |
+| Equity | $100,000.00 |
+| Cash | $100,000.00 |
+| Buying power | $200,000.00 (2x margin) |
+| Long market value | $0.00 |
+| Pattern day trader | No |
+| Day-trade count | 0 |
+| Trading blocked | No |
 
 ## Open positions
-_No data yet — Alpaca API credentials missing in this session._
+_None — fresh paper account, fully in cash._
 
 | Symbol | Qty | Avg entry | Mkt value | Unrealized P/L | Weight |
 |---|---|---|---|---|---|
 
 ## Sector exposure
-_Will be computed on first successful sync._
+- Semis (NVDA+AMD+QTUM+IONQ): 0%
+- Index (SPY+QQQ): 0%
+- Cash: 100%
+
+Headroom vs strategy caps:
+- Semi sector cap (40%): $40,000 deployable.
+- Single-position cap (10%): $10,000 max per name.
+- Cash floor (10%): keep ≥ $10,000 cash, i.e. deploy at most $90,000.
