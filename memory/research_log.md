@@ -4,6 +4,34 @@ Newest entries first.
 
 ---
 
+## 2026-05-21 — Midday risk check
+
+**Session:** Midday position review.
+
+**Alpaca sync:** Successful. Account `PA39FINFSDLL`, status ACTIVE,
+equity $100,000.00, cash $100,000.00, buying power $200,000.00.
+`GET /v2/positions` returned `[]` — zero open positions.
+
+**Risk actions executed:**
+- Hard-stop sweep (≤ -8% from entry): no positions to evaluate.
+- Winner trim (≥ +30%): no positions to evaluate.
+- Trailing-stop tightening (≥ +15% → 7% trail): no positions to evaluate.
+
+**New entries:** None. Per instructions, no new midday positions without
+a major catalyst; none observed and no positions to defend.
+
+**Web search:** Skipped. Trigger condition (significant move on a held
+name) cannot be met with a flat book.
+
+**ClickUp ping:** Suppressed. Trigger requires a stop fired or a trim
+executed; neither occurred.
+
+**Next step:** Resume normal pre-market workflow — research watchlist
+(QTUM, IONQ, NVDA, AMD, SPY, QQQ) and draft entry ideas to deploy
+capital from a 100%-cash starting point.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
