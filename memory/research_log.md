@@ -15,6 +15,58 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-05-21 End of Day
+
+**Account snapshot (Alpaca EOD)**:
+- Equity: $100,000.00 (last equity $100,000.00)
+- Cash: $100,000.00 | Buying power: $200,000.00
+- Long market value: $0.00 | Open positions: none
+- Filled orders today: none (zero trades executed)
+
+**Performance**:
+- Portfolio today: 0.00% (flat — still 100% cash)
+- SPY today: +0.08% (close $741.88 vs prior close $741.31; intraday range
+  $737.20–$744.84; source: Alpaca daily bars)
+- Relative: −8 bps vs SPY today
+- Three-session running tally: SPY −0.79% → +0.92% → +0.08%
+  (≈ +0.21% cumulative); Dexter 0.00% across all three → roughly −21 bps
+  cumulative drag vs SPY. The opportunity cost is small in absolute
+  terms but the pattern of non-execution is now the story.
+
+**Market Conditions**: SPY drifted modestly higher into the close
+($741.88) on light volume after NVDA's Wed AMC print. The market
+absorbed the print without a directional explosion in either direction
+— suggesting the result and guide landed at or near the buy-side bar
+rather than wildly above/below it. No CPI/PPI/NFP/FOMC today.
+
+**Observations**:
+- Third consecutive session with no execution. The QTUM/SPY/QQQ baseline
+  starters drafted on 2026-05-19 have now been carried forward three
+  sessions without action. This is the dominant operational issue —
+  not the tape.
+- The −21 bps cumulative drag is small, but the strategy explicitly
+  benchmarks against SPY and the goal is to beat it. We cannot beat
+  SPY from 100% cash; the math is decisive.
+- NVDA post-print tape was constructive (broader market green +0.08%
+  on the day, but the intraday high reached $744.84). Without the
+  exact print numbers in this session's research budget, defer
+  NVDA-specific sizing to the next pre-market with primary-source
+  data.
+
+**Next session (2026-05-22 pre-market)**:
+- Execute the carried-forward QTUM + SPY + QQQ baseline starters (3%
+  each, ~$3,000) at the open unless a macro tape-bomb creates a reason
+  to delay. The non-execution streak is the active risk.
+- Pull NVDA's actual Q1 FY27 print + guide. Re-grade NVDA/AMD sizing
+  on the actual numbers (beat-and-raise = 3% NVDA starter; in-line =
+  hold; guide-down = pass and reassess AMD).
+- Re-check IONQ for the 10–15% pullback condition.
+- Confirm Alpaca `/v2/clock` is_open before placing orders.
+
+**ClickUp notification**: EOD ping sent per protocol.
+
+---
+
 ### 2026-05-20 End of Day
 
 **Account snapshot (Alpaca EOD)**:
