@@ -15,6 +15,179 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-05-22 Pre-Market
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions)**:
+- Equity: $100,000.00 | Last equity: $100,000.00
+- Cash: $100,000.00 | Buying power: $200,000.00
+- Long market value: $0.00 | Open positions: none
+- Status ACTIVE (PA39FINFSDLL); no trading/transfer blocks; PDT false; day-trade count 0.
+- Fourth consecutive session opening 100% in cash.
+
+**Watchlist closing prints (Alpaca snapshot, 2026-05-21 close)**:
+| Symbol | 5/21 Close | 5/20 Close | 1-day Δ | Note |
+|---|---|---|---|---|
+| SPY  | 742.71 | 741.31 | +0.19% | Drift higher, light vol |
+| QQQ  | 714.41 | 713.07 | +0.19% | Same |
+| QTUM | 149.38 | 145.23 | **+2.86%** | Quantum-grant sector lift |
+| NVDA | 219.47 | 223.48 | **−1.79%** | Sell-the-news after the beat |
+| AMD  | 449.44 | 447.55 | +0.42% | Holding gains; multi-day strength |
+| IONQ |  58.87 |  52.49 | **+12.15%** | Sympathy rip; not a grant recipient |
+
+**Market Conditions**:
+- Risk-on tone into Friday. Stock futures higher overnight; oil softer
+  on easing US–Iran tensions; geopolitical risk premium compressing.
+- Macro calendar today: Michigan Consumer Sentiment **Final** at 10:00
+  ET, NY Fed Staff Nowcast at 12:45 ET. **No CPI / PPI / NFP / FOMC**.
+  No 30-minute pre-print blackout triggered by the strategy rules.
+- Fed leadership transition: Powell's term as Fed Chair ends May 2026
+  — successor speculation ongoing, watch for headline risk.
+
+**Key News**:
+- **NVDA Q1 FY27 print (Wed 2026-05-20 AMC)**: Revenue **$81.62B**
+  (+85% y/y) vs Street ~$78.8B / whisper ~$80B → **beat both bars**.
+  Q2 FY27 guide **$91.0B ± 2%** vs Street $86.84B → **raised**.
+  Dividend and buyback bumped. Reaction Thursday: stock −1.79% to
+  $219.47 — classic "buy-the-rumor / sell-the-news" digestion, not a
+  thesis break. Beat-and-raise unlocks the NVDA/AMD pre-print
+  embargo per strategy.md.
+- **Quantum sector — Trump admin $2B CHIPS Act package (announced
+  Thu 2026-05-21)**: Commerce Dept awards $2B in grants to nine
+  quantum-computing companies, with the federal government taking
+  minority equity stakes. Recipients: **IBM $1B, GlobalFoundries
+  $375M, D-Wave (QBTS) ~$100M, Rigetti (RGTI) ~$100M, Infleqtion
+  (INFQ) ~$100M, PsiQuantum $100M, Diraq $38M**, plus two others.
+  **IonQ is NOT a recipient.** Despite that, IONQ closed **+12.15%
+  ($58.87)** as the sector got a structural-tailwind re-rating.
+  Direct grantees QBTS / RGTI / INFQ ripped +7% to +21% intraday.
+  QTUM (equal-weight basket) captured the sector lift cleanly at
+  **+2.86%**.
+- **AMD**: Up modestly into NVDA print and held the gain post-print
+  — $449.44 close. Sell-side: Baird $625 PT (~+39% upside), BofA
+  keeps AMD + NVDA as "top AI chip picks", hyperscalers actively
+  cultivating AMD as second source. No fresh binary risk before Aug
+  earnings.
+- **Macro**: Iran de-escalation narrative dominant; oil retreating;
+  futures green. No tier-1 data print today.
+
+**Watchlist Updates**:
+- Tier 1 (deploy first — no single-name binary risk): **QTUM, SPY,
+  QQQ**. Plan unchanged from 5/19 draft, but now four sessions stale.
+- Tier 2 (post-NVDA print): **NVDA, AMD** — both cleared to enter.
+  NVDA print was beat-and-raise; AMD tape confirms.
+- Tier 3 (chase risk): **IONQ** — gapped +12% on a competitor catalyst
+  rather than its own. Strategy says wait for 10–15% pullback before
+  starter; today violates that condition harder than it did last week.
+- **RGTI** carried forward for research; today's grant recipient list
+  makes it materially more relevant.
+
+**Thesis Notes**:
+- The "anything with earnings in the next 48h" guardrail is now
+  cleared for NVDA. Print landed Wed AMC; we are >48h post-print on
+  Friday open. AMD next earnings Aug 4 — no near-term binary.
+- The dominant operational issue remains the **non-execution streak**.
+  Four consecutive sessions of carrying QTUM/SPY/QQQ baseline starters
+  without firing. Cumulative drag vs SPY is small (~−21 bps thru
+  5/21) but compounding while we sit. The plan is decided; the
+  execution is the gap.
+- The quantum-grant story is a structural positive for QTUM (basket
+  captures D-Wave/Rigetti/Infleqtion automatically) but adds entry-
+  timing risk on the basket — entering at +2.9% on a one-off catalyst
+  is worse than entering pre-catalyst. Mitigation: split the QTUM
+  starter into two tranches (half today, half on the next 2–3% dip)
+  rather than chase the full size at the open gap.
+
+**Trade Ideas Drafted (NOT placed in this pre-market run)**:
+
+```
+1. Ticker: SPY
+   Direction: long (starter)
+   Thesis: Establish baseline beta. Account is 100% cash; we cannot
+     beat SPY from cash. Risk-on tape, futures up, no macro shock today.
+   Catalyst: Carry-forward baseline trade; Iran de-escalation tailwind.
+   Entry zone: MOO ~ $742–745
+   Stop: −8% from fill (~$683)
+   Target: open-ended (index hold); trim plan per strategy 30%+ rule.
+   Size: 3% (~$3,000 = ~4 shares)
+   Confidence: 4/5
+```
+```
+2. Ticker: QQQ
+   Direction: long (starter)
+   Thesis: AI/tech tilt to complement SPY; captures NVDA/MSFT capex
+     story; index, not single-name.
+   Catalyst: Same baseline; NVDA beat-and-raise validates capex thesis.
+   Entry zone: MOO ~ $714–717
+   Stop: −8% from fill (~$657)
+   Target: open-ended.
+   Size: 3% (~$3,000 = ~4 shares)
+   Confidence: 4/5
+```
+```
+3. Ticker: QTUM
+   Direction: long (starter, scale-in)
+   Thesis: Quantum-theme basket; equal-weight basket caps single-name
+     blow-up; sector just received $2B CHIPS Act structural support.
+   Catalyst: Trump admin quantum grants (5/21) — re-rating tailwind.
+   Entry zone: split — half MOO ~ $149, half on a 2–3% retrace.
+   Stop: −8% from blended fill
+   Target: open-ended; equal-weight basket hold.
+   Size: 3% total (~$3,000 = ~20 shares), split 1.5%/1.5%
+   Confidence: 4/5
+```
+```
+4. Ticker: NVDA
+   Direction: long (starter)
+   Thesis: Beat-and-raise on Q1 FY27 ($81.6B vs $78.8B; guide $91B vs
+     $86.8B). "Sell-the-news" dip to $219 = constructive entry.
+   Catalyst: Post-print digestion; AI capex narrative intact.
+   Entry zone: $217–222
+   Stop: −8% (~$202)
+   Target: trail per strategy; trim 50% at +30%
+   Size: 3% (~$3,000 = ~14 shares)
+   Confidence: 3/5 (post-print chop is real)
+```
+```
+5. Ticker: AMD
+   Direction: long (starter)
+   Thesis: NVDA-tape proxy, Q1 beat, $11.2B Q2 guide raised; hyperscaler
+     second-source bid; Baird $625 PT.
+   Catalyst: NVDA confirmed; AMD held strength into and out of the print.
+   Entry zone: $445–452
+   Stop: −8% (~$413)
+   Target: $540+ (Melius)
+   Size: 3% (~$3,000 = ~7 shares)
+   Confidence: 3/5
+```
+```
+6. Ticker: IONQ
+   Direction: HOLD OFF (no entry)
+   Thesis: Gapped +12% on a competitor's catalyst, not its own; entry
+     would chase a sympathy move. Strategy demands 10–15% pullback
+     first.
+   Catalyst (negative for entry): IonQ excluded from $2B CHIPS Act
+     grant package. Bullish for sector, neutral-to-bearish for IONQ
+     relative valuation vs grantees.
+   Re-eval trigger: pullback to $50–52 zone or fresh IONQ-specific
+     positive catalyst.
+```
+
+**Combined Tier-1+Tier-2 deployment**: ~15% of equity (~$15,000)
+across 5 starters keeps cash at ~85% — well above 20% floor.
+
+**ClickUp notification**: **NOT sent**. No held-name shock (we hold
+none), no halt, no fresh >5% gap on watchlist this morning, no macro
+tape-bomb. IONQ's +12% and the quantum-grant news are yesterday's
+events, already in the tape. NVDA earnings already digested. None
+of this clears the urgent-catalyst bar.
+
+**Open execution risk**: Plan is solid and unchanged in shape from
+5/19. Execution gap is now four sessions. Whether the pre-market
+run can be allowed to place orders today is governed by session
+framing — this run is per the user prompt drafts-only.
+
+---
+
 ### 2026-05-21 End of Day
 
 **Account snapshot (Alpaca EOD)**:

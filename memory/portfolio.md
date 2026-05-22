@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-05-21 16:00 ET (end-of-day session)
+Last Updated: 2026-05-22 pre-market (Alpaca /v2/account + /v2/positions)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper)
@@ -9,7 +9,7 @@ Last Updated: 2026-05-21 16:00 ET (end-of-day session)
 - Buying Power: $200,000.00 (Reg-T 2x; not used per strategy)
 - Long Market Value: $0.00
 - Last Equity (prior close): $100,000.00
-- Today's P/L: $0.00 (0.00%) — flat, no positions deployed
+- Today's P/L: $0.00 (0.00%) — flat, no positions deployed (4th session)
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
@@ -28,17 +28,18 @@ Last Updated: 2026-05-21 16:00 ET (end-of-day session)
 - Equities: 0%
 
 ## Watchlist
-Stocks/ETFs being monitored but not yet purchased:
+Stocks/ETFs being monitored but not yet purchased. Last prints from
+Alpaca snapshot at 2026-05-21 close.
 
-| Symbol | Why Watching | Target Entry | Notes |
-|--------|-------------|--------------|-------|
-| QTUM   | Quantum computing ETF, high future potential | Market on open (no single-name binary risk) | Core theme; +84% TTM; equal-weight basket caps individual blow-up risk |
-| SPY    | S&P 500 benchmark hedge | Any significant dip | Baseline beta; needed since account is 100% cash |
-| QQQ    | Tech/AI tilt — captures NVDA/MSFT capex thesis | Market on open / dip | Complement to SPY; ~$708, avg 12-mo tgt ~$727 |
-| NVDA   | AI silicon leader | Re-grade post Wed AMC print on Thu pre-market | Earnings released 2026-05-20 AMC; re-evaluate tape reaction before sizing |
-| AMD    | NVDA-tape proxy, Q1 beat, $11.2B Q2 guide | Wait for post-NVDA dislocation | $421.01; Melius $540, Citi $460, Evercore $579 |
-| IONQ   | Quantum leader, Q1 revenue +755% y/y | Wait for 10–15% pullback | +98% since Mar 30; consensus PT $63.91 (already through it) |
-| RGTI   | Per strategy.md, quantum theme | Not researched this session | Add to next pre-market checklist |
+| Symbol | Last | 1-day Δ | Why Watching | Target Entry | Notes |
+|--------|------|---------|--------------|--------------|-------|
+| QTUM   | 149.38 | +2.86% | Quantum-theme equal-weight basket; +84% TTM | Split: half MOO ~$149, half on 2–3% retrace | Got structural lift from $2B CHIPS quantum grants 5/21; basket includes grantees QBTS/RGTI/INFQ |
+| SPY    | 742.71 | +0.19% | Baseline beta; needed since account is 100% cash | MOO ~$742–745 | Conf 4/5; futures green on Iran de-escalation |
+| QQQ    | 714.41 | +0.19% | Tech/AI tilt; captures NVDA/MSFT capex | MOO ~$714–717 | NVDA beat-and-raise validates thesis |
+| NVDA   | 219.47 | −1.79% | AI silicon leader; cleared post-print | $217–222 | Q1 FY27: $81.62B rev (Street $78.8B); Q2 guide $91B vs $86.8B est. Sell-the-news dip = constructive entry |
+| AMD    | 449.44 | +0.42% | NVDA-tape proxy + hyperscaler 2nd-source bid | $445–452 | Baird $625 PT; BofA top AI pick; no earnings until Aug 4 |
+| IONQ   |  58.87 | +12.15% | Quantum leader, +755% y/y rev growth | **HOLD OFF** — wait for pullback to $50–52 | Excluded from $2B CHIPS grant but rallied on sector lift; chasing violates strategy |
+| RGTI   | n/a    | n/a    | Direct $100M CHIPS grant recipient + gov't equity stake | Research-only next session | Materially more relevant after 5/21 announcement |
 
 ## Cash Allocation Plan
 - Keep minimum 20% cash at all times
@@ -46,19 +47,26 @@ Stocks/ETFs being monitored but not yet purchased:
 - Deploy cash gradually, not all at once
 
 ## Notes from Last Session
-- EOD 2026-05-21: still 100% cash. Zero filled orders today; the drafted
-  QTUM/SPY/QQQ starters carried forward from the 2026-05-19 pre-market
-  plan were NOT executed this session (third consecutive session of no
-  deployment).
-- Today's tape was modestly green (SPY +0.08%, close $741.88 vs prior
-  $741.31). Flat-in-cash underperformed by ~8 bps. Three-session
-  cumulative drag vs SPY is now ~−21 bps.
-- NVDA print landed AMC Wed 2026-05-20; tape reaction Thu drove SPY
-  through $741+ on light volume, suggesting the print was at-or-near
-  the buy-side bar. Re-grade NVDA/AMD specifically in next pre-market
-  with the actual print details.
-- Cash floor (20%) remains irrelevant — we are at 100% cash. The
-  longer this stays the case the larger the opportunity cost.
-- Action item carried forward: execute QTUM + SPY + QQQ starters (3%
-  each, ~$3,000) at the open on 2026-05-22 unless macro creates a
-  reason to delay. Re-grade NVDA/AMD on the post-print tape.
+- Pre-market 2026-05-22: still 100% cash, 4th consecutive session of
+  zero deployment. Drafted six trade ideas (5 long starters + IONQ
+  hold-off). Drafts only this session per user prompt.
+- NVDA Q1 FY27 print (5/20 AMC) landed beat-and-raise: $81.62B rev vs
+  Street $78.8B; Q2 guide $91B vs $86.8B est. Stock closed −1.79% on
+  Thursday at $219.47 — sell-the-news, not a thesis break.
+- Quantum sector got a structural catalyst: Trump admin $2B CHIPS Act
+  grants to nine quantum firms on 5/21, with government equity stakes.
+  Recipients include QBTS, RGTI, INFQ (each ~$100M), IBM ($1B),
+  GlobalFoundries ($375M), PsiQuantum ($100M), Diraq ($38M).
+  **IonQ excluded**, but IONQ closed +12.15% on sector lift; QTUM
+  basket +2.86%.
+- Macro today (Fri 5/22): Michigan Sentiment Final 10:00 ET, NY Fed
+  Nowcast 12:45 ET. No CPI/PPI/NFP/FOMC. Risk-on into the open on
+  Iran de-escalation; oil softer; futures higher pre-market.
+- Action items for next session (intraday or post-market on 5/22):
+  1. Execute SPY + QQQ starters (3% each) — cleanest, no single-name
+     risk.
+  2. Execute QTUM starter in two tranches (1.5% MOO, 1.5% on dip).
+  3. Execute NVDA + AMD starters (3% each) — pre-print embargo cleared.
+  4. IONQ stays hold-off; reset entry trigger to $50–52 pullback.
+  5. Add RGTI to research-only watchlist; reassess fit after the
+     grant deal closes.
