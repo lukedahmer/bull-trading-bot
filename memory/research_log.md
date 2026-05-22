@@ -4,6 +4,35 @@ Newest entries first.
 
 ---
 
+## 2026-05-22 — Market open
+
+**Session:** Market-open run with live Alpaca credentials.
+
+**Account sync (Alpaca `/v2/account`):**
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $200,000.00
+- Status: ACTIVE
+- Account: PA39FINFSDLL
+
+**Positions (Alpaca `/v2/positions`):** none — 100% cash.
+
+**Stop-loss sweep:** N/A (no open positions).
+
+**Trade ideas reviewed:** None in `research_log.md`. The previous (2026-05-19)
+pre-market session was blocked and drafted zero ideas. Per strategy, no
+trades are placed without a pre-vetted idea on the log.
+
+**Trades placed:** None.
+
+**ClickUp:** Not sent (no trade, no stop, no urgent catalyst).
+
+**Next step:** Run the pre-market research workflow (Perplexity sonar-pro
+on QTUM, IONQ, NVDA, AMD, SPY, QQQ + macro calendar) to draft ideas
+before the next market-open session.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
