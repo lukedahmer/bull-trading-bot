@@ -4,6 +4,32 @@ Newest entries first.
 
 ---
 
+## 2026-05-22 — Midday
+
+**Session:** Midday risk check.
+
+**Alpaca account:** ACTIVE — equity $100,000.00, cash $100,000.00,
+buying power $200,000.00, long market value $0.00, no open positions
+(`GET /v2/positions` → `[]`).
+
+**Risk actions taken:**
+- Stop-loss cut (≤ -8% from entry): **n/a** — no positions held.
+- Winner trim (≥ +30%, sell 50%): **n/a** — no positions held.
+- Trail tighten (≥ +15% → 7% trail): **n/a** — no positions held.
+- New entries: **none** — midday entries gated on a major catalyst; no
+  catalyst observed and account is flat.
+
+**ClickUp notification:** not sent — gate is "stop triggered or
+position trimmed"; neither occurred.
+
+**Trade log:** no append — no executions.
+
+**Next session:** pre-market workflow tomorrow; consider scaling into
+watchlist (QTUM, IONQ, NVDA, AMD, SPY, QQQ) per the 2% default sizing
+rule if research supports it.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
