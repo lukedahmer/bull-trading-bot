@@ -20,9 +20,22 @@ own checklist.
 - Hard stop: -8% from entry on any single name.
 - Trailing stop on winners: tighten to break-even after +10%, trail 5%
   below high-water mark after +20%.
-- No new entries within 30 minutes of FOMC, CPI, PPI, NFP, or earnings
-  for held names.
+- No new entries within 30 minutes of FOMC, CPI, **PCE**, PPI, NFP, or
+  earnings for held names.
 - No options, no leverage, no shorting in this account.
+- **Holidays:** no new entries in the last 30 minutes before a US
+  market holiday or 3-day weekend close. On reopen days, starter
+  size only (no full-size adds in the first session back).
+
+## Bootstrap deployment cadence
+Applies while the book is <30% deployed (i.e. fresh / mostly-cash
+account). Lifts automatically once deployment ≥30%.
+- Max 1 new starter position per session.
+- Max 3 new starter positions per calendar week.
+- Starter = 2% of equity (per Position sizing). Adds to a winner
+  follow the normal sizing rules.
+- Index proxies (SPY, QQQ) preferred for the first 1–2 starters
+  to avoid single-name gap risk while the process is ramping.
 
 ## Decision workflow (pre-market)
 1. Read memory files: strategy, portfolio, trade_log, research_log.
