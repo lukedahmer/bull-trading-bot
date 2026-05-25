@@ -25,11 +25,22 @@ Beat the S&P 500 (SPY) over the long term using a mix of thematic ETFs and high-
 - Trailing stop of 10% triggered on a winner
 - Position up 30%+ → trim 50%, let the rest run
 
-## Position Sizing
-- Starter position: 3-5% of portfolio
-- High conviction: up to 10% of portfolio
-- Never exceed 10% in any single name
-- Always keep minimum 20% in cash
+## Position Sizing (AGGRESSIVE MODE — paper trading)
+- This is a paper account; goal is to find out fast whether the strategy works.
+- Deploy the majority of the $100,000. Sitting on cash defeats the purpose.
+- Starter position: 5-10% of portfolio
+- High conviction: 15-25% of portfolio is allowed
+- Single-name cap raised to 25% (was 10%) for highest-conviction ideas
+- Cash floor relaxed to 5-10% (was 20%) — keep a little dry powder for dislocations, but stay heavily invested
+- Still respect the -8% hard stop and 10% trailing stop — aggressive sizing requires disciplined exits
+
+## Small-Cap / High-Growth Research Mandate
+- Actively research smaller, less-covered names with large growth potential
+- Risk is acceptable if the thesis is sound and the upside is asymmetric
+- Look for: emerging tech, disruptive business models, early-stage thematic plays, post-IPO names with strong fundamentals
+- Document the downside case explicitly before sizing in — small caps can go to zero
+- Size small-caps more conservatively (3-7%) even in aggressive mode due to volatility
+- Use the research log to flag promising names early so they can be tracked before becoming consensus
 
 ## Research Checklist (Before Any Buy)
 - [ ] What is the thesis in one sentence?

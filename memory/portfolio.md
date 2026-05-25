@@ -40,6 +40,10 @@ Alpaca snapshot at 2026-05-21 close.
 | AMD    | 449.44 | +0.42% | NVDA-tape proxy + hyperscaler 2nd-source bid | $445–452 | Baird $625 PT; BofA top AI pick; no earnings until Aug 4 |
 | IONQ   |  58.87 | +12.15% | Quantum leader, +755% y/y rev growth | **HOLD OFF** — wait for pullback to $50–52 | Excluded from $2B CHIPS grant but rallied on sector lift; chasing violates strategy |
 | RGTI   | n/a    | n/a    | Direct $100M CHIPS grant recipient + gov't equity stake | Research-only next session | Materially more relevant after 5/21 announcement |
+| PLTR   | n/a    | n/a    | AI/data analytics, gov + commercial growth | Research next session | User-added watchlist; check valuation, earnings cadence |
+| SOFI   | n/a    | n/a    | Fintech disruptor, banking + lending growth | Research next session | User-added watchlist; small-mid cap growth story |
+| NBIS   | n/a    | n/a    | AI infrastructure / cloud compute small-cap | Research next session | User-added watchlist; small-cap high-growth, higher risk |
+| KTOS   | n/a    | n/a    | Defense tech, drones/unmanned systems | Research next session | User-added watchlist; defense spending tailwind |
 
 ## Cash Allocation Plan
 - Keep minimum 20% cash at all times
