@@ -4,6 +4,31 @@ Newest entries first.
 
 ---
 
+## 2026-05-25 — Midday risk check
+
+**Session:** Midday.
+
+**Status:** Alpaca credentials now present in environment. Successfully
+called `/v2/account` and `/v2/positions`.
+
+- Account equity: $100,000.00 (paper account `PA39FINFSDLL`, ACTIVE).
+- Cash: $100,000.00. Long market value: $0.
+- Open positions: **none**.
+
+**Risk actions evaluated (none triggered):**
+- -8% hard-stop cut: N/A (no positions).
+- +30% trim 50%: N/A.
+- +15% tighten trailing stop to 7%: N/A.
+
+**New entries:** None. Midday entries require a major catalyst per
+strategy, and no held names exist to react to. Watchlist (QTUM, IONQ,
+NVDA, AMD, SPY, QQQ) not researched this session — the run was scoped
+to risk management on existing positions.
+
+**ClickUp:** Not sent (no stop triggered, no trim executed).
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
