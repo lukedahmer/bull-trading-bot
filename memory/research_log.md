@@ -4,6 +4,40 @@ Newest entries first.
 
 ---
 
+## 2026-05-25 — End of Day (Memorial Day — market closed)
+
+**Session:** End-of-day wrap.
+
+**Market status:** NYSE and Nasdaq closed in observance of Memorial Day.
+No U.S. equity trading session today; bond market also closed.
+
+**Alpaca sync (first successful pull):**
+- Account status: ACTIVE (PA39FINFSDLL)
+- Equity: $100,000.00 (unchanged from last_equity)
+- Cash: $100,000.00
+- Buying power: $200,000.00
+- Open positions: none
+- Filled orders today: none
+
+**Performance:**
+- Portfolio return today: 0.00% (flat — no positions, holiday)
+- SPY return today: N/A (market closed)
+- vs SPY: N/A
+
+**Trades executed:** None.
+
+**Observation:** Credentials are now wired up — first clean Alpaca pull
+succeeded. Account is fully in cash on day one. Next regular session
+(Tue 2026-05-26) is the first real opportunity to deploy capital per
+the 2% sizing rule. No urgent catalysts crossed the tape today.
+
+**Next session:**
+- Run normal pre-market workflow Tuesday 2026-05-26.
+- Watchlist scan: QTUM, IONQ, NVDA, AMD, SPY, QQQ.
+- Check macro calendar (post-holiday data catch-up risk).
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
