@@ -4,6 +4,34 @@ Newest entries first.
 
 ---
 
+## 2026-05-26 — Market open
+
+**Session:** Market-open execution run.
+
+**Alpaca snapshot:**
+- Equity $100,000.00, Cash $100,000.00, Buying power $200,000.00
+- Status ACTIVE, account PA39FINFSDLL
+- Open positions: none
+
+**Trade ideas evaluated:** None on file. The prior research_log entry
+(2026-05-19) was BLOCKED and produced zero drafted ideas. Per strategy,
+the agent does not fabricate ideas at the open without research, so no
+orders were placed this session.
+
+**Stop-loss sweep:** No open positions — nothing to evaluate against the
+-8% hard stop or trailing rules.
+
+**Orders placed:** None.
+
+**ClickUp notification:** Not sent (no trade placed, no stop triggered;
+strategy gates pings to urgent catalysts only).
+
+**Next action:** Run the pre-market research workflow (Perplexity
+sonar-pro across watchlist + macro) to populate trade ideas before the
+next execution window. Perplexity creds remain unsupplied this session.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
