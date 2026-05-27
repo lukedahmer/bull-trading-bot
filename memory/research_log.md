@@ -15,6 +15,57 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-05-27 End-of-Day
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders?status=filled)**:
+- Equity: $100,000.00 | Last equity: $100,000.00 | Cash: $100,000.00
+- Buying power: $200,000.00 | Long market value: $0.00
+- Open positions: none | Filled orders today: none
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0.
+
+**Performance**:
+- Portfolio return today: **+0.00%** (flat — no exposure)
+- SPY return today: **+0.06%** (close 750.46 → 750.90, Alpaca IEX bars)
+- Relative to SPY: **−0.06%**
+
+**Market Conditions**:
+- SPY/S&P 500 drifted slightly higher into the close on a choppy session.
+  Tech and financials briefly turned red mid-session on headlines that
+  the White House contradicted a leaked Iran deal draft; Nasdaq
+  recovered led by select chip names.
+- Prior session (5/26) closed at fresh records (S&P 500 7,519.12, +0.61%);
+  today digested those gains rather than extending them.
+
+**Key News**:
+- Iran deal headline cross-currents whipsawed risk assets intraday — net
+  flat for SPY, modest gains for Nasdaq.
+- Oil softened (sub-$90); no tier-1 macro print today.
+
+**Watchlist Updates**:
+- No change to composition. SPY mark refreshed to $750.90 (+0.06%).
+  Other watchlist prints carried forward from 5/21 close pending the
+  next pre-market refresh.
+
+**Thesis Notes**:
+- Non-execution streak continues — Alpaca confirms zero fills since
+  bootstrap. The drafted 5/22 starter slate (SPY, QQQ, QTUM split,
+  NVDA, AMD) is still on the books but unpriced at current tape.
+- SPY has drifted +1.10% from the 5/21 reference ($742.71 → $750.90)
+  while we sat in cash; the cost of waiting compounds.
+
+**Actions taken**:
+- Pulled `/v2/account`, `/v2/positions`, `/v2/orders?status=filled` — all
+  consistent (100% cash, no positions, no fills).
+- Updated `portfolio.md` with EOD snapshot and refreshed SPY mark.
+- Sent end-of-day ClickUp notification per protocol.
+- No trades executed in EOD window.
+
+**Next session**:
+- Pre-market on next trading day: refresh full watchlist quotes against
+  current tape, re-validate the 5/22 idea slate at today's prices, and
+  fire the index starters (SPY/QQQ) first to establish baseline beta.
+
+
 ### 2026-05-22 Pre-Market
 
 **Account snapshot (Alpaca, GET /v2/account + /v2/positions)**:
