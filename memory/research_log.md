@@ -4,6 +4,34 @@ Newest entries first.
 
 ---
 
+## 2026-05-27 — Midday risk check
+
+**Session:** Midday risk-management sweep.
+
+**Account snapshot (Alpaca PA39FINFSDLL, paper):**
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Long market value: $0.00
+- Status: ACTIVE
+
+**Positions:** `GET /v2/positions` returned `[]`. No open positions.
+
+**Risk-rule pass:**
+- Hard stop -8%: n/a (no positions).
+- Trim 50% on +30% winners: n/a.
+- Tighten trail to 7% on +15% winners: n/a.
+
+**Actions taken:**
+- No orders placed (midday rule: no new positions without major catalyst).
+- No ClickUp ping (no stop triggered, no trim executed).
+- Updated `portfolio.md` with fresh sync.
+
+**Notes:** Account is fully in cash. Next pre-market session should
+draft entries against the core watchlist (QTUM, IONQ, NVDA, AMD, SPY,
+QQQ) consistent with the 2% default sizing rule.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
