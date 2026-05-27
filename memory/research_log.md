@@ -4,6 +4,31 @@ Newest entries first.
 
 ---
 
+## 2026-05-27 — Intraday open (no action)
+
+**Session:** Intraday, market just opened. Credentials provided this run.
+
+**Alpaca sync:**
+- Equity $100,000.00, cash $100,000.00, buying power $200,000.00
+- Positions: none
+- Account ACTIVE, not flagged PDT
+
+**Stop-loss sweep:** No positions held — nothing to stop out.
+
+**Trade ideas reviewed:** None in the log. The only prior entry
+(2026-05-19) was a blocked pre-market run that drafted no ideas.
+
+**Decision:** Stand down. Placing trades without research or a drafted
+idea on the checklist would violate the strategy's decision workflow.
+No orders sent, no trailing stops set, no ClickUp ping.
+
+**Next session unblocker:** Run a pre-market research pass (Perplexity
+sonar-pro on watchlist QTUM, IONQ, NVDA, AMD, SPY, QQQ + macro
+calendar) and draft trade ideas using the template in strategy.md
+before the next intraday session.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
