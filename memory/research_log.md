@@ -15,6 +15,222 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-05-28 Pre-Market
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions)**:
+- Equity: $100,000.00 | Last equity: $100,000.00 | Cash: $100,000.00
+- Buying power: $200,000.00 | Long market value: $0.00
+- Open positions: none | Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0.
+- Still 100% cash entering a 7th+ session. Non-execution streak persists.
+
+**Watchlist marks (Alpaca IEX, 2026-05-27 daily-bar close)**:
+| Symbol | 5/27 Close | Δ vs prior | vs 5/21 ref | Note |
+|---|---|---|---|---|
+| SPY  | 750.59 | +0.02% | +1.06% | Near record, grinding sideways |
+| QQQ  | 729.48 | −0.09% | +2.11% | 4-day win streak into 5/26 |
+| QTUM | 156.51 | −1.26% | +4.77% | Quantum basket, YTD +36% |
+| NVDA | 212.42 | −1.03% | −3.21% | Post-print digestion deepened → cheaper entry |
+| AMD  | 494.88 | −1.66% | +10.1% | Ran hard; now above prior entry zone |
+| IONQ |  64.77 | +2.86% | +10.0% | Still extended; no pullback |
+| PLTR | 133.03 | −3.00% | n/a | New coverage |
+| NBIS | 208.32 | +0.14% | n/a | New coverage; very volatile |
+| RGTI |  24.52 | −1.82% | n/a | Direct CHIPS grantee |
+| KTOS |  57.31 | +0.77% | n/a | Defense; research-only |
+| SOFI |  16.17 | +1.25% | n/a | Fintech; research-only |
+
+**Market Conditions**:
+- **Tier-1 macro today (2026-05-28, Thu): April PCE price index — the
+  Fed's preferred inflation gauge — plus the Q1 GDP second reading,
+  both out this morning.** March PCE ran hot at 3.5% headline / 3.2%
+  core (above the 2% target). Street looks for April core PCE around
+  +0.3% m/m (~3.3% y/y, per BofA). A hot print is a rate-cut headwind
+  and a risk-off catalyst; a cool print is the opposite. **Stage any
+  entries AFTER the print** to respect the pre-data blackout discipline.
+- Broad tape: S&P 500 near records (SPY ~$750.6); QQQ on a multi-day
+  win streak and technically constructive (~$729.5). BofA 2026 SPX
+  target 7,100 / Citi 7,700.
+- Macro-narrative caveat: one third-party source flagged "oil >$100,
+  10y yields ~4.6%, Strait of Hormuz closed." This **conflicts** with
+  the more recent internal session notes (Iran de-escalation, oil
+  sub-$90) and could not be corroborated this session — treating it as
+  low-confidence / possibly stale. Verify next session.
+
+**Key News (watchlist)**:
+- **NVDA** — Q1 FY27 (reported 5/20 AMC) was a clean beat-and-raise:
+  record rev $81.6B (+85% y/y) vs Street $78.8B; EPS $1.87 vs $1.76;
+  Q2 guide $91B vs $86.8B; $80B buyback authorized. Stock muted/lower
+  post-print on prior run-up; drifted from $219→$212. Consensus Strong
+  Buy. Earnings >48h past — entry embargo cleared.
+- **AMD** — Q1 2026 (5/5): rev $10.3B (+38% y/y), EPS $1.37 beat; data
+  center $5.8B (+57%). MI400 series (MI455X 40 PFLOPS FP4, Helios racks
+  Q3'26); OpenAI 6GW + Meta up to 6GW (~$60B) multi-year deals. Stock
+  +267% TTM and ran +10% since our 5/21 ref to ~$495 — now above the
+  prior $445–452 entry zone (chase risk).
+- **IONQ** — Q1: rev $64.7M (+755% y/y), first 256-qubit system sale,
+  raised FY guidance; SkyWater acquisition cleared shareholder vote
+  (close Q2/Q3 pending regulators). Wedbush PT $75 Outperform. Stock
+  ~$65, +37% YTD — still no pullback to the $50–52 entry trigger.
+- **QTUM** — $156.51 (5/27); YTD +36%, 1yr +74%; $3.78B AUM. Equal-
+  weight quantum/AI-chip basket; still riding the $2B CHIPS-grant
+  re-rating.
+- **PLTR** (new) — Q1 (5/4): EPS $0.33 vs $0.27, rev $1.63B (+85%);
+  raised FY26 rev to ~$7.66B, US commercial guide +120%, FCF $4.2–4.4B.
+  Strong fundamentals; valuation rich → size small. Pulled back to ~$133.
+- **NBIS** (new) — Q1 (5/13): rev $399M (+685% y/y from $50.9M), Cloud
+  AI +841%, EBITDA swung positive ($129.5M); NVDA $2B investment, Meta
+  & Microsoft multi-year compute contracts, 1.2GW PA AI factory, raised
+  FY guide $3–3.4B on $20–25B capex. High-growth AI-infra neocloud;
+  very volatile (5/26 range $206–221) and capex-heavy → small-cap size.
+- **RGTI** (new coverage) — direct ~$100M CHIPS-grant recipient with a
+  federal minority equity stake; higher-beta single-name expression of
+  the quantum theme vs the QTUM basket. ~$24.5.
+- **KTOS / SOFI** — carried as research-only; no fresh fundamental
+  catalyst confirmed this session. KTOS ~$57 (defense/drones tailwind),
+  SOFI ~$16 (fintech). Need a dedicated deep dive before sizing.
+
+**Watchlist Updates**:
+- Added PLTR and NBIS to active coverage with fundamentals + entry zones.
+- RGTI promoted from research-only to a sized small-cap idea.
+- AMD entry zone RAISED / flagged as chase risk after the +10% move.
+- NVDA entry zone LOWERED to $208–214 (better than 5/21).
+- IONQ remains hold-off; trigger unchanged at $50–52.
+
+**Thesis Notes**:
+- The dominant operational issue remains the **non-execution streak**
+  (7th+ session in 100% cash). Aggressive-mode strategy says deploy the
+  majority of capital; sitting in cash defeats the paper-trading goal.
+  Plan is decided — execution is the gap. This run is drafts-only per
+  pre-market protocol.
+- Today's PCE is the gating event: stage entries after the print to
+  avoid buying into a potential hot-inflation air pocket.
+
+**Trade Ideas Drafted (NOT placed in this pre-market run)**:
+
+```
+1. Ticker: SPY
+   Direction: long (starter)
+   Thesis: Establish baseline beta; cannot beat SPY from 100% cash.
+   Catalyst: Carry-forward baseline; tape near records.
+   Entry zone: after PCE print, ~$748–752
+   Stop: −8% from fill
+   Target: open-ended (index hold)
+   Size: 5% (~$5,000 ≈ 6–7 shares)
+   Confidence: 4/5
+```
+```
+2. Ticker: QQQ
+   Direction: long (starter)
+   Thesis: AI/tech tilt to complement SPY; captures NVDA/MSFT capex.
+   Catalyst: NVDA beat-and-raise validates capex; constructive technicals.
+   Entry zone: after PCE print, ~$726–731
+   Stop: −8% from fill
+   Target: open-ended
+   Size: 5% (~$5,000 ≈ 6–7 shares)
+   Confidence: 4/5
+```
+```
+3. Ticker: QTUM
+   Direction: long (starter, scale-in)
+   Thesis: Equal-weight quantum basket; caps single-name blow-up; $2B
+     CHIPS structural tailwind.
+   Catalyst: Sector re-rating; basket auto-captures grantees.
+   Entry zone: ~2.5% near $156, ~2.5% on a 2–3% dip (~$152)
+   Stop: −8% from blended fill
+   Target: open-ended basket hold
+   Size: 5% total (~$5,000), split
+   Confidence: 4/5
+```
+```
+4. Ticker: NVDA
+   Direction: long (starter)
+   Thesis: Beat-and-raise; post-print drift from $219→$212 = better entry.
+   Catalyst: AI capex intact; $80B buyback; Strong Buy consensus.
+   Entry zone: $208–214
+   Stop: −8% (~$195)
+   Target: trail per strategy; trim 50% at +30%
+   Size: 5% (~$5,000 ≈ 23 shares)
+   Confidence: 4/5
+```
+```
+5. Ticker: AMD
+   Direction: long (starter — REVISED, reduced)
+   Thesis: Strong Q1 + MI400/hyperscaler deals, but ran +10% to ~$495.
+   Catalyst: data-center momentum intact; no near-term earnings binary.
+   Entry zone: prefer pullback to ~$470–480; else half-size only at mkt
+   Stop: −8% from fill
+   Target: trail per strategy
+   Size: 2.5% (half starter) if chasing; full 5% only on pullback
+   Confidence: 3/5 (entry timing, not thesis)
+```
+```
+6. Ticker: PLTR
+   Direction: long (small starter — NEW)
+   Thesis: AI/data-analytics compounder; Q1 beat, raised FY guide, US
+     commercial +120%. Valuation rich → keep size small.
+   Catalyst: post-beat momentum; gov + commercial pipeline.
+   Entry zone: $130–135
+   Stop: −8% (~$122)
+   Target: trail per strategy
+   Size: 3–5% (~$3,000–5,000)
+   Confidence: 3/5
+```
+```
+7. Ticker: NBIS
+   Direction: long (small-cap starter — NEW)
+   Thesis: AI-infra neocloud; rev +685% y/y, EBITDA positive, NVDA $2B
+     backing + Meta/MSFT contracts. Downside: $20–25B capex, high vol,
+     execution risk — small-cap can de-rate hard.
+   Catalyst: hyperscaler compute demand; capacity build-out.
+   Entry zone: $200–210
+   Stop: −8% (~$192) — honor strictly given volatility
+   Target: trail per strategy
+   Size: 3% (~$3,000)
+   Confidence: 3/5
+```
+```
+8. Ticker: RGTI
+   Direction: long (small-cap starter — NEW)
+   Thesis: Direct ~$100M CHIPS grantee w/ federal equity stake; high-beta
+     single-name quantum expression vs QTUM basket.
+   Catalyst: $2B quantum-grant package; sector re-rating.
+   Entry zone: ~$23–25
+   Stop: −8% (~$22.5)
+   Target: trail per strategy
+   Size: 3% (~$3,000)
+   Confidence: 3/5
+```
+```
+9. Ticker: IONQ
+   Direction: HOLD OFF (no entry)
+   Thesis: Strong fundamentals but extended; ~$65 vs $50–52 trigger.
+   Re-eval trigger: pullback to $50–52 or fresh IONQ-specific catalyst.
+```
+```
+10. Tickers: KTOS, SOFI
+    Direction: RESEARCH-ONLY (no entry)
+    Note: tailwinds plausible but no fresh fundamental catalyst confirmed
+    this session; deep-dive required before sizing.
+```
+
+**Combined draft deployment** (if all non-hold-off ideas fired at
+midpoints): ~5+5+5+5+2.5+4+3+3 ≈ **32.5% of equity (~$32,500)**, leaving
+~67% cash — well above the relaxed 5–10% floor, with room to add.
+
+**ClickUp notification**: **NOT sent.** We hold no positions (no held-
+name shock or halt), no watchlist name gapped >5% on the latest close,
+and today's PCE is a *scheduled* tier-1 print, not an unscheduled macro
+shock. None clears the urgent-catalyst bar per strategy. (If the PCE
+print lands materially hot/cold and the open gaps hard, the market-open
+session should reassess the ping.)
+
+**Next session**:
+- Re-check Alpaca /v2/clock is_open before any orders.
+- After the PCE print, lead with SPY/QQQ index starters, then QTUM
+  scale-in and NVDA; treat AMD as pullback-or-half-size; layer PLTR/
+  NBIS/RGTI as conviction allows; keep IONQ on hold.
+
+---
+
 ### 2026-05-27 End-of-Day
 
 **Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders?status=filled)**:
