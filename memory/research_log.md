@@ -15,6 +15,42 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-05-28 End-of-Day
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders?status=filled)**:
+- Equity: $100,000.00 | Last equity: $100,000.00 | Cash: $100,000.00
+- Buying power: $200,000.00 | Long market value: $0.00
+- Open positions: none | Filled orders today: none
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0.
+
+**Daily performance**:
+- Dexter today: **0.00%** ($0.00 P/L) — flat, 100% cash, no trades.
+- SPY today: **+0.52%** (IEX daily bar 750.59 → 754.48).
+- vs Benchmark: **−0.52%** today.
+- Since inception (5/12): Dexter **0.00%** vs SPY **+2.21%** (738.19 → 754.48) ⇒ **−2.21%** cumulative.
+- Top winner / top loser: n/a (no positions held).
+
+**Market Conditions**:
+- April PCE (Fed's preferred inflation gauge) + Q1 GDP 2nd reading landed
+  this morning without a hawkish surprise; the tape took it well. S&P 500
+  / Nasdaq pushed to fresh records intraday (SPY ~$754.5, +0.52%) before
+  gains moderated into the close. Sentiment helped by reports of a
+  US–Iran ceasefire extension (~60 days) and nuclear talks. No held-name
+  catalysts to manage (book is empty).
+
+**Trades**: None.
+
+**Thesis Notes / Lesson**:
+- Eighth consecutive all-cash session. The analysis is sound and the
+  watchlist is well-staged (SPY/QQQ index starters, QTUM + RGTI quantum,
+  NVDA at a cheaper post-print entry, PLTR/NBIS growth starters), but the
+  book has never been deployed — so the strategy keeps booking the full
+  opportunity cost of a rising market (now −2.21% vs SPY since 5/12).
+  Execution risk has overtaken selection risk as the dominant problem.
+  Tomorrow's pre-market must convert at least the lowest-binary-risk
+  ideas (SPY/QQQ 5% index starters) into actual orders rather than
+  re-drafting them.
+
 ### 2026-05-28 Pre-Market
 
 **Account snapshot (Alpaca, GET /v2/account + /v2/positions)**:

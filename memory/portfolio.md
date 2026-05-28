@@ -1,22 +1,24 @@
 # Portfolio State
 
-Last Updated: 2026-05-28 pre-market (Alpaca /v2/account + /v2/positions)
+Last Updated: 2026-05-28 market close / EOD (Alpaca /v2/account + /v2/positions + /v2/orders)
 
 ## Account Summary
-- Starting Capital: ~$100,000 (Alpaca paper)
+- Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
 - Current Cash: $100,000.00
 - Total Portfolio Value: $100,000.00
 - Buying Power: $200,000.00 (Reg-T 2x; not used per strategy)
 - Long Market Value: $0.00
 - Last Equity (prior close): $100,000.00
-- Today's P/L: $0.00 (0.00%) — flat, no positions deployed
+- Today's P/L: $0.00 (0.00%) — flat, no positions deployed, no trades filled
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
-- Benchmark (SPY) Last Close: $750.59 (2026-05-27, Alpaca IEX daily bar)
-- Dexter Return: 0.00% (no positions opened yet)
-- Cash drag note: still 100% cash entering a 7th+ session; cannot beat
-  SPY from cash. Today is drafts-only per pre-market protocol.
+- Benchmark (SPY) Last Close: $754.48 (2026-05-28, Alpaca IEX daily bar; prior 5/27 $750.59)
+- SPY Today: +0.52% | Dexter Today: 0.00% | vs Benchmark: −0.52%
+- Dexter Return (since 5/12 inception): 0.00% | SPY same window: +2.21% (738.19→754.48) | Cumulative vs SPY: −2.21%
+- Cash drag note: 100% cash for the 8th consecutive session; cannot beat
+  SPY from cash and the gap is now −2.21% since inception. EOD run is
+  reporting-only (no entries staged outside the pre-market protocol).
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -55,6 +57,13 @@ vs prior session close.
 - Deploy in tranches, not all at once; respect −8% hard stop and 10% trail.
 
 ## Notes from Last Session
+- EOD 2026-05-28: Final Alpaca sync confirms no positions opened, zero
+  filled orders today, cash unchanged at $100,000.00. Equity == last
+  equity → 0.00% on the day. SPY closed the session near record highs at
+  $754.48 (+0.52%) after a benign April PCE print; QQQ also higher. Being
+  flat cost ~0.52% of relative performance today and widened the
+  since-inception gap to −2.21% vs SPY. This is now the 8th straight
+  all-cash session — execution, not analysis, is the binding constraint.
 - Pre-market 2026-05-28: Alpaca confirms still 100% cash, no positions,
   no working orders. Account ACTIVE (PA39FINFSDLL), PDT false. The
   non-execution streak persists into a 7th+ session.
