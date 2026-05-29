@@ -4,6 +4,38 @@ Newest entries first.
 
 ---
 
+## 2026-05-29 — Market open (NO TRADES)
+
+**Session:** Market-open trading run.
+
+**Alpaca sync (first successful):** account PA39FINFSDLL, ACTIVE.
+- Equity: $100,000.00 | Cash: $100,000.00 | Buying power: $200,000.00
+- Open positions: **none**.
+
+**Stop-loss check:** No open positions → nothing down -8%, no stops to
+trigger, no trailing stops to attach.
+
+**Trade ideas reviewed:** research_log.md contains **zero** drafted trade
+ideas (the only prior entry, 2026-05-19, is a blocked bootstrap that
+drafted none). The strategy requires a researched thesis — ticker,
+catalyst, entry zone, stop, target, size, confidence — before any entry,
+and forbids fabricated research.
+
+**Decision:** **No trades placed.** There is nothing to execute: no vetted
+ideas, no live research capability this session (no `PERPLEXITY_API_KEY`),
+and no positions to manage. Placing trades without a thesis would violate
+the strategy's discipline and risk rules. Syncing portfolio + logging only.
+
+**Next session unblocker:** Provide `PERPLEXITY_API_KEY` (sonar-pro) so the
+pre-market research workflow can run and draft vetted trade ideas for a
+subsequent execution run. Watchlist to research: QTUM, IONQ, NVDA, AMD,
+SPY, QQQ.
+
+**ClickUp:** Not sent — no trade placed and no stop triggered (per run
+instructions, ping only on those events).
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
