@@ -8,6 +8,7 @@ own checklist.
 ## Core watchlist
 - **Thematic / growth**: QTUM, IONQ
 - **Mega-cap semis**: NVDA, AMD
+- **AI networking / custom silicon**: AVGO
 - **Index proxies**: SPY, QQQ
 
 ## Position sizing
@@ -20,9 +21,26 @@ own checklist.
 - Hard stop: -8% from entry on any single name.
 - Trailing stop on winners: tighten to break-even after +10%, trail 5%
   below high-water mark after +20%.
-- No new entries within 30 minutes of FOMC, CPI, PPI, NFP, or earnings
-  for held names.
+- No new entries within 30 minutes of **FOMC, CPI, PPI, NFP, JOLTS,
+  ISM PMIs**, or earnings for held names.
+- No new entries after 14:00 ET on the day before NFP.
 - No options, no leverage, no shorting in this account.
+
+## Anti-paralysis rule
+- Once capital is available and the workflow is unblocked, deploy at
+  least one starter position (1-2% sizing) within the first full
+  trading week, **provided** at least one watchlist name passes the
+  pre-market entry checklist (no adverse news, no event within 24h,
+  technical setup intact). If no name passes, stay flat and log why.
+
+## Session cadence
+- **Pre-market** (workflow below): every trading day.
+- **Intraday checks**: at least one mid-session sweep for stop hits and
+  catalyst surprises on held names.
+- **Post-market**: brief log entry — fills, slippage, lessons.
+- **Friday post-close**: full **weekly review**. Append to
+  `memory/weekly_review.md`, refresh watchlist in `memory/portfolio.md`,
+  push to GitHub, send ClickUp notification with all sections.
 
 ## Decision workflow (pre-market)
 1. Read memory files: strategy, portfolio, trade_log, research_log.
