@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-05-28 market close / EOD (Alpaca /v2/account + /v2/positions + /v2/orders)
+Last Updated: 2026-05-29 pre-market (Alpaca /v2/account + /v2/positions)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -13,12 +13,13 @@ Last Updated: 2026-05-28 market close / EOD (Alpaca /v2/account + /v2/positions 
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
-- Benchmark (SPY) Last Close: $754.48 (2026-05-28, Alpaca IEX daily bar; prior 5/27 $750.59)
-- SPY Today: +0.52% | Dexter Today: 0.00% | vs Benchmark: −0.52%
-- Dexter Return (since 5/12 inception): 0.00% | SPY same window: +2.21% (738.19→754.48) | Cumulative vs SPY: −2.21%
-- Cash drag note: 100% cash for the 8th consecutive session; cannot beat
-  SPY from cash and the gap is now −2.21% since inception. EOD run is
-  reporting-only (no entries staged outside the pre-market protocol).
+- Benchmark (SPY) Last Close: $754.68 (2026-05-28, Alpaca IEX daily bar; prior 5/27 $750.59); 5/29 pre-market last ~$755.4
+- SPY 5/28: +0.54% | Dexter: 0.00% | vs Benchmark: −0.54%
+- Dexter Return (since 5/12 inception): 0.00% | SPY same window: +2.23% (738.19→754.68) | Cumulative vs SPY: −2.23%
+- Cash drag note: 100% cash for the **9th consecutive session**; cannot beat
+  SPY from cash and the gap is now ~−2.23% since inception. This 5/29
+  pre-market run is **draft-only by instruction** — no trades placed; ideas
+  staged below and in research_log.md for execution on approval.
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -32,23 +33,25 @@ Last Updated: 2026-05-28 market close / EOD (Alpaca /v2/account + /v2/positions 
 - Equities: 0%
 
 ## Watchlist
-Stocks/ETFs being monitored but not yet purchased. Marks below are
-2026-05-27 Alpaca IEX closes (latest available pre-market 5/28); Δ is
-vs prior session close.
+Stocks/ETFs being monitored but not yet purchased. The six named tickers
+below are refreshed to **2026-05-28 Alpaca IEX daily-bar closes** (latest
+completed session) with 5/29 pre-market last in Notes; Δ is vs prior
+session (5/27) close. Names marked "(5/27, not refreshed)" were not
+re-quoted this session.
 
-| Symbol | Last (5/27) | 1-day Δ | Why Watching | Target Entry | Notes |
+| Symbol | Last | 1-day Δ | Why Watching | Target Entry | Notes |
 |--------|------|---------|--------------|--------------|-------|
-| QTUM   | 156.51 | −1.26% | Quantum-theme equal-weight basket; YTD +36%, 1yr +74% | Split: half ~$156, half on 2–3% retrace (~$152) | $2B CHIPS quantum-grant tailwind intact; basket holds grantees QBTS/RGTI/INFQ |
-| SPY    | 750.59 | +0.02% | Baseline beta; needed since account is 100% cash | After PCE print, ~$748–752 | Conf 4/5; tape near record, grinding sideways |
-| QQQ    | 729.48 | −0.09% | Tech/AI tilt; captures NVDA/MSFT capex | After PCE print, ~$726–731 | 4-day win streak into 5/26; technicals constructive |
-| NVDA   | 212.42 | −1.03% | AI silicon leader; post-print digestion | $208–214 (cheaper than 5/21) | Q1 FY27 beat+raise ($81.6B rev, $91B guide, $80B buyback); stock drifted from $219→$212 post-print = better entry |
-| AMD    | 494.88 | −1.66% | NVDA-tape proxy + hyperscaler 2nd-source bid | **RAISED** — ran +10% from 5/21 ($449→$495); wait for pullback ~$470–480 or take ½-size starter | Q1 beat; MI400/MI455X; OpenAI 6GW + Meta ~6GW (~$60B) deals; no earnings until ~Aug. Chasing $495 violates entry discipline |
-| IONQ   |  64.77 | +2.86% | Quantum leader, +755% y/y rev growth | **HOLD OFF** — still no pullback (now ~$65 vs $50–52 trigger) | Rallied further from $58.87→$65; even more extended. Wait for $50–52 or fresh IONQ-specific catalyst |
-| PLTR   | 133.03 | −3.00% | AI/data analytics, gov + commercial growth | $130–135 small starter (3–5%) | Q1 (5/4) beat: EPS $0.33 vs $0.27, rev $1.63B +85%; raised FY26 to ~$7.66B, US commercial +120%. Rich valuation = size small |
-| NBIS   | 208.32 | +0.14% | AI infrastructure / neocloud high-growth | $200–210 small-cap starter (3%) | Q1 (5/13): rev $399M (+685% y/y), Cloud AI +841%, EBITDA+; NVDA $2B investment, Meta/MSFT contracts, raised guide $3–3.4B. Very volatile (5/26 range $206–221); capex $20–25B is the risk |
-| KTOS   | 57.31 | +0.77% | Defense tech, drones/unmanned systems | Research-only; needs deeper dive | User-added; defense-spend tailwind. No fundamental catalyst confirmed this session |
-| SOFI   | 16.17 | +1.25% | Fintech disruptor, banking + lending growth | Research-only; needs deeper dive | User-added; small-mid cap fintech. No fresh catalyst confirmed this session |
-| RGTI   | 24.52 | −1.82% | Direct ~$100M CHIPS grant recipient + gov't equity stake | Small-cap quantum starter (3%) as RGTI-specific complement to QTUM | Direct beneficiary of 5/21 $2B package; higher beta single-name expression of the quantum theme |
+| QTUM   | 159.06 (5/28) | +1.63% | Quantum-theme equal-weight basket; ETF AUM just crossed **$5B** | Split: half ~$157–159, half on 2–3% retrace (~$154) | $2B federal quantum-grant tailwind intact (announced 5/26); basket holds grantees RGTI/QBTS. Cleanest, most-diversified theme expression. 5/29 pre-mkt last ~$159.1 |
+| SPY    | 754.68 (5/28) | +0.54% | Baseline beta; account is 100% cash | ~$752–755 (near record) | Conf 4/5; April PCE cleared benign 5/28, tape at records. 5/29 pre-mkt last ~$755.4 |
+| QQQ    | 735.64 (5/28) | +0.84% | Tech/AI tilt; captures NVDA/MSFT capex | ~$732–736 | Constructive; multi-day strength into 5/28. 5/29 pre-mkt last ~$736.0 |
+| NVDA   | 214.27 (5/28) | +0.80% | AI silicon leader; post-print | $210–215 | Q1 FY27 beat+raise; **NEW**: Vera CPU launch → data-center CPU $200B TAM, ~$20B CPU rev guided this FY. ~25x fwd (reasonable). 5/29 pre-mkt last ~$214.1 |
+| AMD    | 518.07 (5/28) | +4.54% | NVDA-tape proxy + hyperscaler 2nd-source | **HOLD OFF** — ran $495→$518 (+4.5%) on 5/28, now ~$519; well above the $470–480 zone | Q1 beat; MI400/MI455X; OpenAI 6GW + Meta deals; ~58x fwd (rich). Chasing $519 badly violates entry discipline; wait for pullback. 5/29 pre-mkt last ~$519.4 |
+| IONQ   |  70.14 (5/28) | +7.25% | Quantum leader, +755% y/y rev | **HOLD OFF** — spiked +7.25% on 5/28 to ~$70 (trigger was $50–52) | Q1 blowout + raised FY26 guide ($260–270M) + first 256-qubit sale + SkyWater deal passed shareholder vote. BUT **excluded from Commerce's $2B LOI list** (relative negative vs peers). Extremely extended; do not chase. 5/29 pre-mkt last ~$70.1 |
+| PLTR   | 133.03 (5/27, not refreshed) | — | AI/data analytics, gov + commercial growth | $130–135 small starter (3–5%) | Q1 (5/4) beat: EPS $0.33 vs $0.27, rev $1.63B +85%; raised FY26 to ~$7.66B, US commercial +120%. Rich valuation = size small |
+| NBIS   | 208.32 (5/27, not refreshed) | — | AI infrastructure / neocloud high-growth | $200–210 small-cap starter (3%) | Q1 (5/13): rev $399M (+685% y/y), Cloud AI +841%, EBITDA+; NVDA $2B investment, Meta/MSFT contracts. Very volatile; capex $20–25B is the risk |
+| RGTI   | 24.52 (5/27, not refreshed) | — | Direct ~$100M grant recipient + gov't equity stake | Small-cap quantum starter (3%) as complement to QTUM | Direct beneficiary of the 5/21 $2B package; higher-beta single-name expression of the quantum theme |
+| KTOS   | 57.31 (5/27, not refreshed) | — | Defense tech, drones/unmanned systems | Research-only; needs deeper dive | User-added; defense-spend tailwind. No fundamental catalyst confirmed |
+| SOFI   | 16.17 (5/27, not refreshed) | — | Fintech disruptor, banking + lending growth | Research-only; needs deeper dive | User-added; small-mid cap fintech. No fresh catalyst confirmed |
 
 ## Cash Allocation Plan (aggressive mode — per strategy.md)
 - Cash floor relaxed to 5–10% (was 20%); stay heavily invested.
@@ -57,6 +60,15 @@ vs prior session close.
 - Deploy in tranches, not all at once; respect −8% hard stop and 10% trail.
 
 ## Notes from Last Session
+- **Pre-market 2026-05-29 (this run):** Alpaca confirms still 100% cash, no
+  positions, no working orders (ACTIVE PA39FINFSDLL, PDT false, day-trade
+  count 0) — **9th consecutive all-cash session.** Tape closed 5/28 at fresh
+  records after a benign April PCE; the watchlist ran further away on 5/28:
+  AMD +4.5% (→$518) and IONQ +7.25% (→$70) both extended further past their
+  entry zones, while QTUM (+1.6% →$159) and NVDA (+0.8% →$214) stayed in
+  range. Quantum theme reinforced — QTUM ETF crossed $5B AUM, $2B federal
+  funding push intact. **No trades placed this run by instruction** (draft
+  only). Drafted ideas are logged in research_log.md 2026-05-29.
 - EOD 2026-05-28: Final Alpaca sync confirms no positions opened, zero
   filled orders today, cash unchanged at $100,000.00. Equity == last
   equity → 0.00% on the day. SPY closed the session near record highs at

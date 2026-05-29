@@ -15,6 +15,126 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-05-29 Pre-Market
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions)**:
+- Equity: $100,000.00 | Last equity: $100,000.00 | Cash: $100,000.00
+- Buying power: $200,000.00 | Long market value: $0.00
+- Open positions: none | Working orders: none
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0.
+- **9th consecutive all-cash session.** Since inception (5/12): Dexter 0.00%
+  vs SPY +2.23% (738.19 → 754.68) ⇒ **−2.23% cumulative**.
+
+**Tape (Alpaca IEX; 5/28 daily-bar close, Δ vs 5/27 close, 5/29 pre-mkt last)**:
+| Symbol | 5/28 Close | Δ vs 5/27 | 5/29 pre-mkt last |
+|---|---|---|---|
+| SPY  | 754.68 | +0.54% | ~755.4 |
+| QQQ  | 735.64 | +0.84% | ~736.0 |
+| QTUM | 159.06 | +1.63% | ~159.1 |
+| NVDA | 214.27 | +0.80% | ~214.1 |
+| AMD  | 518.07 | +4.54% | ~519.4 |
+| IONQ |  70.14 | +7.25% | ~70.1 |
+
+**Market Conditions**:
+- **Macro:** April PCE (Fed's preferred gauge) + Q1 GDP 2nd reading landed
+  5/28 with no hawkish surprise; S&P 500 / Nasdaq closed at fresh records.
+  **Today (5/29, Fri) is light** — only second-tier NY Fed releases
+  (Multivariate Core Trend Inflation 10:00 ET, Staff Nowcast 12:45,
+  R-star 14:00); no tier-1 print. Forward calendar: **May NFP June 5,
+  May CPI June 10, FOMC June 16–17 (Chair Warsh's first presser).**
+- **Pre-market tone (5/29):** mildly risk-off in small caps amid a wave of
+  dilutive secondaries (e.g. SIDU −17.6% on a $100M raise; PLAB −25% on
+  earnings); index futures roughly flat. No broad shock.
+
+**Key News (watchlist)**:
+- **Quantum theme — HOT.** Trump administration unveiled an ~$2B federal
+  quantum funding push (announced 5/26); Commerce issued letters of intent
+  with nine quantum companies totaling $2.013B. **QTUM ETF crossed $5B AUM**
+  the same day (strong-inflows = a strategy BUY signal). **RGTI** is a direct
+  ~$100M grant recipient + gov't equity stake.
+- **IONQ:** Q1 rev $64.7M (+755% y/y, +30% above guide), raised FY26 guide to
+  $260–270M, booked first **256-qubit** system sale, SkyWater acquisition
+  passed shareholder vote (regulatory close Q2/Q3). **BUT excluded from
+  Commerce's $2B LOI list** — relative negative vs RGTI/peers. Ran $43 (4/27)
+  → $58 (5/21) → $70 (5/28), **+7.25% on 5/28 alone**. Extremely extended.
+- **NVDA:** Q1 FY27 beat+raise digested; **NEW** — Vera CPU launch puts NVDA
+  into the data-center CPU market; CFO cites a ~$200B TAM and ~$20B of CPU
+  revenue this fiscal year. Trades ~25x fwd (reasonable). $214.
+- **AMD:** Q1 beat (rev $10.25B; data-center record $5.8B, +57% y/y);
+  MI400/MI455X roadmap; OpenAI 6GW + Meta deals. **Ran +4.5% on 5/28 to $518;
+  ~58x fwd (rich)** — now well above the $470–480 entry zone.
+- **Indices:** SPY/QQQ at/near records; 2026 SPX targets BofA 7,100 /
+  Citi 7,700.
+
+**Trades**: None — draft-only by instruction.
+
+**Trade ideas drafted** (aggressive mode: starter 5–10%, high-conviction
+15–25%, single-name cap 25%, cash floor 5–10%, small-caps 3–7%; −8% hard
+stop / 10% trailing stop on all):
+
+```
+1) SPY  — long starter (lowest binary risk)
+   Thesis: deploy beta to stop the 9-session cash drag; tape at records
+           after a benign PCE, no tier-1 data today.
+   Catalyst: PCE cleared; constructive trend into June.
+   Entry: ~$752–755 | Stop: −8% (~$695) | Target: trend-follow, 10% trail
+   Size: 8% (~$8,000) | Confidence: 4/5
+
+2) QQQ  — long starter (tech/AI tilt)
+   Thesis: AI/tech leadership, captures NVDA/MSFT capex w/o single-name risk.
+   Entry: ~$732–736 | Stop: −8% (~$677) | Target: trend-follow, 10% trail
+   Size: 7% (~$7,000) | Confidence: 4/5
+
+3) QTUM — long, two tranches (cleanest quantum expression)
+   Thesis: diversified quantum basket on the $2B federal funding wave; $5B
+           AUM milestone = strong inflows (BUY signal). Basket dampens
+           single-name risk vs IONQ/RGTI.
+   Entry: half ~$157–159 now, half on 2–3% retrace (~$154)
+   Stop: −8% from blended (~$146) | Target: +20–30%, trim 50% at +30%
+   Size: 5% (~$5,000) | Confidence: 3/5 (theme hot but extended)
+
+4) NVDA — long starter (high-quality AI core)
+   Thesis: beat+raise plus NEW Vera CPU opening a ~$200B CPU TAM (~$20B CPU
+           rev this FY); ~25x fwd is reasonable for the franchise.
+   Catalyst: Vera CPU ramp; AI capex cycle.
+   Entry: $210–215 (in range) | Stop: −8% (~$197) | Target: $240, 10% trail
+   Size: 6% (~$6,000) | Confidence: 4/5
+
+5) RGTI — long small starter (small-cap quantum complement)
+   Thesis: direct ~$100M grant recipient + gov't equity stake — highest-
+           leverage single name on the funding catalyst; complements QTUM.
+   Downside (explicit): pre-/early-revenue, high burn, dilution, extreme
+           volatility — can draw down 30–50%; hence small size.
+   Entry: ~$24–25 (5/27 mark — CONFIRM live quote before any order)
+   Stop: −8% hard (expect wide swings) | Target: asymmetric, trim into spikes
+   Size: 3% (~$3,000) | Confidence: 2/5
+```
+
+If all five executed: ~29% deployed / ~71% cash (within the 5–10% cash
+floor with room to scale); semis (NVDA 6%) + quantum (QTUM 5% + RGTI 3%) =
+14%, far under the 25% single-name and ~40% sector ceilings.
+
+**HOLD-OFF / watch (not ideas this run)**:
+- **AMD** — do NOT chase $519 (+4.5% on 5/28, ~58x fwd); wait ~$470–480.
+- **IONQ** — HOLD OFF; spiked to $70 (+7.25%) and was left off the $2B LOI
+  list. Need a real pullback or fresh IONQ-specific catalyst; do not chase.
+- **PLTR / NBIS** — still valid growth starters (3–5% / 3%) but not re-quoted
+  today; confirm live marks before sizing.
+- **KTOS / SOFI** — research-only; need a deeper fundamental dive.
+
+**Thesis Notes / Lesson**:
+- 9th straight all-cash session; execution remains the binding constraint
+  (−2.23% vs SPY since inception). This run is draft-only by explicit
+  instruction, so the gap persists another session — but the
+  lowest-binary-risk ideas (SPY/QQQ index starters) are staged and ready to
+  convert into orders immediately on approval.
+
+**ClickUp**: No notification sent. IONQ printed +7.25% (a >5% watchlist
+move), but it is (a) continuation of a known multi-week run, not a fresh
+overnight shock; (b) on a name we do not hold; and (c) driven by already-
+public catalysts (5/26 funding, earlier earnings). No held-name earnings,
+no halts, no macro shock — the bar for an urgent ping is not met.
+
 ### 2026-05-28 End-of-Day
 
 **Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders?status=filled)**:
