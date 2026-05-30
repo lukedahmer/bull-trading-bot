@@ -15,6 +15,174 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-05-30 Pre-Market (weekend prep for Mon 2026-06-01 open)
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders + /v2/clock)**:
+- Equity: $100,000.00 | Last equity: $100,000.00 | Cash: $100,000.00
+- Buying power: $200,000.00 | Long market value: $0.00
+- Open positions: none | Open orders: none
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0.
+- Clock: `is_open: false` (Sat 5/30 06:03 ET) → next open **Mon 2026-06-01 09:30 ET**.
+- **10th consecutive all-cash session.** Since inception (5/12): Dexter 0.00%
+  vs SPY **+2.46%** (738.19 → 756.34) ⇒ **−2.46% cumulative**.
+
+**Tape (Alpaca IEX 1Day bars; 5/29 Fri close vs 5/28)**:
+| Symbol | 5/29 Close | 1-day Δ | Intraday range | Note |
+|---|---|---|---|---|
+| SPY  | 756.34 | +0.22% | 754.72–758.06 | Fresh ATH close |
+| QQQ  | 738.21 | +0.35% | 735.29–741.54 | Fresh ATH close |
+| QTUM | 159.81 | +0.47% | 157.79–160.69 | Held gains |
+| NVDA | 211.155 | **−1.45%** | 211.14–217.80 | Mild post-print digestion → better entry |
+| AMD  | 516.265 | −0.35% | 503.52–521.69 | Still in chase zone |
+| IONQ |  72.07 | **+2.75%** | 66.84–72.17 | Continues extended |
+| RGTI |  25.535 | **−5.51%** | 24.44–26.53 | Gave back Wed spike |
+| PLTR | 156.58 | **+9.22%** | 145.85–157.75 | Biggest 1-day gain since Apr-25 |
+| NBIS | 231.10 | +2.10% | **210.59–233.40** | Whippy ~$22 range |
+
+**Market Conditions**:
+- **Today is Sat 5/30** — markets closed. This is weekend prep for the
+  **Mon 6/1 cash open**.
+- **5/29 close was a fresh all-time-high** in SPY/QQQ on an AI-led broad
+  rally, with reports of progress toward a US–Iran framework adding to the
+  risk-on tone. No tier-1 macro Friday (NY Fed second-tier prints only).
+- **Forward calendar (next 3 weeks):**
+  - Mon 6/1: ISM Manufacturing PMI (May)
+  - Wed 6/3: ISM Services PMI (May)
+  - **Fri 6/5: May NFP (08:30 ET)** — pre-print blackout per strategy
+  - **Tue 6/10: May CPI** — pre-print blackout
+  - PPI: typically Wed/Thu of CPI week
+  - **Tue–Wed 6/16–17: FOMC** (Chair Warsh's first meeting/presser) —
+    blackout 30 min before each statement/presser
+- Pre-Memorial-Day-+1 week macro tone: April PCE landed benign 5/28;
+  core PCE +3.3% y/y; Fed Gov Miran has flagged that being too tight risks
+  the labor market — dovish-leaning at the margin.
+
+**Key News (watchlist)**:
+- **PLTR — +9.22% on 5/29 to $156.58**, biggest 1-day move since Apr-25.
+  Trigger: **Dell** fiscal Q1-27 print (rev $43.84B +88% y/y; AI-optimized
+  server rev **$16.13B, +757% y/y**) combined with **Snowflake** beat and
+  reports the Trump admin is weighing direct funding for US drone makers
+  (Pentagon/Office of Strategic Capital). PLTR has an on-prem AI-OS
+  partnership with Dell aimed at healthcare/defense — fundamentals reinforced
+  but the entry zone is now blown out. Re-rate trigger to $140–145.
+- **NBIS — $208 → $231 over 5/28–5/29** on Situational Awareness LP
+  disclosure of a **5.6% stake** (~12M Class A shares). Q1 fundamentals
+  remain strong (rev $399M +685% y/y, Cloud AI +841%); Citi PT $287
+  maintained. Very volatile (Fri intraday range $210.59–$233.40 ≈ ~10% peak-
+  to-trough). Let it settle.
+- **NVDA — $211.16 on 5/29** (−1.45%). Q1 FY27 print (5/20) was a clean
+  beat-and-raise (rev $81.6B +85% y/y, EPS $1.87 vs $1.76; data center
+  $39.1B +69%; Blackwell "off the charts"). Vera CPU launch adds a ~$200B
+  data-center CPU TAM and ~$20B CPU rev guided this FY. Next earnings
+  **8/26** — no near-term binary; entry embargo cleared. Friday's small
+  pullback brings the entry zone $208–214 squarely in range.
+- **AMD — $516 on 5/29.** Q1 rev $10.25B (+38% y/y), data-center
+  $5.8B (+57%); MI400/MI455X + OpenAI 6GW + Meta deals; **$10B Taiwan
+  packaging investment announced 5/21**. Ran +45.6% during May, ATH 5/22.
+  ~58x fwd is rich; entry still in chase territory vs the $470–480 zone.
+- **IONQ — $72.07 on 5/29** (+2.75%). Q1 rev $64.7M +755% y/y; FY26
+  guide $260–270M; first 256-qubit sale; SkyWater deal cleared shareholder
+  vote. **Still excluded from Commerce's $2B LOI list** — relative negative
+  vs RGTI/QBTS. Trigger $50–52 not met.
+- **QTUM — $159.81 on 5/29** (+0.47%). ETF AUM crossed **$5B** on 5/26
+  alongside the **$2.013B Trump-admin federal quantum push** (Commerce LOIs
+  to IBM $1B, GlobalFoundries $375M, RGTI ~$100M, QBTS ~$100M, INFQ ~$100M,
+  PsiQuantum $100M, Diraq $38M, +2). Basket auto-captures the grantees;
+  cleanest sector expression. YTD +84% per third-party data, +57pp vs SPX.
+- **RGTI — $25.535 on 5/29** (−5.51%). Gave back ~half of Wed's $24.6 → $27
+  spike. Direct ~$100M grantee + federal minority equity stake. Higher-beta
+  single-name quantum expression vs QTUM basket.
+- **Indices: SPY $756.34 / QQQ $738.21 — fresh ATH closes** on AI rally +
+  US–Iran de-escalation optimism. 2026 SPX targets BofA 7,100 / Citi 7,700.
+
+**Trades**: None — markets closed (Sat) and draft-only by instruction.
+
+**Trade ideas drafted for Mon 6/1 open** (aggressive mode: starter 5–10%,
+high-conviction 15–25%, single-name cap 25%, cash floor 5–10%, small-caps
+3–7%; −8% hard stop / 10% trailing stop on all):
+
+```
+1) SPY  — long starter (lowest binary risk, biggest conviction)
+   Thesis: stop the 10-session cash drag; ATH close on benign macro +
+           AI tape; ISM Mfg lands Mon 10:00 ET so stage entry pre-print
+           or wait until after if the print is hot.
+   Catalyst: AI broad rally + Iran-deal optimism + benign PCE behind us.
+   Entry: ~$754–757 | Stop: −8% (~$696) | Target: trend-follow, 10% trail
+   Size: 8% (~$8,000 ≈ 10 shares) | Confidence: 4/5
+
+2) QQQ  — long starter (tech/AI tilt)
+   Thesis: AI/tech leadership at ATH; captures NVDA/MSFT/AMD capex
+           without single-name binary risk; Dell+Snowflake prints
+           reinforce the AI-infra demand picture.
+   Entry: ~$735–740 | Stop: −8% (~$679) | Target: trend-follow, 10% trail
+   Size: 7% (~$7,000 ≈ 9 shares) | Confidence: 4/5
+
+3) QTUM — long, two tranches (cleanest quantum expression)
+   Thesis: basket on the $2B federal funding wave; $5B AUM milestone =
+           strong inflows. Diversification dampens single-name risk vs
+           IONQ/RGTI.
+   Entry: half ~$158–160 (MOO Mon), half on 2–3% retrace (~$155)
+   Stop: −8% from blended (~$147) | Target: +20–30%, trim 50% at +30%
+   Size: 5% (~$5,000 ≈ 31 shares total) | Confidence: 3/5
+
+4) NVDA — long starter (high-quality AI core)
+   Thesis: beat+raise digested; Vera CPU adds ~$200B TAM / ~$20B CPU rev
+           this FY; ~25x fwd reasonable; 8/26 earnings far away.
+           Friday's −1.45% gives a cleaner $211 entry.
+   Entry: $208–214 | Stop: −8% (~$194) | Target: $240, 10% trail
+   Size: 6% (~$6,000 ≈ 28 shares) | Confidence: 4/5
+
+5) RGTI — long small starter (small-cap quantum complement)
+   Thesis: direct ~$100M grantee + federal equity stake — highest-leverage
+           single name on the funding catalyst; Fri pullback to $25.5
+           after Wed spike = OK entry; complements QTUM basket.
+   Downside (explicit): pre-/early-revenue, high burn, dilution risk,
+           extreme volatility — can draw down 30–50%; hence small size.
+   Entry: ~$24.50–26 | Stop: −8% hard (~$23.4) | Target: asymmetric,
+   trim into spikes | Size: 3% (~$3,000 ≈ 117 shares) | Confidence: 2/5
+```
+
+If all five fire at midpoints: ~29% deployed / ~71% cash (well inside the
+5–10% floor with room to scale); semis (NVDA 6%) + quantum (QTUM 5% +
+RGTI 3%) = 14%, under the 25% single-name and 40% sector ceilings.
+
+**HOLD-OFF / watch (not ideas this run)**:
+- **AMD** — do NOT chase $516 (~58x fwd); wait $470–480 pullback.
+- **IONQ** — HOLD OFF; $72 vs $50–52 trigger; left off $2B LOI list.
+- **PLTR** — entry blown out by Fri's +9.22% rip; **RAISE trigger to
+  $140–145** pullback (was $130–135). Strong fundamentals + Dell/SNOW
+  tailwind, but don't chase $157.
+- **NBIS** — let the +5.6%-stake spike settle; revisit ~$210–215.
+- **KTOS / SOFI** — research-only; dedicated deep dive still owed
+  (KTOS got a small drone-funding tailwind 5/29 worth tracking).
+
+**Thesis Notes / Lesson**:
+- 10th straight all-cash session; SPY drift to a new ATH on Friday widened
+  the since-inception gap to **−2.46%**. Two of the prior watch names that
+  were "ready" pre-Friday (PLTR, NBIS) ran away from the entry zone on
+  Friday's AI rip — concrete cost of execution lag. The lowest-binary-risk
+  ideas (SPY/QQQ/QTUM/NVDA) are still in range and should be the first to
+  convert on the Mon 6/1 open if execution is authorized.
+- Mon's ISM Mfg PMI ~10:00 ET is a tier-2 print but can move the tape;
+  stage SPY/QQQ either at open (MOO) or wait through 10:00 if cautious.
+  NFP 6/5 and CPI 6/10 are the bigger gating events for sizing decisions
+  later in the week.
+
+**ClickUp notification**: **NOT sent.** No urgent catalyst clears the bar:
+markets are closed (Sat); we hold no positions (no held-name halt/shock);
+no fresh overnight macro tape-bomb; PLTR's +9.22% is a >5% watchlist move
+but it (a) printed during regular hours on a known AI rally and (b) is on
+a name we don't hold, so it's a re-plan input, not an urgent ping. The
+$2B quantum funding and Dell AI-server print are already in the tape.
+
+**Next session**:
+- Mon 6/1 pre-market: re-pull /v2/clock + /v2/account; refresh watchlist
+  marks; lead with SPY/QQQ index starters, then QTUM scale-in and NVDA;
+  pre-print blackout for ISM Mfg (~10:00 ET) — stage entries either MOO
+  or post-10:00. Keep cash-floor headroom for NFP-week opportunities.
+
+---
+
 ### 2026-05-29 Pre-Market
 
 **Account snapshot (Alpaca, GET /v2/account + /v2/positions)**:
