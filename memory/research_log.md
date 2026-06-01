@@ -4,6 +4,32 @@ Newest entries first.
 
 ---
 
+## 2026-06-01 — Midday check
+
+**Session:** Midday risk sweep.
+
+**Alpaca sync:** Successful.
+- Account status: ACTIVE
+- Equity: $100,000.00 (all cash)
+- Open positions: 0 (`GET /v2/positions` → `[]`)
+
+**Risk actions evaluated:**
+- Hard-stop sweep (-8% from entry): no positions, none triggered.
+- Winner trim (≥ +30%): no positions, none trimmed.
+- Trail tightening (≥ +15% → 7% trail): no positions, no adjustments.
+
+**New entries:** None. Midday rule prohibits new positions absent a major
+catalyst; no held names to react to, and no catalyst observed worth
+breaking the rule for a fresh entry.
+
+**Web search:** Skipped — nothing to investigate at the position level.
+
+**ClickUp ping:** Not sent (no stop triggered, no trim executed).
+
+**Next session:** Resume normal pre-market workflow tomorrow.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
