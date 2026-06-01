@@ -4,6 +4,33 @@ Newest entries first.
 
 ---
 
+## 2026-06-01 — End of day
+
+**Session:** Post-close wrap.
+
+**Account snapshot (Alpaca):**
+- Equity: $100,000.00
+- Last equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $200,000.00
+- Long market value: $0.00
+- Positions: none
+- Filled orders today: none
+
+**Performance:**
+- Portfolio: 0.00% (uninvested)
+- SPY: +0.44% (close 759.65 vs prior 756.34, sourced from Alpaca daily bars)
+- Relative: −0.44 pp vs SPY
+
+**Observation:** Bull remained 100% cash on the first trading day of June
+while SPY ground out a modest +0.44%. The account is still in its
+bootstrap state — no thesis-backed entries have been initiated. Next
+pre-market session should produce concrete trade ideas from the
+watchlist (QTUM, IONQ, NVDA, AMD, SPY, QQQ) and begin deploying the 2%
+starter sizing per strategy.md.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
