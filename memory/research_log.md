@@ -15,6 +15,75 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-02 End-of-Day
+
+**Session:** Post-close summary (sync at 15:07 ET, ~53 min before 16:00 ET close).
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders)**:
+- Equity: $100,000.00 | Last equity: $100,000.00 | Cash: $100,000.00
+- Buying power: $200,000.00 | Long market value: $0.00
+- Open positions: **none** | Filled orders today: **none**
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0.
+
+**Performance:**
+- Dexter today: **+0.00%** (flat, all cash)
+- SPY today (near-close): **+0.11%** (758.44 → 759.28)
+- Today vs SPY: **−0.11 pp**
+- Since 5/12 inception: Dexter 0.00% vs SPY **+2.86%** (738.19 → 759.28)
+  ⇒ **−2.86% cumulative** (gap widened ~40 bps over 6/1–6/2 sessions).
+
+**Tape (Alpaca IEX 1Day bars; 6/2 near close vs 6/1)**:
+| Symbol | 6/2 Last | 1-day Δ | Intraday range | Note |
+|---|---|---|---|---|
+| SPY  | 759.28 | +0.11% | 756.75–760.40 | Fresh ATH close |
+| QQQ  | 745.02 | +0.33% | 739.25–746.21 | Fresh ATH close |
+| QTUM | 168.09 | **+3.26%** | 165.32–168.59 | Quantum-theme leader; AUM trajectory + RGTI strength |
+| NVDA | 223.06 | −0.61% | 221.91–232.28 | Gapped to ATH $232 then faded; wider range than usual |
+| AMD  | 515.04 | +0.98% | 501.46–519.90 | Held the $515 level |
+| IONQ |  70.33 | +1.51% | 69.11–72.63 | Continues to grind higher |
+| RGTI |  26.02 | +1.50% | 25.48–27.22 | Reclaimed Wed 5/27 spike high |
+| PLTR | 152.32 | **−5.18%** | 149.80–159.43 | Gave back most of Fri 5/29 Dell-driven pop |
+| NBIS | 262.30 | −0.83% | 260.66–278.79 | Still extending range; ~$18 peak-to-trough |
+
+**Market Conditions:**
+- Quiet drift higher into the close on light volume. SPY 6/2 volume
+  ~784k shares vs ~1.45M on 6/1 — typical post-Monday-ISM digestion.
+- Quantum theme had the cleanest tape: QTUM +3.26%, RGTI +1.50%, IONQ
+  +1.51%. The 5/21 $2B Commerce LOI tailwind continues to bid the basket.
+- AI single-name dispersion: NVDA gapped to a fresh ATH $232 on
+  continued Vera CPU enthusiasm then faded to $223; PLTR gave back
+  the Dell-driven pop, closing back below $156. Suggests rotation
+  out of last week's leaders rather than broad de-risking.
+- No tier-1 macro print today; ISM Mfg landed yesterday in line.
+  Wed 6/3 ISM Services next; Fri 6/5 May NFP.
+
+**Trades today:** **None.** Account remains 100% cash for the 12th
+consecutive session. Drafted 5/30 starter ideas (SPY 8% / QQQ 7% /
+QTUM 5% / NVDA 6% / RGTI 3%) were **not executed** at the 6/1 open
+as planned. No EOD trades placed.
+
+**Key observations:**
+- The cost of cash drag has now reached **−2.86 pp** vs SPY since
+  5/12 inception. The decision to defer execution at 6/1 was
+  unfortunate for QTUM specifically (entry zone $158–160 → $168
+  in two sessions = ~5% missed).
+- SPY/QQQ index entry zone has **not** materially moved (SPY $759.28
+  is still within the $754–760 starter range), so the index portion
+  of the drafted plan is still actionable at fresh prices.
+- NVDA's gap-and-fade today widened the entry zone — $215–223 is now
+  available (vs the $208–214 zone last week). Confidence on a clean
+  entry has improved.
+- PLTR's −5.18% confirms last Friday's spike was not the start of a
+  trend; the $140–145 retrace target remains the right trigger.
+
+**Next session unblocker:**
+- Wed 6/3 pre-market: re-pull movers, recalibrate the drafted starter
+  basket at fresh prices, and place a decision in front of the user
+  (execute / hold / modify). Continued cash drag without a documented
+  reason is now the largest single P&L item on the book.
+
+---
+
 ### 2026-05-30 Pre-Market (weekend prep for Mon 2026-06-01 open)
 
 **Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders + /v2/clock)**:
