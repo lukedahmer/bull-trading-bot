@@ -4,6 +4,32 @@ Newest entries first.
 
 ---
 
+## 2026-06-03 — Midday check
+
+**Session:** Midday risk review.
+
+**Alpaca sync:** OK. Account `PA39FINFSDLL` ACTIVE. Equity $100,000.00,
+cash $100,000.00, long market value $0.00.
+
+**Open positions:** None. `GET /v2/positions` returned `[]`.
+
+**Risk actions taken:**
+- No -8% stops triggered (no positions).
+- No +30% trims (no positions).
+- No +15% trail tightenings (no positions).
+- No new midday entries (per rule, no entries midday absent a major
+  catalyst; none warranted in a fully-cash account).
+
+**Web search:** Skipped. No held names to monitor for significant moves.
+
+**ClickUp:** No ping sent (no stop triggered, no trim executed).
+
+**Next session:** Pre-market workflow on next trading day. Consider
+seeding initial positions from the core watchlist (QTUM, IONQ, NVDA,
+AMD, SPY, QQQ) per strategy sizing (2% default, 10% cap, semis ≤40%).
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
