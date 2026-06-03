@@ -15,6 +15,209 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-03 Pre-Market
+
+**Session:** Pre-market (sync at 06:02 ET; market closed; next open 09:30 ET).
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/clock)**:
+- Equity: $100,000.00 | Last equity: $100,000.00 | Cash: $100,000.00
+- Buying power: $200,000.00 | Long market value: $0.00
+- Open positions: **none** | Working orders: not pulled this run
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0
+- Clock: `is_open: false`; next open **2026-06-03 09:30 ET**, next close 16:00 ET
+- **13th consecutive all-cash session.** Since 5/12 inception:
+  Dexter 0.00% vs SPY +2.86% ⇒ **−2.86% cumulative**.
+
+**Tape (carried forward from 6/2 Alpaca IEX 1Day bars; pre-market quotes
+not pulled — web research used for sentiment color only):**
+| Symbol | 6/2 Close | 1-day Δ | Notes |
+|---|---|---|---|
+| SPY  | 759.28 | +0.11% | ATH close; futures marginally lower overnight on Iran headlines |
+| QQQ  | 745.02 | +0.33% | ATH close |
+| NVDA | 223.06 | −0.61% | Gapped ATH $232 then faded |
+| AMD  | 515.04 | +0.98% | +130% YTD; RSI overbought |
+| QTUM | 168.09 | **+3.26%** | Quantum theme leader; entry zone blown out |
+| IONQ |  70.33 | +1.51% | Continues grinding higher; P/S ~109 |
+| RGTI |  26.02 | +1.50% | Reclaimed 5/28 spike high |
+| PLTR | 152.32 | **−5.18%** | Gave back Fri Dell pop |
+| NBIS | 262.30 | −0.83% | Still extending |
+
+**Market Conditions:**
+- **Today's tier-1 print: ISM Services PMI (May) at 10:00 ET.** April
+  was 53.6 (modest pullback from 54.0); new orders weakened; prices
+  index 70.7 (multi-year high — stagflation watch); employment in
+  contraction 2nd month. Polymarket-style implied distribution is
+  diffuse (~47% across mid-40s to mid-50s) → real two-sided risk.
+  Strategy blackout: **no new entries 9:30–10:30 ET**.
+- **Overnight geopolitical re-escalation:**
+  - Senior Iranian military officer said return to hostilities with
+    the US "appears inevitable"; Iran still considering the latest US
+    draft, no response yet.
+  - Israel/Hezbollah clashed overnight despite Trump reportedly
+    securing a halt after a phone call with Netanyahu.
+  - Safe-haven bid: gold futures +1.27% to $4,563.70/oz, silver +1.84%
+    to $76.64/oz.
+- **Futures:** index futures marginally lower per overnight reports;
+  no tape-bomb-level gap.
+- **Forward calendar:**
+  - **Wed 6/3 10:00 ET:** ISM Services PMI (May) — blackout 9:30–10:30
+  - **Fri 6/5 08:30 ET:** May NFP — pre-print blackout
+  - **Tue 6/10 08:30 ET:** May CPI — pre-print blackout
+  - **Tue/Wed 6/16–17:** FOMC (Warsh's first presser per prior memo).
+    Fed speaker blackout begins midnight Sat 6/6.
+
+**Key News (watchlist, refreshed via web research):**
+- **NVDA — ~$222 area, market cap $5.48T.** 61 analyst average PT
+  $296.81 (Strong Buy; +33% from current). COMPUTEX tailwind
+  continues; Vera Rubin custom CPU for agentic AI; commitment to
+  return >50% of FCF to shareholders. FY26 revenue $215.94B (+65% y/y).
+  Entry embargo cleared (next earnings 8/26). $215–225 entry in range.
+- **AMD — ~$510 area, +130% YTD.** Barclays raised PT to $665 on 6/1
+  (street high; ~30% upside from $510). Q1 2026: $10.25B (+38% y/y);
+  data center $5.8B (+57%); CEO Su raised TAM forecast to >$120B
+  growing 35%+/yr by 2030. **Caveats flagged in news flow: RSI
+  overbought, insider sales.** **HOLD OFF — extended** vs $470–480 zone.
+- **IONQ — ~$70 area.** Q1 rev $64.7M (+755% y/y); FY26 guide $260–270M;
+  RPO $470M (+554% y/y); $39M Space Development Agency contract;
+  Missile Defense Agency SHIELD IDIQ vehicle selected; **SkyWater
+  $1.8B merger shareholder-approved**. Cash $3.1B — longest runway in
+  the quantum cohort. **But P/S ratio ~109** flagged as "historically
+  expensive at early commercialization." Still excluded from $2B LOI
+  list — relative negative vs RGTI/QBTS. **HOLD OFF** vs $50–52 trigger.
+- **QTUM ETF — $168.09 (6/2).** Recent holdings as of 6/2 include
+  D-Wave, Quantum Computing, Rigetti, IonQ. 6-mo net flows $1.08B;
+  1-yr $2.34B. Theme still hot; **entry zone $158–160 blown out.**
+  Wait for retrace to ~$160 or open a half-tranche if conviction high.
+- **SPY/QQQ — fresh ATH closes 6/2; mild risk-off pre-market on Iran
+  headlines but no tape-bomb.** SPY ~$759, QQQ ~$745 both still inside
+  the 5/30 starter zones ($754–760 / $740–746). Retail SPY sentiment
+  'bullish', QQQ 'neutral'.
+- **PLTR — $152.32 (−5.18% on 6/2).** Lost 5-day momentum; trigger at
+  $140–145 retrace zone unchanged.
+- **NBIS — $262.30.** Still extending; wait for $210–215 settle.
+- **RGTI — $26.02.** Direct ~$100M grantee; quantum-theme bid intact.
+  3% starter still in $25–27 range.
+
+**Pre-market movers (broad-tape color, not actionable for our names):**
+- ABVX −29% (Phase 3 cancer-cases safety overhang).
+- JZ −43% (despite AI-partnership announcement).
+- DXST +113% (chairman 90.5% voting-stake disclosure).
+- SBFM +37% (unusual volume).
+None on our watchlist; flagged only as broad-tape biotech/micro-cap
+volatility signal.
+
+**Trades:** None — pre-market run is draft-only by protocol.
+
+**Trade ideas drafted for the 6/3 session** (aggressive mode per
+strategy.md: starter 5–10%, high-conviction 15–25%, single-name cap
+25%, cash floor 5–10%, small-caps 3–7%; −8% hard stop / 10% trailing
+stop on all). **All entries must respect the 9:30–10:30 ET ISM
+Services blackout — stage MOO or wait until ≥10:30.**
+
+```
+1) SPY — long starter (lowest binary risk, highest conviction)
+   Thesis: Stop the 13-session cash drag. SPY closed at ATH 6/2; only
+           mild pre-market dip on Iran headlines. AI/macro tape
+           constructive; ISM Services is two-sided risk but not a
+           known hot/cold tilt. Index = no single-name binary.
+   Catalyst: AI broad rally intact; entry levels still in 5/30 zone.
+   Entry: ~$754–760 | Stop: −8% (~$697) | Target: trend-follow, 10% trail
+   Sizing options:
+     - Conservative: MOO 5% half-starter; add 5% post-ISM if tape green
+     - Aggressive:  MOO 8% full starter
+   Size: 5–8% (~$5,000–8,000) | Confidence: 4/5
+
+2) QQQ — long starter (tech/AI tilt)
+   Thesis: Captures NVDA/AMD/MSFT capex without single-name risk.
+           Same ISM Services blackout applies.
+   Entry: ~$740–746 | Stop: −8% (~$680) | Target: trend-follow, 10% trail
+   Size: 6–7% (~$6,000–7,000) | Confidence: 4/5
+
+3) NVDA — long starter (high-quality AI core)
+   Thesis: Vera CPU + ~$200B CPU TAM + 61-analyst PT $296.81. 6/2's
+           gap-and-fade gave a wider $215–225 entry zone vs the $208–214
+           we had on 5/29. No near-term earnings binary (8/26 next).
+   Catalyst: COMPUTEX/Vera ramp; AI capex cycle.
+   Entry: $215–225 (in range at $223 close) | Stop: −8% (~$205)
+   Target: $240, then trail | Size: 5–6% (~$5,000–6,000)
+   Confidence: 4/5
+
+4) QTUM — long, HALF starter only (entry zone blown out)
+   Thesis: Theme still hot but $168.09 close is ~5% above the prior
+           $158–160 zone; do not chase the full 5%. Open 2.5%
+           half-tranche; reserve the other half for a 3–5% pullback
+           toward ~$160. Equal-weight basket caps single-name risk.
+   Entry: half ~$166–168 OR wait full size on retrace to ~$160
+   Stop: −8% from blended | Target: open-ended basket hold, trim 50% at +30%
+   Size: 2.5–5% (~$2,500–5,000) | Confidence: 3/5
+
+5) RGTI — long small starter (small-cap quantum complement)
+   Thesis: Direct ~$100M grantee + federal equity stake; complements
+           QTUM basket; 5/30 entry zone $24.50–26 still intact at $26.02
+           close. Highest single-name leverage on the $2B funding wave.
+   Downside (explicit): pre-/early-revenue, dilution, 30–50% draw-down
+           potential; hence small size.
+   Entry: ~$25–27 | Stop: −8% (~$23.4) | Target: asymmetric, trim spikes
+   Size: 3% (~$3,000 ≈ 115 shares) | Confidence: 2/5
+
+6) AMD — HOLD OFF (do not chase)
+   Reason: +130% YTD; RSI overbought; insider sales flagged; ~58x fwd
+           rich. Wait for $470–480 pullback (or a fresh AMD-specific
+           catalyst).
+
+7) IONQ — HOLD OFF
+   Reason: $70 vs $50–52 trigger; P/S ~109 historically rich; left off
+           $2B LOI list. SkyWater merger approval is incremental, not
+           a fresh trigger. Wait for pullback or LOI add-on.
+
+8) PLTR — HOLD OFF
+   Reason: $152.32 vs $140–145 retrace trigger. Lost momentum after
+           5/29 spike; let it base.
+
+9) NBIS — HOLD OFF
+   Reason: Still ~$262 vs $210–215 settle target; volatile.
+```
+
+**If all five active ideas fire at midpoints** (SPY 6.5% / QQQ 6.5% /
+NVDA 5.5% / QTUM 2.5–5% / RGTI 3%): **~24–27% deployed / ~73–76% cash**
+— well inside the 5–10% cash floor with room to scale. Semis (NVDA 5.5%)
++ quantum (QTUM 2.5–5% + RGTI 3%) = ~11–13.5%, far under the 25%
+single-name and ~40% sector caps.
+
+**ClickUp notification: NOT sent.** Bar-by-bar check vs strategy.md
+urgent-catalyst criteria:
+- *Earnings beat/miss on a held name*: we hold none.
+- *Halted stock we own*: we own none.
+- *Macro shock*: ISM Services is a *scheduled* tier-2 print, not a
+  shock. Iran/Israel headlines are concerning but Tuesday's tape was
+  only −0.14% to −0.25% — not a tape-bomb. Gold +1.27% notable but
+  short of "shock."
+- *Gap >5% on watchlist*: no watchlist name has a fresh overnight gap
+  >5%. The 6/2 closes are already in tape.
+None clears the bar.
+
+**Key thesis notes / lesson**:
+- 13 sessions in cash. The opportunity cost is now the dominant P&L
+  item on the book (−2.86 pp vs SPY since 5/12). The 5/30 drafts had
+  already passed — and QTUM specifically blew out the entry zone
+  (5/30 plan: $158–160 → 6/2 close $168 = ~5% missed).
+- SPY/QQQ index zones are **still** intact at 6/3 pre-market prices.
+  That means today is the cheapest opportunity to convert the lowest-
+  binary-risk drafts into actual orders before the cumulative drag
+  grows further.
+- The right execution path today is: stage SPY/QQQ MOO (or wait
+  post-10:00 ET ISM print if cautious), then add NVDA and the
+  small-cap quantum complements once the print clears. AMD/IONQ
+  remain HOLD OFF on price.
+
+**Next session unblocker:**
+- Convert at least SPY/QQQ starters into live orders during the
+  intraday session, respecting the 10:00 ET ISM blackout. Re-mark
+  watchlist on Alpaca consolidated 1Day bars at EOD and write the
+  EOD log.
+
+---
+
 ### 2026-06-02 End-of-Day
 
 **Session:** Post-close summary (sync at 15:07 ET, ~53 min before 16:00 ET close).
