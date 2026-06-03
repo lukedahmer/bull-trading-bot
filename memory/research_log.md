@@ -15,6 +15,70 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-03 End-of-Day
+
+**Session:** Post-close summary (sync after 16:00 ET close).
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders?status=filled)**:
+- Equity: $100,000.00 | Last equity: $100,000.00 | Cash: $100,000.00
+- Buying power: $200,000.00 | Long market value: $0.00
+- Open positions: **none** | Filled orders today: **none**
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0.
+
+**Performance:**
+- Dexter today: **0.00%** (flat, all cash, 13th consecutive cash close)
+- SPY today: **−0.52%** (~$759.57 prior close → ~$755.66 today close, per web)
+- Today vs SPY: **+0.52 pp** (cash beat the down tape)
+- Since 5/12 inception: Dexter 0.00% vs SPY **+2.37%** (738.19 → 755.66)
+  ⇒ **−2.37% cumulative** (gap narrowed ~49 bps from −2.86% Tuesday).
+
+**Market Conditions:**
+- SPY closed modestly red (−0.52%) — first material down day for the
+  index since the recent ATH run; trading range ~$755.41–$760.29 per
+  web data. No tape-bomb, no halts; a textbook digestion day after
+  the 6/2 ATH close.
+- Today's tier-1 print (ISM Services PMI for May, 10:00 ET) was the
+  scheduled catalyst; intraday weakness suggests the market read it
+  on the softer side or de-risked into the print. We did not capture
+  the print value directly in this sync.
+- Geopolitics: Iran/Israel headlines remained an overhang into the
+  session per the pre-market log; gold/silver had a safe-haven bid
+  overnight (gold +1.27%, silver +1.84%).
+- Forward calendar unchanged: Fri 6/5 NFP, Tue 6/10 CPI, 6/16–17 FOMC.
+
+**Trades today:** **None.** The pre-market drafted starter basket
+(SPY 5–8% / QQQ 6–7% / NVDA 5–6% / QTUM 2.5–5% / RGTI 3%) was **not
+staged** during the intraday session — no orders placed, no fills.
+13th consecutive cash close.
+
+**Key observations:**
+- **Cash drag arithmetic flipped today.** A down SPY (−0.52%) means
+  staying flat *gained* ~52 bps of relative performance vs the
+  benchmark on the day. Inception gap narrowed from −2.86% to −2.37%
+  — the first time the gap has compressed materially in two weeks.
+- This is a one-day reprieve, not a vindication: the strategy is
+  long-only growth/index, so a multi-day SPY drawdown would help our
+  *relative* P&L while still missing the absolute-return mandate.
+- The pre-market entry zones (SPY $754–760, QQQ $740–746) **remain
+  valid** at the EOD print — SPY $755.66 is still in-zone, slightly
+  better than this morning. No new structural reason to defer further.
+- AMD / IONQ / PLTR / NBIS HOLD-OFF prices unchanged (no new catalysts
+  observed this sync; intraday tape not pulled for individual names).
+
+**Watchlist updates:** No fresh price marks this sync (intraday Alpaca
+1Day bars not pulled). Tape will be re-marked at 6/4 pre-market.
+
+**ClickUp notification:** **Sent.** Standard EOD ping per protocol
+(daily summary line, not an urgent-catalyst alert).
+
+**Next session unblocker:**
+- Thu 6/4 pre-market: re-mark watchlist on consolidated 1Day bars,
+  confirm whether SPY/QQQ entry zones are still intact, and frame the
+  execute/defer decision again. 14 cash sessions is the new
+  baseline if Thursday closes flat without orders.
+
+---
+
 ### 2026-06-03 Pre-Market
 
 **Session:** Pre-market (sync at 06:02 ET; market closed; next open 09:30 ET).

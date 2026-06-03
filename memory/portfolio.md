@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-03 pre-market (Alpaca /v2/account + /v2/positions + /v2/clock)
+Last Updated: 2026-06-03 end-of-day (Alpaca /v2/account + /v2/positions + /v2/orders)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -9,20 +9,20 @@ Last Updated: 2026-06-03 pre-market (Alpaca /v2/account + /v2/positions + /v2/cl
 - Buying Power: $200,000.00 (Reg-T 2x; not used per strategy)
 - Long Market Value: $0.00
 - Last Equity (prior close, 6/2): $100,000.00
-- Today's P/L: n/a — pre-market, market closed
+- Today's P/L: **0.00%** (flat, all cash)
+- SPY today: **−0.52%** (~$759.57 → ~$755.66 per web close)
+- Today vs SPY: **+0.52 pp** (cash beat a down tape)
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
-- Market clock at sync: `is_open: false` (06:02 ET 2026-06-03);
-  next open **09:30 ET 2026-06-03**, next close 16:00 ET 2026-06-03.
-- Benchmark (SPY) prior close (6/2 near-close, Alpaca IEX 1Day bar
-  at 15:07 ET): **$759.28** (per 6/2 EOD memo).
-- Dexter Return (since 5/12 inception): 0.00% | SPY same window:
-  **+2.86%** (738.19 → 759.28) | Cumulative vs SPY: **−2.86%**
-- Cash drag note: 100% cash entering the **13th consecutive session**.
-  Drafted starter ideas from 5/30 (SPY 8% / QQQ 7% / QTUM 5% / NVDA 6%
-  / RGTI 3%) were **not executed** at the 6/1 open. Re-drafted at 6/3
-  pre-market prices below (see research_log.md 2026-06-03).
+- Filled orders today: **none**
+- Benchmark (SPY) inception window: 738.19 (5/12) → ~755.66 (6/3 close)
+  = **+2.37%**. Dexter same window: 0.00%. **Cumulative vs SPY: −2.37%**
+  (gap narrowed ~49 bps today as cash outperformed a down SPY).
+- Cash drag note: 100% cash through the **13th consecutive session
+  close**. Pre-market 6/3 drafted starters (SPY 5–8% / QQQ 6–7% / NVDA
+  5–6% / QTUM 2.5–5% / RGTI 3%) were **not executed** during the 6/3
+  intraday session — no orders hit the book.
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -61,7 +61,16 @@ Pre-market color via web research is noted in research_log.md 2026-06-03.
 - Deploy in tranches, not all at once; respect −8% hard stop and 10% trail.
 
 ## Notes from Last Session
-- **Pre-market 2026-06-03 (this run):** Alpaca confirms still 100% cash,
+- **EOD 2026-06-03 (this run):** Alpaca confirms 100% cash through the
+  close (equity $100,000.00, last_equity $100,000.00, no positions, no
+  filled orders today). SPY closed ~**−0.52%** at ~$755.66 (per web
+  close vs ~$759.57 prior). Dexter flat → **+0.52 pp** relative to SPY
+  on the day; inception gap narrowed to **−2.37%** (was −2.86% Tue).
+  The pre-market drafted starter basket did **not** execute during the
+  intraday session — no orders staged or filled. 13th consecutive
+  cash close. ISM Services PMI print was today's tier-1 macro event
+  (no trades placed around it per the 9:30–10:30 blackout).
+- **Pre-market 2026-06-03:** Alpaca confirms still 100% cash,
   no positions (ACTIVE PA39FINFSDLL, PDT false, day-trade count 0).
   Entering the **13th consecutive all-cash session**; inception gap to
   SPY −2.86%. Today's gating event: **ISM Services PMI 10:00 ET**
@@ -78,13 +87,14 @@ Pre-market color via web research is noted in research_log.md 2026-06-03.
   (was −2.46% Friday).
 - **Pre-market 2026-05-30:** weekend prep for Mon 6/1; drafted starter
   ideas SPY 8% / QQQ 7% / QTUM 5% / NVDA 6% / RGTI 3%. No execution.
-- Action items for today (Wed 6/3, intraday session):
-  1. **Decide on execution.** 13 sessions cash drag = −2.86 pp vs SPY.
-     Stop the drag with SPY/QQQ index starters either MOO or after
-     10:00 ET ISM Services print (respect 30-min blackout 9:30–10:30).
-  2. **No new entries** 9:30–10:30 ET (ISM Services pre-print blackout).
-  3. **Fri 6/5 NFP** — pre-print blackout 08:00–09:00 ET. CPI Tue 6/10.
+- Action items for next session (Thu 6/4 pre-market):
+  1. **Decide on execution — again.** Cash drag now −2.37 pp vs SPY
+     across 13 cash sessions. SPY closed ~$755.66 (still inside the
+     $754–760 starter zone). Re-evaluate whether to stage MOO or
+     wait for additional confirmation; document any further deferral.
+  2. **No new entries** 08:00–09:00 ET Fri 6/5 (NFP pre-print blackout).
+  3. **CPI Tue 6/10 08:30 ET** — pre-print blackout 08:00–09:00 ET.
   4. **FOMC 6/16–17** (Warsh's first presser) — Fed speaker blackout
      begins midnight Sat 6/6.
   5. Watch Iran/Israel headline flow — if a tape-bomb hits (oil >$100,
-     SPY -2%+, halt), ClickUp ping. As of this run, not at that bar.
+     SPY -2%+, halt), ClickUp ping. Not at that bar today (SPY −0.52%).
