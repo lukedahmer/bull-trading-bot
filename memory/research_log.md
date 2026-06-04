@@ -4,6 +4,34 @@ Newest entries first.
 
 ---
 
+## 2026-06-04 — Market open (no trades placed)
+
+**Session:** Intraday — market just opened.
+
+**Account sync (Alpaca):**
+- Equity: $100,000 · Cash: $100,000 · Buying power: $400,000
+- Status: ACTIVE · 0 open positions
+
+**Trade ideas reviewed:** None. `research_log.md` contains no pending
+trade ideas — the prior (2026-05-19) pre-market session was blocked
+before any ideas were drafted, and per strategy ("only verified facts
+belong in this log") no fabricated ideas exist to act on.
+
+**Actions taken:**
+- Pulled Alpaca `/v2/account` and `/v2/positions` — both succeeded.
+- Synced `portfolio.md` with the live account snapshot.
+- **No orders placed** — no qualifying trade ideas existed to evaluate
+  against the strategy checklist.
+- **No stop-loss sweep needed** — zero open positions, so no -8% hard
+  stops to enforce.
+- No ClickUp ping — no trade was placed and no stop loss triggered.
+
+**Next session:** Run the pre-market research workflow (Perplexity
+sonar-pro on watchlist QTUM, IONQ, NVDA, AMD, SPY, QQQ + macro) to draft
+trade ideas before the next intraday session can act.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
