@@ -15,6 +15,226 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-05 Pre-Market
+
+**Session:** Pre-market (sync at 06:05 ET; market closed; next open
+2026-06-05 09:30 ET per Alpaca `/v2/clock`).
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders):**
+- Equity: $100,000.00 | Last equity: $100,000.00 | Cash: $100,000.00
+- Buying power: $400,000.00 (intraday 4x) | Reg-T: $200,000.00
+- Long market value: $0.00 | Short market value: $0.00
+- Open positions: **none** | Recent orders (last 20, all statuses): **none**
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0
+- **15th consecutive all-cash session.** The 6/4 intraday execute-or-document
+  call was answered with a third passive defer; the basket was not staged.
+
+**Tape (Alpaca IEX latest 1-min bars, 6/4 close 16:00 ET):**
+| Symbol | 6/4 IEX print | Δ vs 6/3 | Entry zone | Status |
+|---|---|---|---|---|
+| SPY  | 756.16 | +0.36% | $754–760 | **In zone** |
+| QQQ  | 738.60 | −0.32% | $740–746 | At/just-below zone (improved) |
+| NVDA | 217.83 | +1.33% | $215–225 | **In zone** (pre-mkt ~$212 / −1.25%) |
+| AMD  | 518.89 | **−2.85%** | $470–480 | Pulled in; pre-mkt $498–520 (−4%) — still above zone |
+| QTUM | 166.49 | −0.75% | $158–160 | Just above zone |
+| IONQ |  64.36 | **−5.92%** | $50–52 | Big leg lower; still above trigger |
+| RGTI |  23.58 | −0.55% | $25–27 | Below zone (fresh entry) |
+| PLTR | 141.68 | +0.11% | $140–145 | **In zone** |
+| NBIS | 259.66 | +4.10% | $210–215 | Above zone — HOLD OFF |
+| AVGO | 417.58 | (post-earn) | — | Not on watchlist; sector tone setter |
+_Pre-market 6/5: Alpaca IEX quote latencies wide pre-04:00 ET; web color used._
+
+**Market Conditions:**
+- US session 6/4 was a chip-led wobble. AVGO **−15%** post-print on
+  AI-revenue guidance ($16B Q3 vs ~$17.2B consensus) — the headline
+  miss was the *rate of acceleration*, not the absolute number
+  (~+200% YoY). Spillover hit AMD (−2.85% cash, −4% pre-mkt), MU,
+  and clipped NVDA's pre-market today (~−1.25%). CRWD −9% on
+  in-line earnings + 4-for-1 split.
+- IONQ −5.92% on the day stands out — the strategy's "watchlist gap
+  >5%" line. The move was a single regular-hours session leg, not
+  an overnight gap, and IONQ is not held. **Below the ping threshold**
+  but worth noting: P/S ~109 + Quantinuum listing rotation are
+  driving the unwind. The $50–52 trigger zone is finally within
+  reach of a second leg.
+- US-Iran ceasefire holding but fragile; futures weak into NFP.
+- Risk tone: Dow record Thu, SPX +0.41%, Nasdaq −0.09% — bifurcated.
+
+**Today's calendar (Fri 6/5):**
+- **08:30 ET — May NFP** (Bloomberg consensus 85K, Dow Jones 80K,
+  Goldman 60K; prior 115K; U/R est 4.3% unch). **ADP came in hot at
+  122K** on Wed 6/3 (vs 110K est) — sets up an upside surprise risk
+  vs the dovish BLS consensus.
+- **08:30 ET — Hourly Earnings, Unemployment Rate** (same release).
+- **Strategy-mandated entry blackout: 08:00–09:00 ET.** No orders staged.
+- **Fed speaker blackout begins 00:00 ET Sat 6/6** (FOMC 6/16–17,
+  Warsh's first presser).
+- Tue 6/10 08:30 ET — May CPI; pre-print blackout 08:00–09:00.
+
+**Key News (watchlist, refreshed via web research this session):**
+
+- **NVDA — $217.83 cash close (+1.33% on 6/4); ~$212 pre-mkt (−1.25%).**
+  Carry-through from the AVGO sector reprice. Quarterly **$0.250 ex-div
+  was 6/4** (immaterial). Other items: RTX Spark laptop chip launch
+  (edge-AI offload); **Senate Banking hearing 6/11** (Warren invitation
+  to Jensen re: China sales) — political headline risk into next week.
+  Kumo AI ($400M pAI startup) bolt-on closed. Consensus Buy, avg PT
+  ~$298 (+~37%). Tape **back in the $215–225 zone** at cash close;
+  pre-market wobble keeps the entry quality.
+
+- **AMD — $518.89 cash (−2.85%); pre-mkt $498–520 (−4%).** Sector
+  collateral damage from AVGO; nothing company-specific. Strong Buy
+  consensus (41 buys / 0 sells). Q1 print still the dominant
+  fundamentals story. Pre-market lower bound is closer to but still
+  ~4–5% above the $470–480 reset zone — **HOLD OFF** until either
+  $470s prints or thesis catalyst.
+
+- **IONQ — $64.36 (−5.92%).** Quantum-basket rotation; Quantinuum IPO
+  (Honeywell majority, priced 6/3) continues to siphon. P/S still ~109.
+  Q1 fundamentals unchanged (rev +755% YoY, FY26 guide $260–270M,
+  RPO +554% to $470M, SkyWater merger approved). Excluded from $2B
+  CHIPS Act LOI list. **HOLD OFF** vs $50–52 trigger — but the gap
+  to the trigger has closed materially.
+
+- **QTUM ETF — $166.49 (−0.75%).** Theme +53% YTD (Yahoo) / +69% YTD
+  per prior week's basket-index report. Top weights still rotated
+  (MU 3.35%, MediaTek 2.61%, ARM 2.47%). Just above $158–160 zone
+  again. **Half-tranche $166–168** or wait for full retrace.
+
+- **RGTI — $23.58 (−0.55%).** Sits below the $25–27 zone. Direct
+  $100M CHIPS LOI + 108-qubit Cepheus-1-108Q now GA on QCS + Braket
+  + Azure + qBraid; story unchanged from 6/4. **Fresh small-starter
+  candidate** (3% cap, high vol).
+
+- **PLTR — $141.68 (+0.11%).** Held the $140–145 retrace zone
+  through a chop session — still **in trigger**. AI/data analytics
+  + USG thesis intact.
+
+- **SPY/QQQ — $756.16 / $738.60.** SPY held in zone; QQQ leaked back
+  to the lower bound. Sell-side YE 2026 SPX targets 7,100–7,700.
+  Pre-NFP futures weak.
+
+- **NBIS — $259.66 (+4.10%).** Bounced; further above $210–215 settle
+  zone. **HOLD OFF.**
+
+- **AVGO (sector tone setter, not on watchlist):** −15% post Q2 FY26.
+  Q3 AI-chip guide $16B vs ~$17.2B consensus. Q3 total rev guide
+  $29.4B vs $28.53B. The *deceleration of the deceleration* is the
+  read — not a thesis break for AI capex, but a multiple compressor
+  for high-beta AI names through next week.
+
+**Urgent catalyst check (per strategy §7):**
+- Earnings beat/miss on a **held** name? — No holdings. N/A.
+- Halted stock we **own**? — No holdings. N/A.
+- Macro shock? — None overnight. NFP at 08:30 ET is *scheduled* and
+  the strategy already gates it; consensus-vs-print is the risk we'll
+  see at 08:30, not a pre-print shock.
+- Gap >5% on watchlist? — IONQ −5.92% on 6/4 (regular session, not
+  fresh overnight gap; not held). **Sub-ping under a strict reading
+  of "fresh overnight gap on watchlist."**
+→ **No ClickUp ping this session.**
+
+**Trade ideas drafted for the 6/5 intraday session** (aggressive
+mode per strategy.md: starter 5–10%, high conviction 15–25%,
+single-name cap 25%, cash floor 5–10%, small-caps 3–7%; −8% hard
+stop / 10% trailing on all). **No entries 08:00–09:00 ET (NFP
+blackout).** Earliest action window: 09:30 open (post-print
+digestion), preferably 09:45+ after MOO settles.
+
+```
+1) SPY — long starter (highest-conviction beta sleeve)
+   Thesis: 15 sessions of cash drag is the dominant risk now. SPY is
+           inside $754–760 and the NFP gate clears at 09:30. A
+           5% half-starter at 09:45 + 3% add at 10:30 if green is
+           the cleanest way to end the cash streak.
+   Catalyst (today): NFP @ 08:30. In-line/dovish (60–85K, U/R 4.3%)
+                     = bullish for SPY → execute. Hot print
+                     (>110K) = yields up, defer or trim sizing.
+   Entry: $754–760 (post-NFP) | Stop: −8% (~$695) | Target: trend-follow, 10% trail
+   Size: 5–8% (~$5,000–8,000) | Confidence: 4/5
+
+2) QQQ — long starter (tech/AI tilt sleeve)
+   Thesis: AVGO sector compression has improved QQQ entry quality
+           (~$738 vs $740–746 zone). Captures NVDA/AMD/MSFT capex
+           tape without single-name reprice risk.
+   Entry: $738–744 (post-NFP) | Stop: −8% (~$681) | Target: trend-follow, 10% trail
+   Size: 6–7% (~$6,000–7,000) | Confidence: 4/5
+
+3) NVDA — long starter (single-name AI core)
+   Thesis: Pre-market $212 area is at/just-below the lower bound of
+           the $215–225 zone after the AVGO-driven chip wobble. The
+           AVGO read is a multiple compressor, not a thesis break.
+   Caveats: 6/11 Senate Banking hearing (China-sales overhang);
+            sector-wide AI-capex deceleration narrative is the new
+            tape risk through next CPI / FOMC.
+   Entry: $212–222 (scale in on the post-print) | Stop: −8% (~$195)
+   Target: $240, then trail | Size: 5–6% (~$5,000–6,000) | Confidence: 4/5
+
+4) QTUM — long, HALF starter
+   Thesis: Theme intact; basket equal-weight caps single-name risk
+           (vs IONQ's −5.92% reprice). Half-tranche at $166–168,
+           reserve the second half for a $160 retrace.
+   Entry: half ~$166–168 | Stop: −8% from blended | Target: open-ended
+   Size: 2.5–5% (~$2,500–5,000) | Confidence: 3/5
+
+5) RGTI — long small starter (small-cap quantum complement)
+   Thesis: $100M CHIPS LOI + Cepheus-1-108Q GA across major clouds;
+           tape below $25–27 zone improves entry. Highest single-name
+           leverage on the quantum funding wave.
+   Downside (explicit): pre-/early-revenue, dilution, 30–50% drawdown
+                        risk; small size + tight stop.
+   Entry: $23–25 | Stop: −8% (~$21.7) | Target: asymmetric, trim spikes
+   Size: 3% (~$3,000 ≈ 125 sh) | Confidence: 2/5
+
+6) PLTR — long small starter (still in trigger zone)
+   Thesis: Holds $140–145 retrace zone through a chop session.
+           Thesis (AI data analytics + USG primary) unchanged.
+   Downside: high multiple; another 5–10% leg lower if NFP hot.
+   Entry: $140–145 | Stop: −8% (~$130) | Target: $160 then trail
+   Size: 3–4% (~$3,000–4,000) | Confidence: 3/5
+
+7) AMD — HOLD OFF (still ~4–5% above $470–480 reset)
+   Watch pre-market $498 print; deepen only if cash session prints
+   $470s, otherwise wait. No company-specific thesis break.
+
+8) IONQ — HOLD OFF (vs $50–52 trigger; closing the gap)
+   Quantinuum rotation could push another leg lower — but P/S 109
+   needs the trigger before sizing in. Patient.
+
+9) NBIS — HOLD OFF (still ~21% above $210–215 zone after +4% bounce).
+```
+
+**Deployment math if all active ideas fire at midpoints**
+(SPY 6.5% + QQQ 6.5% + NVDA 5.5% + QTUM 3.75% + RGTI 3% + PLTR 3.5%):
+**~28.75% deployed / ~71% cash** — inside the 5–10% cash floor with
+plenty of room to scale on confirmation.
+
+Sector check: AI single-name (NVDA 5.5%) + quantum bucket (QTUM
+3.75% + RGTI 3%) + AI/USG (PLTR 3.5%) ≈ 15.75% thematic;
+SPY+QQQ ≈ 13% index beta. All under 25% single-name and ~40% sector caps.
+
+**Decision pressure:** 15th consecutive cash session. The 6/4
+log mandated either execute or document a hard reason for a
+third defer. The bot did neither. Today's NFP gate is a *legitimate*
+reason to wait until 09:30 — but post-print, the basket either
+executes (in-line/dovish print) or earns a fourth-defer paper trail
+(hot print + AVGO compression). The pattern of drift has to break.
+
+**ClickUp notification:** **Not sent.** No held-name earnings, no
+halts on holdings (no holdings), no overnight macro shock, no
+fresh overnight gap >5% on the watchlist. IONQ's −5.92% intraday
+on 6/4 is noted but does not meet the strict overnight-gap reading.
+
+**Next session unblocker:**
+- 08:30 ET — read NFP print + market reaction (yields, SPX futures,
+  dollar). Decision tree above keyed off the 80–85K consensus.
+- 09:30–09:45 ET — confirm 09:30 consolidated opens; stage SPY/QQQ
+  half-starters at 09:45 if tape is digesting cleanly.
+- Bias the day toward execution unless the print is a hot tail
+  (>110K) or futures break −1%+ pre-bell.
+
+---
+
 ### 2026-06-04 Pre-Market
 
 **Session:** Pre-market (sync at 06:05 ET; market closed; next open
