@@ -50,3 +50,16 @@ Target:
 Size (% equity):
 Confidence (1-5):
 ```
+
+## Logging cadence (added 2026-06-05 after Week 1 review)
+- Pre-market run **must** append at least one entry to research_log.md
+  every trading day, even when no trade is taken. A "no-trade, here's
+  why" note is valid and lets us back-test idea quality vs. realized
+  moves.
+- Weekly review (Friday post-close) **must** append to
+  weekly_review.md and refresh the watchlist table in portfolio.md
+  with explicit entry zones, stops, and targets — name-only
+  watchlists are not actionable on Monday.
+- If the account is 100% cash for two consecutive weeks, the Friday
+  review must call this out as a deployment gap, not a status
+  update.
