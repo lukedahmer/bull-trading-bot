@@ -4,6 +4,35 @@ Newest entries first.
 
 ---
 
+## 2026-06-05 — End of Day
+
+**Session:** Post-close summary (Friday).
+
+**Alpaca sync (live pull):**
+- Equity: $100,000.00 | Last equity: $100,000.00
+- Cash: $100,000.00 | Buying power: $400,000.00
+- Long market value: $0.00 | Positions: 0 | Filled orders today: 0
+- Account status: ACTIVE | Day-trade count: 0
+
+**Today's performance:**
+- Portfolio: **0.00%** (flat — fully in cash)
+- SPY benchmark: **-0.54%** (S&P 500 fell on chip-stock weakness; jobs data came in hot, fueling rate-cut repricing)
+- Relative: **+0.54% vs SPY** by being uninvested
+
+**Trades executed:** None.
+
+**Observation:** Account remains in its initial all-cash state; the
+strategy file is in place but no positions have ever been opened. The
+prior session (2026-05-19) was blocked on credentials — those are now
+present, so the next pre-market run can begin building the watchlist
+positions per strategy.md (2% sizing, 10% cash floor).
+
+**Next session:** Pre-market Monday 2026-06-08 — pull overnight news on
+QTUM, IONQ, NVDA, AMD; draft initial entry ideas; check FOMC/CPI/PPI
+calendar for the week.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
