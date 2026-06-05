@@ -15,6 +15,103 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-05 End-of-Day
+
+**Session:** EOD summary (Fri 6/5; market closing at 16:00 ET, snapshot
+taken ~15:09 ET, 51 min before the bell).
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders?status=filled):**
+- Equity: $100,000.00 | Last equity: $100,000.00 | **Day P/L: 0.00%**
+- Cash: $100,000.00 | Buying power: $400,000.00 (intraday 4x)
+- Long market value: $0.00 | Short market value: $0.00
+- Open positions: **none** | Filled orders today: **none**
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0
+- **15th consecutive all-cash session close.** The pre-market plan's
+  fourth-defer branch (hot NFP → no execution) is now the realized
+  outcome.
+
+**Tape (Alpaca daily 1-day bars / latest trades, 6/5 in-progress at snapshot):**
+| Symbol | 6/5 close (so far) | Δ vs 6/4 | Notes |
+|---|---|---|---|
+| SPY  | 738.42 | **−2.45%** | Low $738.33; latest trade $738.02 @ 15:08 ET. Round-tripped back to 5/12 inception print ($738.19). |
+| QQQ  | 708.75 | **−4.29%** | Tech/AI risk-off in size. |
+| NVDA | 205.96 | **−5.45%** | Sliced through the $215–225 starter zone; well below pre-mkt $212. |
+| AMD  | 470.12 | **−9.40%** | $470–480 reset zone printed at the lower bound. |
+| QTUM | 153.88 | **−7.58%** | Theme basket lower with the cohort. |
+| IONQ | 56.63  | **−12.01%** | Closing the $50–52 trigger gap. |
+| RGTI | 20.34  | **−13.74%** | Now well below the $23–25 zone. |
+| PLTR | 134.64 | **−4.97%** | Below the $140–145 trigger. |
+| NBIS | 223.51 | **−13.92%** | Approaching $210–215 settle. |
+_All marks from Alpaca data-API snapshot; intraday at 15:08 ET. Final
+4 PM consolidated print likely within ±0.3%._
+
+**Today's portfolio return vs SPY:**
+- Dexter: **0.00%** (flat — fully in cash all session)
+- SPY: **−2.45%** (Alpaca daily bar so far; web color reported a
+  smaller intraday level earlier in the session, but live Alpaca tape
+  is the authoritative read at close-of-day)
+- **Relative: +2.45% vs SPY** on the day
+- **Inception (5/12 → 6/5): Dexter 0.00% vs SPY +0.03% → cumulative
+  −0.03%.** The −2.43% inception gap carried in pre-market was
+  effectively erased — SPY round-tripped to the starting print on a
+  brutal red close.
+
+**Market Conditions (EOD read):**
+- May NFP came in **hot** at roughly double the 80–85K consensus
+  (web reports — "doubling the consensus estimate" + upward prior
+  revisions ~+93K combined). Hot labor print → bear-steepening
+  pressure on the curve → multiple compression on long-duration tech.
+- Chip cohort cratered: AVGO carryover from Thu's −15% guide miss
+  compounded by a fresh AI-capex-deceleration narrative. NVDA
+  −5.45%, AMD −9.40% (HSBC analyst flagging chip-price slide +
+  AI spend slowdown).
+- Quantum names lower with the theme: IONQ −12%, RGTI −14%,
+  QTUM (ETF) −7.6%. Quantinuum-IPO rotation continues.
+- Defensive rotation: consumer staples reportedly +2% on the day
+  as flows fled high-beta AI.
+
+**Trade activity (Alpaca /v2/orders?status=filled):**
+- **None.** No orders placed, staged, or filled today. The pre-market
+  decision tree's "hot NFP → defer + document fourth pass" branch
+  was the realized outcome. The 6/5 pre-market plan now closes as
+  the documented fourth defer.
+
+**Decision retrospective:**
+- The cash thesis got paid today — +245 bps vs SPY in a single session,
+  closing the inception gap from −2.43% to −0.03% in one tape.
+- The pre-market log was explicit that a hot print routed to defer.
+  The bot followed the rule. **However**, the broader pattern of 15
+  consecutive cash sessions is now reframed: the 6/4 EOD log called
+  this an "execute or document" inflection; today's deferral was
+  process-correct but the underlying multi-session drift remains the
+  real risk to manage on Monday.
+- The new mark-down across the watchlist is the best entry quality
+  observed since inception. Monday's pre-market needs fresh entry
+  zones (the prior $215–225 NVDA / $754–760 SPY zones are now stale).
+
+**Urgent catalyst check (per strategy §7):**
+- Earnings beat/miss on a **held** name? — No holdings. N/A.
+- Halted stock we **own**? — No holdings. N/A.
+- Macro shock? — Hot NFP was scheduled; no shock. SPY −2.45% is
+  inside normal one-σ for the realized vol regime, but is the worst
+  day in the inception window.
+- Gap >5% on **held** watchlist? — No holdings; multiple watchlist
+  names dropped >5% intraday but none are held.
+→ **ClickUp end-of-day ping sent** (per the standing EOD requirement).
+
+**Next session (Pre-market Mon 6/8):**
+1. **Refresh all entry zones** — Friday's reset rendered prior
+   triggers stale across the basket.
+2. **CPI Tue 6/10 08:30 ET** — pre-print blackout 08:00–09:00.
+3. **FOMC 6/16–17** — Fed speaker blackout begins 00:00 ET Sat 6/6.
+4. **Weekend headlines** — Iran/Israel, China chips response to the
+   AI-capex narrative, any Fed shadow-speak.
+5. **Execution discipline** — fifth session of cash drag enters
+   risk-of-drift territory even though today validated the call.
+   Pre-market 6/8 needs a clear go/no-go before the bell.
+
+---
+
 ### 2026-06-05 Pre-Market
 
 **Session:** Pre-market (sync at 06:05 ET; market closed; next open
