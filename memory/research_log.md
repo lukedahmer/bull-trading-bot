@@ -15,6 +15,237 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-06 Pre-Market (Sat 6/6 — for Mon 6/8 open)
+
+**Session:** Weekend pre-market prep. Alpaca `/v2/clock`:
+`is_open=false`, `next_open=2026-06-08T09:30:00-04:00`. Today (Sat 6/6)
+is also the start of the Fed pre-FOMC speaker blackout (midnight ET
+through the 6/16–17 meeting press conference).
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders?status=all):**
+- Equity: $100,000.00 | Cash: $100,000.00 | Buying power: $400,000.00 (intraday 4x)
+- Long market value: $0.00 | Short market value: $0.00
+- Open positions: **none** | Recent orders (last 20, all statuses): **none**
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0
+- **16th cash-session checkpoint** entering Monday's open (15 closes
+  realized through 6/5; pre-market 6/8 is the next decision point).
+
+**Tape carry-in (Alpaca /v2/stocks/snapshots, captured 06:08 ET Sat 6/6
+— last regular-session close = Fri 6/5, plus latest AH print):**
+
+| Symbol | 6/5 close | Prev 6/4 | Δ% | AH last | AH time (ET) |
+|---|---|---|---|---|---|
+| SPY  | 737.45 | 756.97 | **−2.58%** | 734.47 | 16:59 |
+| QQQ  | 705.38 | 740.50 | **−4.74%** | 701.02 | 16:58 |
+| NVDA | 205.17 | 218.64 | **−6.16%** | 204.37 | 16:12 |
+| AMD  | 466.46 | 523.07 | **−10.82%** | 464.98 | 16:53 |
+| QTUM | 152.81 | 166.49 | **−8.21%** | 152.81 | 15:59 |
+| IONQ | 56.77  | 65.65  | **−13.52%** | 55.95 | 16:54 |
+| RGTI | 20.65  | 24.15  | **−14.49%** | 20.65 | 15:59 |
+| PLTR | 135.60 | 141.68 | **−4.29%** | 134.44 | 16:55 |
+| NBIS | 227.91 | 259.66 | **−12.23%** | 221.00 | 16:20 |
+
+_AH prints across SPY/QQQ/NVDA/AMD/NBIS leaked another 30–300 bps weaker
+into the Friday close → carry-in is incrementally worse than the 4PM
+print, not better. No fresh weekend gap-up to fade._
+
+**Market Conditions (weekend read):**
+- **AVGO overhang carries into Monday.** Fri 6/5's SOX −5–6% session
+  was the worst single-day chip print since early 2025. AVGO Q3 AI
+  guide of $16B vs $17.2B consensus + unchanged FY AI target reset the
+  AI-capex tape lower; AMD −10.82% absorbed the bulk of cohort selling.
+- **NFP hot print (May)** doubled the 80–85K consensus and erased
+  near-term Fed-cut hopes; CME FedWatch shifted toward 0 cuts near-term
+  with non-zero hike risk by year-end. Bear-steepening pressure on the
+  curve compounded duration-tech multiple compression.
+- **Fed pre-FOMC blackout begins 00:00 ET Sat 6/6.** No Fed speakers
+  through 6/17 close. Removes a normal release-valve for hawkish/dovish
+  repricing this week — the data has to do the talking.
+- **CPI (May) Tue 6/10 08:30 ET.** Prediction markets price >4% YoY
+  vs Cleveland Fed nowcast 3.5% (per web color). Iran/Strait-of-Hormuz
+  oil pass-through (oil ~$115 earlier in cycle) is a known upside
+  surprise vector. Pre-print blackout 08:00–09:00 ET applies.
+- **Geopolitics:** Iran/Israel/Lebanon ceasefire fragile — Hezbollah
+  rejected terms ("absurd, humiliating"); Trump-brokered framework
+  still in flux. Oil cooled into the weekend but is the binary that
+  swings the CPI tape Tuesday.
+
+**Watchlist news scan (NVDA / AMD / QTUM / IONQ / SPY / QQQ):**
+- **NVDA — NEW OVERHANG.** Senator Warren formally invited Jensen
+  Huang to testify before Senate Banking Committee **Wed 6/11** on
+  China sales + US export controls. Adds political-headline risk on
+  top of the AVGO/AI-capex tape and the AI-overhype narrative
+  (analysts trimming AI exuberance estimates). Stock −6.16% Fri to
+  $205. Separate item: NVDA disclosed a $400M acquisition of Kumo AI
+  (predictive AI startup) — additive but second-order.
+- **AMD.** Worst cohort move Friday (−10.82% to $466.46). Still
+  +116% YTD; HSBC note flagged chip-price slide + AI-spend
+  deceleration as the proximate triggers. Q1 had been the earnings
+  cycle's standout (+19% pop on the print); Friday partially gives
+  that back. No fresh weekend-specific catalyst; carry-in is purely
+  AVGO contagion + macro.
+- **QTUM (Defiance Quantum ETF).** −8.21% to $152.81. YTD still
+  +~40% (came into Friday +54.2%; tax-base 2025 close $109.44). The
+  CHIPS-Act $2B letters-of-intent (5/21) to nine quantum names
+  ($100M each to D-Wave, Rigetti, Quantinuum, PsiQuantum, Atom
+  Computing, Infleqtion) remain the structural tailwind. ETF is
+  modified-equal-weight ~83–85 names, ~2% cap per name — diversified
+  exposure into the theme drawdown.
+- **IONQ.** −13.52% to $56.77 (AH $55.95). Inside the $50–52
+  trigger gap now. Q1 2026 was a blowout (revenue $64.7M, +755% YoY;
+  FY guide raised to $260–270M); $3.1B cash buffer. Zacks rates #4
+  (Sell) on valuation/run-up. The 6/5 drawdown is mostly theme beta,
+  not a name-specific catalyst.
+- **SPY.** −2.58% to $737.45 (AH $734.47). Round-tripped to the
+  5/12 inception print zone; now sitting just under it. Cash-drag
+  thesis was vindicated Friday; entry quality is the best since
+  inception, but CPI 6/10 is the next macro gate.
+- **QQQ.** −4.74% to $705.38 (AH $701.02). MACD turned negative
+  6/4. Tech-heavy index absorbing the chip selloff disproportionately.
+
+**Decision retrospective (pre-Monday):**
+- The pre-market 6/5 plan documented the "hot NFP → defer" branch and
+  followed it. The cash thesis paid +245 bps vs SPY in one session
+  and closed the inception gap from −2.43% to −0.03%.
+- Going into Monday, the choice is no longer "is the entry quality
+  good?" (it is — best of the inception window) but "do we want to
+  step in front of CPI Tuesday and a Senate semis-China hearing
+  Wednesday?" Both are real binary catalysts within 72 hours.
+- Aggressive-mode strategy says "deploy the majority of $100k; sitting
+  on cash defeats the purpose." 15 sessions of cash drift is now the
+  documented risk on the other side.
+
+**Trade ideas drafted (NOT placed — pre-market session):**
+
+```
+Ticker:      QQQ
+Direction:   long (starter)
+Thesis:      Diversified Nasdaq-100 entry after a −4.74% washout day;
+             AVGO-led selloff over-extended given AI structural demand
+             intact. Best entry quality in inception window.
+Catalyst:    CPI 6/10 (binary); FOMC 6/16–17 (Warsh debut)
+Entry zone:  $700–708 (AH already $701)
+Stop:        $648 (−8%)
+Target:      $755 (recover to pre-AVGO levels)
+Size:        5–7% ($5–7k)
+Confidence:  3/5  — high-quality entry but front-loaded into CPI risk
+```
+
+```
+Ticker:      SPY
+Direction:   long (starter, defensive vs QQQ)
+Thesis:      Broad-market entry after SPY round-tripped to inception
+             print; less chip-beta than QQQ. Pairs with QQQ as
+             diversifier on AI-capex re-rate scenario.
+Catalyst:    CPI 6/10; FOMC 6/16–17
+Entry zone:  $730–740
+Stop:        $678 (−8%)
+Target:      $760 (recover pre-NFP)
+Size:        5–7% ($5–7k)
+Confidence:  3/5
+```
+
+```
+Ticker:      QTUM
+Direction:   long (starter)
+Thesis:      Diversified quantum/AI-compute basket exposure post
+             −8.2% drawdown; CHIPS-Act $2B letters-of-intent (5/21)
+             structural tailwind unchanged. 2% per-name cap inside
+             the ETF limits single-name blowup risk vs IONQ/RGTI.
+Catalyst:    Quantum-name newsflow; CHIPS-Act formal awards (TBA)
+Entry zone:  $150–154
+Stop:        $140 (−8%)
+Target:      $168 (recover pre-Fri high; FY26 retest)
+Size:        4–5% ($4–5k)
+Confidence:  3/5
+```
+
+```
+Ticker:      AMD
+Direction:   long (starter — DEFER until post-CPI 6/10)
+Thesis:      Worst cohort drawdown −10.82%; AVGO-contagion overdone
+             at the AMD multiple given MI300/MI325 ramp and Lisa Su's
+             May earnings beat (+19% reaction). Still +116% YTD.
+Catalyst:    Post-CPI tape; potential semis-China political clarity
+             after the 6/11 Senate hearing
+Entry zone:  $455–475 (Fri close 466.46; AH 464.98)
+Stop:        $429 (−8%)
+Target:      $520 (recover to pre-AVGO Tue close)
+Size:        4–5% ($4–5k)
+Confidence:  3/5 (would be 4/5 absent CPI/Senate front-loading)
+```
+
+```
+Ticker:      NVDA
+Direction:   long (starter — DEFER until post-Senate hearing 6/11)
+Thesis:      Fundamentals intact (FY26 revenue $215.9B, +65%; Strong
+             Buy consensus, avg PT $298). BUT Warren / Senate Banking
+             6/11 testimony introduces near-term political headline
+             risk on top of AVGO contagion. Better entry post-hearing.
+Catalyst:    6/11 Senate Banking testimony (binary headline risk);
+             then any China-export framework update
+Entry zone:  $195–207 (decide post-hearing)
+Stop:        $188 (−8% from $204)
+Target:      $235 (recover pre-AVGO Wed close)
+Size:        5–6% ($5–6k)
+Confidence:  2/5 today; revisit 6/11 PM
+```
+
+```
+Ticker:      IONQ
+Direction:   long (speculative starter — DEFER, optional)
+Thesis:      Inside $50–52 trigger zone for first time. Q1 blowout
+             (+755% YoY) + $3.1B cash buffer. But Zacks #4 (Sell)
+             and theme-beta whipsaw risk into CPI argue for waiting.
+Catalyst:    256-qubit Cambridge system commercial milestones
+Entry zone:  $52–57
+Stop:        $52 (just below trigger floor)
+Target:      $70 (analyst avg PT $69.95)
+Size:        2–3% ($2–3k) max — per strategy small-cap 3–7% ceiling
+             and aggressive single-name vol
+Confidence:  2/5
+```
+
+**Monday 6/8 execution plan (NOT executing today — pre-market plan only):**
+1. Re-check Alpaca snapshots ~06:30 ET Monday for fresh gap context.
+2. **Preferred path:** Stage a half-size starter tranche
+   (QQQ 3% + SPY 3% + QTUM 2% = ~8% deployed) in the **10:00–10:30
+   ET window** (well clear of the 09:30–10:00 open volatility band
+   and CPI is still 24h out). Hold AMD/NVDA/IONQ until post-CPI
+   (Tue PM) and post-Senate (Wed PM) respectively.
+3. **Alternate path (full defer):** if Monday gaps another −2%+,
+   step aside and revisit Tuesday post-CPI. Drift discipline holds
+   only if the alternative is clearly worse, not as the default.
+4. **Hard blackouts honored:** 09:30–10:00 Mon (open vol);
+   08:00–09:00 Tue (CPI pre-print); 13:30–15:00 Tue if CPI surprise
+   triggers tape break; no new entries 30 min ahead of/at the
+   Wed 6/11 NVDA Senate hearing slot.
+
+**Urgent catalyst check (per strategy):**
+- Earnings beat/miss on a **held** name? — No holdings. N/A.
+- Halt on a **held** name? — No holdings. N/A.
+- Macro shock? — None over the weekend; CPI Tue and FOMC 6/16–17 are
+  scheduled (not shocks). Hezbollah/ceasefire is fluid but no oil
+  gap-up overnight (markets closed Sat).
+- Gap >5% overnight on a **held** name? — N/A. Watchlist already
+  digested the −5–14% Friday moves; AH prints leaked weaker but no
+  fresh new-information gap.
+- **NEW item to flag forward (not urgent today):** Warren / Huang
+  Senate Banking testimony Wed 6/11 — headline-risk catalyst for
+  NVDA and the broader US-export-control complex. Track but no ping
+  warranted (no NVDA position, and the event is 5 days out, not 24h).
+→ **No ClickUp ping sent** (no urgent catalyst per strategy rules).
+
+**Next session (Pre-market Mon 6/8, 06:00 ET):**
+1. Re-pull /v2/account + /v2/positions + /v2/snapshots.
+2. Reconfirm AH/pre-market levels vs Fri close for gap context.
+3. Final go/no-go on starter tranche (QQQ + SPY + QTUM ~8%).
+4. Re-check overnight headlines (China response to chip narrative,
+   Iran/Israel, any weekend Fed shadow-speak before blackout).
+5. CPI is Tue 6/10 08:30 ET — sizing must respect a 24-hour binary.
+
+---
+
 ### 2026-06-05 End-of-Day
 
 **Session:** EOD summary (Fri 6/5; market closing at 16:00 ET, snapshot
