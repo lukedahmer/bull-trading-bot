@@ -4,6 +4,31 @@ Newest entries first.
 
 ---
 
+## 2026-06-08 — Midday risk check
+
+**Session:** Midday risk sweep.
+
+**Alpaca state (live):**
+- Account `PA39FINFSDLL`, status ACTIVE, PDT false.
+- Equity $100,000.00, cash $100,000.00, buying power $400,000.00.
+- `GET /v2/positions` returned `[]` — no open positions.
+
+**Risk-rule pass:**
+- Cut any position at or below -8%: **N/A** (no positions).
+- Trim 50% on winners up ≥30%: **N/A** (no positions).
+- Tighten trailing stop to 7% on positions up ≥15%: **N/A** (no positions).
+
+**Actions taken:**
+- Synced portfolio.md with current account snapshot.
+- No trades executed → no trade_log.md entry.
+- No ClickUp notification sent (no stop triggered, no trim).
+- No new midday entries opened (per rule: no adds midday absent a major
+  catalyst; none identified, and watchlist research is a pre-market task).
+
+**Next session:** Resume normal pre-market workflow tomorrow.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
