@@ -4,6 +4,39 @@ Newest entries first.
 
 ---
 
+## 2026-06-08 06:36 UTC — Market-open session
+
+**Session:** Market-open run. Alpaca credentials now provided in the prompt.
+
+**Account snapshot (via `/v2/account`):**
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Status: ACTIVE
+- Pattern day trader: false
+
+**Positions (via `/v2/positions`):** None. Portfolio is 100% cash.
+
+**Stop-loss check:** Nothing to evaluate — no open positions.
+
+**Trade ideas reviewed:** None drafted in prior sessions (last research run on
+2026-05-19 was blocked on missing credentials, so no ideas exist to act on).
+Per the strategy doc, new entries should be sourced from a pre-market research
+pass (Perplexity sonar-pro on watchlist + macro), which has not yet been run
+with live data. Placing no trades this session.
+
+**Actions taken:**
+- Synced portfolio.md with live Alpaca snapshot.
+- No orders placed, no stops set, no ClickUp ping (no trade, no stop trigger,
+  no urgent catalyst on a held name since we hold nothing).
+
+**Next session unblocker:**
+Run a pre-market research pass (Perplexity) to populate trade ideas on the
+core watchlist (QTUM, IONQ, NVDA, AMD, SPY, QQQ) before the next market-open
+execution window.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
