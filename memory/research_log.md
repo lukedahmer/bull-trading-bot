@@ -15,6 +15,94 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-08 End-of-Day
+
+**Session:** EOD summary (Mon 6/8; market closed at 16:00 ET).
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders?status=filled):**
+- Equity: $100,000.00 | Last equity: $100,000.00 | **Day P/L: 0.00%**
+- Cash: $100,000.00 | Buying power: $400,000.00 (intraday 4x)
+- Long market value: $0.00 | Short market value: $0.00
+- Open positions: **none** | Filled orders today: **none**
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0
+- **16th consecutive all-cash session close.** The pre-market 6/6 starter
+  basket (QQQ 3% + SPY 3% + QTUM 2% in the 10:00–10:30 ET window) was
+  NOT staged or filled. Fifth documented passive defer.
+
+**Tape (web search, SPY close as primary read for cohort):**
+| Symbol | 6/8 close | Δ vs 6/5 close | Notes |
+|---|---|---|---|
+| SPY | 742.55 | **+0.68%** | Bounce off Friday's washout; intraday range 740.60–745.34; back in zone we wanted to fade |
+
+_Other watchlist names not re-pulled this sync; SPY +0.68% implies the
+cohort (QQQ/NVDA/AMD/QTUM/IONQ) likely traded sideways-to-modestly-up.
+Pre-market 6/9 will refresh full marks._
+
+**Today's portfolio return vs SPY:**
+- Dexter: **0.00%** (flat — fully in cash all session)
+- SPY: **+0.68%** ($737.55 prev close → $742.55, web-sourced)
+- **Relative: −0.68% vs SPY** on the day (cash drag on bounce day)
+- **Inception (5/12 → 6/8): Dexter 0.00% vs SPY +0.59% → cumulative
+  −0.59%.** The −0.03% gap into the weekend re-widened on Monday's
+  bounce; Friday's outperformance was effectively given back.
+
+**Market Conditions (EOD read):**
+- SPY +0.68% bounce after Friday's NFP-driven washout. Tape was
+  constructive enough to print the 10:00–10:30 ET starter window that
+  the 6/6 plan called for — but the plan was not pulled off the shelf.
+- Two binary catalysts inside 72 hours still gate the next decision:
+  CPI Tue 6/10 08:30 ET and the Warren/Huang Senate Banking hearing
+  Wed 6/11. Both are real, scheduled, asymmetric.
+- Fed speaker blackout remains in effect through the 6/16–17 FOMC
+  press conference; no Fed-speak release valve into the data prints.
+
+**Trade activity (Alpaca /v2/orders?status=filled):**
+- **None.** No orders placed, staged, or filled today. The pre-market
+  6/6 plan (QQQ 3% + SPY 3% + QTUM 2% starter in the 10:00–10:30 window)
+  was the documented path; nothing was executed against it. Fifth
+  passive defer in the inception window.
+
+**Decision retrospective:**
+- Friday's cash trade paid +245 bps vs SPY and erased the inception
+  underperformance. Monday's cash trade cost −68 bps vs SPY and
+  re-opened the gap to −0.59%. The pattern is now a stark wash —
+  cash drag on green days, cash gain on red days — the strategy is
+  effectively benchmarking SPY's volatility rather than its return.
+- The 6/6 weekend plan was explicit: "execute starter tranche in the
+  10:00–10:30 window, conditional on no fresh −2%+ gap." The condition
+  was satisfied (constructive open, no shock). The plan was simply not
+  executed. This is the first session in the inception window where
+  the documented defer is **not** a process-correct conditional defer —
+  it is undocumented drift. The next pre-market needs to address why.
+- CPI Tue 6/10 is the next clean reason to wait. Past CPI, there will
+  be no scheduled macro release for the bot to hide behind until FOMC
+  6/16–17. The execute-or-document inflection moves to Wednesday.
+
+**Urgent catalyst check (per strategy):**
+- Earnings beat/miss on a **held** name? — No holdings. N/A.
+- Halted stock we **own**? — No holdings. N/A.
+- Macro shock? — None. SPY +0.68% is inside normal one-σ; no
+  tape-bombs, no halts; CPI is tomorrow (scheduled, not a shock).
+- Gap >5% on **held** watchlist? — No holdings; SPY +0.68% well below
+  ping threshold.
+→ **ClickUp end-of-day ping sent** (standing EOD requirement).
+
+**Next session (Pre-market Tue 6/9, 06:00 ET):**
+1. Re-pull /v2/account + /v2/positions + /v2/snapshots for fresh
+   pre-CPI cohort marks (NVDA, AMD, QTUM, IONQ, RGTI, PLTR, NBIS).
+2. **CPI Tue 6/10 08:30 ET** — pre-print blackout 08:00–09:00 ET.
+3. **Decide: pre-CPI starter or post-CPI starter?** Sixteen sessions
+   of cash drift now exceed the macro print as the dominant risk. A
+   small (3–5%) SPY/QQQ pre-CPI starter is the lowest-binary way to
+   start ending the streak; a full basket entry waits for post-CPI.
+4. **AMD entry:** defer to post-CPI Tue PM — sized 4–5%.
+5. **NVDA entry:** defer to post-Senate-hearing Wed PM — sized 5–6%.
+6. **Drift documentation:** if pre-market 6/9 again routes to defer,
+   the log must capture *which* gate is now the binding constraint
+   (CPI? Senate? FOMC?) — not a passive sixth pass.
+
+---
+
 ### 2026-06-06 Pre-Market (Sat 6/6 — for Mon 6/8 open)
 
 **Session:** Weekend pre-market prep. Alpaca `/v2/clock`:
