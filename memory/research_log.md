@@ -4,6 +4,35 @@ Newest entries first.
 
 ---
 
+## 2026-06-09 — Market open (NO TRADES)
+
+**Session:** Market open. Credentials now provided in-session.
+
+**Account snapshot (Alpaca):**
+- Equity: $100,000.00
+- Cash: $100,000.00 (100% cash)
+- Buying power: $400,000.00
+- Status: ACTIVE
+- Open positions: 0
+
+**Stop-loss check:** No positions held, nothing to evaluate.
+
+**Trade ideas evaluated:** None. The research log contained zero
+drafted trade ideas (previous pre-market session was blocked on missing
+credentials). Per strategy.md the decision workflow drafts ideas in
+pre-market and executes against that pre-vetted set — improvising
+entries at the bell without thesis/catalyst/entry/stop/target is not
+permitted by the playbook.
+
+**Action taken:**
+- Synced portfolio.md with live Alpaca account state.
+- No orders placed. No ClickUp ping (no trade, no stop triggered).
+
+**Next session:** Run a pre-market research pass (Perplexity sonar-pro
+on watchlist + macro) to populate trade ideas before next open.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
