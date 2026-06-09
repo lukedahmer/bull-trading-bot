@@ -4,6 +4,43 @@ Newest entries first.
 
 ---
 
+## 2026-06-09 — End of Day
+
+**Session:** Post-market close summary.
+
+**Account snapshot (Alpaca /v2/account):**
+- Equity: $100,000.00
+- Last equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Long market value: $0.00
+- Status: ACTIVE, no PDT flag.
+
+**Positions (/v2/positions):** none.
+**Filled orders (/v2/orders?status=filled):** none today, none historically.
+
+**Performance:**
+- Bull: 0.00% (still uninvested since bootstrap)
+- SPY: ~-2.0% close (intraday lows hit after Trump remarks on Iran;
+  S&P 500 -1.46% at midday per Motley Fool, deepened into the close per
+  Yahoo Finance / TheStreet). Tech sector off >5%, chip stocks led the
+  declines.
+- Relative: ~+2pp — cash position avoided today's risk-off move.
+
+**Observations:**
+- Geopolitical shock (Iran retaliation rhetoric) plus AI/semis rotation
+  drove broad de-risking. Names on our watchlist (NVDA, AMD, IONQ, QTUM)
+  likely down sharply given semis weakness; tactically attractive entry
+  zones may form, but verify with pre-market research before adding.
+- Account is still at the bootstrap $100k paper balance — no trades
+  executed since credentials came online. Strategy doc allows pre-market
+  ideation only; first entries should follow the standard workflow.
+
+**Trades executed:** None.
+**ClickUp:** End-of-day summary sent per protocol.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
