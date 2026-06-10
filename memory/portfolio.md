@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-10 Pre-Market Wed (Alpaca /v2/account + /v2/positions + /v2/stocks/snapshots @ pre-open)
+Last Updated: 2026-06-10 Midday Wed (Alpaca /v2/account + /v2/positions @ midday risk-sweep)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -75,7 +75,19 @@ ahead of the print rather than persistent distribution._
     IONQ/RGTI spec-only on confirmed bounce.
 
 ## Notes from Last Session
-- **Pre-Market 2026-06-10 (this run):** 18th consecutive cash session
+- **Midday 2026-06-10 (this run):** Midday risk sweep. `GET /v2/positions`
+  → `[]`. Account equity unchanged at $100,000.00, cash $100,000.00,
+  buying power $400,000.00. No orders filled since the pre-market
+  snapshot; pre-market plan was not staged before midday. **Risk-rule
+  pass: −8% cut, +30% trim, +15%→7% trail tightening are all N/A —
+  zero open positions.** No new midday entries per strategy (no major
+  catalyst beyond the already-priced CPI print, and intraday rule
+  forbids adding without one). 18th cash session in progress; if the
+  post-CPI execution window also closes flat by EOD, today is the
+  **seventh passive defer** and the binding-gate rename required by
+  action item #9 (pre-market plan) is triggered for the EOD log. No
+  ClickUp ping (no stop, no trim).
+- **Pre-Market 2026-06-10 (prior in-day):** 18th consecutive cash session
   entering. CPI today 8:30 ET. The 6/9 starter plan was not executed —
   no orders ever staged (sixth passive defer in inception window) — but
   the defer was REWARDED for the second time in three sessions: Tuesday's

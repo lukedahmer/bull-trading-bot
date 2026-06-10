@@ -15,6 +15,46 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-10 Midday
+
+**Session:** Midday Wed 6/10 — risk sweep on existing book.
+
+**Alpaca sync (GET /v2/account + /v2/positions):**
+- Equity $100,000.00 | Cash $100,000.00 | Buying power $400,000.00
+- Long market value $0.00 | Short market value $0.00
+- `/v2/positions` → `[]` (empty array)
+- Account ACTIVE; PDT false; day-trade count 0
+- **No fills since the pre-market snapshot.** The post-CPI execution
+  window opened at 09:30 ET with the pre-market plan in hand; as of
+  midday no orders are on file.
+
+**Midday risk-rule pass (per intraday checklist):**
+- **Cut at/below −8% from entry:** N/A — no positions.
+- **Trim 50% on winners up ≥30%:** N/A — no positions.
+- **Tighten trailing stop to 7% on positions up ≥15%:** N/A — no
+  positions.
+- **No new midday entries:** consistent with strategy (no fresh major
+  catalyst beyond the already-printed CPI; intraday adds require one).
+
+**Web search:** Skipped. The trigger ("position moving significantly")
+does not apply — there are no positions to surveil. CPI reaction and
+watchlist tape will be re-pulled in the EOD session per the standing
+workflow.
+
+**Process note:** Pre-market action item #9 explicitly tagged the
+"10:30 ET passes with no orders" state as a process inflection
+requiring a written binding-gate rename (FOMC 6/16–17? Senate 6/11?).
+Midday confirms that state. The rename itself is an EOD task — by
+end-of-day, if today closes flat, this becomes the **seventh
+documented passive defer** and the log will name the next binding
+gate. Midday is not the moment to override the no-new-midday-entries
+rule; the cost of waiting for EOD/EOD-plan is one session.
+
+**ClickUp notification:** Not sent. Per task rubric, ping only on
+triggered stop or trim. Neither occurred (no positions).
+
+---
+
 ### 2026-06-10 Pre-Market
 
 **Session:** Pre-market Wed 6/10 — **CPI Day** (May 2026 print 08:30 ET).
