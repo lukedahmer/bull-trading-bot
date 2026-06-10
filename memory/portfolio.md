@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-09 Pre-Market Tue (Alpaca /v2/account + /v2/positions + /v2/stocks/snapshots @ pre-open)
+Last Updated: 2026-06-10 Pre-Market Wed (Alpaca /v2/account + /v2/positions + /v2/stocks/snapshots @ pre-open)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -8,24 +8,23 @@ Last Updated: 2026-06-09 Pre-Market Tue (Alpaca /v2/account + /v2/positions + /v
 - Total Portfolio Value: $100,000.00
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
-- Last Equity (prior close, 6/8): $100,000.00
-- **Day P/L: 0.00%** (pre-open; 17th consecutive cash session entering)
+- Last Equity (prior close, 6/9): $100,000.00
+- **Day P/L: 0.00%** (pre-open; **18th consecutive cash session entering**)
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
 - Filled orders today: **none** | Filled orders since inception: **none**
-- Benchmark (SPY) carry-in: $739.24 (6/8 close, +0.24% vs 6/5 $737.45).
-- Benchmark (SPY) inception window: 738.19 (5/12) → 739.24 (6/8)
-  = **+0.14%**. Dexter same window: 0.00%. **Cumulative vs SPY: −0.14%**
-  on the 6/8 close-to-close mark (recomputed: 738.19 was the inception
-  print used in the EOD; the −0.59% number in the 6/8 EOD used SPY
-  $742.55 as the close, but the snapshot pulled this morning shows
-  $739.24 — using the snapshot value for consistency with this run).
-- Cash drag note: **17th consecutive session in 100% cash entering
-  Tuesday's open.** CPI tomorrow 6/10 08:30 ET is the next scheduled
-  binary. Aggressive-mode strategy budget supports a 3% SPY + 2% QQQ
-  + 2% QTUM pre-CPI starter (~$7,000 deployed, 93% cash floor) as the
-  lowest-binary path to end the streak — per pre-market 6/9 plan.
+- /v2/orders?status=all → **empty array**. The 6/9 starter plan
+  (SPY 3% + QQQ 2% + QTUM 2%) was not even staged. **Sixth documented
+  passive defer.** But: yesterday's intraday reverse rewarded the defer
+  for the second time in three sessions.
+- Benchmark (SPY) carry-in: $737.07 (6/9 close, **−0.29%** vs 6/8 $739.235).
+- Benchmark (SPY) inception window: 738.19 (5/12) → 737.07 (6/9)
+  = **−0.15%**. Dexter same window: 0.00%. **Cumulative vs SPY: +0.15%**
+  on the 6/9 close-to-close mark. The cash-drag gap closed (and flipped
+  to a tiny lead) on Tuesday's −1.1% reversal in QQQ / −2.6% in QTUM.
+- Cash drag note: 18 consecutive cash sessions. CPI today 8:30 ET is
+  the binary; post-print is the decision point.
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -41,71 +40,72 @@ Last Updated: 2026-06-09 Pre-Market Tue (Alpaca /v2/account + /v2/positions + /v
 - Thematic quantum (QTUM + IONQ + RGTI): 0%
 - Index (SPY + QQQ): 0%
 
-## Watchlist (refreshed pre-market 6/9 from Alpaca snapshots)
+## Watchlist (refreshed pre-market 6/10 from Alpaca snapshots)
 
-| Symbol | 6/8 close | Last AH | Δ% vs 6/5 | Prior entry zone (6/6) | Status |
-|--------|-----------|---------|-----------|------------------------|--------|
-| SPY    | 739.24    | 739.24  | +0.24%    | $730–740               | At top of zone — actionable starter |
-| QQQ    | 716.05    | 715.53  | +1.51%    | $700–708               | Above zone — actionable at $710–716 |
-| NVDA   | 208.66    | 208.66  | +1.70%    | $195–207 (defer)       | DEFER until post-Senate hearing 6/11 PM |
-| AMD    | 490.01    | 491.47  | +5.05%    | $455–475 (defer)       | DEFER until post-CPI 6/10 PM |
-| QTUM   | 157.86    | 157.86  | +3.30%    | $150–154               | Above zone; ratchet to $156–159; actionable |
-| IONQ   | 62.78     | 62.62   | +10.57%   | $52–57 (defer/opt)     | Extended — do not chase; spec only at $56–58 |
-| RGTI   | 21.77     | 21.77   | +5.42%    | $19–21                 | Above zone; research-only |
-| PLTR   | 136.47    | 136.47  | +0.64%    | $134–140               | In zone; defer to second tranche |
-| NBIS   | 218.03    | 217.80  | −4.34%    | $215–225               | In zone; research-only |
-| KTOS   | —         | —       | —         | Research-only          | Defense overhang |
-| SOFI   | —         | —       | —         | Research-only          | No fresh catalyst |
+| Symbol | 6/9 close | 6/8 close | Δ% Tue | Prior entry zone | Status |
+|--------|-----------|-----------|--------|------------------|--------|
+| SPY    | 737.07    | 739.235   | −0.29% | $737–740         | At low end of zone — actionable post-CPI |
+| QQQ    | 707.86    | 716.05    | −1.14% | $710–716         | Below zone — entry quality improved |
+| NVDA   | 208.20    | 208.66    | −0.22% | $205–210         | Mid-zone — Senate hearing 6/11 gate still binding |
+| AMD    | 475.50    | 490.01    | −2.96% | $470–475         | At zone — CPI gate clears today |
+| QTUM   | 153.79    | 157.855   | −2.58% | $156–159 → $152–156 (ratcheted down) | Below prior zone — best risk-adjusted theme entry |
+| IONQ   | 56.66     | 62.78     | −9.75% | $56–58           | At zone — speculative starter possible post-CPI |
+| RGTI   | 19.69     | 21.77     | −9.55% | $19–21           | At low end of zone — research only (small cap discipline) |
+| PLTR   | 132.05    | 136.47    | −3.24% | $134–140         | Slipped below zone; ratchet to $128–134 |
+| NBIS   | 220.17    | 218.03    | +0.98% | $215–225         | In zone but illiquid; research-only |
+
+_Tuesday's intraday saw a massive reversal: opens were green (S&P futures
++0.46% pre-open), then sold off into CPI. Lows were materially deeper
+than the closes — IONQ printed $53.30, AMD $437.71, QTUM $147.53, QQQ
+$686.43, SPY $722.605. The wicks suggest stop runs / panic selling
+ahead of the print rather than persistent distribution._
 
 ## Cash Allocation Plan (aggressive mode — per strategy.md)
-- Cash floor relaxed to 5–10% (was 20%); stay heavily invested.
+- Cash floor: 5–10% (was 20%); stay heavily invested.
 - Starter 5–10%; high conviction 15–25%; single-name cap 25%.
 - Size small-caps 3–7% even in aggressive mode due to volatility.
-- Deploy in tranches, not all at once; respect −8% hard stop and 10% trail.
-- **Today's deployable budget (per pre-market 6/9 plan):**
-  ~$7,000 across SPY (3%) + QQQ (2%) + QTUM (2%). Single-name semis
-  + IONQ deferred per catalyst gates (CPI / Senate hearing).
+- Deploy in tranches; respect −8% hard stop and 10% trail.
+- **Today's deployable budget (per pre-market 6/10 plan, all post-CPI):**
+  - In-line/cool CPI branch (≤4.2% YoY, core ≤2.9%): SPY 5% + QQQ 4% +
+    QTUM 4% + AMD 3% basket (~$16k, 16% deployed, 84% cash).
+  - Hot CPI branch (>4.3% YoY or core >3.0%): SPY 3% + QTUM 2% defensive
+    starter only (~$5k, 5% deployed, 95% cash). Single-name semis defer
+    again.
+  - Either branch: NVDA waits for Senate hearing tomorrow (6/11);
+    IONQ/RGTI spec-only on confirmed bounce.
 
 ## Notes from Last Session
-- **Pre-Market 2026-06-09 (this run):** 17th consecutive cash session
-  entering. Cohort recovered Friday's washout on Mon 6/8 (AMD +5.05%,
-  IONQ +10.57%, QTUM +3.30%, QQQ +1.51%, NVDA +1.70%, SPY only +0.24%).
-  Iran/Israel exchanged direct missile strikes overnight → Brent
-  +4.9% to $97.67 = new CPI swing vector for tomorrow's print.
-  Pre-market futures green (S&P +0.46%, NDX +0.79%). Plan: small
-  SPY+QQQ+QTUM starter (~7%) at 09:30–10:30 ET window; AMD defer
-  post-CPI; NVDA defer post-Senate-hearing 6/11; IONQ no-chase. No
-  ClickUp ping (no urgent catalyst on held names — we hold none).
-- **EOD 2026-06-08 (prior):** 16th consecutive cash close. SPY bounced
-  +0.68% off Friday's washout (in EOD log; pre-market snapshot pulls
-  $739.24 close); Dexter remained 100% cash. The 6/6 starter plan
-  (QQQ 3% + SPY 3% + QTUM 2%) was NOT executed despite the constructive
-  open — fifth documented passive defer. CPI Tue 6/10 08:30 ET is the
-  next 24h binary. Sent end-of-day ClickUp ping.
-- **Pre-market 2026-06-06 (Sat):** Weekend prep for Mon 6/8 open.
-  Drafted starter basket plan: QQQ 3% + SPY 3% + QTUM 2% (~$8k deployed)
-  at the 10:00–10:30 ET window Monday, conditional on no fresh −2%+ gap;
-  AMD/NVDA/IONQ deferred until post-CPI 6/10 and post-Senate-hearing 6/11
-  respectively. Senate Banking Warren-Huang testimony Wed 6/11 flagged
-  as new political overhang on NVDA.
-- **EOD 2026-06-05:** 15th consecutive cash session close. NFP came in
-  hot (~double consensus); chip cohort cratered (SPY −2.45%, QQQ −4.29%,
-  NVDA −5.45%, AMD −9.40%). The cash beat SPY by 245 bps and erased the
-  inception underperformance.
-- Action items for intraday Tue 6/9:
-  1. **Stage SPY 3% starter** at $737–$740 limit, half near open.
-  2. **Stage QQQ 2% + QTUM 2%** at 10:00–10:30 ET window if no
-     fresh −1% reversal.
-  3. **No new entries inside CPI blackout** (08:00–09:00 ET on 6/10).
-  4. **AMD:** alert only; defer to post-CPI Tue PM — sized 4–5%.
-  5. **NVDA:** alert only; defer to post-Senate-hearing Wed PM —
-     sized 5–6%. Warren/Huang testimony is the fresh political overhang.
-  6. **IONQ:** do not chase the +10.57% session; spec-size only at
-     pullback to $56–58.
-  7. **Fed speaker blackout** in effect through the 6/16–17 PC.
-  8. **FOMC 6/16–17** (Warsh's first presser) is the larger gate.
-  9. Oil monitor: Brent through $100 → escalation branch; below $95
-     → de-escalation branch. Either tail re-prices CPI tomorrow.
-  10. Documented drift flag: if 10:30 ET passes without execution,
-      research log must capture *which* gate is binding (CPI energy
-      pass-through? Oil tail risk?) — not a passive sixth pass.
+- **Pre-Market 2026-06-10 (this run):** 18th consecutive cash session
+  entering. CPI today 8:30 ET. The 6/9 starter plan was not executed —
+  no orders ever staged (sixth passive defer in inception window) — but
+  the defer was REWARDED for the second time in three sessions: Tuesday's
+  intraday reversal (-1.14% QQQ, -2.58% QTUM, -2.96% AMD, -9.75% IONQ)
+  closed the inception cumulative-vs-SPY gap from −0.59% → +0.15%.
+  Process gap remains: cash is "winning" on volatility, not strategy.
+  Today's post-CPI execution is the explicit terminus — see 6/9 plan's
+  "execute-or-document inflection moves to Wednesday." Strategy now
+  forces a written decision either way.
+- **Pre-Market 2026-06-09 (prior):** Plan called for SPY 3% + QQQ 2% +
+  QTUM 2% starter in 09:30–10:30 ET window. Plan NOT staged.
+- **EOD 2026-06-08:** 16th consecutive cash close. SPY +0.68% — cash
+  drag day; cumulative gap −0.59% vs SPY.
+- **EOD 2026-06-05:** NFP washout (SPY −2.45%, NVDA −5.45%, AMD −9.40%);
+  cash beat SPY by +245 bps and erased prior underperformance.
+
+## Action items for intraday Wed 6/10
+1. **Pre-print blackout 08:00–09:00 ET.** No orders.
+2. **08:30 ET CPI print.** Capture YoY/MoM headline + core; compare to
+   4.2%/2.9% consensus.
+3. **08:30–09:30 ET (post-print, pre-open).** Re-pull /v2/snapshots;
+   decide branch (hot vs in-line/cool) based on CPI + futures reaction.
+4. **09:30–10:00 ET.** Execute basket per chosen branch. Half-fills on
+   limits acceptable; do not chase >0.5% above zone mids.
+5. **10:00–10:30 ET.** Add second tranche if first set holds VWAP.
+6. **AMD:** in-line/cool branch only — single ticket at $470–478.
+7. **NVDA:** defer to post-Senate-hearing tomorrow (6/11) regardless of
+   CPI outcome.
+8. **IONQ:** speculative satellite ONLY on confirmed bounce off
+   yesterday's $53.30 low; pass if it gaps back above $60.
+9. **Drift documentation:** if 10:30 ET passes again with no orders,
+   research log must name the new binding gate (FOMC 6/16–17? Senate
+   6/11?) — passive seventh defer is no longer process-correct.

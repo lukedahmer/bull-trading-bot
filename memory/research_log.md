@@ -15,6 +15,250 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-10 Pre-Market
+
+**Session:** Pre-market Wed 6/10 — **CPI Day** (May 2026 print 08:30 ET).
+Alpaca creds present.
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders):**
+- Equity: $100,000.00 | Cash: $100,000.00 | Buying power: $400,000.00 (4x)
+- Long market value: $0.00 | Short market value: $0.00
+- Open positions: **none** | Filled orders today: **none**
+- /v2/orders?status=all → **empty**. Yesterday's planned starter (SPY 3%
+  + QQQ 2% + QTUM 2%) was never even staged. **Sixth passive defer in
+  inception window.**
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0
+- **18th consecutive cash session entering today.** Equity flat at the
+  inception $100k mark.
+
+**Cohort tape carry-in (Alpaca /v2/stocks/snapshots, captured pre-open):**
+
+| Symbol | 6/9 close | 6/9 low | 6/9 open | Δ% vs 6/8 | Notes |
+|---|---|---|---|---|---|
+| SPY  | 737.07   | 722.605 | 743.41  | **−0.29%** | Big intraday reversal; lost ~21 pts from high |
+| QQQ  | 707.86   | 686.43  | 722.99  | **−1.14%** | Reversed −36 pts intraday; below 6/6 entry zone |
+| NVDA | 208.20   | 199.34  | 210.74  | **−0.22%** | Modest close hides a $11 wick |
+| AMD  | 475.50   | 437.71  | 503.22  | **−2.96%** | Wick to $437.71 — likely stop run |
+| QTUM | 153.79   | 147.53  | 160.255 | **−2.58%** | Cleanest entry quality of cohort post-reversal |
+| IONQ | 56.66    | 53.30   | 62.11   | **−9.75%** | Gave back nearly the entire 6/8 +10.57% pop |
+| RGTI | 19.69    | 18.48   | 21.67   | **−9.55%** | Same pattern as IONQ — speculative cohort hit |
+| PLTR | 132.05   | 127.41  | 134.84  | **−3.24%** | Lost the 6/6 entry zone outright |
+| NBIS | 220.17   | 200.50  | 228.60  | **+0.98%** | Sole green close on a panic-wick session |
+
+_Wide intraday wicks (lows materially below closes) suggest stop-run /
+panic-selling into the CPI print rather than persistent distribution.
+The 6/6 "best entry quality since inception" window has effectively
+reopened at better marks._
+
+**Pre-market indications (web):** S&P futures **−0.47%** Wed AM;
+Polymarket implying only **22% probability of green open** on 6/10.
+WTI crude +1% overnight (Iran/Israel overhang persists). Market is
+positioning short-side into the print.
+
+**Market Conditions (pre-market read):**
+- **CPI (May 2026) Wed 6/10 08:30 ET — TODAY.** Consensus:
+  **headline 4.2% YoY (vs 3.8% April), core 2.9% YoY (vs 2.8% April)**;
+  MUFG: headline +0.47% MoM, core +0.28% MoM. **First reading >4% since
+  May 2023.** Energy pass-through from the Iran/Israel oil shock is the
+  dominant input — pricing skews to the upside, but consensus already
+  prices the worst of the energy lift, so an in-line 4.2% print could
+  paradoxically be the bullish surprise.
+- **Pre-print blackout 08:00–09:00 ET** (strategy rule).
+- **Senate Banking hearing — Thu 6/11.** Warren/Huang testimony. NVDA
+  political-headline overhang remains. Defer fresh NVDA until post-PM.
+- **Fed speaker blackout** continues through 6/16–17 FOMC presser.
+- **FOMC 6/16–17** (Warsh's first presser). FedWatch pricing 99.1% no
+  change. SEP/dot-plot is the swing factor for late-week sleeve.
+
+**Key News (watchlist, last 24h):**
+- **NVDA $208.20 (−0.22% Tue).** Korea LG/SK Hynix narrative intact.
+  Jensen declined Senate invitation but hearing proceeds tomorrow.
+  Apple-AI-client win is a fresh tailwind from this week's tape.
+- **AMD $475.50 (−2.96% Tue).** Gave back ~30% of Mon's bounce.
+  Lisa Su's UK £2B + raised server-CPU TAM ($120B by 2030) still
+  bullish on the multi-quarter. Helios H2 inflection unchanged.
+- **IONQ $56.66 (−9.75% Tue).** Roundtrip back to the 6/6 entry-zone
+  area ($56–58). Q1 +755% rev / $260–270M FY guide / $3.1B cash
+  unchanged. The reversal is technical not thesis-driven.
+- **QTUM $153.79 (−2.58% Tue).** Below the prior $156–159 zone. New
+  Defiance suite siblings (QTUP early-stage, QPUX leveraged tactical)
+  launched 6/9 — flagship still gets the index-flow nod. $6B AUM,
+  +54% YTD, equal-weighted. **Cleanest theme-entry vehicle.**
+- **SPY $737.07 (−0.29% Tue) / QQQ $707.86 (−1.14% Tue).** SPY lost
+  the inception print ($738.19) by 15 cents; QQQ broke below 6/6
+  $700–708 zone intraday at the lows.
+- **RGTI / PLTR / NBIS:** small-cap cohort followed the IONQ pattern;
+  PLTR slipped below its 6/6 entry zone.
+
+**Watchlist updates:**
+- **QTUM zone ratcheted down** to $152–156 (was $156–159) on the
+  Tuesday repricing.
+- **PLTR zone ratcheted down** to $128–134 (was $134–140).
+- **IONQ zone confirmed** at $56–58 (post-roundtrip), still spec-size.
+- No new names added.
+
+**Decision retrospective (pre-CPI Wednesday, post Tuesday's reversal):**
+- Tuesday's "execute-or-document" inflection (per 6/8 EOD plan) routed
+  to "execute" in the documented plan — but no orders were even staged.
+  Six passive defers in seven trading days.
+- Yet the cohort sold off so hard intraday that **the defer was again
+  rewarded:** Dexter cumulative vs SPY swung from −0.59% (6/8 close) to
+  **+0.15%** (6/9 close). Cash is now nominally ahead since inception —
+  again — purely on volatility timing, not on a deliberate edge.
+- Today's CPI print is the explicit pivot. After this print there is no
+  scheduled macro release for the bot to hide behind until FOMC 6/16–17.
+  Drift-management note: a seventh passive defer requires a NEW
+  documented binding constraint, not a recycled one.
+
+**Trade ideas drafted (NOT placed pre-market per workflow; all gated to
+post-CPI 09:30 ET+):**
+
+```
+Ticker:        QTUM
+Direction:     long (starter, both branches)
+Thesis:        Equal-weighted quantum + ML basket; +54% YTD, $6B AUM,
+               0.40% ER. Reverted to better entry $153.79 after Tuesday's
+               −2.58% reversal. Diversified theme vs single-name chase.
+Catalyst:      Post-CPI flow normalization; Defiance suite expansion
+               (QTUP/QPUX 6/9) draws flows back to flagship; CHIPS-Act
+               $2B letters to nine quantum names structural tailwind.
+Entry zone:    $152–$156 (limit; scale). Half-ticket near open;
+               second half 10:00–10:30 ET if first holds VWAP.
+Stop:          −8% (~$141 from $153 entry). Trailing per strategy
+               (BE at +10%, 5% trail after +20%).
+Target:        $175 (+14%).
+Size:          4% ($4,000) in-line/cool branch; 2% ($2,000) hot branch.
+Confidence:    4/5
+```
+
+```
+Ticker:        SPY
+Direction:     long (starter, both branches)
+Thesis:        Aggressive-mode requires a deployed core. SPY is the
+               least-asymmetric vehicle into CPI digest. Now sits at
+               −0.15% vs inception print ($738.19), below the prior
+               $737–740 zone in pre-market.
+Catalyst:      CPI digest; absence of Fed-speak release valve makes
+               flow-driven mean reversion the dominant short-term
+               vector.
+Entry zone:    $730–$737 (post-print). Skip if futures gap red >1.5%
+               post-CPI (then wait for 10:00 ET).
+Stop:          −8% (~$677).
+Target:        $770 (+~4%) by FOMC week.
+Size:          5% ($5,000) in-line/cool branch; 3% ($3,000) hot branch.
+Confidence:    3/5
+```
+
+```
+Ticker:        QQQ
+Direction:     long (in-line/cool branch only)
+Thesis:        Tech sleeve to capture AI-infra leadership. Now below
+               the prior $710–716 zone after Tuesday's −1.14%.
+Catalyst:      CPI digest; H2 AI-capex narrative.
+Entry zone:    $700–$710 (limit). Single ticket if SPY holds VWAP
+               post-print.
+Stop:          −8% (~$649).
+Target:        $750 (+~6%) by FOMC week.
+Size:          4% ($4,000) in-line/cool branch only; pass if hot.
+Confidence:    3/5
+```
+
+```
+Ticker:        AMD
+Direction:     long (in-line/cool branch only)
+Thesis:        Helios H2 inflection; server-CPU TAM doubling to $120B.
+               Tuesday's wick to $437.71 brought it to the entry zone.
+Catalyst:      CPI clearance; Helios ramp; UK £2B AI commitment.
+Entry zone:    $470–$478 (single ticket post-CPI; skip if it gaps back
+               above $490).
+Stop:          −8% (~$436).
+Target:        $540 (+~13%).
+Size:          3% ($3,000) in-line/cool branch only; pass if hot.
+Confidence:    3/5
+```
+
+```
+Ticker:        NVDA
+Direction:     long (DEFER until post-Senate-hearing Thu 6/11 PM)
+Thesis:        Mega-cap AI infra; Apple-AI client + Korea LG/SK Hynix
+               deals; sell-side avg PT $298 (+43% from spot).
+Catalyst:      Senate Banking hearing Thu 6/11 is the binding gate.
+Entry zone:    $200–$208 if hearing is benign; $192–$198 if hawkish.
+Stop:          −8% from entry.
+Target:        $230 first leg, $250 second.
+Size:          5–6% ($5,000–$6,000) on hearing clearance.
+Confidence:    4/5 — defer execution.
+```
+
+```
+Ticker:        IONQ
+Direction:     long (spec satellite, both branches conditional)
+Thesis:        Best-in-class quantum revenue ramp ($64.7M Q1, +755%
+               YoY; $470M RPO); $3.1B cash war chest; DARPA HAQ +
+               SkyWater foundry deal pending.
+Catalyst:      Bounce off $53.30 6/9 low confirms support; quantum
+               theme flows; 256-qubit demo planned 2026.
+Entry zone:    $56–$58 ONLY on confirmed intraday hold above $55.
+               Pass if it gaps >$60 on no-news.
+Stop:          −8% (~$52).
+Target:        $80 (+~42%).
+Size:          1–2% ($1,000–$2,000) — speculative only.
+Confidence:    2/5 — high-beta single name.
+```
+
+```
+Ticker:        RGTI
+Direction:     research-only (no trade)
+Thesis:        Smaller quantum pure-play; CHIPS-Act $100M LOI.
+Catalyst:      Quantum-theme flows.
+Entry zone:    $18–$20 (now at $19.69 after −9.55%).
+Size:          n/a (research-only).
+Confidence:    2/5
+```
+
+```
+Ticker:        PLTR / NBIS
+Direction:     no entry today
+Notes:         Both reset lower on Tue. PLTR zone ratcheted to $128–134;
+               NBIS spread structure illiquid (latest quote 189×249 on
+               6/9 close). Pass.
+```
+
+**Urgent catalyst check (per strategy):**
+- Earnings beat/miss on a **held** name? — No holdings. N/A.
+- Halted stock we **own**? — No holdings. N/A.
+- Macro shock? — CPI is a scheduled binary, NOT a shock. Iran/Israel
+  flare-up is now four sessions old; Brent has held around $97; no
+  fresh escalation overnight. Below ping threshold.
+- Gap >5% on **held** watchlist? — No holdings. (Cohort marks have
+  >5% gaps on a 24h basis — IONQ, RGTI — but we hold none.)
+→ **No ClickUp ping this session.** EOD ping standing requirement
+   stands.
+
+**Plan for intraday session (Wed 6/10):**
+1. **08:00–09:00 ET:** Pre-print blackout. No orders, no staging.
+2. **08:30 ET:** Capture CPI YoY/MoM headline + core. Classify branch:
+   - **In-line/cool:** headline ≤4.2% AND core ≤2.9%, OR either prints
+     soft.
+   - **Hot:** headline >4.3% OR core ≥3.0%.
+3. **09:00–09:30 ET:** Re-pull /v2/snapshots; check futures + index ETF
+   pre-open quotes; decide branch.
+4. **09:30–10:00 ET (in-line/cool):** Execute QTUM 4% + SPY 5% as half-
+   fill limits; QQQ 4% + AMD 3% as single tickets if SPY holds VWAP.
+5. **09:30–10:00 ET (hot):** Execute QTUM 2% + SPY 3% defensive starter
+   only. Single-name semis defer. No QQQ today.
+6. **10:00–10:30 ET:** Add second tranche on in-line/cool only if first
+   set holds; pass on hot branch.
+7. **IONQ:** spec entry $56–58 only on confirmed intraday hold above
+   $55; cancel if it gaps >$60 on no-news.
+8. **NVDA:** alert only; defer to post-Senate-hearing Thu PM.
+9. **Cash floor 5–10%** untouchable.
+10. **Drift documentation:** if 10:30 ET passes without execution under
+    EITHER branch, research log must name the new binding gate (FOMC?
+    Senate? a NEW catalyst?) — not a recycled CPI defer.
+
+---
+
 ### 2026-06-09 Pre-Market
 
 **Session:** Pre-market Tue 6/9 (CPI eve). Alpaca creds present this run.
