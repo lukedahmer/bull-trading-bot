@@ -4,6 +4,42 @@ Newest entries first.
 
 ---
 
+## 2026-06-10 — Market open
+
+**Session:** Market-open run. Credentials provided inline this session.
+
+**Alpaca account snapshot:**
+- Equity: $100,000.00
+- Cash: $100,000.00 (100% cash)
+- Buying power: $400,000.00
+- Status: ACTIVE, no PDT flag
+- Open positions: none
+- Open orders: none
+
+**Stop-loss sweep:** N/A — no positions to evaluate against the -8%
+hard stop.
+
+**Trade ideas evaluated:** None. `research_log.md` contains no prior
+drafted trade ideas (only the 2026-05-19 BLOCKED bootstrap entry). The
+strategy workflow requires research-backed ideas before entries; with
+no Perplexity research run this session and no pre-drafted ideas in the
+log, **no orders were placed**. Guardrails (10% max position, 20% cash
+floor) were therefore not engaged.
+
+**Actions taken:**
+- Synced `portfolio.md` with live Alpaca account + positions.
+- Logged this session here.
+- No trades placed, no stops triggered → no ClickUp notification sent
+  (per session brief: notify only on trade placed or stop triggered).
+
+**Next session unblocker:**
+Run a pre-market research pass (movers, holdings news, macro, watchlist
+QTUM / IONQ / NVDA / AMD / SPY / QQQ) and draft trade ideas under the
+`Trade idea template` before the next market-open run so the entry
+workflow has candidates to evaluate.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
