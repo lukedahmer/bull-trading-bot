@@ -4,6 +4,44 @@ Newest entries first.
 
 ---
 
+## 2026-06-11 — End of day
+
+**Session:** Post-market / close summary.
+
+**Account snapshot (Alpaca):**
+- Equity: $100,000.00
+- Last equity (prior close): $100,000.00
+- Cash: $100,000.00
+- Long market value: $0.00
+- Buying power: $400,000.00
+- Account status: ACTIVE
+
+**Today's portfolio return:** 0.00% (account is 100% cash; first
+successful Alpaca sync since the 2026-05-19 credentials blocker was
+resolved).
+
+**Benchmark — SPY:** +1.26% on the day (close $734.54). Bull
+underperformed SPY by 1.26 pts today as a function of being fully on
+the sidelines.
+
+**Open positions:** None.
+
+**Trades executed today:** None. `GET /v2/orders?status=filled&after=2026-06-11T00:00:00Z`
+returned an empty list.
+
+**Observations:**
+- Credentials are now live end-to-end (Alpaca + ClickUp). The 2026-05-19
+  blocker is resolved.
+- Account has never been deployed; sitting in 100% cash means we are
+  capturing 0% of upside on green tape days like today.
+- Next pre-market session should run the full research workflow and
+  draft initial entries against the watchlist (QTUM, IONQ, NVDA, AMD,
+  SPY, QQQ), respecting the 2% sizing default and 10% cash floor.
+
+**ClickUp:** End-of-day summary posted.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
