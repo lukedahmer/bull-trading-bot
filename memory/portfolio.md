@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-12 Midday Fri (Alpaca /v2/account + /v2/positions @ midday risk-sweep)
+Last Updated: 2026-06-12 EOD Fri (Alpaca /v2/account + /v2/positions + /v2/orders @ post-close)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -9,22 +9,26 @@ Last Updated: 2026-06-12 Midday Fri (Alpaca /v2/account + /v2/positions @ midday
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
 - Last Equity (prior close, 6/11): $100,000.00
-- **Day P/L: 0.00%** (midday Fri; **20th consecutive cash session in progress**)
+- **Day P/L: 0.00%** (EOD Fri; **20th consecutive all-cash session close**)
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
 - Filled orders today: **none** | Filled orders since inception: **none**
-- /v2/orders?status=all → **empty array**. The 6/9 starter plan
-  (SPY 3% + QQQ 2% + QTUM 2%) was not even staged. **Sixth documented
-  passive defer.** But: yesterday's intraday reverse rewarded the defer
-  for the second time in three sessions.
-- Benchmark (SPY) carry-in: $737.07 (6/9 close, **−0.29%** vs 6/8 $739.235).
-- Benchmark (SPY) inception window: 738.19 (5/12) → 737.07 (6/9)
-  = **−0.15%**. Dexter same window: 0.00%. **Cumulative vs SPY: +0.15%**
-  on the 6/9 close-to-close mark. The cash-drag gap closed (and flipped
-  to a tiny lead) on Tuesday's −1.1% reversal in QQQ / −2.6% in QTUM.
-- Cash drag note: 18 consecutive cash sessions. CPI today 8:30 ET is
-  the binary; post-print is the decision point.
+- /v2/orders?status=filled → **empty array** at EOD. Seventh documented
+  passive defer through the post-CPI / post-Senate-hearing window. The
+  next live binding gate is FOMC Tue/Wed 6/16–17 (Warsh's first presser).
+- Benchmark (SPY) today: ~$738 area, **+0.56%** on the day (S&P 500 cash
+  index 7,435.47, +41.17 pts) on US/Iran peace-deal hopes around the
+  Strait of Hormuz. Dow +0.5%, Nasdaq 100 −0.5% (hyperscalers MSFT,
+  AMZN, AAPL, ORCL each ~−2% on AI-infra wobble pre-SpaceX IPO).
+- Today's relative: **−0.56% vs SPY** (cash drag on a green tape day).
+- Cash drag note: **20 consecutive all-cash sessions closed.** CPI 6/10
+  printed and was absorbed without a Dexter entry; NVDA Senate hearing
+  6/11 cleared without producing a fresh actionable line. **FOMC
+  6/16–17 is now the binding gate.** Per strategy.md aggressive-mode
+  guidance ("sitting on cash defeats the purpose"), the cumulative
+  defer is the dominant process risk going into next week's pre-FOMC
+  pre-market run.
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -75,7 +79,15 @@ ahead of the print rather than persistent distribution._
     IONQ/RGTI spec-only on confirmed bounce.
 
 ## Notes from Last Session
-- **Midday 2026-06-12 (this run):** Midday risk sweep on the standing
+- **EOD 2026-06-12 (this run):** Post-close summary. `GET /v2/account`,
+  `/v2/positions` → `[]`, `/v2/orders?status=filled` → `[]`. Equity flat
+  at $100,000.00; cash $100,000.00; BP $400,000.00. **20th consecutive
+  all-cash session close.** SPY +0.56% on the day (S&P 7,435.47 close)
+  on US/Iran Strait-of-Hormuz peace-deal hopes; Dexter 0.00% → today's
+  relative −56 bps vs SPY. Seventh passive defer through the
+  CPI/Senate-hearing window; FOMC 6/16–17 is now the binding gate.
+  Standing EOD ClickUp ping sent.
+- **Midday 2026-06-12 (prior in-day):** Midday risk sweep on the standing
   cash book. `GET /v2/positions` → `[]`. Account equity unchanged at
   $100,000.00, cash $100,000.00, buying power $400,000.00. No fills
   since inception; `/v2/orders` history still empty for the working
@@ -115,20 +127,30 @@ ahead of the print rather than persistent distribution._
 - **EOD 2026-06-05:** NFP washout (SPY −2.45%, NVDA −5.45%, AMD −9.40%);
   cash beat SPY by +245 bps and erased prior underperformance.
 
-## Action items for intraday Wed 6/10
-1. **Pre-print blackout 08:00–09:00 ET.** No orders.
-2. **08:30 ET CPI print.** Capture YoY/MoM headline + core; compare to
-   4.2%/2.9% consensus.
-3. **08:30–09:30 ET (post-print, pre-open).** Re-pull /v2/snapshots;
-   decide branch (hot vs in-line/cool) based on CPI + futures reaction.
-4. **09:30–10:00 ET.** Execute basket per chosen branch. Half-fills on
-   limits acceptable; do not chase >0.5% above zone mids.
-5. **10:00–10:30 ET.** Add second tranche if first set holds VWAP.
-6. **AMD:** in-line/cool branch only — single ticket at $470–478.
-7. **NVDA:** defer to post-Senate-hearing tomorrow (6/11) regardless of
-   CPI outcome.
-8. **IONQ:** speculative satellite ONLY on confirmed bounce off
-   yesterday's $53.30 low; pass if it gaps back above $60.
-9. **Drift documentation:** if 10:30 ET passes again with no orders,
-   research log must name the new binding gate (FOMC 6/16–17? Senate
-   6/11?) — passive seventh defer is no longer process-correct.
+## Action items for next session (Weekend prep Sat 6/13 / Pre-market Mon 6/15)
+1. **Re-pull /v2/snapshots** for SPY, QQQ, NVDA, AMD, QTUM, IONQ, RGTI,
+   PLTR, NBIS — refresh entry zones against Friday's close marks.
+2. **Read overnight tape** for follow-through on the US/Iran peace
+   headline (oil reaction, defense names) and on the AI-infra rotation
+   that pressured MSFT/AMZN/AAPL/ORCL ~−2% Friday.
+3. **FOMC 6/16–17 is the binding gate.** Strategy rules prohibit new
+   entries within 30 min of the press conference; intra-meeting entries
+   are still permitted outside that window. Decide pre-market Mon
+   whether to stage a pre-FOMC defensive starter (SPY + QTUM, ~5%
+   combined) or to defer the full basket to the post-presser tape
+   Wed 6/17 PM.
+4. **Process inflection — call it explicitly.** 20 cash sessions is the
+   documented risk on the other side of the binding-gate framework.
+   The weekend-prep log must either (a) name FOMC as the gate and
+   commit a specific pre-FOMC starter size to be staged Mon 6/15, or
+   (b) acknowledge that the cumulative defer is overriding the
+   aggressive-mode mandate and propose a rewrite of strategy.md to
+   permit catalyst-independent entries on quality tape.
+5. **Watchlist hygiene:** NVDA Senate hearing (6/11) cleared without
+   producing a fresh structural line — keep $205–210 entry zone but
+   no longer gate behind a hearing. AMD/QTUM entry zones unchanged.
+   IONQ/RGTI remain spec-only.
+6. **Cash floor 5–10% (aggressive mode)** untouchable on any sizing.
+7. **ClickUp ping policy unchanged:** standing EOD ping always; intra-
+   session pings only on triggered stop, trim, or urgent catalyst on a
+   held name.

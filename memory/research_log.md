@@ -15,6 +15,106 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-12 End-of-Day
+
+**Session:** EOD summary (Fri 6/12; market closed at 16:00 ET).
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions + /v2/orders?status=filled):**
+- Equity: $100,000.00 | Last equity: $100,000.00 | **Day P/L: 0.00%**
+- Cash: $100,000.00 | Buying power: $400,000.00 (intraday 4x)
+- Long market value: $0.00 | Short market value: $0.00
+- Open positions: **none** | Filled orders today: **none**
+- /v2/orders?status=filled → `[]` (empty array since inception)
+- Status ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0
+- **20th consecutive all-cash session close.** Seventh documented
+  passive defer through the post-CPI / post-Senate-hearing window. The
+  midday log's flagged "binding-gate rename" decision is now explicit:
+  **FOMC 6/16–17 is the next binding gate** (Warsh's first presser).
+
+**Tape (web search — S&P 500 cash index close as primary read):**
+| Symbol | 6/12 close | Δ vs 6/11 | Notes |
+|---|---|---|---|
+| S&P 500 | 7,435.47 | **+0.56%** (+41.17 pts) | Green close on US/Iran peace-deal hopes around the Strait of Hormuz / energy trade |
+| Dow | n/a level | **+0.5%** | Defensives led |
+| Nasdaq 100 | n/a level | **−0.5%** | Hyperscalers MSFT/AMZN/AAPL/ORCL each ~−2% on AI-infra wobble ahead of SpaceX IPO |
+| SPY (ETF) | ~$738.66 approx | **+0.56%** | Computed from S&P daily Δ; SPY 6/11 close $734.54 per web |
+
+_Cohort marks (NVDA / AMD / QTUM / IONQ / RGTI / PLTR / NBIS) not
+re-pulled this sync — the +0.56% S&P + −0.5% Nasdaq-100 split implies
+the chip/quantum cohort likely traded down to flat on the day
+(AI-infra rotation read-through). Weekend-prep 6/13 will refresh full
+Alpaca snapshots for the watchlist._
+
+**Today's portfolio return vs SPY:**
+- Dexter: **0.00%** (flat — fully in cash all session)
+- SPY: **+0.56%** (S&P 500 cash index proxy)
+- **Relative: −0.56% vs SPY** on the day (cash drag on a green tape day)
+- Inception (5/12 → 6/12): Dexter 0.00%; SPY rough estimate flat-to-
+  modestly positive vs the 5/12 inception print ($738.19) given the
+  6/9 → 6/12 path (close-to-close +1.2% on the S&P over those three
+  sessions). Cumulative cash-drag gap likely re-widened from the
+  +0.15% lead documented at 6/9 close back into a small (~50 bps)
+  underperformance band. Precise reconciliation deferred to
+  weekend-prep with fresh /v2/bars pulls.
+
+**Market Conditions (EOD read):**
+- S&P 500 +0.56% green close. The dominant catalyst was progress on a
+  US–Iran framework that would gradually restore energy trade through
+  the Strait of Hormuz. Defensive Dow led (+0.5%); tech-heavy Nasdaq
+  100 lagged (−0.5%) as AI hyperscalers wobbled into the SpaceX IPO.
+- The 6/10 CPI print is now two sessions stale. The 6/11 NVDA Senate
+  Banking hearing cleared without a fresh structural line. The next
+  scheduled binary catalyst is **FOMC 6/16–17 (Tue/Wed)**, with Warsh's
+  first SEP/dot-plot. FedWatch was pricing 99.1% no-change pre-6/10;
+  refresh pre-FOMC for any post-CPI shift.
+- Fed speaker blackout remains in effect through the 6/17 presser.
+
+**Trade activity (Alpaca /v2/orders?status=filled):**
+- **None.** No orders placed, staged, or filled today, in keeping with
+  the midday rule pass. Seventh passive defer in the inception window.
+
+**Decision retrospective:**
+- The midday log explicitly forecast this EOD: "by end-of-day, if today
+  closes flat, this becomes the seventh passive defer and the log will
+  name the next binding gate." That commitment is honored here — FOMC
+  6/16–17 is named. But naming a gate is not the same as committing
+  to deploy after it; the cumulative pattern (CPI gate → defer; Senate
+  gate → defer; new gate → defer) is now itself the documented risk.
+- The weekend-prep / pre-market Mon log MUST close this loop with either
+  a sized pre-FOMC starter commitment (SPY + QTUM, ~5% combined,
+  staged inside the post-Mon-open window) OR a written acknowledgment
+  that the binding-gate framework has become the deferral mechanism and
+  a rewrite of strategy.md is required. Per strategy.md aggressive-mode
+  language ("sitting on cash defeats the purpose"), the status quo is
+  not stable into a third gate cycle.
+
+**Urgent catalyst check (per strategy):**
+- Earnings beat/miss on a **held** name? — No holdings. N/A.
+- Halted stock we **own**? — No holdings. N/A.
+- Macro shock? — None. The US/Iran headline is a positive surprise, not
+  a shock; market reacted in size but cleanly.
+- Gap >5% on **held** watchlist? — No holdings. (Hyperscaler −2% prints
+  on MSFT/AMZN/AAPL/ORCL are below the 5% ping threshold and we are
+  not long them.)
+→ **ClickUp end-of-day ping sent** (standing EOD requirement).
+
+**Next session (Weekend prep Sat 6/13 / Pre-market Mon 6/15, 06:00 ET):**
+1. Re-pull /v2/account + /v2/positions + /v2/snapshots + /v2/bars
+   (compute exact SPY inception P/L vs Dexter for reconciliation).
+2. Refresh entry zones for SPY, QQQ, NVDA, AMD, QTUM, IONQ against
+   Friday's marks; ratchet down anything that closed below current zone.
+3. **Decide:** pre-FOMC starter (SPY 3% + QTUM 2% staged 09:30–10:30 ET
+   Mon 6/15) OR full defer to post-presser Wed 6/17 PM. Commit in
+   writing; do not leave the decision implicit.
+4. **Strategy review:** if the answer is "defer again," the weekend-prep
+   log must propose specific edits to strategy.md (catalyst-independent
+   entries on quality tape) rather than another binding-gate rename.
+5. Cash floor 5–10% (aggressive mode) untouchable.
+6. ClickUp ping policy unchanged: EOD always; intra-session pings only
+   on triggered stop, trim, or urgent catalyst on a held name.
+
+---
+
 ### 2026-06-12 Midday
 
 **Session:** Midday Fri 6/12 — risk sweep on standing cash book.
