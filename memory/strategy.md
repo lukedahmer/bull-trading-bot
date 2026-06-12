@@ -24,6 +24,20 @@ own checklist.
   for held names.
 - No options, no leverage, no shorting in this account.
 
+## FOMC-week sizing (added 2026-06-12)
+- In any week that contains an FOMC rate decision, cap new initiations
+  at 1% equity per name until after the Powell presser.
+- Post-decision: normal 2% default applies, but stage entries over at
+  least two sessions rather than a single-day fill.
+
+## First-deployment guidance (added 2026-06-12)
+- When the book is 100% cash, do not deploy more than 25% of equity in
+  any single session. Build core exposure (SPY/QQQ) before thematic
+  (QTUM) before single-name speculation (NVDA, AMD, IONQ).
+- Target equilibrium: ~60% deployed, ~40% cash by end of the first
+  two operating weeks — well inside the 10% cash floor and the 40%
+  sector cap.
+
 ## Decision workflow (pre-market)
 1. Read memory files: strategy, portfolio, trade_log, research_log.
 2. Pull Alpaca account + positions.
