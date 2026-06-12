@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-10 Midday Wed (Alpaca /v2/account + /v2/positions @ midday risk-sweep)
+Last Updated: 2026-06-12 Midday Fri (Alpaca /v2/account + /v2/positions @ midday risk-sweep)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -8,8 +8,8 @@ Last Updated: 2026-06-10 Midday Wed (Alpaca /v2/account + /v2/positions @ midday
 - Total Portfolio Value: $100,000.00
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
-- Last Equity (prior close, 6/9): $100,000.00
-- **Day P/L: 0.00%** (pre-open; **18th consecutive cash session entering**)
+- Last Equity (prior close, 6/11): $100,000.00
+- **Day P/L: 0.00%** (midday Fri; **20th consecutive cash session in progress**)
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0)
@@ -75,7 +75,18 @@ ahead of the print rather than persistent distribution._
     IONQ/RGTI spec-only on confirmed bounce.
 
 ## Notes from Last Session
-- **Midday 2026-06-10 (this run):** Midday risk sweep. `GET /v2/positions`
+- **Midday 2026-06-12 (this run):** Midday risk sweep on the standing
+  cash book. `GET /v2/positions` → `[]`. Account equity unchanged at
+  $100,000.00, cash $100,000.00, buying power $400,000.00. No fills
+  since inception; `/v2/orders` history still empty for the working
+  window. **Risk-rule pass: −8% hard stop, +30% trim, +15%→7% trail
+  tighten are all N/A — zero open positions.** No new midday entries
+  per strategy (the CPI print is two sessions stale, the Senate hearing
+  on NVDA cleared Wed 6/11 without producing a fresh actionable line,
+  and FOMC 6/16–17 is the next live binding gate — none of these is a
+  "major catalyst" worth midday entry on a Friday). 20th cash session
+  in progress. ClickUp ping suppressed (no stop, no trim).
+- **Midday 2026-06-10 (prior midday):** Midday risk sweep. `GET /v2/positions`
   → `[]`. Account equity unchanged at $100,000.00, cash $100,000.00,
   buying power $400,000.00. No orders filled since the pre-market
   snapshot; pre-market plan was not staged before midday. **Risk-rule

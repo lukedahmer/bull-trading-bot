@@ -15,6 +15,51 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-12 Midday
+
+**Session:** Midday Fri 6/12 — risk sweep on standing cash book.
+
+**Alpaca sync (GET /v2/account + /v2/positions):**
+- Equity $100,000.00 | Cash $100,000.00 | Buying power $400,000.00
+- Long market value $0.00 | Short market value $0.00
+- `/v2/positions` → `[]` (empty array)
+- Account ACTIVE (PA39FINFSDLL); PDT false; day-trade count 0
+- **No fills since inception.** The 6/10 post-CPI window closed without
+  staging the planned basket; 6/11 (Senate hearing on NVDA) and this
+  morning's 6/12 open likewise did not produce orders. **20th
+  consecutive cash session in progress.**
+
+**Midday risk-rule pass (per intraday checklist):**
+- **Cut at/below −8% from entry:** N/A — no positions.
+- **Trim 50% on winners up ≥30%:** N/A — no positions.
+- **Tighten trailing stop to 7% on positions up ≥15%:** N/A — no
+  positions.
+- **No new midday entries:** consistent with strategy. The CPI print is
+  now two sessions stale (priced in across the cohort), the NVDA Senate
+  hearing on 6/11 cleared without producing a fresh structural line,
+  and FOMC 6/16–17 is the next live binding gate (Monday/Tuesday next
+  week). Friday midday is not a "major catalyst" window worth
+  overriding the rule.
+
+**Web search:** Skipped. Trigger ("position moving significantly")
+does not apply — no positions to surveil. Tape will be re-pulled in
+the EOD/weekend-prep session per the standing workflow.
+
+**Process note:** The "binding-gate rename" flagged in the 6/10
+pre-market action item #9 still has not been written into the log
+explicitly. With FOMC 6/16–17 now four/five calendar days out and the
+prior CPI/Senate gates both passed without execution, the next session
+(EOD 6/12 or weekend prep) MUST either (a) name FOMC as the new
+binding gate and document the deferral, or (b) acknowledge that the
+"binding gate" framework is itself the deferral mechanism and rewrite
+strategy.md to permit catalyst-independent entries on quality tape.
+Midday is not the moment to make that decision — flagging only.
+
+**ClickUp notification:** Not sent. Per task rubric, ping only on
+triggered stop or trim. Neither occurred (no positions).
+
+---
+
 ### 2026-06-10 Midday
 
 **Session:** Midday Wed 6/10 — risk sweep on existing book.
