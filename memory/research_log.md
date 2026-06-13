@@ -15,6 +15,274 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-13 Weekend Pre-Market Prep (Sat — for Mon 6/15 open)
+
+**Session:** Weekend prep. Market closed (Sat 6/13). Alpaca creds present
+this run. Last regular-session close = Fri 6/12.
+
+**Account snapshot (Alpaca, GET /v2/account + /v2/positions):**
+- Equity $100,000.00 | Cash $100,000.00 | Buying power $400,000.00 (4x)
+- Long market value $0.00 | Short market value $0.00
+- `/v2/positions` → `[]` (empty) | Account ACTIVE (PA39FINFSDLL)
+- PDT false; day-trade count 0; options level 3; shorting enabled (unused)
+- **20th consecutive all-cash close confirmed.** No fills since
+  inception (5/12). Equity flat $100,000.00 — 33 calendar days, 21
+  trading sessions including today's prep into Monday open.
+
+**Carry-in marks (web; Alpaca /v2/snapshots not re-pulled — weekend, no
+fresh ticks since Friday close):**
+
+| Symbol | 6/12 close (approx) | Source notes |
+|---|---|---|
+| SPY  | ~$738.66  | Implied from S&P 500 cash index 7,435.47 (+0.56%) |
+| QQQ  | n/a level | Nasdaq 100 −0.5% on AI-infra rotation |
+| NVDA | n/a       | Hyperscalers (MSFT/AMZN/AAPL/ORCL) ~−2%; NVDA followed AI-infra tape down |
+| AMD  | n/a       | BofA Top CPU Pick + Citi Buy upgrade Fri PM — chip cohort mixed |
+| QTUM | n/a       | Quantum cohort sideways into IONQ headlines |
+| IONQ | n/a       | Horizon Quantum 256-qubit purchase announced 6/11 (Dublin) |
+
+_Live Alpaca /v2/snapshots will be re-pulled in Mon 6/15 pre-market run
+to refresh exact entry zones against Friday's official closes._
+
+**Market Conditions (weekend read):**
+- **FOMC Tue/Wed 6/16–17 is the dominant near-term catalyst.** Decision
+  Wed 6/17 14:00 ET; CME FedWatch implies ~99% no-change at the meeting
+  (consensus hold at 3.50–3.75%). **The real swing factor is the SEP
+  dot-plot and Kevin Warsh's first presser as Chair.** Markets have
+  repriced toward roughly 70% probability of at least one hike by
+  year-end since Warsh's nomination (up from ~0% at the start of the
+  year). A hawkish dot-plot shift is the asymmetric risk; a benign
+  presser would be the bullish surprise.
+- **Strategy hard rule:** no new entries within 30 min of the FOMC
+  press conference (i.e., 13:30–14:30 ET window Wed 6/17). Monday and
+  Tuesday entries OUTSIDE that window are still permitted.
+- **May CPI carry-forward.** Headline ~4% YoY, core 2.9% YoY with
+  MoM decelerating (0.2% May vs 0.4% April). Two-week-old print but
+  still the primary input shaping Warsh's first dot-plot.
+- **Fed speaker blackout** remains in effect through the Wed presser.
+  No release-valve speakers Mon/Tue.
+- **Geopolitics:** US/Iran peace-deal framework around Strait of Hormuz
+  energy trade is the Friday tailwind that lifted S&P +0.56%; defense
+  names led lower into the headline. Weekend follow-through to be
+  re-scanned Mon AM.
+- **SpaceX IPO** debuted Friday (+~20% on day — biggest IPO in history
+  per the tape). Reaction was a net negative for hyperscaler AI-infra
+  beta (MSFT/AMZN/AAPL/ORCL each ~−2%) as flow rotated into the new
+  liquid AI-adjacent name. Read-through for NVDA: neutral-to-negative
+  near-term; the AI-capex thesis is unchanged structurally.
+
+**Key News (watchlist, last 72h):**
+- **NVDA.** Two fresh items overnight 6/11–6/12: (1) developing an AI
+  healthcare model with Abridge (clinical documentation use case) —
+  additive, second-order; (2) **pitching its 'Vera' CPU to Chinese
+  clients** — export-control headline-risk vector still live (the
+  Warren hearing on 6/11 cleared without a structural line, but the
+  China-sales narrative is the recurring overhang). Sell-side
+  comparison: NVDA grows 85% at 24x fwd vs AMD 68x at slower growth —
+  NVDA still the better risk-adjusted mega-cap semi in the cohort.
+- **AMD.** **BofA lifted PT and called AMD its Top CPU Pick.** **Citi
+  upgraded to Buy** with "GPU upside not fully priced." Bullish
+  sell-side print into the FOMC week. **AMD's 6 GW Meta deployment is
+  the flagship hyperscaler commitment** (referenced in the cohort
+  comparison). Helios H2 rack-scale ramp unchanged.
+- **IONQ.** **256-qubit trapped-ion system delivered to Horizon
+  Quantum Holdings (European HQ, Dublin)** — announced 6/11. Separate:
+  IonQ demonstrated quantum error-correction milestone across **nine
+  different QEC codes from three families**, achieving operational
+  breakeven with **3.95-second logical memory lifetime** (significant
+  for the trapped-ion roadmap). **Rosenblatt Securities maintained Buy
+  rating 6/11.** Cambridge University 256-qubit deal (Q1 2026)
+  reaffirmed. **P/S 109x remains the structural concern** — Zacks #4
+  (Sell) call on valuation/run-up still applies. Speculative-only
+  sizing.
+- **QTUM.** ETF $6B AUM, 0.40% ER, modified-equal-weight ~83–85 names.
+  Cleanest theme vehicle (per the EOD 6/12 thesis), particularly given
+  IONQ's valuation overhang. CHIPS-Act $2B letter-of-intent flows to
+  nine quantum names remains the structural tailwind.
+- **SPY / QQQ.** Friday's +0.56% / −0.5% split reflects the AI-infra
+  rotation INTO defensives and out of hyperscalers around the SpaceX
+  IPO. Bid is still risk-on at the index level; concentration drag is
+  inside the Nasdaq-100 top names.
+
+**Watchlist Updates (carry-forward from 6/10 with weekend overlay):**
+- **NVDA:** entry zone $200–$210 maintained. **Add new tag:** "Vera CPU
+  China-pitch headline-risk — defer fresh adds inside any pending
+  export-control news cycle." No change to size band (5–6%).
+- **AMD:** entry zone $470–$478 maintained. Friday's BofA/Citi
+  upgrades incrementally derisk the entry. Confidence raised to 4/5
+  (was 3/5) for an in-line/cool branch.
+- **QTUM:** entry zone $152–$156 maintained (ratcheted 6/10). Now
+  the highest-confidence theme-entry name (4/5).
+- **IONQ:** entry zone $56–$58 maintained. Confidence unchanged at 2/5
+  given P/S 109. Spec-only 1–2%.
+- **SPY / QQQ:** zones unchanged ($730–$737 / $700–$710).
+- **RGTI / PLTR / NBIS:** research-only carry-forward.
+
+**Process inflection — explicit decision (per 6/12 EOD action item):**
+
+The 6/12 EOD log named FOMC 6/16–17 as the binding gate AND demanded
+this weekend-prep session resolve one of two paths:
+- **(A) Commit a pre-FOMC starter for Mon 6/15** — SPY + QTUM ~5%
+  combined, staged inside the 09:30–10:30 ET window.
+- **(B) Acknowledge the binding-gate framework has become the deferral
+  mechanism** and propose a strategy.md rewrite to permit
+  catalyst-independent entries on quality tape.
+
+**Decision: Path (A), with explicit ceiling.** A small SPY + QTUM
+pre-FOMC starter sized at **5% combined** (SPY 3% + QTUM 2%) is the
+lowest-binary path to end the 21-session cash drift. Rationale:
+- SPY and QTUM are diversified vehicles — single-name FOMC blow-up
+  risk is bounded by the basket structure.
+- 5% deployed retains 95% cash, well inside the 5–10% aggressive-mode
+  floor with ample dry powder for either a hawkish-dot-plot reversal
+  (add to weakness Wed PM) or a dovish surprise (add to strength).
+- Single-name semis (NVDA, AMD) remain DEFERRED to post-presser Wed
+  6/17 PM. NVDA-China headline risk is unhedgable inside two sessions;
+  AMD-on-upgrades can still be entered into a Wed PM tape.
+- This does NOT close the loop on the strategy.md rewrite question
+  (Path B remains on the table for the next weekend prep if Mon's
+  starter is also passively deferred), but it stops compounding the
+  defer-streak at the 21st session.
+
+**Trade ideas drafted (NOT placed — pre-market workflow; all entries
+gated to Mon 6/15 09:30–10:30 ET window, OUTSIDE the Wed 6/17
+13:30–14:30 ET FOMC blackout):**
+
+```
+Ticker:        SPY
+Direction:     long (pre-FOMC starter)
+Thesis:        End 21-session cash drift with index core. SPY +0.56%
+               Friday on US/Iran peace-deal hopes — flow is still
+               risk-on at the index level despite Nasdaq-100
+               concentration drag. Least-asymmetric exposure into the
+               FOMC presser.
+Catalyst:      FOMC 6/16–17 (Warsh debut, SEP dot-plot). Strategy
+               permits Mon/Tue entries outside the Wed 13:30–14:30 ET
+               blackout.
+Entry zone:    $730–$737 (limit, scale). Half-fill near Mon open;
+               second half 10:00–10:30 ET if first holds VWAP.
+Stop:          −8% from blended entry (~$674). Trailing per strategy
+               (BE at +10%, 5% trail after +20%).
+Target:        $770 (~+4.5%) into FOMC week resolution.
+Size:          3% ($3,000) — split into two tickets.
+Confidence:    3/5
+```
+
+```
+Ticker:        QTUM
+Direction:     long (pre-FOMC starter)
+Thesis:        Diversified quantum theme; $6B AUM, +54% YTD,
+               modified-equal-weight ~83 names (~2% cap per name)
+               bounds single-name blow-up risk vs IONQ chase. CHIPS-Act
+               $2B LOI to nine quantum names + recent IONQ 256-qubit
+               commercial deployment (Horizon Quantum, Cambridge)
+               continue the structural tailwind. Cleanest theme entry
+               vehicle on the watchlist.
+Catalyst:      Quantum-theme sector flows; FOMC tape resolution.
+Entry zone:    $152–$156 (limit, single ticket Mon).
+Stop:          −8% (~$141).
+Target:        $175 (+~14%).
+Size:          2% ($2,000).
+Confidence:    4/5
+```
+
+```
+Ticker:        AMD
+Direction:     long (DEFER until post-FOMC Wed 6/17 PM)
+Thesis:        BofA "Top CPU Pick" PT lift + Citi Buy upgrade ("GPU
+               upside not fully priced") are the freshest bullish
+               sell-side prints of the week. Meta 6 GW deployment
+               anchors the hyperscaler bull case. Helios H2 inflection
+               unchanged.
+Catalyst:      Post-presser FOMC tape; sell-side upgrades digest.
+Entry zone:    $470–$478 single ticket if Wed PM tape is benign.
+Stop:          −8% (~$436).
+Target:        $540 (+~13%).
+Size:          3–4% ($3,000–$4,000) on FOMC clearance.
+Confidence:    4/5 — defer execution.
+```
+
+```
+Ticker:        NVDA
+Direction:     long (DEFER until post-FOMC Wed 6/17 PM)
+Thesis:        Mega-cap AI infra. AI healthcare partnership with
+               Abridge is additive; Vera CPU China-client pitch keeps
+               export-control headline risk live. NVDA grows 85% at
+               24x fwd vs AMD's 68x at slower growth — still the
+               better risk-adjusted mega-cap semi.
+Catalyst:      Post-presser FOMC tape AND any 72h export-control news
+               cycle clearance.
+Entry zone:    $200–$210 baseline; $192–$198 on a hawkish-Warsh dump.
+Stop:          −8% from entry.
+Target:        $230 first leg, $250 second.
+Size:          5–6% ($5,000–$6,000) on dual clearance (FOMC + China).
+Confidence:    4/5 — defer execution.
+```
+
+```
+Ticker:        QQQ
+Direction:     long (DEFER — concentration drag inside Nasdaq-100
+               unresolved while hyperscalers absorb SpaceX-IPO rotation)
+Thesis:        Tech sleeve. The Nasdaq-100 −0.5% Fri vs S&P +0.56%
+               split is the active rotation we don't want to step into
+               blind. Re-evaluate Wed PM after FOMC + 1–2 sessions of
+               post-IPO flow normalization.
+Entry zone:    $700–$710 if it holds; $685–$695 on a hawkish dump.
+Stop:          −8%.
+Target:        $750.
+Size:          3% ($3,000) on FOMC clearance.
+Confidence:    3/5 — defer execution.
+```
+
+```
+Ticker:        IONQ
+Direction:     long (spec satellite, DEFER and pass on chase)
+Thesis:        Horizon Quantum 256-qubit deployment (Dublin) +
+               Rosenblatt Buy reiteration + 9-code QEC milestone
+               (3.95s logical memory) are real fundamental wins. But
+               P/S 109x and ZACKS #4 (Sell) on valuation/run-up keep
+               this in spec-only territory. Prefer QTUM exposure for
+               the theme.
+Entry zone:    $56–$58 ONLY on confirmed intraday hold above $55;
+               pass if it gaps >$60.
+Stop:          −8% (~$52).
+Target:        $80 (+~42%).
+Size:          1–2% ($1,000–$2,000) — speculative only.
+Confidence:    2/5 — entry timing risk; do not chase.
+```
+
+**Urgent catalyst check (per strategy):**
+- Earnings beat/miss on a **held** name? — No holdings. N/A.
+- Halted stock we **own**? — No holdings. N/A.
+- Macro shock? — None. US/Iran framework is positive surprise (priced
+  Fri); FOMC Wed is scheduled. Below ping threshold.
+- Gap >5% on **held** watchlist? — No holdings.
+→ **No ClickUp ping this session.** Weekend prep ping is not a
+  standing requirement (EOD-only is the standing rule); no urgent
+  catalyst is live.
+
+**Plan for next session (Pre-market Mon 6/15, ~06:00 ET):**
+1. Re-pull `/v2/account` + `/v2/positions` + `/v2/snapshots` + `/v2/bars`
+   for SPY, QQQ, NVDA, AMD, QTUM, IONQ, RGTI, PLTR, NBIS — refresh
+   exact entry zones against Friday's official closes.
+2. Compute exact Dexter-vs-SPY inception P/L (5/12 → 6/12) using
+   `/v2/bars` daily, replacing the Friday-estimate band of ~−50 bps.
+3. **Execute the SPY 3% + QTUM 2% pre-FOMC starter** in the 09:30–10:30
+   ET window, per the trade idea cards above. Half-fill SPY near open;
+   second half + QTUM single ticket 10:00–10:30 ET.
+4. Skip the starter ONLY if: SPY gaps red >1.5% on a fresh weekend
+   macro shock, or QTUM gaps above $158 on no-news (chase risk).
+5. NVDA / AMD / QQQ entries DEFER to post-FOMC Wed 6/17 PM per cards.
+6. IONQ alert-only; do not chase.
+7. Cash floor 5–10% (aggressive mode) untouchable.
+8. **If 10:30 ET passes without the starter executing**, the EOD 6/15
+   log MUST flip to Path (B) — acknowledge the binding-gate framework
+   as the deferral mechanism and draft strategy.md edits permitting
+   catalyst-independent entries on quality tape. No more recycled
+   gate renames.
+
+---
+
 ### 2026-06-12 End-of-Day
 
 **Session:** EOD summary (Fri 6/12; market closed at 16:00 ET).

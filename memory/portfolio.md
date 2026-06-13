@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-12 EOD Fri (Alpaca /v2/account + /v2/positions + /v2/orders @ post-close)
+Last Updated: 2026-06-13 Weekend Prep (Alpaca /v2/account + /v2/positions @ Sat AM; markets closed)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -8,27 +8,27 @@ Last Updated: 2026-06-12 EOD Fri (Alpaca /v2/account + /v2/positions + /v2/order
 - Total Portfolio Value: $100,000.00
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
-- Last Equity (prior close, 6/11): $100,000.00
-- **Day P/L: 0.00%** (EOD Fri; **20th consecutive all-cash session close**)
+- Last Equity (Fri 6/12 close): $100,000.00
+- **Weekend P/L: 0.00%** (market closed; **20 consecutive all-cash closes**)
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
-- Pattern Day Trader: false (day-trade count 0)
-- Filled orders today: **none** | Filled orders since inception: **none**
-- /v2/orders?status=filled → **empty array** at EOD. Seventh documented
-  passive defer through the post-CPI / post-Senate-hearing window. The
-  next live binding gate is FOMC Tue/Wed 6/16–17 (Warsh's first presser).
-- Benchmark (SPY) today: ~$738 area, **+0.56%** on the day (S&P 500 cash
-  index 7,435.47, +41.17 pts) on US/Iran peace-deal hopes around the
-  Strait of Hormuz. Dow +0.5%, Nasdaq 100 −0.5% (hyperscalers MSFT,
-  AMZN, AAPL, ORCL each ~−2% on AI-infra wobble pre-SpaceX IPO).
-- Today's relative: **−0.56% vs SPY** (cash drag on a green tape day).
-- Cash drag note: **20 consecutive all-cash sessions closed.** CPI 6/10
-  printed and was absorbed without a Dexter entry; NVDA Senate hearing
-  6/11 cleared without producing a fresh actionable line. **FOMC
-  6/16–17 is now the binding gate.** Per strategy.md aggressive-mode
-  guidance ("sitting on cash defeats the purpose"), the cumulative
-  defer is the dominant process risk going into next week's pre-FOMC
-  pre-market run.
+- Pattern Day Trader: false (day-trade count 0); options level 3
+- Filled orders this weekend: **none** | Filled orders since inception: **none**
+- /v2/positions → **`[]`** (empty array) at weekend-prep pull.
+- Benchmark (SPY) last close: ~$738.66 area (S&P 500 cash index 7,435.47,
+  +0.56% Fri) on US/Iran peace-deal hopes around the Strait of Hormuz.
+  Dow +0.5%, Nasdaq 100 −0.5% (hyperscalers MSFT/AMZN/AAPL/ORCL each
+  ~−2% on AI-infra wobble post-SpaceX-IPO rotation).
+- **Path (A) committed for Mon 6/15:** SPY 3% + QTUM 2% pre-FOMC
+  starter, staged in the 09:30–10:30 ET window. See research_log.md
+  2026-06-13 for full rationale and trade-idea cards. Wed 6/17 FOMC
+  presser remains the binding gate for the rest of the basket
+  (NVDA/AMD/QQQ DEFER).
+- Cash drag note: **20 consecutive all-cash sessions closed.** This
+  weekend prep ENDS the recycled "binding-gate rename" loop by
+  committing a sized starter for Monday. If Monday's 10:30 ET
+  execution window also passes flat, EOD 6/15 must flip to Path (B)
+  (strategy.md rewrite permitting catalyst-independent entries).
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -79,7 +79,22 @@ ahead of the print rather than persistent distribution._
     IONQ/RGTI spec-only on confirmed bounce.
 
 ## Notes from Last Session
-- **EOD 2026-06-12 (this run):** Post-close summary. `GET /v2/account`,
+- **Weekend Prep 2026-06-13 (this run):** Saturday weekend-prep workflow.
+  `GET /v2/account` → equity $100,000.00, cash $100,000.00, BP $400,000.00,
+  ACTIVE (PA39FINFSDLL), PDT false. `GET /v2/positions` → `[]`. No
+  fresh tick data (weekend); using Friday EOD marks from web research.
+  Watchlist news scan delivered fresh catalysts: AMD BofA "Top CPU Pick"
+  PT lift + Citi Buy upgrade ("GPU upside not fully priced"); NVDA Vera
+  CPU China-client pitch (export-control overhang persists) + Abridge
+  AI healthcare partnership (additive); IONQ 256-qubit deployment to
+  Horizon Quantum Holdings in Dublin + Rosenblatt Buy reiteration + QEC
+  milestone (9 codes, 3.95s logical memory lifetime). **Decision:
+  Path (A) committed — SPY 3% + QTUM 2% pre-FOMC starter for Mon 6/15
+  09:30–10:30 ET window.** NVDA/AMD/QQQ defer to post-presser Wed 6/17 PM.
+  No ClickUp ping (no urgent catalyst; weekend prep ping not a
+  standing requirement). 20 cash-session streak unchanged at weekend
+  prep — Monday's execution ends or extends the streak.
+- **EOD 2026-06-12 (prior):** Post-close summary. `GET /v2/account`,
   `/v2/positions` → `[]`, `/v2/orders?status=filled` → `[]`. Equity flat
   at $100,000.00; cash $100,000.00; BP $400,000.00. **20th consecutive
   all-cash session close.** SPY +0.56% on the day (S&P 7,435.47 close)
@@ -127,30 +142,26 @@ ahead of the print rather than persistent distribution._
 - **EOD 2026-06-05:** NFP washout (SPY −2.45%, NVDA −5.45%, AMD −9.40%);
   cash beat SPY by +245 bps and erased prior underperformance.
 
-## Action items for next session (Weekend prep Sat 6/13 / Pre-market Mon 6/15)
-1. **Re-pull /v2/snapshots** for SPY, QQQ, NVDA, AMD, QTUM, IONQ, RGTI,
-   PLTR, NBIS — refresh entry zones against Friday's close marks.
-2. **Read overnight tape** for follow-through on the US/Iran peace
-   headline (oil reaction, defense names) and on the AI-infra rotation
-   that pressured MSFT/AMZN/AAPL/ORCL ~−2% Friday.
-3. **FOMC 6/16–17 is the binding gate.** Strategy rules prohibit new
-   entries within 30 min of the press conference; intra-meeting entries
-   are still permitted outside that window. Decide pre-market Mon
-   whether to stage a pre-FOMC defensive starter (SPY + QTUM, ~5%
-   combined) or to defer the full basket to the post-presser tape
-   Wed 6/17 PM.
-4. **Process inflection — call it explicitly.** 20 cash sessions is the
-   documented risk on the other side of the binding-gate framework.
-   The weekend-prep log must either (a) name FOMC as the gate and
-   commit a specific pre-FOMC starter size to be staged Mon 6/15, or
-   (b) acknowledge that the cumulative defer is overriding the
-   aggressive-mode mandate and propose a rewrite of strategy.md to
-   permit catalyst-independent entries on quality tape.
-5. **Watchlist hygiene:** NVDA Senate hearing (6/11) cleared without
-   producing a fresh structural line — keep $205–210 entry zone but
-   no longer gate behind a hearing. AMD/QTUM entry zones unchanged.
-   IONQ/RGTI remain spec-only.
-6. **Cash floor 5–10% (aggressive mode)** untouchable on any sizing.
-7. **ClickUp ping policy unchanged:** standing EOD ping always; intra-
-   session pings only on triggered stop, trim, or urgent catalyst on a
-   held name.
+## Action items for next session (Pre-market Mon 6/15, ~06:00 ET)
+1. **Re-pull /v2/account + /v2/positions + /v2/snapshots + /v2/bars**
+   for SPY, QQQ, NVDA, AMD, QTUM, IONQ, RGTI, PLTR, NBIS — refresh
+   exact entry zones against Friday's official closes.
+2. **Compute exact Dexter-vs-SPY inception P/L** (5/12 → 6/12) using
+   /v2/bars daily, replacing the Friday ~−50 bps estimate band.
+3. **EXECUTE — Path (A) committed:** SPY 3% ($3,000) + QTUM 2%
+   ($2,000) pre-FOMC starter, 09:30–10:30 ET window. SPY split into
+   two limit tickets ($730–737); QTUM single ticket ($152–156). Cards
+   in research_log.md 2026-06-13.
+4. **Skip the starter ONLY if:** SPY gaps red >1.5% on a fresh weekend
+   macro shock, OR QTUM gaps above $158 on no-news (chase risk).
+5. **NVDA / AMD / QQQ DEFER** to post-presser Wed 6/17 PM. NVDA gated
+   on China export-control headline clearance; AMD on FOMC tape;
+   QQQ on Nasdaq-100 concentration drag resolution.
+6. **IONQ** alert-only. Pass on chase >$60; P/S 109 keeps spec-only.
+7. **Cash floor 5–10% (aggressive mode)** untouchable.
+8. **Process kill-switch:** If 10:30 ET Mon passes without execution,
+   EOD 6/15 log MUST flip to Path (B) — strategy.md rewrite proposal
+   for catalyst-independent entries. No more recycled gate renames.
+9. **ClickUp ping policy unchanged:** standing EOD ping always;
+   intra-session pings only on triggered stop, trim, or urgent
+   catalyst on a held name.
