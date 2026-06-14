@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-13 Weekend Prep (Alpaca /v2/account + /v2/positions @ Sat AM; markets closed)
+Last Updated: 2026-06-14 Pre-Market Sun (Alpaca /v2/account + /v2/positions @ Sun AM; markets closed — pre-Monday open prep)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -14,21 +14,26 @@ Last Updated: 2026-06-13 Weekend Prep (Alpaca /v2/account + /v2/positions @ Sat 
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0); options level 3
 - Filled orders this weekend: **none** | Filled orders since inception: **none**
-- /v2/positions → **`[]`** (empty array) at weekend-prep pull.
+- /v2/positions → **`[]`** (empty array) at Sun 6/14 pre-market pull.
 - Benchmark (SPY) last close: ~$738.66 area (S&P 500 cash index 7,435.47,
   +0.56% Fri) on US/Iran peace-deal hopes around the Strait of Hormuz.
   Dow +0.5%, Nasdaq 100 −0.5% (hyperscalers MSFT/AMZN/AAPL/ORCL each
   ~−2% on AI-infra wobble post-SpaceX-IPO rotation).
-- **Path (A) committed for Mon 6/15:** SPY 3% + QTUM 2% pre-FOMC
+- **Sun 6/14 weekend overlay:** US-Iran draft peace deal text finalized
+  Fri 6/12 with Pakistani mediation; possible signing in Switzerland
+  as soon as Sunday. Crude −2% Fri to ~$85/bbl (still well above
+  pre-war ~$70). If signing lands Sun PM, Mon 6/15 futures should gap
+  green; if it slips, partial unwind of Friday's risk-on tape.
+- **Path (A) RECONFIRMED for Mon 6/15:** SPY 3% + QTUM 2% pre-FOMC
   starter, staged in the 09:30–10:30 ET window. See research_log.md
-  2026-06-13 for full rationale and trade-idea cards. Wed 6/17 FOMC
-  presser remains the binding gate for the rest of the basket
-  (NVDA/AMD/QQQ DEFER).
-- Cash drag note: **20 consecutive all-cash sessions closed.** This
-  weekend prep ENDS the recycled "binding-gate rename" loop by
-  committing a sized starter for Monday. If Monday's 10:30 ET
-  execution window also passes flat, EOD 6/15 must flip to Path (B)
-  (strategy.md rewrite permitting catalyst-independent entries).
+  2026-06-13 + 2026-06-14 for full rationale and trade-idea cards.
+  Wed 6/17 FOMC presser remains the binding gate for the rest of the
+  basket (NVDA/AMD/QQQ DEFER). No weekend headline changes the
+  Path (A) sizing.
+- Cash drag note: **20 consecutive all-cash sessions closed.** Mon
+  6/15 10:30 ET execution window must end or extend the streak. If
+  passively deferred again, EOD 6/15 flips to Path (B) (strategy.md
+  rewrite permitting catalyst-independent entries).
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -79,7 +84,23 @@ ahead of the print rather than persistent distribution._
     IONQ/RGTI spec-only on confirmed bounce.
 
 ## Notes from Last Session
-- **Weekend Prep 2026-06-13 (this run):** Saturday weekend-prep workflow.
+- **Pre-Market 2026-06-14 (this run, Sun):** Sunday pre-market workflow
+  ahead of Mon 6/15 open. `GET /v2/account` → equity $100,000.00, cash
+  $100,000.00, BP $400,000.00, ACTIVE (PA39FINFSDLL), PDT false.
+  `GET /v2/positions` → `[]`. Book unchanged since 6/13 weekend prep —
+  no fills, no orders. Weekend headline scan turned up two material
+  items: (1) **US-Iran draft peace deal text finalized Fri 6/12** with
+  Pakistani mediation, possible signing in Switzerland today (Sun) —
+  risk-positive if it lands; (2) **week-ahead calendar is heavy** —
+  BoJ rate decision Tue 6/16, FOMC statement Wed 6/17 14:00 ET,
+  Warsh's first presser, May retail sales + pending home sales Wed.
+  No new catalysts on QTUM, IONQ, NVDA, AMD, SPY, QQQ beyond what
+  the 6/13 prep already captured. **Path (A) RECONFIRMED** — SPY 3%
+  + QTUM 2% pre-FOMC starter for Mon 09:30–10:30 ET. NVDA / AMD / QQQ
+  remain DEFERRED to post-Warsh-presser Wed PM. No ClickUp ping
+  (no held positions, peace-deal-signing is risk-positive not a
+  shock, FOMC still 2 sessions out, no watchlist >5% gap).
+- **Weekend Prep 2026-06-13 (prior):** Saturday weekend-prep workflow.
   `GET /v2/account` → equity $100,000.00, cash $100,000.00, BP $400,000.00,
   ACTIVE (PA39FINFSDLL), PDT false. `GET /v2/positions` → `[]`. No
   fresh tick data (weekend); using Friday EOD marks from web research.
