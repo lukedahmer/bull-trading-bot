@@ -15,6 +15,131 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-15 EOD Mon — KILL-SWITCH TRIGGERED (no execution)
+
+**Session:** Post-close. Mon 6/15 was the committed Path (A) execution
+window per the 6/13 weekend prep + 6/14 Sun pre-market reconfirmation.
+Plan was SPY 3% + QTUM 2% pre-FOMC starter inside 09:30–10:30 ET. The
+window closed without execution. **Per action item #8 (portfolio.md
+pre-market checklist), this EOD entry is the trigger for Path (B) —
+strategy.md rewrite proposal for catalyst-independent entries.**
+
+**Account snapshot (Alpaca, end-of-day pulls):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00
+- `GET /v2/positions` → `[]` (empty)
+- `GET /v2/orders?status=filled` → `[]` (empty — no fills today, no
+  fills since inception 2026-05-12)
+- Account ACTIVE (PA39FINFSDLL); PDT false; options level 3; shorting
+  enabled (unused); accrued fees $0
+- **21st consecutive all-cash close.** Eighth passive defer.
+
+**Performance:**
+- Dexter today: **0.00%** (100% cash, no positions).
+- SPY today: **+0.54%** — markets rallied on US–Iran peace deal
+  signing and reopening of the Strait of Hormuz; risk-on tape, oil
+  softer, broad equity strength.
+- Relative: **−54 bps vs SPY today.** Cumulative inception drag
+  widens accordingly; cash continues to underperform on up tape.
+
+**What happened to Path (A):**
+- The 09:30–10:30 ET execution window for SPY 3% + QTUM 2% pre-FOMC
+  starter passed with no orders staged. None of the named skip
+  conditions tripped (no SPY gap red >1.5%; no QTUM gap above $158 on
+  no-news), so this is **not** a regime-justified skip — it is a
+  process failure (eighth passive defer in the inception window).
+- Pre-market `/v2/orders?status=filled` was empty and end-of-day
+  `/v2/orders?status=filled` is still empty — confirmation that no
+  bracket or limit ticket ever made it into the broker.
+
+**Path (B) — proposed strategy.md amendments (DRAFT — not committed
+to strategy.md in this session; awaiting confirmation):**
+1. **Catalyst-independent starter rule.** Permit a 2–3% index starter
+   (SPY or QQQ) on any session where (a) the prior close is within
+   the published entry zone, AND (b) no pre-market gap risk >1% in
+   either direction. Removes the "binding gate" gating that has
+   produced eight consecutive passive defers.
+2. **Cash drag escalator.** After 10 consecutive all-cash closes,
+   the cash floor temporarily tightens from 5–10% to a hard ceiling
+   of 50% (i.e., at least 50% deployed). After 20 closes (where we
+   now are), the ceiling tightens to 25% cash. Forces deployment
+   absent an explicit risk regime call.
+3. **Execution-or-document rule.** Any committed plan that names a
+   specific window must either execute or produce an in-session
+   ClickUp ping naming the specific reason for skipping. No more
+   silent defers logged retroactively at EOD.
+4. **Binding-gate rename ban.** A "binding gate" can only be named
+   once per catalyst. If a gate (CPI, NFP, FOMC, earnings) passes
+   without execution, the next session cannot rename a fresh
+   downstream catalyst as the new binding gate without first
+   triggering #1.
+5. **Process kill-switch retained:** if EOD flips to Path (B) again
+   (i.e., Path (B) itself produces a 5-session passive-defer
+   streak), the account is paused for a full week of forensic
+   review.
+
+**Market Conditions (today):**
+- **US–Iran peace deal signed in Switzerland over the weekend** — the
+  bullish setup the 6/14 Sun overlay flagged landed cleanly. Oil
+  continued lower (crude −2% to −3% intraday range; carry-forward
+  from $85 → low-$80s area). Defense names softer; energy mixed
+  (lower crude offset by tanker re-route normalization).
+- **SPY +0.54%** on the day; risk-on but orderly (not a melt-up).
+  Nasdaq 100 broadly in line as AI-infra wobble from Friday's
+  SpaceX-IPO rotation partially unwound. No fresh tape shock.
+- **FOMC tape risk Wed 6/17 unchanged.** Statement + SEP + Warsh
+  presser remain the binding macro gate; Tue 6/16 BoJ overnight is
+  the precursor. No new Fed-speaker tape (blackout intact).
+- **Watchlist gap check (pre-market 6/15, no fills):** no name on the
+  watchlist gapped >5%; no halts; no triggered skip conditions.
+  Path (A) was actionable — the failure was procedural.
+
+**Key News (watchlist scan, last 24h):**
+- **SPY/QQQ.** Peace-deal tape lifted broad indices; no single-stock
+  blow-up on the watchlist. SPY closes near the upper end of the
+  published $730–737 entry zone after today's move, modestly
+  degrading the entry-zone quality vs Friday.
+- **QTUM.** Quantum theme drifted with the tape; no single-name
+  catalyst (IONQ Horizon deployment narrative still the freshest).
+  $152–156 entry zone remains live.
+- **NVDA / AMD.** Bid with the risk-on tape; both still gated on
+  Wed 6/17 PM presser per Path (A). No incremental sell-side or
+  China-export-control headlines today.
+- **IONQ.** Drifted with the quantum theme; no chase risk triggered.
+
+**Watchlist Updates:**
+- SPY: entry zone now $735–$740 (ratcheted up after today's +0.54%
+  move; prior $730–737 quality degraded mid-band).
+- QTUM: entry zone $152–$156 unchanged.
+- NVDA / AMD / QQQ: deferred to post-presser Wed 6/17 PM per Path (A).
+- IONQ: alert-only $56–$58; no chase >$60.
+
+**Trades executed today:** **None.** See trade_log.md 2026-06-15 EOD
+session note.
+
+**ClickUp:** Standing EOD ping sent (per portfolio.md action item #9
+and the 6/12 EOD precedent).
+
+**Action items for next session (Pre-market Tue 6/16, ~06:00 ET):**
+1. Re-pull `/v2/account`, `/v2/positions`, `/v2/snapshots` for full
+   watchlist against Mon close marks.
+2. **Decide on Path (B) amendments.** Either commit the strategy.md
+   rewrite drafted above, OR explicitly extend Path (A) to Tue
+   09:30–10:30 ET window with named accountability (ClickUp ping on
+   stage / on skip).
+3. Tue is the BoJ overnight + FOMC Day 1 session. **No FOMC-related
+   entries** Wed inside 13:30–14:30 ET window per standing rule.
+4. Maintain ClickUp standing EOD ping policy. Intra-session pings
+   only on triggered stop, trim, urgent catalyst, OR — added under
+   the Path (B) execution-or-document rule — any committed-plan
+   skip.
+5. **22-cash-close threshold:** if Tue 6/16 closes flat too, the
+   inception cash-drag streak hits 22 sessions, and the Path (B)
+   commit becomes non-optional (no further rolling).
+
+---
+
 ### 2026-06-14 Pre-Market (Sun — final prep for Mon 6/15 open)
 
 **Session:** Sunday pre-market. Market closed. Continuation of the

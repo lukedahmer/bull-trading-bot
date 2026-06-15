@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-14 Pre-Market Sun (Alpaca /v2/account + /v2/positions @ Sun AM; markets closed — pre-Monday open prep)
+Last Updated: 2026-06-15 EOD Mon (Alpaca /v2/account + /v2/positions + /v2/orders?status=filled, post-close pulls)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -8,32 +8,35 @@ Last Updated: 2026-06-14 Pre-Market Sun (Alpaca /v2/account + /v2/positions @ Su
 - Total Portfolio Value: $100,000.00
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
-- Last Equity (Fri 6/12 close): $100,000.00
-- **Weekend P/L: 0.00%** (market closed; **20 consecutive all-cash closes**)
+- Last Equity (prior close, Fri 6/12): $100,000.00
+- **Day P/L: 0.00%** | **SPY today: +0.54%** | **Relative: −54 bps vs SPY**
+- **21 consecutive all-cash closes** (8th passive defer; Mon 6/15 Path A window expired without execution)
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0); options level 3
-- Filled orders this weekend: **none** | Filled orders since inception: **none**
-- /v2/positions → **`[]`** (empty array) at Sun 6/14 pre-market pull.
-- Benchmark (SPY) last close: ~$738.66 area (S&P 500 cash index 7,435.47,
-  +0.56% Fri) on US/Iran peace-deal hopes around the Strait of Hormuz.
-  Dow +0.5%, Nasdaq 100 −0.5% (hyperscalers MSFT/AMZN/AAPL/ORCL each
-  ~−2% on AI-infra wobble post-SpaceX-IPO rotation).
-- **Sun 6/14 weekend overlay:** US-Iran draft peace deal text finalized
-  Fri 6/12 with Pakistani mediation; possible signing in Switzerland
-  as soon as Sunday. Crude −2% Fri to ~$85/bbl (still well above
-  pre-war ~$70). If signing lands Sun PM, Mon 6/15 futures should gap
-  green; if it slips, partial unwind of Friday's risk-on tape.
-- **Path (A) RECONFIRMED for Mon 6/15:** SPY 3% + QTUM 2% pre-FOMC
-  starter, staged in the 09:30–10:30 ET window. See research_log.md
-  2026-06-13 + 2026-06-14 for full rationale and trade-idea cards.
-  Wed 6/17 FOMC presser remains the binding gate for the rest of the
-  basket (NVDA/AMD/QQQ DEFER). No weekend headline changes the
-  Path (A) sizing.
-- Cash drag note: **20 consecutive all-cash sessions closed.** Mon
-  6/15 10:30 ET execution window must end or extend the streak. If
-  passively deferred again, EOD 6/15 flips to Path (B) (strategy.md
-  rewrite permitting catalyst-independent entries).
+- Filled orders today: **none** | Filled orders since inception: **none**
+- /v2/positions → **`[]`** (empty array) at Mon 6/15 EOD pull.
+- Benchmark (SPY) today: **+0.54%** on confirmed US–Iran peace deal
+  signing in Switzerland over the weekend and Strait of Hormuz
+  reopening. Crude continued lower into the low-$80s; defense softer;
+  AI-infra cohort partial-unwind of Friday's SpaceX-IPO rotation
+  drag. Risk-on but orderly tape (not a melt-up).
+- **Mon 6/14 weekend overlay landed bullish:** Sun signing materialized
+  as flagged; SPY closed near the upper end of the published
+  $730–$737 zone. Pre-market gap check found no skip-condition trip
+  (no SPY gap red >1.5%; no QTUM gap >$158).
+- **Path (A) FAILED TO EXECUTE — kill-switch triggered.** Mon 6/15
+  09:30–10:30 ET execution window for SPY 3% + QTUM 2% pre-FOMC
+  starter closed with no orders staged. None of the named skip
+  conditions tripped — this is a process failure (8th passive defer
+  in inception window). **Per pre-market action item #8, EOD 6/15
+  log flips to Path (B) — strategy.md rewrite proposal for
+  catalyst-independent entries (draft in research_log.md 2026-06-15
+  EOD entry).** Wed 6/17 FOMC presser remains the binding gate for
+  NVDA / AMD / QQQ regardless of Path-B amendments.
+- Cash drag note: **21 consecutive all-cash sessions closed** (was
+  20 entering today). Inception window: 33 calendar days, 22 trading
+  sessions, zero fills.
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -84,7 +87,23 @@ ahead of the print rather than persistent distribution._
     IONQ/RGTI spec-only on confirmed bounce.
 
 ## Notes from Last Session
-- **Pre-Market 2026-06-14 (this run, Sun):** Sunday pre-market workflow
+- **EOD 2026-06-15 (this run, Mon):** Post-close summary. `GET /v2/account`,
+  `GET /v2/positions` → `[]`, `GET /v2/orders?status=filled` → `[]`. Equity
+  flat at $100,000.00; cash $100,000.00; BP $400,000.00. **21st consecutive
+  all-cash session close.** SPY **+0.54%** on confirmed US–Iran peace deal
+  signing in Switzerland (weekend bullish setup landed cleanly); Dexter
+  0.00% → today's relative **−54 bps vs SPY**. Path (A) committed 6/13
+  + reconfirmed 6/14 did NOT execute inside the 09:30–10:30 ET window,
+  with no named skip condition tripping. **Eighth passive defer.
+  Kill-switch from pre-market action item #8 is triggered — EOD log
+  flips to Path (B): strategy.md rewrite proposal drafted in
+  research_log.md 2026-06-15 EOD entry (catalyst-independent starter
+  rule, cash-drag escalator, execution-or-document rule,
+  binding-gate-rename ban). FOMC Wed 6/17 statement + SEP + Warsh
+  presser remain the binding gate for the NVDA / AMD / QQQ legs
+  irrespective of the Path-B amendments. Standing EOD ClickUp ping
+  sent.
+- **Pre-Market 2026-06-14 (prior, Sun):** Sunday pre-market workflow
   ahead of Mon 6/15 open. `GET /v2/account` → equity $100,000.00, cash
   $100,000.00, BP $400,000.00, ACTIVE (PA39FINFSDLL), PDT false.
   `GET /v2/positions` → `[]`. Book unchanged since 6/13 weekend prep —

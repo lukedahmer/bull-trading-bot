@@ -34,3 +34,24 @@ All trades are logged here chronologically. Every buy and sell must be recorded 
 - FOMC 6/16–17 named explicitly as the next binding gate. Weekend-prep
   6/13 must commit (size + window) or rewrite strategy.md.
 - ClickUp end-of-day ping sent (standing EOD requirement).
+
+### 2026-06-15 EOD Mon — SESSION NOTE (no trades — kill-switch triggered)
+- Alpaca `GET /v2/orders?status=filled` → `[]` (still empty since inception).
+- `GET /v2/positions` → `[]`.
+- Account equity $100,000.00; cash $100,000.00; buying power $400,000.00.
+- Day P/L: 0.00%. SPY: +0.54%. Relative: −0.54% vs SPY (cash drag on
+  risk-on tape; US–Iran peace deal signed in Switzerland over the weekend).
+- **21st consecutive all-cash session close; eighth passive defer.**
+- Path (A) committed 6/13 + reconfirmed 6/14 (SPY 3% + QTUM 2% pre-FOMC
+  starter, 09:30–10:30 ET window) did NOT execute. No named skip condition
+  tripped — pre-market gap check was clean (no SPY gap red >1.5%; no
+  QTUM gap >$158 on no news). Process failure, not regime-justified skip.
+- **Kill-switch triggered per pre-market action item #8.** EOD log flips
+  to Path (B): strategy.md rewrite proposal drafted in research_log.md
+  2026-06-15 EOD entry. Awaiting Tue 6/16 pre-market commit/reject
+  decision.
+- Risk rules (−8% stop, +30% trim, +15%→7% trail tighten) all N/A — zero
+  open positions.
+- FOMC 6/17 statement + SEP + Warsh presser remain the binding gate for
+  NVDA / AMD / QQQ legs irrespective of Path-B amendments.
+- ClickUp end-of-day ping sent (standing EOD requirement).
