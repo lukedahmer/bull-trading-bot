@@ -4,6 +4,32 @@ Newest entries first.
 
 ---
 
+## 2026-06-15 — Midday risk-management sweep
+
+**Session:** Midday position-management checklist.
+
+**Alpaca sync:** Successful. `/v2/account` and `/v2/positions` both
+responded 200.
+
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Open positions: **0**
+
+**Risk-rule pass:**
+- Cut at ≤ -8% from entry: N/A (no positions).
+- Trim 50% on winners ≥ +30%: N/A.
+- Tighten trailing stop to 7% on winners ≥ +15%: N/A.
+
+**Actions taken:**
+- Synced `portfolio.md` to reflect first successful Alpaca pull.
+- No trades executed (no positions to manage, no new entries permitted
+  midday absent a major catalyst).
+- No ClickUp notification sent — no stop triggered and no trim done.
+
+**Next:** Resume normal pre-market workflow for 2026-06-16.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
