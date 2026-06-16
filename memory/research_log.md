@@ -15,6 +15,65 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-16 Midday Tue — Cash-book risk sweep; no catalyst, no action
+
+**Session:** Midday risk sweep on the standing all-cash book, FOMC Day 1.
+Per user midday checklist: cut anything at/below −8% from entry, trim 50%
+of any position up ≥30%, tighten trail to 7% on any position up ≥15%, no
+new midday adds without a major catalyst, web-search any significantly
+moving position. **All risk-rule branches are N/A — `/v2/positions` is
+empty.**
+
+**Account snapshot (Alpaca, midday pulls):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00
+- `GET /v2/positions` → `[]` (empty)
+- `GET /v2/orders?status=all&limit=20` → `[]` (zero orders / fills since
+  inception 2026-05-12)
+- Account ACTIVE (PA39FINFSDLL); PDT false; options level 3; shorting
+  enabled (unused); accrued fees $0; daytrade_count 0
+
+**Midday risk sweep (per user checklist):**
+- **−8% hard stop trigger:** N/A — no positions to evaluate.
+- **+30% trim-50% trigger:** N/A — no positions.
+- **+15% trail-tighten to 7% trigger:** N/A — no positions.
+- **"Position moving significantly" web-search trigger:** N/A — no
+  positions to monitor.
+
+**New entries at midday?** No.
+- Strategy rule: no new entries midday absent a major catalyst.
+- Catalyst check: BoJ +25bp to 1.00% overnight was in-line (already
+  priced; not a midday catalyst). FOMC statement / SEP / Warsh
+  presser is the live binding gate but prints **tomorrow** 14:00 ET,
+  with a 13:30–14:30 ET entry blackout (strategy §23). No held
+  watchlist name is gapping >5% intraday; no halts. Today's pre-open
+  Census print (May Housing Starts 08:30 ET) was the only macro tick;
+  Retail Sales is tomorrow.
+- User directive layer: the standing pre-market 2026-06-16 directive
+  is **drafts only** until explicit user authorization to commit
+  Path (A) extended-execute or Path (B). Midday user checklist does
+  not override that — it only governs the existing book and any
+  major-catalyst exception, neither of which exists right now.
+
+**ClickUp ping:** Suppressed. Per user explicit policy this run, ping
+only if a stop was triggered or a position was trimmed. Neither
+applies.
+
+**Carry to EOD:**
+- 22nd cash session in progress; flat close puts Path (B) commit at
+  non-optional per yesterday's pre-market action item #5.
+- Wed 6/17: 08:30 ET May Retail Sales (pre-presser warm-up), then
+  14:00 ET FOMC statement + SEP, 14:30 ET Warsh first presser.
+  13:30–14:30 ET entry blackout in force.
+
+**Sources consulted:** Alpaca `/v2/account`, `/v2/positions`,
+`/v2/orders?status=all` (live pulls this run). No external news search
+triggered — preconditions (held position moving significantly, or
+major catalyst surfacing midday) were not met.
+
+---
+
 ### 2026-06-16 Pre-Market Tue — BoJ +25bp; FOMC Day 1; drafts only per user
 
 **Session:** Pre-market Tuesday. Day 1 of the FOMC two-day; BoJ overnight

@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-16 Pre-Market Tue (Alpaca /v2/account + /v2/positions + /v2/orders?status=filled, pre-open pulls)
+Last Updated: 2026-06-16 Midday Tue (Alpaca /v2/account + /v2/positions, intraday pulls)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -87,7 +87,24 @@ ahead of the print rather than persistent distribution._
     IONQ/RGTI spec-only on confirmed bounce.
 
 ## Notes from Last Session
-- **Pre-Market 2026-06-16 (this run, Tue):** Pre-open workflow into BoJ
+- **Midday 2026-06-16 (this run, Tue):** Midday risk sweep on the standing
+  cash book between BoJ-overnight digestion and tomorrow's FOMC.
+  `GET /v2/account` → equity $100,000.00, cash $100,000.00, BP $400,000.00,
+  long_market_value $0.00, ACTIVE (PA39FINFSDLL), PDT false.
+  `GET /v2/positions` → `[]`. `GET /v2/orders?status=all&limit=20` → `[]`
+  (still zero fills since inception 2026-05-12). **Risk-rule pass per
+  user midday checklist: −8% hard cut, +30% trim-50%, +15%→7% trail
+  tighten are all N/A — zero open positions.** No new midday entries:
+  per strategy + user directive, "no new positions midday unless major
+  catalyst" — BoJ +25bp landed in-line overnight (already priced; not
+  a catalyst), FOMC statement / SEP / Warsh presser is the next live
+  binding gate but does not print until tomorrow 14:00 ET, and no held
+  name exists to defend. Web search not triggered (no held position
+  moving significantly; no held position at all). 22nd cash session
+  in progress; if today closes flat, EOD must commit Path (B) per
+  yesterday's pre-market action item #5. **No ClickUp ping this run
+  per user policy: no stop triggered, no position trimmed.**
+- **Pre-Market 2026-06-16 (prior, Tue):** Pre-open workflow into BoJ
   overnight + FOMC Day 1. `GET /v2/account` → equity $100,000.00, cash
   $100,000.00, BP $400,000.00, ACTIVE (PA39FINFSDLL), PDT false.
   `GET /v2/positions` → `[]`. `GET /v2/orders?status=filled` → `[]`.
