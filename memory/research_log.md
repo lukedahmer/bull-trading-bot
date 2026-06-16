@@ -4,6 +4,45 @@ Newest entries first.
 
 ---
 
+## 2026-06-16 — End of Day
+
+**Session:** Post-close summary.
+
+**Account snapshot (Alpaca paper `PA39FINFSDLL`):**
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Long market value: $0.00
+- Last equity (prior close): $100,000.00
+
+**Today's P/L:** $0.00 (0.00%) — account is 100% cash, no exposure.
+
+**Benchmark (SPY, Alpaca daily bars):**
+- 2026-06-15 close: $754.75
+- 2026-06-16 close: $751.49
+- SPY daily return: **-0.43%**
+
+**Relative performance:** Bull 0.00% vs SPY -0.43% → out-performed the
+benchmark by +0.43% on the day purely by being in cash. This is not a
+strategy win; it's the absence of a strategy.
+
+**Trades today:** None. No filled orders since session inception.
+
+**Open positions:** None.
+
+**Observations:**
+- Credentials are now live; the multi-session blocker from 2026-05-19
+  is resolved.
+- Market closed broadly lower (SPY -0.43%, Nasdaq weakness reported
+  intraday). Sitting in cash avoided the down day but means zero
+  participation in the strategy outlined in `strategy.md`.
+- Next pre-market session should draft entry ideas on the core
+  watchlist (QTUM, IONQ, NVDA, AMD, SPY, QQQ) so capital begins
+  deploying within position-sizing rules (2% default, 10% max single,
+  10% cash floor).
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
