@@ -4,6 +4,32 @@ Newest entries first.
 
 ---
 
+## 2026-06-16 — Market open
+
+**Session:** Market-open sync.
+
+**Account:** Equity $100,000.00, cash $100,000.00, buying power $400,000.00,
+status ACTIVE. Zero open positions.
+
+**Trade ideas evaluated:** None. `research_log.md` contained no drafted
+ideas from a prior pre-market session, so the strategy checklist had no
+candidates to score. Strategy prohibits placing trades without a vetted
+thesis.
+
+**Stop-loss sweep:** N/A — no positions held.
+
+**Actions taken:**
+- Pulled `/v2/account` and `/v2/positions` from Alpaca (paper).
+- Refreshed `portfolio.md` with the live snapshot.
+- Did **not** place any orders (no qualifying ideas).
+- Did **not** ping ClickUp (no trade placed, no stop triggered).
+
+**Next session:** Run the pre-market research workflow to generate vetted
+trade ideas (per `strategy.md` §"Decision workflow (pre-market)") before
+the next market-open run.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
