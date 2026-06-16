@@ -15,6 +15,254 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-16 Pre-Market Tue — BoJ +25bp; FOMC Day 1; drafts only per user
+
+**Session:** Pre-market Tuesday. Day 1 of the FOMC two-day; BoJ overnight
+hike landed in-line; tomorrow (Wed 6/17) is the binding tape gate
+(statement + SEP + Warsh's first presser at 14:00 / 14:30 ET, with May
+Retail Sales at 08:30 ET as the pre-presser warm-up). **User directive
+this run: draft trade ideas, do not place trades, no ClickUp ping
+unless an urgent catalyst surfaces.** Per that override, this session
+is **drafts-only** — Path (A) extended-execute and Path (B) commit
+are both deferred to a later run with explicit user authorization.
+Yesterday's action item #2 (decide on Path B vs. extend Path A) is
+parked, not abandoned; action item #5 (22-cash-close threshold) is
+flagged.
+
+**Account snapshot (Alpaca, pre-open pulls):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00
+- `GET /v2/positions` → `[]` (empty)
+- `GET /v2/orders?status=filled&limit=5` → `[]` (empty — no fills
+  since inception 2026-05-12; **35 calendar days, 23 trading sessions
+  including today's open, zero fills**)
+- Account ACTIVE (PA39FINFSDLL); PDT false; options level 3; shorting
+  enabled (unused); accrued fees $0
+- **21 consecutive all-cash closes carried in.** If today closes flat
+  too, that's 22 — Path (B) commit becomes non-optional per yesterday's
+  EOD action item #5.
+
+**Market Conditions:**
+- **BoJ +25bp to 1.00%** overnight (in-line — Polymarket, Reuters, all
+  five major bank previews had this priced). Himino said the bank
+  "will continue to raise the policy rate" but ties pace to Middle
+  East spillovers. USD/JPY reaction modest because of the
+  telegraphing; no JGB tantrum overnight. **Net read-through to US
+  tape: neutral.** Removes one risk overhang ahead of the Wed FOMC.
+- **FOMC Day 1 today, statement + SEP + Warsh presser Wed 6/17 at
+  14:00 / 14:30 ET.** Consensus is HOLD at 3.50–3.75% (~99% on
+  Polymarket / Reuters poll). The real tape risk is **(a) the dot
+  plot reducing 2026 cuts** vs. March SEP (CPI 3.8% YoY, NFP +172k,
+  Iran-war-driven energy sticky) and **(b) Warsh's communication
+  style on his first presser** — Warsh was Trump's choice precisely
+  because Trump wanted faster cuts, so a hawkish-first-out message
+  would surprise dovishly-positioned books, while a too-dovish
+  message would surprise hawkishly-positioned ones. Either side is
+  a wedge.
+- **May Retail Sales drops 08:30 ET tomorrow (6/17)** — six hours
+  ahead of the FOMC statement. Hot retail print = hawkish kicker;
+  weak = adds dovish nuance to the dot plot read.
+- **Crude in the low-$80s** carry-forward from Mon's risk-on move on
+  the US–Iran peace-deal signing. Strait of Hormuz reopen narrative
+  intact. Headline-inflation pressure easing on the margin, but core
+  services still firm — Warsh has no obvious dovish handhold from
+  recent prints.
+- **Strategy hard rule §23 in force:** No new entries within 30
+  minutes of FOMC = 13:30–14:30 ET Wed entry blackout.
+- **Fed blackout intact** through Wed presser; no release-valve
+  speakers Tue/Wed AM.
+
+**Pre-market broad tape (this morning):**
+- Semis bid — MU +7.6%, TSEM +4.7% (supply deal + IP resolution).
+  Confirmation read for our semi watchlist.
+- Energy soft — WDS −8.1% on denied Exxon-talks headline; idiosyncratic.
+- Speculative micro-cap froth (CAST +245%, VSME +66%) — noise, not
+  signal for our universe.
+
+**Key News (watchlist, last 24h):**
+- **NVDA** — Mon close $212.45, **+3.54% on the day** with constructive
+  volume. Catalyst: SEC filing Monday revealing NVDA's first
+  investment-grade corporate-bond issuance since 2021 — signals capex
+  confidence and capital-structure normalization. Pre-market 6/15
+  print was $207.97; closes at $212.45 leaves the name **above the
+  $200–210 entry zone published 6/13**. Next earnings Aug 26, 2026
+  (no earnings-window conflict). Path A defer rule still in force —
+  await Warsh presser.
+- **AMD** — MEXT memory-optimization acquisition closed + fresh
+  Street upgrade (top analyst, GPU upside-not-priced theme). No
+  6/16 pre-market mover headline. Path A defer rule in force —
+  await Warsh presser.
+- **QTUM** — Defiance Quantum ETF, +36.69% in 2025; the S&P Kensho
+  Global Quantum index is +69.3% YTD through end-May vs. SPX +10.7%
+  (TipRanks / sector recap). Thematic strength intact; modified-
+  equal-weight 83+ holdings bound single-name blow-up risk. Entry
+  zone $152–$156 carry forward; **this is the highest-conviction
+  theme starter on the watchlist if and when Path (A) extended-
+  execute or Path (B) commit clears.**
+- **IONQ** — Mon close $62.48 (+5.83%). Q1 2026 revenue $64.7M
+  (+755% YoY), first 256-qubit commercial sale (Cambridge),
+  guidance raise — strong fundamentals, but the name has whipped
+  $58 ↔ $70 since 21 May and a 6/13 "quantum hype meets doubt"
+  headline shows two-way flow. **Entry zone $56–$58 still
+  applies; alert-only, no chase >$60.** Currently >$60, so no
+  action.
+- **SPY** — Mon close near upper end of published $730–$737 zone
+  after +0.54% on US–Iran signing. Zone re-ratcheted **$735–$740**
+  in 6/15 EOD entry. Above-zone if it gaps up further today.
+- **QQQ** — Mon close ~$744 (recovered through ATH zone post-AI-
+  infra rotation unwind). Above 6/13 entry zone $700–$710. Path A
+  defer.
+
+**Watchlist updates (Tue 6/16 carry):**
+- **SPY:** entry zone $735–$740 (per 6/15 EOD ratchet). In-play
+  range pending FOMC.
+- **QQQ:** entry zone $700–$710 — **stale** (price now ~$744); needs
+  ratchet in next refresh. Defer to post-presser.
+- **NVDA:** entry zone $200–$210 — **stale at top** (price $212.45);
+  needs ratchet. Defer to post-presser.
+- **AMD:** entry zone $470–$478 — needs price recheck post-MEXT
+  re-rate. Defer to post-presser.
+- **QTUM:** entry zone $152–$156 — in-play pending re-tick. Highest-
+  conviction theme starter.
+- **IONQ:** entry zone $56–$58 — alert-only; price $62.48 = above
+  zone, no chase.
+
+**Trade ideas (DRAFT — NOT placed; user directive: drafts only):**
+
+```
+Ticker:        SPY
+Direction:     long (pre-FOMC index starter — Path A leg 1 carry)
+Thesis:        End 21-session cash drift with diversified index core.
+               US–Iran signing landed cleanly; BoJ hike was in-line;
+               last clean window before 13:30 ET Wed blackout.
+               Single-name dot-plot blow-up risk bounded by basket
+               structure (500 names).
+Catalyst:      FOMC SEP + Warsh presser Wed 6/17 14:00/14:30 ET.
+Entry zone:    $735–$740 (limit, scale-in 50/50 inside the band).
+Stop:          −8% blended (~$679 if filled $738). Trailing per
+               strategy (BE at +10%, 5% trail after +20%).
+Target:        $770 (~+4.3%) into FOMC-week resolution.
+Size:          3% ($3,000), two tickets.
+Confidence:    3/5
+Skip rule:     Only if SPY gaps red >1.5% on a fresh shock pre-open.
+```
+
+```
+Ticker:        QTUM
+Direction:     long (theme starter — Path A leg 2 carry)
+Thesis:        Modified-equal-weight 83+ name exposure to quantum
+               theme; +36.69% 2025, +69.3% YTD on sector index
+               through end-May. Bound single-name blow-up risk vs
+               IONQ chase. Cleanest theme entry vehicle.
+Catalyst:      Quantum-theme flows; FOMC resolution as macro gate.
+Entry zone:    $152–$156 (limit, single ticket).
+Stop:          −8% (~$141).
+Target:        $175 (~+14%).
+Size:          2% ($2,000).
+Confidence:    4/5
+Skip rule:     Only if QTUM gaps above $158 on no-news (chase risk).
+```
+
+```
+Ticker:        NVDA
+Direction:     long (DEFER — single-name post-presser)
+Thesis:        AI capex super-cycle intact; bond-issuance Mon was a
+               positive capital-structure signal; +3.5% breakout on
+               6/15 has constructive volume. Vera CPU China-pitch
+               carries export-control overhang unhedgable inside two
+               sessions.
+Catalyst:      Post-Warsh tape; Aug 26 earnings is the next
+               fundamental gate.
+Entry zone:    Ratchet to $208–$215 (price closed $212.45; prior
+               $200–$210 is stale at the top). Confirm on post-presser
+               consolidation.
+Stop:          −8% (~$196 if filled $213).
+Target:        $235 (~+10%), then trail per strategy.
+Size:          2% ($2,000) starter; scale to 5% on confirmation.
+Confidence:    4/5
+```
+
+```
+Ticker:        AMD
+Direction:     long (DEFER — single-name post-presser)
+Thesis:        MEXT memory-optimization acquisition closes a
+               competitive gap vs NVDA; fresh Street upgrade on
+               GPU-upside-not-priced theme. Meta 6 GW + MI450/Helios
+               H2 ramp anchor hyperscaler bull case.
+Catalyst:      Post-Warsh tape; next earnings ~early August.
+Entry zone:    Recheck $470–$478 zone post-MEXT re-rate.
+Stop:          −8% from entry.
+Target:        +12% initial.
+Size:          3% ($3,000).
+Confidence:    3/5
+```
+
+```
+Ticker:        IONQ
+Direction:     long (speculative tranche — DEFER, alert-only)
+Thesis:        Q1 $64.7M revenue +755% YoY, raised 2026 guide, first
+               256-qubit commercial sale (Cambridge). High-beta
+               revenue-ramp story.
+Catalyst:      Quantum-advantage milestones; gov contracts; sector
+               flows.
+Entry zone:    $56–$58 only (currently $62.48 — NO CHASE).
+Stop:          $50 hard (~−9% from $55), accepts a hair over
+               strategy due to documented beta.
+Target:        $75 (~+34%).
+Size:          1.5% ($1,500), under-sized for beta.
+Confidence:    2/5
+```
+
+**Process note — Path (A) vs Path (B):**
+- Yesterday's EOD entry triggered the kill-switch and proposed Path
+  (B) (catalyst-independent starter, cash-drag escalator, execution-
+  or-document rule, binding-gate-rename ban, kill-switch retention).
+- Today's user directive is **draft-only**. That is an explicit
+  override of the action-item #2 decision window; it is not a
+  passive procedural defer. The Path (B) draft remains unchanged
+  in the prior EOD entry and is ready for commit once the user
+  authorizes.
+- **22nd cash close threshold (yesterday's action item #5) is live
+  for today's EOD.** If the close is flat again, the Path (B) commit
+  becomes non-optional at the next agent-discretion session.
+
+**ClickUp:** No ping this run. No urgent catalyst:
+- BoJ hike was in-line.
+- No held positions to defend; no stops to trigger.
+- No watchlist name gapping >5%; no halts.
+- FOMC is a scheduled known gate (binding tomorrow, not today).
+- User explicit directive: only ping on urgent catalyst.
+
+**Action items for next session (intraday Tue 6/16 or EOD Tue 6/16):**
+1. Re-pull Alpaca state; confirm no fills/orders during the day.
+2. Watch SPY / QQQ / NVDA / AMD / QTUM / IONQ for >2% intraday
+   moves; ping ClickUp if any held-watchlist name >5% or any halt.
+3. If today closes flat (which is the modal path under user
+   draft-only directive), **flip EOD entry to formal Path (B) commit
+   proposal** for user sign-off — 22 consecutive all-cash closes,
+   ninth passive defer, non-optional per yesterday's #5.
+4. **Wed 6/17:** No new entries 13:30–14:30 ET. Retail Sales tape
+   risk at 08:30. Powell-eq-... Warsh presser at 14:30.
+
+**Sources consulted:**
+- Alpaca `/v2/account`, `/v2/positions`, `/v2/orders?status=filled`
+- Polymarket FOMC June 2026 odds; Reuters / FXStreet / Investing.com
+  on BoJ +25bp outcome; Japan Times BoJ preview
+- Motley Fool / Yahoo Finance / Marketplace / IndexBox on Warsh's
+  first FOMC presser
+- TipRanks / CNN Markets / Yahoo Finance on NVDA bond filing + 6/15
+  close $212.45
+- TipRanks / Robinhood / Timothy Sykes on IONQ 6/15 close $62.48
+- TipRanks recap of QTUM ETF 2025 performance + S&P Kensho Global
+  Quantum index
+- Census Bureau scheduling — May Housing Starts (today 08:30) +
+  May Retail Sales (Wed 08:30)
+- Stockanalysis.com / Barchart / TradingView for broad pre-market
+  movers
+
+---
+
 ### 2026-06-15 EOD Mon — KILL-SWITCH TRIGGERED (no execution)
 
 **Session:** Post-close. Mon 6/15 was the committed Path (A) execution

@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-15 EOD Mon (Alpaca /v2/account + /v2/positions + /v2/orders?status=filled, post-close pulls)
+Last Updated: 2026-06-16 Pre-Market Tue (Alpaca /v2/account + /v2/positions + /v2/orders?status=filled, pre-open pulls)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -15,7 +15,7 @@ Last Updated: 2026-06-15 EOD Mon (Alpaca /v2/account + /v2/positions + /v2/order
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0); options level 3
 - Filled orders today: **none** | Filled orders since inception: **none**
-- /v2/positions → **`[]`** (empty array) at Mon 6/15 EOD pull.
+- /v2/positions → **`[]`** (empty array) at Tue 6/16 pre-market pull (also Mon 6/15 EOD pull — unchanged).
 - Benchmark (SPY) today: **+0.54%** on confirmed US–Iran peace deal
   signing in Switzerland over the weekend and Strait of Hormuz
   reopening. Crude continued lower into the low-$80s; defense softer;
@@ -87,7 +87,27 @@ ahead of the print rather than persistent distribution._
     IONQ/RGTI spec-only on confirmed bounce.
 
 ## Notes from Last Session
-- **EOD 2026-06-15 (this run, Mon):** Post-close summary. `GET /v2/account`,
+- **Pre-Market 2026-06-16 (this run, Tue):** Pre-open workflow into BoJ
+  overnight + FOMC Day 1. `GET /v2/account` → equity $100,000.00, cash
+  $100,000.00, BP $400,000.00, ACTIVE (PA39FINFSDLL), PDT false.
+  `GET /v2/positions` → `[]`. `GET /v2/orders?status=filled` → `[]`.
+  Book unchanged since 6/15 EOD; **21 consecutive all-cash closes
+  intact, today's session is closing window for either Path (A)
+  extended-execute or Path (B) commit per yesterday's action item
+  #2**. **BoJ raised the policy rate 25bp to 1.00% overnight (as
+  expected)** — Himino: future hikes contingent on Middle East and
+  inflation; USD/JPY reaction muted because the move was telegraphed.
+  **No new entries placed per user pre-market directive — drafts only.**
+  Path (B) decision deferred again to a later run (or to user); this
+  run honors the user override, NOT a passive procedural defer. **22nd
+  cash close threshold is in play if today closes flat:** Path (B)
+  commit becomes non-optional at next session. Wed 6/17 14:00 ET FOMC
+  statement + SEP + Warsh first presser remains the binding macro gate
+  — 13:30–14:30 ET Wed entry blackout in force. Tomorrow morning's
+  8:30 ET May Retail Sales is the pre-presser tape risk. No ClickUp
+  ping this session (no urgent catalyst; BoJ in-line; no held names;
+  no >5% gap on watchlist).
+- **EOD 2026-06-15 (prior, Mon):** Post-close summary. `GET /v2/account`,
   `GET /v2/positions` → `[]`, `GET /v2/orders?status=filled` → `[]`. Equity
   flat at $100,000.00; cash $100,000.00; BP $400,000.00. **21st consecutive
   all-cash session close.** SPY **+0.54%** on confirmed US–Iran peace deal
