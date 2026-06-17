@@ -4,6 +4,36 @@ Newest entries first.
 
 ---
 
+## 2026-06-17 — Market open
+
+**Session:** Intraday (market just opened).
+
+**Status:** Credentials are now provided. First successful Alpaca sync.
+
+**Account snapshot:**
+- Equity: $100,000.00
+- Cash: $100,000.00 (100% cash)
+- Buying power: $400,000.00
+- Open positions: none
+
+**Stop-loss sweep:** No positions held, nothing to evaluate against the
+-8% hard stop.
+
+**Trade ideas reviewed:** None on file. The prior research_log entry
+(2026-05-19) is a BLOCKED placeholder, not a trade idea. Per strategy,
+I do not fabricate ideas without research; sonar-pro research is a
+pre-market step and `PERPLEXITY_API_KEY` was not provided in this
+session.
+
+**Trades placed:** None — no idea passed the checklist (because no idea
+was on file).
+
+**Next session unblocker:** Provide `PERPLEXITY_API_KEY` so a real
+pre-market research pass can populate trade ideas, then this intraday
+run can execute against them.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
