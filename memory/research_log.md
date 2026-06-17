@@ -4,6 +4,30 @@ Newest entries first.
 
 ---
 
+## 2026-06-17 — Midday risk check
+
+**Session:** Midday risk-management sweep.
+
+**Alpaca sync:** Credentials now configured. `/v2/account` and
+`/v2/positions` both responded 200.
+
+- Equity: $100,000.00 (all cash)
+- Buying power: $400,000.00
+- Open positions: **none**
+
+**Risk actions evaluated:**
+- Hard stop (-8% from entry): N/A — no positions.
+- Winner trim (+30%, sell 50%): N/A — no positions.
+- Tighten trailing stop to 7% on +15% winners: N/A — no positions.
+
+**New entries:** Per the strategy, no new positions added midday absent
+a major catalyst. None identified this session.
+
+**ClickUp:** No notification sent — no stop triggered, no position
+trimmed.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
