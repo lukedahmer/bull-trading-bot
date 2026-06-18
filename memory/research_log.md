@@ -4,6 +4,35 @@ Newest entries first.
 
 ---
 
+## 2026-06-18 — End of Day
+
+**Session:** Post-close summary.
+
+**Account snapshot (Alpaca):**
+- Equity: $100,000.00
+- Last equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Long market value: $0.00
+- Open positions: none
+- Filled orders today: none
+
+**Performance:**
+- Portfolio today: 0.00% (no positions, account still in bootstrap state)
+- SPY today: +0.72% (close $746.37 vs prior close $741.02, IEX feed via Alpaca)
+- Relative: -0.72% vs SPY
+
+**Trades executed today:** None.
+
+**Observation:** Account remains 100% cash with no exposure deployed. The
+strategy is to be a 24/7 long-biased operator, but no pre-market trade
+ideas have been actioned yet. SPY closed mildly green; we missed the
+upside but also incurred zero drawdown. Next session priority: stage
+initial watchlist entries (QTUM, IONQ, NVDA, AMD) at strategy-defined
+2% sizing once a fresh pre-market read confirms the setup.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
