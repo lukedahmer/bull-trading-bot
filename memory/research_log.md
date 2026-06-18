@@ -4,6 +4,33 @@ Newest entries first.
 
 ---
 
+## 2026-06-18 — Midday risk check
+
+**Session:** Midday risk-management sweep.
+
+**Alpaca account snapshot:**
+- Equity: $100,000.00
+- Cash: $100,000.00 (100%)
+- Long market value: $0.00
+- Status: ACTIVE, no PDT flag
+
+**Positions (`GET /v2/positions`):** Empty array — zero open positions.
+
+**Risk actions:**
+- Stop-loss cuts (≤ -8% from entry): none — no positions.
+- Winner trims (≥ +30%): none — no positions.
+- Trailing-stop tightening (≥ +15%): none — no positions.
+
+**Catalyst scan:** Skipped — no holdings to monitor, and rules forbid
+new midday entries absent a major catalyst.
+
+**ClickUp ping:** Not sent — no stop triggered, no trim executed.
+
+**Next session:** Resume normal pre-market workflow; draft entries if
+watchlist (QTUM, IONQ, NVDA, AMD, SPY, QQQ) presents setups.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
