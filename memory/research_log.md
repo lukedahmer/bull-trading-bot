@@ -4,6 +4,33 @@ Newest entries first.
 
 ---
 
+## 2026-06-19 — Midday check-in
+
+**Session:** Midday risk review.
+
+**Alpaca sync:** OK.
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Open positions: **0**
+
+**Risk-rule actions executed:**
+- Cut at -8% or worse: none (no positions).
+- Trim 50% on winners up 30%+: none (no positions).
+- Tighten trailing stop to 7% on winners up 15%+: none (no positions).
+
+**New positions:** None added. Midday rule prohibits new entries absent
+a major catalyst, and no held names exist to react to.
+
+**Web search:** Skipped — nothing to monitor.
+
+**ClickUp notification:** Not sent. No stop was triggered and no position
+was trimmed; per instructions, ping only on those events.
+
+**Next session:** Resume normal pre-market workflow tomorrow.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
