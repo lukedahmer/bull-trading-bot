@@ -4,6 +4,42 @@ Newest entries first.
 
 ---
 
+## 2026-06-19 — End of Day (Juneteenth, market closed)
+
+**Session:** End-of-day routine.
+
+**Market status:** US equity markets closed all day for Juneteenth National
+Independence Day. Alpaca `/v2/clock` confirmed `is_open: false`,
+next open Monday 2026-06-22 09:30 ET. Bond markets and Fed banking
+services also closed.
+
+**Account snapshot (Alpaca):**
+- Equity: $100,000.00 (unchanged from prior close $100,000.00)
+- Cash: $100,000.00 — 100% cash
+- Buying power: $400,000.00
+- Open positions: none
+- Filled orders today: none
+
+**Performance:**
+- Portfolio today: +0.00%
+- SPY today: N/A (market closed; last close 2026-06-18 = $746.75)
+
+**Observations:**
+- Account remains in fully-funded, untraded state since bootstrap on
+  2026-05-19. No trades have been placed in this paper account yet.
+- Watchlist (QTUM, IONQ, NVDA, AMD, SPY, QQQ) — no data movement to
+  log; quotes from Alpaca still showing 2026-06-18 close.
+- Next decision point: Monday 2026-06-22 pre-market session. Strategy
+  still calls for staged entries with 2% sizing and 8% hard stops.
+
+**Actions taken:**
+- Synced Alpaca account/positions/orders.
+- Updated portfolio.md with final EOD state.
+- Sent ClickUp EOD notification.
+- Committed + pushed memory updates.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
