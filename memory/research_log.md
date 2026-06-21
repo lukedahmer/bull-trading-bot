@@ -15,6 +15,320 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-21 Pre-Market Sun — Weekend prep for Mon 6/22; post-FOMC re-engage after log gap
+
+**Session:** Sunday pre-market prep. Market closed (Sun 6/21). **First agent
+session since Tue 6/16 midday** — multi-day log gap covers the Wed 6/17
+FOMC (hawkish surprise), Thu 6/18 recovery, Fri 6/19 Juneteenth (market
+closed), Sat 6/20 weekend. **Path (B) commit decision from 6/16 was
+never recorded; strategy.md is unchanged.** Treating this as a re-engage
+session: re-snapshot the book, re-read the tape, refresh entry zones,
+draft trade ideas, and flag the path-decision overdue for Mon 6/22
+pre-market.
+
+**Account snapshot (Alpaca, weekend pulls):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00
+- `GET /v2/positions` → `[]` (empty)
+- `GET /v2/orders?status=all&limit=20` → `[]` (zero orders / fills since
+  inception 2026-05-12)
+- Account ACTIVE (PA39FINFSDLL); PDT false; options level 3; shorting
+  enabled (unused); accrued fees $0
+- **24 consecutive all-cash closes** (22 entering FOMC Wed + Wed + Thu;
+  Fri was Juneteenth-closed so no close to add). 40 calendar days from
+  inception, 25 trading sessions, zero fills.
+
+**Watchlist snapshots (Alpaca /v2/stocks/snapshots, Thu 6/18 dailyBar
+since Fri 6/19 was closed for Juneteenth):**
+
+| Symbol | Thu 6/18 close | Wed 6/17 close (FOMC dump) | Δ% Thu | Wed intraday low |
+|--------|---------------:|----------------------------:|--------|----------------:|
+| SPY    | 746.75 | 741.02 | +0.77% | 739.26 |
+| QQQ    | 739.82 | 722.48 | +2.40% | 720.85 |
+| NVDA   | 210.38 | 204.70 | +2.77% | 203.47 |
+| AMD    | 537.13 | 512.19 | +4.87% | 507.33 |
+| QTUM   | 167.89 | 162.36 | +3.41% | 162.36 |
+| IONQ   |  56.54 |  54.73 | +3.32% |  54.46 |
+
+**Market Conditions (week recap + macro setup):**
+- **FOMC Wed 6/17 — HAWKISH SURPRISE.** Fed held 3.50–3.75% (12-0
+  unanimous) but the SEP dot-plot **flipped from cut to hike**: median
+  policymaker now sees rates END 2026 higher than today; 9 of 18 see
+  ≥1 hike before year-end; 6 see two 25bp hikes; 17 of 18 judge
+  inflation risks tilted to upside. **Warsh declined to submit his own
+  dot** ("not helpful in the conduct of policy"). His 10-min presser
+  announced 5 task forces (communications, balance sheet, data sources,
+  productivity/jobs, inflation framework). Tape reaction: SPY's
+  worst Fed-day for a new chair since 1994; S&P sold off into the close.
+- **Thu 6/18 — Recovery.** SPY +0.77% to $746.75; QQQ +2.40% to $739.82;
+  semis led the bounce (NVDA +2.77%, AMD +4.87% on continued MEXT /
+  upgrade tailwind). Quantum theme continued strong (QTUM +3.41%, IONQ
+  +3.32%).
+- **Fri 6/19 — Juneteenth, US equity markets closed.** Long weekend.
+- **Net week:** SPY +0.9% despite the Wed dump — tech/growth reclaimed
+  leadership; small/micro caps outperformed large; risk-on regime intact.
+- **Mon 6/22 = first session of the catch-up week.** First trading day
+  after a market-closed Friday — expect orderly catch-up flow with no
+  fresh Friday tape to digest.
+- **Week-ahead macro calendar:**
+  - **Tue 6/23:** quiet US data; international PMI flash prints overnight.
+  - **Wed 6/24:** NVDA stockholder meeting (corporate event, not a
+    blackout). Light US macro.
+  - **Thu 6/25:** **May PCE + Core PCE 08:30 ET — binding inflation
+    print.** Consensus per Wells Fargo: headline PCE +0.5% MoM / +4.1% YoY
+    (energy-driven jump from April 3.8%); core +0.3% MoM / +3.4% YoY
+    (vs April 3.3%). A hot core print re-asserts the Wed 6/17 hawkish
+    dot-plot; a cool print is the marginal dovish surprise.
+  - **Fri 6/26:** quiet; Univ of Michigan final sentiment + 5y inflation
+    expectations.
+- **Strategy hard rule:** PCE day Thu 6/25 — no new entries within 30
+  min of the 08:30 ET print = 08:00–09:00 ET entry blackout.
+
+**Pre-market broad tape (Sun read):**
+- US futures don't open until Sun 18:00 ET. This session's "pre-market"
+  is weekend prep, not a live futures read. Mon 6/22 06:00 ET pre-market
+  pull is the actionable snapshot.
+- No major weekend catalyst surfaced in the search sweep (FOMC digested
+  Thu; no geopolitical shock; no held-name halts because no holdings).
+
+**Key News (watchlist, last 5 days):**
+- **NVDA — $210.38.** Stockholder meeting Wed 6/24 (online participation
+  available). SK hynix multi-year memory partnership for AI factories
+  announced last week. TSMC collaboration to bring AI into fabs.
+  Investment-grade bond issuance completed 6/15 ("filling the barn
+  before the storm"). Thursday's $210.38 close puts it mid-zone
+  ($208–$215 per 6/16 ratchet). **Cleanest single-name entry on the
+  board** — only watchlist name sitting inside its zone.
+- **AMD — $537.13.** Re-rated hard this week: **MEXT memory-optimization
+  acquisition** closed 6/15; UK AI commitment up to £2B + Imperial
+  College collaboration (announced 6/8 but flowed through tape this
+  week); Rackspace multi-year 30 MW deployment with Instinct GPUs +
+  EPYC CPUs; AMD-OQC-JPM quantum-AI collab announced 6/19; Wall Street
+  PT lifts as high as $600. Up +4.87% Thu alone. **$537 is FAR above
+  the stale $470–$478 entry zone** — chase risk if entered cold;
+  rezone to $520–$535 and wait for pullback.
+- **QTUM — $167.89.** Defiance Quantum ETF up **+54% YTD through June
+  2026** (vs SPY +11%); +47.39% YTD through 6/12 vs QQQ +17.42%;
+  trailing-year +82.93% vs QQQ +35.17%. Defiance launching new
+  Defiance Long Pure Quantum ETF (QTUP) — adjacent flow. Holdings:
+  NVDA 8.14%, AAPL 7.10%, MSFT 4.74% top. **$167.89 is FAR above
+  the stale $152–$156 entry zone** — same chase risk as AMD. Rezone
+  $162–$168 with no chase >$170.
+- **IONQ — $56.54.** Duke distributed-tripartite-entanglement
+  demonstration across 3-node trapped-ion network (modular quantum
+  computing milestone). Fixstars Amplify trapped-ion integration for
+  US/Japan users. Horizon Quantum (Dublin) 256-qubit deal continues.
+  IonQ registered as new lobbying client 6/15 (Aerospace, Computer
+  Industry, Defense, Homeland Security, Sci/Tech). Q1 2026 rev $64.7M
+  (+755% YoY). **Back inside $56–$58 entry zone** after Wed FOMC
+  drawdown to $54.46 low and Thu bounce to $56.54.
+- **SPY — $746.75.** Above the published $735–$740 entry zone.
+  Ratchet candidate $740–$748 if Mon catch-up holds; alternatively
+  wait for $735 retest before deploying.
+- **QQQ — $739.82.** Way above the stale $700–$710 zone. Ratchet to
+  $725–$735 (post-FOMC base). Hawkish dot didn't break tech bid —
+  growth led the recovery.
+
+**Watchlist Updates (effective Mon 6/22 plan):**
+- **SPY:** ratchet entry zone $740–$748 (or wait for $735 retest).
+- **QQQ:** ratchet entry zone $725–$735.
+- **NVDA:** $208–$215 holds (mid-zone at Thu close); single best
+  in-zone entry.
+- **AMD:** ratchet entry zone $520–$535 (was stale at $470–$478);
+  do not chase >$540.
+- **QTUM:** ratchet entry zone $162–$168 (was stale at $152–$156);
+  do not chase >$170.
+- **IONQ:** $56–$58 holds (back in zone); spec-only sizing per P/S
+  109.
+
+**Trade ideas (DRAFT — NOT placed; user directive: drafts only this
+run):**
+
+```
+Ticker:        NVDA
+Direction:     long (single-name semi starter — highest-priority Mon entry)
+Thesis:        Only watchlist name sitting cleanly inside its zone after
+               Thursday's tape. AI capex super-cycle intact; SK hynix +
+               TSMC partnerships are fresh structural tailwinds; bond
+               issuance signals capex-confidence. Stockholder meeting
+               Wed 6/24 is a non-blackout corporate event.
+Catalyst:      Stockholder meeting Wed 6/24; PCE Thu 6/25 (macro).
+               Next earnings Aug 26.
+Entry zone:    $208–$215 (limit, single ticket Mon 09:30–10:30 ET).
+Stop:          −8% (~$193 if filled $210).
+Target:        $235 (~+12%), then trail per strategy.
+Size:          2% ($2,000) starter; can scale to 5% on confirmation.
+Confidence:    4/5
+Skip rule:     Skip if NVDA gaps >$216 on Mon open (chase) OR <$202 on
+               a fresh export-control headline (unhedgable inside one
+               session).
+```
+
+```
+Ticker:        SPY
+Direction:     long (diversified index leg)
+Thesis:        End 24-session cash drift with index core. SPY recovered
+               cleanly from Wed FOMC dump; week net +0.9%. Catch-up
+               session Mon after Juneteenth long weekend. Basket
+               structure bounds single-name PCE blow-up risk.
+Catalyst:      PCE Thu 6/25 (macro). 08:00–09:00 ET Thu entry blackout.
+Entry zone:    $740–$748 (limit, single ticket Mon 09:30–10:30 ET).
+               Alternate: wait for $735 retest if catch-up disappoints.
+Stop:          −8% from blended entry (~$686 if filled $746).
+Target:        $775 (~+3.9%) into July/Q2-earnings open.
+Size:          3% ($3,000), single ticket.
+Confidence:    3/5
+Skip rule:     Skip if SPY gaps red >1.5% on a fresh macro shock OR if
+               PCE-week event-vol estimate exceeds previous CPI weeks.
+```
+
+```
+Ticker:        QQQ
+Direction:     long (tech-tilt alternative to SPY — single ticket Mon
+               if SPY ratchet is not actionable)
+Thesis:        Tech reclaimed leadership last week despite the hawkish
+               dot-plot — QQQ +2.40% Thu vs SPY +0.77%. Hyperscaler
+               concentration drag from the SpaceX-IPO rotation has
+               unwound. Alternative index vehicle to SPY for the index
+               leg.
+Catalyst:      PCE Thu 6/25 (macro). 08:00–09:00 ET Thu entry blackout.
+Entry zone:    $725–$735 (limit, single ticket Mon).
+Stop:          −8% (~$670 if filled $728).
+Target:        $760 (~+4.4%).
+Size:          3% ($3,000), single ticket.
+Confidence:    3/5
+Skip rule:     Skip if QQQ gaps above $745 on Mon open.
+```
+
+```
+Ticker:        QTUM
+Direction:     long (theme starter — DEFER unless pullback)
+Thesis:        Quantum theme +54% YTD, modified-equal-weight 83+ name
+               diversification bounds single-name blow-up. Adjacent ETF
+               launch (QTUP) signals continued flow. But $167.89 is
+               above the stale $152–$156 zone — entry quality has
+               degraded.
+Catalyst:      Theme flows; PCE only indirect.
+Entry zone:    $162–$168 (ratcheted). Skip on gap >$170.
+Stop:          −8% (~$154 if filled $167).
+Target:        $190 (~+14%).
+Size:          2% ($2,000).
+Confidence:    3/5 (downgraded from 4/5 — chase risk).
+Skip rule:     Skip if QTUM gaps >$170 on no news.
+```
+
+```
+Ticker:        AMD
+Direction:     long (DEFER — chase risk after +4.87% Thu)
+Thesis:        MEXT close + UK AI commit + Rackspace deal + JPM/OQC
+               quantum collab + Citi/BofA upgrades + Wall Street PTs
+               to $600 all stacked into a +4.87% Thu print. $537 is
+               $60+ above the stale $470–$478 zone.
+Catalyst:      PCE Thu 6/25; next earnings ~early August.
+Entry zone:    $520–$535 (ratcheted from $470–$478). Wait for $525
+               retest before deploying.
+Stop:          −8% (~$487 if filled $529).
+Target:        $590 (~+11%).
+Size:          3% ($3,000) on confirmed pullback into zone.
+Confidence:    3/5 — defer execution until pullback.
+```
+
+```
+Ticker:        IONQ
+Direction:     long (speculative tranche — optional Mon entry)
+Thesis:        Back inside $56–$58 zone after Wed FOMC dump to $54.46
+               low. Duke 3-node entanglement + Fixstars Amplify + Dublin
+               256-qubit + IonQ federal lobbying registration all
+               continue the commercialization momentum. Q1 $64.7M
+               +755% YoY anchor.
+Catalyst:      Quantum-theme flows; PCE indirect; no earnings until Aug.
+Entry zone:    $56–$58 (limit, single ticket Mon if available).
+Stop:          $51 hard (~−9% from $56) — accepts a hair over strategy
+               per documented beta.
+Target:        $72 (~+28%).
+Size:          1% ($1,000), spec-only.
+Confidence:    2/5 — entry timing risk.
+Skip rule:     Skip if IONQ gaps >$58 on Mon open.
+```
+
+**Process note — Path (B) is OVERDUE:**
+- 6/15 EOD kill-switch flipped EOD log to Path (B) draft.
+- 6/16 pre-market and midday deferred the commit per user "drafts only"
+  directive.
+- 6/16 EOD through 6/20 — no agent sessions ran (log gap).
+- **Strategy.md still says §27 "decision workflow" applies, but the
+  binding-gate framework has produced 25 consecutive trading sessions
+  of zero fills.** The Path (B) draft (catalyst-independent starter,
+  cash-drag escalator, execution-or-document rule, binding-gate
+  rename ban, kill-switch retention) remains in the 6/15 EOD entry
+  awaiting user sign-off or explicit reject.
+- This pre-market run honors the standing "drafts only in pre-market"
+  rule, so no execution this session. **Mon 6/22 pre-market is the
+  next natural decision point.**
+
+**Urgent catalyst check (per strategy):**
+- Earnings beat/miss on a **held** name? — No holdings. N/A.
+- Halted stock we **own**? — No holdings. N/A.
+- Macro shock? — None. FOMC was 4 sessions ago; PCE is 4 sessions
+  forward; no geopolitical surprise.
+- Gap >5% on **held** watchlist? — No holdings; weekend so no live
+  pre-market quotes either.
+→ **No ClickUp ping this session.** Weekend prep ping is not a
+  standing requirement (EOD-only is the standing rule); no urgent
+  catalyst is live.
+
+**Plan for next session (Pre-market Mon 6/22, ~06:00 ET):**
+1. Re-pull `/v2/account` + `/v2/positions` + `/v2/orders?status=all`
+   + `/v2/snapshots` for the full watchlist. Refresh exact entry zones
+   against Thursday's official closes (the Mon open is the first
+   post-Juneteenth tape).
+2. **Live pre-market gap check.** Any watchlist name gapping >1.5%
+   either direction merits a re-think of the entry zone before
+   deploying.
+3. **Path-decision is overdue** — commit Path (B) edits to strategy.md
+   OR execute a catalyst-independent starter (NVDA 2% + SPY-or-QQQ 3%
+   + QTUM 2% + IONQ 1% = ~8%) OR document explicit reason for
+   continued defer in a ClickUp ping.
+4. **NVDA is the cleanest in-zone single-name entry** — prioritize
+   if executing.
+5. **AMD / QTUM are chase risks** at current levels — only enter on
+   pullback into ratcheted zones.
+6. **IONQ** spec-only 1%, optional, $56–$58 only.
+7. **PCE Thu 6/25 08:30 ET = entry blackout 08:00–09:00 ET.** Honor
+   strategy §23.
+8. **Cash floor 5–10% (aggressive mode)** untouchable.
+9. **ClickUp ping policy unchanged:** standing EOD ping always;
+   intra-session pings only on triggered stop, trim, or urgent
+   catalyst on a held name.
+
+**Sources consulted:**
+- Alpaca `/v2/account`, `/v2/positions`, `/v2/orders?status=all`,
+  `/v2/stocks/snapshots?symbols=SPY,QQQ,NVDA,AMD,QTUM,IONQ` (live
+  pulls this run).
+- Web search (this run):
+  - Chase / CNBC / Fox Business / StockTitan / Kiplinger / BondSavvy
+    on FOMC 6/17 — Warsh first meeting, dot-plot flip, 12-0 hold,
+    task-force announcements.
+  - TheStreet (6/15, 6/17), 247WallSt, Schwab Weekly Trader's Outlook
+    on the 6/15–19 tape recap.
+  - Marketwatch / Defiance / 247WallSt on QTUM YTD performance and
+    QTUP launch.
+  - Yahoo Finance / TimothySykes on AMD MEXT acquisition + UK AI
+    commit + Rackspace + quantum collab + PT lifts.
+  - IonQ press / Quantum Computing Report / Legis1 on IONQ Duke
+    entanglement + Fixstars Amplify + Horizon Quantum 256-qubit +
+    federal lobbying registration.
+  - Yahoo / CNBC / Marketbeat on NVDA SK hynix + TSMC partnerships +
+    bond issuance + stockholder meeting 6/24.
+  - Kiplinger on May PCE preview (Wells Fargo: 0.5% headline / 0.3%
+    core MoM, 4.1% / 3.4% YoY).
+- Pre-market mover screens (Stockanalysis.com / MarketChameleon /
+  Barchart) — no actionable single-name signal on the watchlist
+  pre-Mon-open.
+
+---
+
 ### 2026-06-16 Midday Tue — Cash-book risk sweep; no catalyst, no action
 
 **Session:** Midday risk sweep on the standing all-cash book, FOMC Day 1.
