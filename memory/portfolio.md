@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-22 Midday Mon (Alpaca /v2/account + /v2/positions; midday risk sweep)
+Last Updated: 2026-06-22 EOD Mon (Alpaca /v2/account + /v2/positions + /v2/orders post-close pull)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -10,16 +10,15 @@ Last Updated: 2026-06-22 Midday Mon (Alpaca /v2/account + /v2/positions; midday 
 - Long Market Value: $0.00 | Short Market Value: $0.00
 - Last Equity (prior close, Thu 6/18 — Fri 6/19 was Juneteenth, market closed): $100,000.00
 - **Day P/L: 0.00%** (cash book — no positions to move)
-- **25th consecutive all-cash session in progress** (24 closes carried in)
+- **SPY today: −0.16%** (close $745.55 vs Thu 6/18 close $746.75); cash beat SPY by +16 bps on a down tape — but this is the 25th consecutive day of "winning by not playing," which is not a strategy.
+- **25th consecutive all-cash close** (24 closes carried in + today's close).
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0); options level 3
 - Filled orders today: **none** | Filled orders since inception: **none**
-- /v2/positions → **`[]`** (empty array) at Mon 6/22 midday pull.
-- **Session gap:** Mon 6/22 pre-market did NOT run. Sun 6/21 prep was the
-  last logged session before this midday sweep. Path-decision action item
-  from yesterday's prep (commit Path B / execute starter / document defer)
-  is overdue and rolls to today's EOD or Tue 6/23 pre-market.
+- /v2/positions → **`[]`** (empty array) at Mon 6/22 EOD pull.
+- /v2/orders?status=filled → **`[]`** (zero fills since inception 2026-05-12).
+- **Session log this Mon 6/22:** midday risk-sweep + EOD ran; **pre-market did NOT run.** Path-decision (commit B / execute starter / document defer) remains overdue — now rolling to Tue 6/23 pre-market as 9th passive defer.
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -35,34 +34,48 @@ Last Updated: 2026-06-22 Midday Mon (Alpaca /v2/account + /v2/positions; midday 
 - Thematic quantum (QTUM + IONQ): 0%
 - Index (SPY + QQQ): 0%
 
-## Watchlist (refreshed pre-market Sun 6/21 from Alpaca /v2/stocks/snapshots; latest dailyBar is Thu 6/18 close)
+## Watchlist (Mon 6/22 close from stockanalysis.com cross-check; Alpaca IEX daily bar used for sanity)
 
-| Symbol | Thu 6/18 close | Wed 6/17 close | Δ% Thu (FOMC-recovery day) | Prior entry zone | Status |
-|--------|---------------:|---------------:|---------------------------:|------------------|--------|
-| SPY    | 746.75 | 741.02 | +0.77% | $735–$740 | **Above zone**; FOMC dump bottomed $739.26 Wed, recovered Thu. Ratchet entry to $740–$748 or wait for $735 retest. |
-| QQQ    | 739.82 | 722.48 | +2.40% | $700–$710 (stale 6/16) | **Way above stale zone**; ratchet to $725–$735 (post-FOMC base). |
-| NVDA   | 210.38 | 204.70 | +2.77% | $208–$215 (6/16 ratchet) | **Mid-zone**; cleanest single-name entry on the board. Stockholder mtg Wed 6/24. |
-| AMD    | 537.13 | 512.19 | +4.87% | $470–$478 (stale 6/13) | **Far above stale zone** (+$60 since); MEXT close + Citi/BofA bull tape drove a re-rate. New zone $520–$535. |
-| QTUM   | 167.89 | 162.36 | +3.41% | $152–$156 (stale) | **Way above stale zone** (+$15); quantum theme +54% YTD per Defiance. New zone $162–$168 (no chase >$170). |
-| IONQ   | 56.54 | 54.725 | +3.32% | $56–$58 (alert-only) | **Back inside zone** post-FOMC pullback; still spec-only sizing per P/S 109. |
+| Symbol | Mon 6/22 close | Thu 6/18 close | Δ% Mon | Prior entry zone | Status |
+|--------|---------------:|---------------:|-------:|------------------|--------|
+| SPY    | 745.55 | 746.75 | −0.16% | $740–$748 (ratcheted Sun) | **Inside ratcheted zone**; quiet post-Juneteenth catch-up day. No trigger for chase; entry zone holds. |
+| QQQ    | _pull Tue pre-mkt_ | 739.82 | ~−0.27% per TheStreet Nasdaq quote | $725–$735 | Likely still above ratcheted zone; refresh from /v2/snapshots Tue. |
+| NVDA   | _pull Tue pre-mkt_ | 210.38 | n/a | $208–$215 | Stockholder mtg Wed 6/24 — non-blackout but headline-drift risk. |
+| AMD    | _pull Tue pre-mkt_ | 537.13 | n/a | $520–$535 (ratcheted) | Chase risk persists; wait for $525 retest. |
+| QTUM   | _pull Tue pre-mkt_ | 167.89 | n/a | $162–$168 (ratcheted) | No chase >$170. |
+| IONQ   | _pull Tue pre-mkt_ | 56.54 | n/a | $56–$58 (alert-only) | Spec-only; refresh Tue. |
 
-_FOMC Wed 6/17 was hawkish surprise — dot plot flipped from cut to hike (9 of 18 see ≥1 hike by year-end), worst Fed-day for a new chair since 1994. Thursday recovered cleanly; Friday was Juneteenth (closed). Net week +0.9% on SPY despite the Wed dump._
+_TheStreet Mon 6/22 wrap (cross-check): Nasdaq-100 quarterly rebalance day. Indices mixed — Dow +0.44%, S&P 500 modestly red (−0.16% per stockanalysis SPY proxy), Nasdaq −0.27%, Russell 2000 +2.12%. Notable single-name dumps: Moderna −9.54%, Alphabet −7.04%, new Nasdaq-100 entrants CoreWeave −9% and Rocket Lab −8.29% on first-day inclusion volatility. None on our watchlist._
 
 ## Cash Allocation Plan (aggressive mode — per strategy.md)
 - Cash floor: 5–10% (was 20%); stay heavily invested.
 - Starter 5–10%; high conviction 15–25%; single-name cap 25%.
 - Size small-caps 3–7% even in aggressive mode due to volatility.
 - Deploy in tranches; respect −8% hard stop and 10% trail.
-- **Mon 6/22 deployable budget (DRAFT — drafts only this run per user pre-market directive):**
-  - Diversified-index leg: SPY 3% or QQQ 3% (single ticket) — choose at open based on which is closer to ratcheted zone.
-  - Theme leg: QTUM 2% (single ticket) only if it backs off to $162–$165; skip if it gaps >$170.
-  - Single-name semi leg: NVDA 2% starter — only name in zone after Thu's tape.
-  - AMD DEFER — chase risk after +4.87% Thu rip; wait for $525 retest.
-  - IONQ optional spec 1% inside $56–$58; skip if >$58 on Mon open.
+- **Tue 6/23 deployable budget (carry-forward from Sun 6/21 draft, unmodified by today's quiet tape):**
+  - Diversified-index leg: SPY 3% inside $740–$748 (today's close $745.55 = in zone) — clean single-ticket.
+  - QQQ 3% only if back to $725–$735 (likely still above per the Nasdaq −0.27% close).
+  - Theme leg: QTUM 2% only if $162–$168; skip if >$170.
+  - Single-name semi leg: NVDA 2% starter — refresh price Tue pre-market.
+  - AMD DEFER — chase risk after Thu's rip.
+  - IONQ optional spec 1% inside $56–$58.
   - Total deployable: ~7–8% ($7–8k), keeps cash ~92%.
 
 ## Notes from Last Session
-- **Midday 2026-06-22 (this run, Mon):** Midday risk sweep per user
+- **EOD 2026-06-22 (this run, Mon):** Post-close pull. `GET /v2/account`
+  → equity $100,000.00 | cash $100,000.00 | last_equity $100,000.00 |
+  long_market_value $0.00 | ACTIVE (PA39FINFSDLL). `GET /v2/positions`
+  → `[]`. `GET /v2/orders?status=filled` → `[]`. Day P/L 0.00% on the
+  cash book vs SPY −0.16% (close $745.55 from stockanalysis.com,
+  cross-checked against Alpaca IEX daily bar showing $743.75; consolidated
+  $745.55 is the trustworthy print). Relative perf +16 bps — meaningless
+  alpha; this is the 25th consecutive day collecting the cash carry while
+  the index drifts. **Pre-market Mon 6/22 did not run; midday sweep did;
+  EOD did.** Path-decision overdue for the 9th consecutive session. PCE
+  Thu 6/25 is now 3 sessions out — the binding test of the post-FOMC
+  hawkish-dot regime. NVDA stockholder mtg Wed 6/24 (non-blackout). EOD
+  ClickUp ping sent per standing rule.
+- **Midday 2026-06-22 (prior this Mon):** Midday risk sweep per user
   checklist. `GET /v2/account` → equity $100,000.00, cash $100,000.00,
   BP $400,000.00, long_market_value $0.00, ACTIVE (PA39FINFSDLL).
   `GET /v2/positions` → `[]`. All risk-rule branches N/A on an empty
@@ -107,34 +120,31 @@ _FOMC Wed 6/17 was hawkish surprise — dot plot flipped from cut to hike (9 of 
   + QTUM 2% pre-FOMC starter for Mon 6/15. AMD upgraded by BofA Top CPU
   Pick + Citi Buy; IONQ shipped 256-qubit to Horizon Dublin.
 
-## Action items for next session (Pre-market Mon 6/22, ~06:00 ET)
-1. **Re-pull /v2/account + /v2/positions + /v2/snapshots** for SPY,
-   QQQ, NVDA, AMD, QTUM, IONQ — refresh entry zones against Thursday
-   close (the last regular session) and any Mon pre-market gap.
-2. **Watch pre-market for Monday gap risk** — first session after
-   Juneteenth long weekend; expect catch-up flow. >1.5% SPY gap either
-   direction = re-evaluate before deploying.
-3. **Path-decision is overdue.** Strategy.md is unchanged from 5/19;
-   Path (B) draft from 6/15 EOD has been parked for six days. Pre-market
-   Mon 6/22 needs to either:
-   (a) Commit Path (B) edits to strategy.md (catalyst-independent starter,
-       cash-drag escalator, execution-or-document rule, binding-gate
-       rename ban), OR
-   (b) Execute a catalyst-independent starter inside the first hour
-       on Mon (SPY 3% or QQQ 3% + NVDA 2% + QTUM 2% — total 7%),
-       OR
-   (c) Document an explicit reason for further defer in a ClickUp ping
-       under the proposed execution-or-document rule.
-4. **NVDA is the cleanest single-name entry** — only watchlist name
-   sitting inside its ratcheted zone after Thursday's tape. Stockholder
-   mtg Wed 6/24 is a non-blackout event but watch for headline drift.
-5. **AMD and QTUM are now CHASE risk** — both broke above their prior
-   zones on Thu's recovery. Wait for pullback or ratchet zones higher
-   with explicit acknowledgment.
-6. **IONQ** back inside $56–$58 — spec-only, optional 1% entry.
-7. **PCE Thu 6/25 is the next macro gate.** Hot print resumes the
-   Wed 6/17 hawkish-dot story; cool print disinflation back on the table.
-8. **Cash floor 5–10% (aggressive mode)** untouchable.
-9. **ClickUp ping policy unchanged:** standing EOD ping always;
+## Action items for next session (Pre-market Tue 6/23, ~06:00 ET)
+1. **Re-pull /v2/account + /v2/positions + /v2/snapshots** for SPY, QQQ,
+   NVDA, AMD, QTUM, IONQ — refresh entry zones against Mon 6/22 actual
+   close (today: SPY $745.55 inside ratcheted $740–$748 zone). Replace
+   stale Thu 6/18 prices in the watchlist table.
+2. **Path-decision now 9 sessions overdue.** Tue 6/23 pre-market MUST
+   choose one and execute, no more drift:
+   (a) Commit Path (B) edits to strategy.md (catalyst-independent
+       starter, cash-drag escalator, execution-or-document rule,
+       binding-gate rename ban), OR
+   (b) Execute the catalyst-independent starter inside Tue 09:30–10:30 ET
+       (SPY 3% inside $740–$748 + NVDA 2% if in zone + QTUM 2% if
+       <$170 — total ~7%), OR
+   (c) Send an explicit ClickUp defer ping under the proposed
+       execution-or-document rule, naming the specific blocker.
+3. **PCE Thu 6/25 is now 3 sessions out** — the binding test of the
+   post-FOMC hawkish-dot regime. A starter deployed Tue gets 2 sessions
+   to settle before the print; a Wed entry collides with NVDA stockholder
+   mtg same day.
+4. **NVDA stockholder mtg Wed 6/24** — non-blackout but headline-drift
+   risk. If NVDA is the cleanest single-name entry, do it Tue not Wed.
+5. **AMD and QTUM remain chase risk** unless they retest the ratcheted
+   zones ($525 and $162–$165 respectively).
+6. **IONQ** $56–$58 spec-only, optional 1% entry.
+7. **Cash floor 5–10% (aggressive mode)** untouchable.
+8. **ClickUp ping policy unchanged:** standing EOD ping always;
    intra-session pings only on triggered stop, trim, or urgent
    catalyst on a held name.

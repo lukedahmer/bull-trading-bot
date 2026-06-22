@@ -15,6 +15,87 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-22 EOD Mon — 25th cash close; SPY −0.16% on quiet Nasdaq-100 rebalance day; path-decision now 9 sessions overdue
+
+**Session:** Mon 6/22 end-of-day per user EOD checklist. The session log
+for today is midday + EOD (pre-market did not run). First post-Juneteenth
+regular session.
+
+**Account snapshot (Alpaca, post-close pull):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00 | sma $100,000.00 |
+  accrued_fees $0 | balance_asof 2026-06-18
+- `GET /v2/positions` → `[]` (empty)
+- `GET /v2/orders?status=filled&limit=50` → `[]` (zero fills since
+  inception 2026-05-12; 41 calendar days, 26 trading sessions)
+- Account ACTIVE (PA39FINFSDLL); PDT false; options level 3
+- **25th consecutive all-cash close** (24 carried in + today's close).
+
+**Performance vs benchmark:**
+- Bull EOD value: $100,000.00 → **Day P/L 0.00%** (cash book, no positions).
+- SPY EOD value: $745.55 (stockanalysis.com consolidated print) vs Thu
+  6/18 close $746.75 → **SPY −0.16%**.
+- Alpaca IEX daily bar reported SPY close $743.75 — discarded in favor
+  of the consolidated print since IEX captures only one venue's late
+  prints (volume 968k on the IEX bar vs ~1.5M on Thu 6/18 IEX bar
+  suggests an incomplete close).
+- **Relative perf: +16 bps vs SPY.** This is the 25th consecutive
+  session of "winning by not playing." On a quiet rebalance day with
+  a 16 bps spread it's noise, not alpha. Cumulative since inception
+  (40 days): Bull flat, SPY ~+6.5% off recent highs after FOMC dump —
+  back-of-envelope the cash book is materially behind benchmark over
+  the inception window.
+
+**Market wrap (Mon 6/22) — TheStreet + Alpaca cross-check:**
+- Nasdaq-100 **quarterly rebalance** day. Four new entrants: Astera Labs
+  (replacing Charter), CoreWeave (replacing Cognizant), Nebius Group
+  (replacing Insmed), Rocket Lab (replacing Verisk). New entrants
+  CoreWeave −9% and Rocket Lab −8.29% on first-day inclusion volatility.
+- Index tape: **Dow +0.44%, S&P 500 −0.16% (SPY proxy), Nasdaq −0.27%,
+  Russell 2000 +2.12%.** 299 of 503 S&P names advanced — the cap-weight
+  drag came from a small number of large-cap dumps, not breadth.
+- Notable single-name moves outside watchlist: **Moderna −9.54%**,
+  **Alphabet −7.04%** were the steepest S&P decliners. Neither on our
+  book or watchlist.
+- **No watchlist gap >5%** observed (SPY −0.16%, Nasdaq −0.27%; semis
+  and quantum names not flagged in the recap — confirm Tue pre-market
+  with /v2/snapshots).
+- Macro: quiet day, no Fed speakers / data prints of consequence between
+  the Wed 6/17 hawkish FOMC and Thu 6/25 May PCE / Core PCE.
+
+**Risk-rule checklist (EOD, all N/A on empty book):**
+- −8% hard stop: no positions.
+- +30% trim 50%: no winners.
+- +15%→7% trail tighten: no winners.
+- New entries: none (EOD is not an entry window per strategy).
+
+**Path-decision status:** Now 9 sessions overdue (since 6/15 EOD
+kill-switch). Today's pre-market no-show + midday no-add + EOD
+no-execution = the 9th passive defer. The defer is no longer an
+oversight; it's the de-facto policy. Tue 6/23 pre-market must execute
+one of the three branches (commit B / execute starter / explicit
+documented defer) — drift is now the failure mode.
+
+**ClickUp:** EOD notification sent per standing rule (always ping at
+EOD with portfolio value + day return + SPY return + trades + one
+observation). Today's observation: 25th cash close + path-decision
+9 sessions overdue.
+
+**Next session unblockers (Tue 6/23 pre-market, ~06:00 ET):**
+1. Refresh /v2/snapshots for SPY/QQQ/NVDA/AMD/QTUM/IONQ — Mon close
+   prices, not stale Thu 6/18 data.
+2. Confirm SPY $740–$748 zone still holds (today's $745.55 inside it).
+3. Make the path-decision NOW — Tue is the last sane window before
+   Wed NVDA stockholder mtg + Thu PCE compress the calendar.
+4. If executing starter: SPY 3% + NVDA 2% (if in zone) + QTUM 2% (if
+   <$170) in the 09:30–10:30 ET window. AMD defer, IONQ optional spec.
+5. If committing Path B: edit strategy.md to add catalyst-independent
+   starter, cash-drag escalator, execution-or-document rule.
+6. If documenting defer: ClickUp ping with explicit named blocker.
+
+---
+
 ### 2026-06-22 Midday Mon — Risk-sweep on empty book; pre-market gap flagged
 
 **Session:** Mon 6/22 midday risk-sweep run per user checklist. Mon 6/22
