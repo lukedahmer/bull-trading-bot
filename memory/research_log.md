@@ -4,6 +4,38 @@ Newest entries first.
 
 ---
 
+## 2026-06-22 — Market-open session (no-op)
+
+**Session:** Intraday open routine (Monday).
+
+**Account snapshot (Alpaca paper `PA39FINFSDLL`):**
+- Equity: $100,000.00
+- Cash: $100,000.00 (100% cash floor not at risk)
+- Open positions: none
+
+**Market clock check:** Alpaca `/v2/clock` reports `is_open: false`,
+`next_open: 2026-06-22T09:30:00-04:00`. Local timestamp at run start was
+02:31 ET — market has not yet opened despite the routine's prompt. Any
+`time_in_force: day` order would queue until open, but see below.
+
+**Trade ideas reviewed:** None. `research_log.md` contains no drafted
+ideas since the 2026-05-19 bootstrap. No candidate passes the checklist
+because no candidate exists.
+
+**Stop-loss sweep:** No positions held → nothing to evaluate against the
+-8% hard stop.
+
+**Actions taken:**
+- Synced Alpaca account + positions; updated `portfolio.md`.
+- Did **not** place any orders (no ideas + no positions).
+- Did **not** send a ClickUp ping (no trade placed, no stop triggered).
+
+**Next session unblocker:** Pre-market run needs to draft trade ideas
+into this log (using the strategy template) before the open session can
+act on them.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
