@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-21 Pre-Market Sun (Alpaca /v2/account + /v2/positions + /v2/snapshots, weekend prep for Mon 6/22 open)
+Last Updated: 2026-06-22 Midday Mon (Alpaca /v2/account + /v2/positions; midday risk sweep)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -9,15 +9,17 @@ Last Updated: 2026-06-21 Pre-Market Sun (Alpaca /v2/account + /v2/positions + /v
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
 - Last Equity (prior close, Thu 6/18 — Fri 6/19 was Juneteenth, market closed): $100,000.00
-- **Day P/L: 0.00%** (market closed today; tracking N/A on a Sunday)
-- **24 consecutive all-cash closes** (last regular-session close Thu 6/18; 22 entering Wed FOMC + Wed + Thu = 24)
+- **Day P/L: 0.00%** (cash book — no positions to move)
+- **25th consecutive all-cash session in progress** (24 closes carried in)
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0); options level 3
 - Filled orders today: **none** | Filled orders since inception: **none**
-- /v2/positions → **`[]`** (empty array) at Sun 6/21 pre-market pull.
-- /v2/orders?status=all&limit=20 → **`[]`** (still zero fills since inception 2026-05-12; 40 calendar days, 25 trading sessions, zero fills).
-- **Log gap:** No agent sessions logged between Tue 6/16 midday and this Sun 6/21 prep run. That spans FOMC Wed 6/17, recovery Thu 6/18, market-closed Fri 6/19 (Juneteenth), Sat 6/20. **Path (B) commit decision from 6/16 was NOT recorded; the strategy.md is unchanged.** Treating this run as the first session re-engaging the workflow.
+- /v2/positions → **`[]`** (empty array) at Mon 6/22 midday pull.
+- **Session gap:** Mon 6/22 pre-market did NOT run. Sun 6/21 prep was the
+  last logged session before this midday sweep. Path-decision action item
+  from yesterday's prep (commit Path B / execute starter / document defer)
+  is overdue and rolls to today's EOD or Tue 6/23 pre-market.
 
 ## Current Positions
 [Agent populates this from Alpaca API each session]
@@ -60,7 +62,17 @@ _FOMC Wed 6/17 was hawkish surprise — dot plot flipped from cut to hike (9 of 
   - Total deployable: ~7–8% ($7–8k), keeps cash ~92%.
 
 ## Notes from Last Session
-- **Pre-Market 2026-06-21 (this run, Sun — weekend prep for Mon 6/22):** First
+- **Midday 2026-06-22 (this run, Mon):** Midday risk sweep per user
+  checklist. `GET /v2/account` → equity $100,000.00, cash $100,000.00,
+  BP $400,000.00, long_market_value $0.00, ACTIVE (PA39FINFSDLL).
+  `GET /v2/positions` → `[]`. All risk-rule branches N/A on an empty
+  book: −8% stop (no positions), +30% trim-50% (no winners), +15%→7%
+  trail tighten (no winners). No midday entries — strategy prohibits
+  midday adds without a major catalyst, and none on the empty book.
+  Web search not triggered (rule fires only on a held position moving).
+  Mon 6/22 pre-market did NOT run; Path-decision action item from Sun
+  6/21 prep rolls forward. ClickUp suppressed (no stop, no trim).
+- **Pre-Market 2026-06-21 (prior, Sun — weekend prep for Mon 6/22):** First
   agent session since Tue 6/16 midday — multi-day log gap covering FOMC Wed
   6/17, Thu 6/18 recovery, Juneteenth-closed Fri 6/19, Sat 6/20. `GET /v2/account`
   → equity $100,000.00, cash $100,000.00, BP $400,000.00, long_market_value

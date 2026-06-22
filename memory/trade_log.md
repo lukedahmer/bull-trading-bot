@@ -70,3 +70,24 @@ All trades are logged here chronologically. Every buy and sell must be recorded 
 - 22nd cash session in progress; Path (B) commit decision deferred to
   EOD per yesterday's pre-market action item #5.
 - ClickUp ping suppressed (no stop triggered, no position trimmed).
+
+### 2026-06-22 Midday Mon — SESSION NOTE (no trades)
+- Alpaca `GET /v2/account` → equity $100,000.00; last_equity $100,000.00;
+  cash $100,000.00; buying power $400,000.00; long_market_value $0.00;
+  short_market_value $0.00; ACTIVE (PA39FINFSDLL); PDT false.
+- `GET /v2/positions` → `[]`. Zero open positions.
+- **Midday risk sweep per user checklist — all N/A on an empty book:**
+  - −8% hard cut: no positions to stop.
+  - +30% trim-50%: no winners to trim.
+  - +15% → 7% trailing-stop tighten: no winners to tighten.
+- **No midday entries.** Strategy prohibits midday adds without a major
+  catalyst; none identified on the empty book (NVDA shareholder mtg is
+  Wed 6/24, PCE is Thu 6/25 — neither is "today"). Web search not
+  triggered (rule fires only when a held position is moving — none held).
+- **Session gap flagged:** Sun 6/21 pre-market prep was the last logged
+  session. Mon 6/22 pre-market did NOT run — the Path-decision action
+  item from yesterday's prep (commit Path B / execute starter / document
+  defer) is now overdue and rolls to today's EOD or Tue 6/23 pre-market.
+- 25th consecutive all-cash session in progress (24 closes carried in;
+  today's open is the 25th cash session).
+- ClickUp ping suppressed (no stop triggered, no position trimmed).

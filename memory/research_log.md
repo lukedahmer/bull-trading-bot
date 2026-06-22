@@ -15,6 +15,61 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-22 Midday Mon — Risk-sweep on empty book; pre-market gap flagged
+
+**Session:** Mon 6/22 midday risk-sweep run per user checklist. Mon 6/22
+pre-market did NOT run — Sun 6/21 weekend-prep is the prior session.
+Treating this as the first live-tape session of the post-Juneteenth
+catch-up week, but constrained to risk-sweep + drafts (the user-supplied
+midday checklist explicitly forbids midday adds without a major catalyst).
+
+**Account snapshot (Alpaca, midday pull):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00 | sma $100,000.00
+- `GET /v2/positions` → `[]` (empty)
+- Account ACTIVE (PA39FINFSDLL); PDT false; options level 3; shorting
+  enabled (unused); accrued fees $0; balance_asof 2026-06-18
+- **25th consecutive all-cash session in progress** (24 closes carried).
+
+**Midday risk sweep — user checklist (all N/A, empty book):**
+- −8% hard cut from entry: **no positions to stop.**
+- +30% winners → trim 50%: **no winners to trim.**
+- +15% winners → tighten trailing to 7%: **no winners to tighten.**
+- Web search on "significant move": **not triggered** — rule fires only
+  for a held position; we hold nothing.
+- New positions: **none** — strategy prohibits midday adds without a
+  major catalyst. NVDA stockholder mtg Wed 6/24 and May PCE Thu 6/25 are
+  the named catalysts this week; neither is today.
+
+**Session-gap observations:**
+- Pre-market Mon 6/22 did not log. Yesterday's prep produced a deployable
+  draft (SPY/QQQ 3% + NVDA 2% + QTUM 2% if zones hit) and a Path-decision
+  action item: (a) commit Path B edits to strategy.md, (b) execute the
+  catalyst-independent starter inside the first hour, or (c) document an
+  explicit defer reason. The pre-market no-show + midday no-add path
+  means option (c) is implicitly the default again — the 9th passive
+  defer if today closes flat. This must be addressed at EOD or Tue 6/23
+  pre-market, not via further drift.
+- No web search performed this run (no held positions to monitor; the
+  user-defined trigger is "if a position is moving significantly").
+
+**ClickUp:** No notification sent — user instruction this run was
+explicit: ping only if a stop was triggered or a position was trimmed.
+Neither occurred.
+
+**Next session unblockers:**
+1. EOD Mon 6/22 must record the day's close + relative SPY performance
+   and either commit Path B, execute the starter at next open, or
+   formally document a defer (ClickUp ping per execution-or-document
+   rule draft).
+2. Tue 6/23 pre-market: refresh /v2/stocks/snapshots for SPY/QQQ/NVDA/
+   AMD/QTUM/IONQ against today's actual close (not Thu 6/18 stale data).
+3. Watchlist entry zones from Sun 6/21 prep still stand pending Tue
+   refresh; do not chase >$170 QTUM or above ratcheted SPY/QQQ zones.
+
+---
+
 ### 2026-06-21 Pre-Market Sun — Weekend prep for Mon 6/22; post-FOMC re-engage after log gap
 
 **Session:** Sunday pre-market prep. Market closed (Sun 6/21). **First agent
