@@ -15,6 +15,236 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-23 Pre-market Tue — SpaceX-led tech gap-down forces watchlist into zones; AMD back in entry zone, NVDA shows RS, QQQ gaps below zone
+
+**Session:** Tue 6/23 pre-market per user checklist. Credentials live this
+session. First session after 9 consecutive passive defers; today's tape
+removes the "chase risk" objection on AMD and pulls QQQ below its prior
+entry zone — the path-decision is no longer about overcoming inertia, it's
+about whether to deploy into a real gap-down.
+
+**Account snapshot (Alpaca, pre-market pull):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00 | sma $100,000.00
+- `GET /v2/positions` → `[]` (empty — **26th consecutive cash open**)
+- Account ACTIVE (PA39FINFSDLL); PDT false; daytrade_count 0; balance_asof
+  2026-06-22; options level 3.
+
+**Watchlist snapshot (Alpaca `/v2/stocks/snapshots`, Mon 6/22 closes; web
+search for pre-market deltas):**
+
+| Symbol | Mon 6/22 close | Mon range L–H | Δ% vs Thu 6/18 | Pre-mkt 6/23 (web) | Entry zone (carried) | Status |
+|--------|---------------:|---------------|---------------:|-------------------|----------------------|--------|
+| SPY    | 744.27 | 743.13–750.14 | −0.33% | gap ~−1.3% → ~$734 | $740–$748 | **gaps BELOW zone** — re-ratchet decision |
+| QQQ    | 738.10 | 734.41–745.32 | −0.23% | gap ~−2.4% → ~$720 | $725–$735 | **gaps BELOW zone** — oversold open |
+| NVDA   | 208.59 | 207.72–213.98 | −0.85% | $211.28 (−0.28%) | $208–$215 | **inside zone + RS leader** (only −0.3% vs peers −5–9%) |
+| AMD    | 552.00 | 536.50–562.30 | +2.77% | gap ~−5%+ → ~$524 | $520–$535 (ratcheted) | **gap BACK INTO zone** — chase risk removed by tape |
+| QTUM   | 168.51 | 166.48–169.76 | +0.37% | (no specific pre) | $162–$168, skip >$170 | sits at top of zone; will likely open inside it on a −1.5% index gap |
+| IONQ   | 58.34  | 55.56–61.975 | +3.17% | (idiosyncratic +) | $56–$58 spec | wild Monday range; Northland PT $70 + Clavis XG remain idiosyncratic catalysts |
+
+**Pre-market tape — broad tech selloff:**
+- US futures lower **5:30 ET**: ES −1.33%, NQ −2.42%, YM −0.61%
+  (~−319 points).
+- **Trigger cluster:** (a) SpaceX (SPCX) crashed **−16.4% Mon 6/22**
+  (4th straight down session, ~$400B mkt cap erased since IPO peak;
+  IPO was 6/12 at $135) — bleeding into broader AI infra trade;
+  (b) AI capex sustainability debate; (c) rates-higher-for-longer
+  narrative ahead of Thu PCE; (d) Senate hearing on China chip sales
+  overhang on NVDA/AMD.
+- **Pre-market chip carnage:** SNDK −9%, MU −7%, MRVL −7%, STX −7%,
+  INTC −6.7%, AMD −5%+, QCOM −5%. **NVDA only −0.28%** — relative
+  strength leader. The asymmetry inside semis is the cleanest signal
+  on the tape.
+
+**Macro:**
+- **Tue 6/23 (today):** light data day — no tier-1 prints.
+- **Thu 6/25:** May PCE / Core PCE — Fed's preferred inflation gauge.
+  Post-Wed 6/17 hawkish-dot FOMC (Chair Warsh held on energy-led
+  inflation), a hot print extends the rates-higher narrative pressuring
+  tech today. A cool print is the obvious unwind catalyst.
+- **Wed 6/24:** NVDA stockholder meeting (non-blackout, headline-drift
+  risk if any prepared remarks leak).
+
+**Watchlist news updates (web research):**
+- **NVDA** — Vera CPU platform announced (entry into CPU space), 35 AI
+  HPC supercomputers in development across Europe, Halos for Robotics.
+  Sell-side: 38 analysts Strong Buy, 12-mo avg PT $298.93 (vs $211
+  pre-mkt = ~+41% upside). Overhang: Senate China chip-sales hearing.
+- **AMD** — Rackspace AI infra deal (positive). Offsets: Lisa Su sold
+  125k shares ~$57.6M; CTO Papermaster option-related sales 6/15;
+  fwd P/E 75–82x; Commerce Dept closed China loophole pathways via
+  overseas subs (international volume risk). Tepper reduced AMD + NVDA
+  stakes, favoring AMZN for AI exposure.
+- **IONQ** — Northland PT raised to **$70** (from $55), Outperform.
+  Launched **Clavis XG Multiplex** 6/17 (QKD on existing metro fiber).
+  Q1'26 rev $64.7M (+754% YoY); RPO +554% YoY to **~$470M** anchored
+  by $39M SDA contract + Missile Defense Agency SHIELD IDIQ selection.
+  **Investor Day Sept 8.** Still −29% from 52-wk high $82.09 (Oct '25).
+- **QTUM** — AUM $7.30B; ER 0.40%. Top holdings shifted toward pure-play
+  quantum: Horizon Quantum 2.54%, Arqit 1.96%, ARM 1.51%, BTQ Tech
+  1.44%, Nebius 1.43%. 2025 +36.69% (beat NDX); 2024 +50.54%.
+- **SPY / QQQ** — Year-end targets: BofA S&P 7,100, Citi 7,700 (more
+  bullish on AI + rate-cut path). Mon 6/22 was Nasdaq-100 quarterly
+  rebalance (CoreWeave, Astera Labs, Nebius, Rocket Lab in; first-day
+  inclusion volatility hit CoreWeave −9% and Rocket Lab −8.29%).
+
+**Reframe vs Mon 6/22 EOD plan:**
+- Yesterday's plan: SPY 3% inside $740–$748 + NVDA 2% if in zone +
+  QTUM 2% if <$170 + IONQ optional 1%; AMD DEFER (chase risk).
+- Today's tape inverts the AMD logic: gap-down ~−5% brings AMD back
+  inside the ratcheted $520–$535 zone. Chase risk removed.
+- SPY/QQQ both gap BELOW their entry zones — not a chase, but the
+  decision is now "buy gap-down into oversold open vs wait for stab".
+- **NVDA's relative strength (−0.3% vs peers −5–9%) is the highest-
+  signal data point on the tape.** A name that doesn't sell off in a
+  capitulation move usually leads the rebound.
+
+**Risk-rule checklist (pre-market, all N/A on empty book):**
+- −8% hard stop: no positions.
+- +30% trim 50%: no winners.
+- +15%→7% trail tighten: no winners.
+- 30-min blackout around FOMC/CPI/PPI/NFP/earnings: NVDA stockholder
+  mtg Wed 6/24 not a blackout event but a headline-drift watch.
+
+**Trade ideas drafted (DO NOT execute in pre-market run — drafts only):**
+
+```
+Ticker: NVDA
+Direction: long (starter, on RS thesis)
+Thesis: Cleanest semi name on the tape — only −0.3% pre-mkt vs peers
+  −5 to −9%. Best franchise (Vera CPU expansion, 35 EU HPC wins, Halos
+  Robotics). RS in a selloff usually leads the rebound.
+Catalyst: Buy the dip into broad chip washout; mean-reversion target.
+Entry zone: $206–$211 (inside ratcheted $208–$215, prefer the lower
+  half if a capitulation print prints). Use 09:30–10:30 window; do not
+  chase if NVDA opens >$214.
+Stop: $193 (−8% from $210 mid)
+Target: $235 first leg; trim 1/3 at $228; $250 stretch
+Size (% equity): 2% starter = $2,000 (≈9–10 shares); aggressive-mode
+  starter range allows 5%, but the macro overhang argues for size
+  discipline at first entry.
+Confidence: 4/5
+```
+
+```
+Ticker: AMD
+Direction: long (starter — newly in zone)
+Thesis: −5% pre-mkt drop brings AMD into ratcheted $520–$535 zone for
+  the first time in days. Rackspace deal + sector beta. Offsetting risk:
+  insider selling + China rule changes + 75–82x fwd P/E.
+Catalyst: Gap-into-zone after multi-day chase risk; broader chip
+  rebound mean-reversion play.
+Entry zone: $520–$528 (lower half — let the dust settle first 30 min)
+Stop: $483 (−8% from $525 mid)
+Target: $565 first leg; trim 1/3 at $555; $600 stretch
+Size (% equity): 2% starter = $2,000 (≈4 shares at $525) — smaller of
+  the two semis because the insider-selling + China overhangs are
+  fundamentally different than NVDA's setup.
+Confidence: 3/5
+```
+
+```
+Ticker: QQQ
+Direction: long (index ballast, oversold gap)
+Thesis: −2.4% futures gap with no fundamental Fed/data trigger; a
+  partial fade is plausible. Index entry diversifies single-name chip
+  beta. SpaceX-driven selloff is largely a single-name + sentiment
+  story, not a macro regime change.
+Catalyst: Capitulation gap-down + light macro calendar today → mean
+  reversion into Thu PCE.
+Entry zone: $718–$725 (let the open print; look for 09:45–10:15 low).
+  Do NOT chase if QQQ gaps and goes — wait for the first 15-min retest.
+Stop: $695 (~−3.5%, tighter than 8% because index vol is lower and a
+  break of $695 is a regime-change signal)
+Target: $738 (gap fill) then $748
+Size (% equity): 2–3% = $2,000–$3,000
+Confidence: 3/5
+```
+
+```
+Ticker: SPY
+Direction: long (alternative to QQQ, less tech-beta)
+Thesis: −1.3% futures gap is milder than QQQ — pairs with QQQ for a
+  blended index entry. Already inside the long-standing $740–$748 zone
+  pre-gap; the gap takes it below the zone bottom.
+Entry zone: $732–$738
+Stop: $715 (~−2.5%)
+Target: $748 then $755
+Size (% equity): 3% = $3,000 — clean single-ticket per Sun 6/21 plan.
+Confidence: 3/5
+```
+
+```
+Ticker: QTUM
+Direction: WATCH — only buy if it gaps inside $162–$168 zone
+Thesis: Diversified quantum exposure but IONQ is more direct. Mon close
+  $168.51 = top of zone; a −1.5% gap puts it ~$166 = inside.
+Entry zone: $162–$168 (must be inside; skip if open >$170)
+Stop: $154 (−8%)
+Target: $185 then $200
+Size (% equity): 2%
+Confidence: 3/5
+```
+
+```
+Ticker: IONQ
+Direction: long (spec, optional)
+Thesis: Idiosyncratic catalysts (Northland PT $70, Clavis XG launch,
+  $470M RPO incl. defense pipeline) likely insulate vs broad chip-capex
+  worry. Quantum is a different beta from AI infra.
+Catalyst: Mon's wild range ($55.56–$61.97) suggests a 2-side market;
+  prefer the lower half on entry.
+Entry zone: $54–$57 (Mon low was $55.56 — anchor near there)
+Stop: $50
+Target: $70 (Northland PT); trim half at $66
+Size (% equity): 1% spec = $1,000 (small per small-cap mandate)
+Confidence: 3/5
+```
+
+**Total deployable sizing if ALL drafts fill (worst-case from
+sizing-discipline standpoint):**
+- NVDA $2,000 + AMD $2,000 + QQQ $2,500 + SPY $3,000 + QTUM $2,000 +
+  IONQ $1,000 = **$12,500 deployed (12.5% of equity)**.
+- Cash post-fills: $87,500 (well above 5–10% floor).
+- Semis sector weight: NVDA + AMD + QTUM + IONQ = $7,000 = 7% (cap
+  40% — plenty of room).
+- Index ballast: SPY + QQQ = $5,500 = 5.5%.
+
+**Path-decision — branch chosen (provisional, awaiting user confirmation
+since this is the pre-market drafts-only session):**
+- **Branch (b): Execute starter** is now the strongly indicated path.
+  The gap-down does the work of the "binding catalyst" the prior plan
+  was waiting for. The 9-defer drift is a process failure, but the tape
+  is now offering exactly the entry conditions the watchlist zones were
+  set up for.
+- Strategy.md still says "drafts only in pre-market" — these are drafts.
+  Execution window 09:30–10:30 ET per Sun 6/21 plan; the midday session
+  or a follow-up pre-market commit should execute.
+
+**ClickUp:** **No pre-market ping sent.** No held position → no earnings
+beat/miss/halt on a held name; no held position gapped >5%; macro shock
+threshold not met (this is a single-day −2.4% futures gap driven by a
+single-name SpaceX selloff, not a macro regime change). Standard EOD
+ping covers today's wrap if the user wants the recap.
+
+**Next session unblockers (Tue 6/23 midday + EOD):**
+1. **Re-pull /v2/snapshots at the open** — confirm pre-market quotes
+   translated into the regular session. Look for capitulation print
+   in the first 10 minutes.
+2. **NVDA RS check at 09:45 ET** — if NVDA holds green or unchanged
+   while QQQ is red 1.5%+, that's the green light for the starter.
+   If NVDA cracks with the rest, the RS thesis is broken — wait.
+3. **AMD entry only inside $520–$535** — do not chase if it rebounds
+   above $535 on a midday squeeze.
+4. **Volume confirmation** — a real capitulation low usually prints
+   with a volume spike. If the first hour is light volume, that's
+   not the low; wait.
+5. **PCE Thu 6/25 still 2 sessions out** — sized starters get one
+   session to settle. Larger adds should wait for the post-PCE tape.
+
+---
+
 ### 2026-06-22 EOD Mon — 25th cash close; SPY −0.16% on quiet Nasdaq-100 rebalance day; path-decision now 9 sessions overdue
 
 **Session:** Mon 6/22 end-of-day per user EOD checklist. The session log
