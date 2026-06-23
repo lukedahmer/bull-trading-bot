@@ -4,6 +4,33 @@ Newest entries first.
 
 ---
 
+## 2026-06-23 — Market open session
+
+**Status:** First successful Alpaca sync. Credentials provided in
+session. Account is fresh ($100k equity, 100% cash, no positions, no
+open orders).
+
+**Stop-loss checks:** N/A — no positions.
+
+**Trade ideas considered:** None. The research_log had no drafted trade
+ideas from a prior pre-market session. Per strategy.md, trades require a
+prior pre-market research pass (Perplexity sonar-pro on movers / macro /
+watchlist) — no such pass has been run yet in a session with creds. Will
+not place trades on an unresearched watchlist.
+
+**Actions taken:**
+- Pulled `/v2/account` and `/v2/positions` from Alpaca paper API. Both
+  succeeded.
+- Updated `portfolio.md` with the synced snapshot.
+- No orders placed. No trailing stops set. No ClickUp ping (per user
+  instruction: notify only on trade placed or stop triggered).
+
+**Next session:** Run the pre-market research workflow (movers,
+overnight news on watchlist, macro calendar) to draft the first set of
+trade ideas. Only then graduate to intraday execution.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.

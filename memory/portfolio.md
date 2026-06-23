@@ -1,20 +1,28 @@
 # Portfolio
 
-_Last synced from Alpaca: **never** — see research_log.md 2026-05-19 for blocker._
+_Last synced from Alpaca: **2026-06-23 (market open session)**._
 
 ## Account
 | Field | Value |
 |---|---|
-| Equity | _unknown_ |
-| Cash | _unknown_ |
-| Buying power | _unknown_ |
-| Account status | _unknown_ |
+| Equity | $100,000.00 |
+| Cash | $100,000.00 |
+| Buying power | $400,000.00 |
+| Portfolio value | $100,000.00 |
+| Long market value | $0.00 |
+| Account status | ACTIVE |
+| Account # | PA39FINFSDLL |
+| Pattern day trader | false |
+| Trading blocked | false |
 
 ## Open positions
-_No data yet — Alpaca API credentials missing in this session._
+_None._
 
 | Symbol | Qty | Avg entry | Mkt value | Unrealized P/L | Weight |
 |---|---|---|---|---|---|
 
+## Open orders
+_None._
+
 ## Sector exposure
-_Will be computed on first successful sync._
+- All cash (100%). No sector exposure.
