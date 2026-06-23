@@ -4,6 +4,37 @@ Newest entries first.
 
 ---
 
+## 2026-06-23 — End of Day
+
+**Session:** Post-market close summary.
+
+**Account (Alpaca paper, PA39FINFSDLL):**
+- Equity: $100,000.00
+- Cash: $100,000.00 (100% cash)
+- Buying power: $400,000.00
+- Open positions: none
+- Filled orders today: none
+
+**Performance:**
+- Portfolio: 0.00% (flat — no exposure)
+- SPY: -0.31% (close 744.39 from prior 746.74)
+- Relative: +0.31 pts vs SPY
+
+**Observations:**
+- Account is still in its initial 100% cash state — no trades have ever
+  been executed in this paper account. Strategy workflow has not yet
+  initiated any entries off the watchlist (QTUM, IONQ, NVDA, AMD, SPY,
+  QQQ).
+- Sitting in cash on a mildly red SPY day delivered passive
+  outperformance, but this is not a strategy — it's the absence of one.
+- Action item for next pre-market: per strategy.md, draft initial 2%
+  starter positions from the watchlist (no entries in post-market run).
+
+**Notifications sent:**
+- ClickUp end-of-day ping per daily SOP.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
