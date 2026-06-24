@@ -4,6 +4,34 @@ Newest entries first.
 
 ---
 
+## 2026-06-24 — Overnight / pre-market sync
+
+**Session:** Scheduled routine fired at 02:32 ET. Task description claimed
+"the market just opened" but Alpaca `/v2/clock` reports `is_open=false`,
+next open 09:30 ET. Treated as a pre-market sync, not an intraday run.
+
+**Account snapshot (Alpaca `PA39FINFSDLL`):**
+- Equity $100,000.00 — Cash $100,000.00 — Long mkt value $0.00
+- Buying power $400,000.00, status ACTIVE, PDT false
+- Open positions: **none**
+
+**Stop-loss sweep:** N/A — no positions held.
+
+**Trade ideas reviewed:** None. `research_log.md` contained no drafted
+ideas going into this session (prior entry was the 2026-05-19 BLOCKED
+bootstrap), and the strategy workflow forbids placing trades in the
+pre-market run. No orders submitted.
+
+**ClickUp notification:** Suppressed. No trade placed, no stop triggered,
+no urgent catalyst surfaced.
+
+**Next session:** Run the real pre-market research workflow once a
+research source is wired up — pull movers, overnight news on the
+watchlist (QTUM, IONQ, NVDA, AMD, SPY, QQQ), and macro events for
+2026-06-24, then draft ideas here for the next intraday run to act on.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
