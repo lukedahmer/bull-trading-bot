@@ -15,6 +15,116 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-24 EOD Wed — 27th cash close; SPY −0.27% on quiet pre-PCE drift; NVDA stockholder meeting digested without incident; path-decision now 10 sessions overdue
+
+**Session:** Wed 6/24 end-of-day per user EOD checklist. The session log
+for today is EOD only (pre-market did not run; midday did not run).
+Post-NVDA-stockholder-meeting (non-blackout corporate event); pre-PCE
+(Thu 6/25 08:30 ET, T-minus 1 session).
+
+**Account snapshot (Alpaca, post-close pull):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00 | sma $100,000.00 |
+  accrued_fees $0 | balance_asof 2026-06-23
+- `GET /v2/positions` → `[]` (empty)
+- `GET /v2/orders?status=filled&limit=50` → `[]` (zero fills since
+  inception 2026-05-12; 43 calendar days, 28 trading sessions)
+- Account ACTIVE (PA39FINFSDLL); PDT false; daytrade_count 0; options
+  level 3
+- **27th consecutive all-cash close** (26 carried in + today's close).
+
+**Performance vs benchmark:**
+- Bull EOD value: $100,000.00 → **Day P/L 0.00%** (cash book, no positions).
+- SPY (Alpaca IEX daily bar): Tue 6/23 close $733.62 → Wed 6/24 close
+  $731.625 (intraday range $731.26–$739.93, vol 834,853 on the IEX bar).
+  **SPY −0.27%** day.
+- **Relative perf: +27 bps vs SPY.** Twenty-seventh consecutive session
+  of "winning by not playing." On a quiet pre-PCE drift day a 27 bps
+  spread is noise, not alpha. Cumulative since inception (43 days):
+  Bull flat, SPY positive over the inception window — the cash book is
+  materially behind benchmark on a beta-adjusted basis.
+
+**Market wrap (Wed 6/24) — Alpaca tape + macro:**
+- SPY −0.27% on light-volume drift; intraday low $731.26 held above the
+  Tue 6/23 capitulation low (~$731.30 zone). No fresh down-leg; tape
+  consolidating the Tue gap-down ahead of Thu PCE.
+- **NVDA stockholder meeting today (non-blackout corporate event).**
+  No headline disruption reported; the meeting agenda was standard
+  governance + Q&A. Empty book → no exposure event regardless.
+- **Pre-PCE quiet day.** Light data calendar; no Fed-speaker release
+  valve (post-FOMC blackout window cleared but no scheduled remarks).
+- Watchlist intraday (qualitative read from sector tape):
+  - **SPY $731.625 close** — still gaps below the carried $740–$748
+    entry zone, 2nd straight day. Tape has not reclaimed the zone.
+  - **NVDA / AMD** — refresh /v2/snapshots Thu pre-mkt; Tue RS-leader
+    setup (NVDA) and AMD in-zone setup likely persist into Thu open
+    given the quiet Wed tape.
+  - **QTUM / IONQ** — refresh Thu pre-mkt; quantum theme uncorrelated
+    to the macro PCE print on a same-day basis.
+- **Macro:** PCE / Core PCE Thu 6/25 08:30 ET — binding inflation print
+  after the Wed 6/17 hawkish-dot FOMC. Consensus (Wells Fargo): headline
+  +0.5% MoM / +4.1% YoY (energy-driven); core +0.3% MoM / +3.4% YoY
+  (vs April 3.3%). A hot core extends the rates-higher narrative pressuring
+  tech; a cool core is the dovish unwind catalyst.
+
+**Risk-rule checklist (EOD, all N/A on empty book):**
+- −8% hard stop: no positions.
+- +30% trim 50%: no winners.
+- +15%→7% trail tighten: no winners.
+- New entries: none (EOD is not an entry window per strategy).
+- Strategy §23 PCE blackout 08:00–09:00 ET Thu in force for any
+  pre-market commit attempt.
+
+**Path-decision status:** Now **10 sessions overdue** (since 6/15 EOD
+kill-switch). Today's no-pre-market + no-midday + EOD no-execution =
+the 10th passive defer. The Tue 6/23 pre-market drafted a full
+$12,500 deployable package that explicitly identified the tape as
+offering "exactly the entry conditions the watchlist zones were set
+up for" — and the package was not executed. Thu 6/25 EOD (post-PCE)
+is now the natural commit window: either the print is a dovish
+unwind (deploy on the rally) or a hawkish extension (deploy on the
+continued capitulation) or neutral (no-excuse path-decision commit).
+
+**ClickUp:** EOD notification sent per standing rule (always ping at
+EOD with portfolio value + day return + SPY return + trades + one
+observation). Today's observation: 27th cash close + path-decision
+10 sessions overdue + PCE T-minus 1.
+
+**Next session unblockers (Thu 6/25 pre-market, ~06:00 ET; PCE day):**
+1. Refresh /v2/snapshots for SPY/QQQ/NVDA/AMD/QTUM/IONQ — Wed close
+   prices, not stale Mon/Tue data.
+2. **PCE blackout 08:00–09:00 ET Thu** — pre-market pull must wrap
+   before 08:00 ET; no new entries inside the window per strategy §23.
+3. **Path-decision must commit Thu EOD.** Three explicit branches:
+   (a) commit Path (B) edits to strategy.md (catalyst-independent
+   starter, cash-drag escalator, execution-or-document rule),
+   (b) execute the carried starter on the post-PCE tape inside the
+   09:30–10:30 ET window, or (c) document an explicit named-blocker
+   defer reason in a ClickUp ping. Drift is no longer an acceptable
+   default.
+4. **If hot PCE:** the gap-down likely continues; AMD's $520–$535
+   zone deepens; NVDA RS check at 09:45 ET (if NVDA holds vs QQQ
+   −1.5%+, execute starter).
+5. **If cool PCE:** index legs (SPY/QQQ) become chase risk on a rally;
+   prefer NVDA single-name on the unwind.
+6. **NVDA stockholder meeting digested with no headline drift** — the
+   only non-blackout corporate-calendar item this week is now cleared.
+7. **Cash floor 5–10%** untouchable; total deployable budget capped
+   at ~12.5% ($12,500) across the six legs.
+8. **ClickUp policy unchanged:** standing EOD ping; intra-session pings
+   only on triggered stop, trim, or urgent catalyst on a held name.
+
+**Sources consulted:**
+- Alpaca `/v2/account`, `/v2/positions`, `/v2/orders?status=filled&limit=50`
+  (live pulls this run).
+- Alpaca `/v2/stocks/SPY/bars?timeframe=1Day` for Tue 6/23 + Wed 6/24
+  daily-bar SPY closes ($733.62, $731.625; IEX feed).
+- Alpaca `/v2/clock` confirmed market open at pull time (next_close
+  16:00 ET Wed 6/24).
+
+---
+
 ### 2026-06-23 Pre-market Tue — SpaceX-led tech gap-down forces watchlist into zones; AMD back in entry zone, NVDA shows RS, QQQ gaps below zone
 
 **Session:** Tue 6/23 pre-market per user checklist. Credentials live this
