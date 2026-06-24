@@ -4,6 +4,29 @@ Newest entries first.
 
 ---
 
+## 2026-06-24 — Midday risk sweep
+
+**Session:** Intraday risk check.
+
+**Alpaca state:** Account ACTIVE, equity $100,000.00, cash $100,000.00,
+buying power $400,000.00, long market value $0, zero open positions.
+
+**Risk actions executed:** None — nothing to act on.
+- Hard-stop sweep (-8%): n/a, no positions.
+- Trim sweep (+30%): n/a, no positions.
+- Trail-tighten sweep (+15% → 7% trail): n/a, no positions.
+
+**New positions:** None added. Midday rule prohibits new entries without
+a major catalyst; none observed and no holdings to defend.
+
+**ClickUp:** No notification sent (rule: only on triggered stop or trim).
+
+**Next session:** Resume pre-market workflow; consider re-entering core
+watchlist (QTUM, IONQ, NVDA, AMD, SPY, QQQ) per strategy sizing rules
+when next pre-market run executes.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
