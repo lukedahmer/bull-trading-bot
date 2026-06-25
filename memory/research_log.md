@@ -4,6 +4,31 @@ Newest entries first.
 
 ---
 
+## 2026-06-25 — Midday check-in
+
+**Session:** Midday risk review.
+
+**Alpaca sync:** Successful. Account is ACTIVE, equity $100,000, cash
+$100,000, buying power $400,000. `GET /v2/positions` returned an empty
+array — **no open positions**.
+
+**Risk actions:**
+- No -8% stops to trigger (no positions).
+- No +30% winners to trim (no positions).
+- No +15% winners to tighten trailing stops on (no positions).
+
+**New entries:** Per strategy, no new positions added midday absent a
+major catalyst. None identified for the core watchlist (QTUM, IONQ,
+NVDA, AMD, SPY, QQQ) in this session.
+
+**ClickUp:** No notification sent — no stop triggered and no trim
+executed (silence per spec when nothing actionable happened).
+
+**Next session:** Pre-market run should draft initial entries to put
+the cash to work, sized per the 2%-of-equity default and 10% cash floor.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
