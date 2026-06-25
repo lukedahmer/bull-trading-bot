@@ -15,6 +15,151 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-25 EOD Thu — PCE prints in-line; SPY +0.52% on Micron-beat post-print bid; 28th cash close; path-decision now 11 sessions overdue with the binding gate cleared
+
+**Session:** Thu 6/25 end-of-day per user EOD checklist. PCE day. The
+session log for today is EOD only (pre-market did not run; midday did
+not run). **The named binding gate cleared today without execution.**
+
+**Account snapshot (Alpaca, post-close pull):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00 | sma $100,000.00 |
+  accrued_fees $0 | balance_asof 2026-06-24
+- `GET /v2/positions` → `[]` (empty)
+- `GET /v2/orders?status=filled&limit=50&after=2026-06-25T00:00:00Z`
+  → `[]` (zero fills today; zero fills since inception 2026-05-12;
+  44 calendar days, 29 trading sessions)
+- Account ACTIVE (PA39FINFSDLL); PDT false; daytrade_count 0; options
+  level 3
+- **28th consecutive all-cash close** (27 carried in + today's close).
+
+**Performance vs benchmark:**
+- Bull EOD value: $100,000.00 → **Day P/L 0.00%** (cash book, no positions).
+- SPY: **+0.52%** (S&P 500 close per TheStreet 6/25 wrap; Dow +0.65%,
+  Nasdaq +0.24%). Alpaca IEX intraday quote at 15:02 ET showed SPY
+  $733.29 vs Wed close $733.32 (essentially flat on IEX-only feed) —
+  consolidated tape captured a late-session bid into the close that
+  the single-venue IEX bar under-printed; using the consolidated wrap
+  for benchmark math per strategy.md.
+- **Relative perf: −52 bps vs SPY.** Twenty-eighth consecutive session
+  of cash drag — and today the drag was on a green tape during the
+  exact post-print window the carried watchlist package was designed
+  to deploy into. Cumulative since inception (44 days): Bull flat,
+  SPY positive over the inception window — the cash book continues
+  to compound underperformance on a beta-adjusted basis.
+
+**PCE print (08:30 ET, Thu 6/25 — the binding gate):**
+- **Headline PCE:** +4.1% YoY (in-line with Dow Jones consensus);
+  +0.4% MoM (consensus +0.5% — **0.1pp cooler than expected**).
+- **Core PCE:** +3.4% YoY (in-line); +0.3% MoM (in-line). Both
+  readings match Wells Fargo's pre-print consensus from the prior log.
+- **Net read:** Marginal dovish tilt on the headline MoM beat;
+  in-line core means the post-FOMC hawkish-dot regime is NOT
+  re-asserted, but also NOT actively unwound. Neither a hot extension
+  nor a cool unwind — a "no fresh shock" print.
+- **Tape reaction:** Pre-print futures soft; post-print bid developed
+  across indices; semis led on Micron blowout earnings (released
+  alongside the PCE morning). S&P +0.52%, Nasdaq +0.24% — the Dow's
+  +0.65% outperformance and Nasdaq's lag suggests rotation into
+  cyclicals/value rather than a pure growth chase. Mag7 lagged on
+  Apple + Microsoft price-increase news (iPhone / Xbox).
+
+**Market wrap (Thu 6/25):**
+- **Micron blowout earnings** — primary semi tailwind read-through
+  to NVDA / AMD / QTUM watchlist names. Refresh /v2/snapshots Fri
+  pre-mkt to quantify.
+- **Mag7 underperformance** on Apple + MSFT price-hike headlines
+  (iPhone + Xbox). Negative consumer-spend read-through; partial
+  offset to the Micron tailwind for tech-heavy QQQ.
+- **No fresh Fed-speaker remarks** post-print; no scheduled release-
+  valve on the dovish tilt.
+- **Watchlist quoted positioning (refresh required Fri pre-mkt):**
+  - **SPY** — Wed close $733.32 → Thu ~+0.52% implies ~$737. Still
+    below the carried $740–$748 entry zone; the post-PCE rally did
+    not reclaim the zone. Index leg remains gap-up risk into Fri.
+  - **NVDA / AMD** — Likely lifted on Micron read-through; refresh
+    Fri pre-mkt. AMD may exit the ratcheted $520–$535 zone on a
+    chase up; NVDA may exit the $208–$215 zone.
+  - **QTUM / IONQ** — Quantum theme uncorrelated to the PCE print;
+    refresh Fri pre-mkt.
+
+**Risk-rule checklist (EOD, all N/A on empty book):**
+- −8% hard stop: no positions.
+- +30% trim 50%: no winners.
+- +15%→7% trail tighten: no winners.
+- New entries: none (EOD is not an entry window per strategy §27).
+- PCE blackout 08:00–09:00 ET cleared at 09:00; the 09:30–10:30 ET
+  execution window per Sun 6/21 plan passed unused.
+
+**Path-decision status:** Now **11 sessions overdue** (since 6/15 EOD
+kill-switch). Today's no-pre-market + no-midday + EOD no-execution =
+the 11th passive defer. **And today is the day the framework broke:**
+the explicit binding gate (PCE) printed, the in-line/cool result was
+the "no fresh shock" outcome the carried drafts assumed, the deploy
+window opened at 09:30 ET, and nothing happened. The "waiting for
+PCE" rationale that has carried the cash book through 28 sessions
+is now spent. Fri 6/26 pre-market cannot defer on the same gate
+again — either commit Path (B), execute, or document a NAMED new
+blocker (not "PCE digestion" — that's drift).
+
+**ClickUp:** EOD notification sent per standing rule (always ping
+at EOD with portfolio value + day return + SPY return + trades +
+one observation). Today's observation: PCE cleared in-line, SPY
++0.52% rally taken in cash, 28th cash close, path-decision binding
+gate spent.
+
+**Next session unblockers (Fri 6/26 pre-market, ~06:00 ET):**
+1. Refresh /v2/snapshots for SPY/QQQ/NVDA/AMD/QTUM/IONQ — Thu close
+   prices, post-PCE + post-Micron. Watchlist zones likely require
+   re-ratcheting upward.
+2. **Path-decision MUST commit Fri.** The binding-gate framework
+   has produced 28 cash closes; the named gate (PCE) has cleared
+   without execution. Three explicit branches:
+   (a) commit Path (B) edits to strategy.md (catalyst-independent
+   starter, cash-drag escalator, execution-or-document rule),
+   (b) execute the carried package (or repriced version) in the
+   09:30–10:30 ET window, or (c) document an explicit NEW named-
+   blocker defer reason in ClickUp — "PCE digestion" does not
+   qualify; the print already cleared in-line.
+3. **Fri 6/26 macro is quiet** — Univ of Michigan final sentiment +
+   5y inflation expectations only. No tier-1 prints; no Fed-speaker
+   blackout. Clean execution window.
+4. **Micron beat is fresh tailwind** for any semi entry (NVDA / AMD /
+   QTUM). Quantify magnitude vs current quotes Fri pre-mkt before
+   sizing.
+5. **NVDA RS check** — if NVDA held or outperformed semis on the
+   Micron bid Thu, the Tue RS thesis is reinforced for Fri entry.
+6. **AMD chase risk re-emerges** — if Thu close pushes AMD above
+   $535, ratchet zone again or defer execution per strategy chase
+   rule.
+7. **Cash floor 5–10%** untouchable; total deployable ~12.5% across
+   all six legs.
+8. **ClickUp policy unchanged:** standing EOD ping; intra-session
+   pings only on triggered stop, trim, or urgent catalyst on a held
+   name.
+
+**Sources consulted:**
+- Alpaca `/v2/account`, `/v2/positions`,
+  `/v2/orders?status=filled&limit=50&after=2026-06-25T00:00:00Z`
+  (live pulls this run).
+- Alpaca `/v2/stocks/SPY/bars?timeframe=1Day&start=2026-06-23&end=2026-06-25&feed=iex`
+  for the IEX SPY series (Tue $733.62, Wed $733.32, Thu intraday
+  $733.405 / latest trade $733.29 at 15:02 ET).
+- Alpaca `/v2/stocks/SPY/snapshot` for intraday Thu quote
+  (latestTrade $733.29, latestQuote $733.30/733.33 at 15:02 ET).
+- Alpaca `/v2/clock` confirmed market_open=true at pull time
+  (next_close 16:00 ET Thu 6/25).
+- TheStreet "Stock Market Today (June 25, 2026)" wrap for
+  consolidated index closes (S&P +0.52%, Dow +0.65%, Nasdaq +0.24%),
+  PCE print numbers, Micron blowout earnings, and Apple/Microsoft
+  price-hike Mag7 drag.
+- Web cross-check on SPY closing price (Investing.com /
+  stockanalysis.com / Yahoo Finance / Robinhood) — consolidated
+  wrap consistent with TheStreet wrap.
+
+---
+
 ### 2026-06-24 EOD Wed — 27th cash close; SPY −0.27% on quiet pre-PCE drift; NVDA stockholder meeting digested without incident; path-decision now 10 sessions overdue
 
 **Session:** Wed 6/24 end-of-day per user EOD checklist. The session log

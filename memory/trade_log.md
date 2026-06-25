@@ -91,3 +91,30 @@ All trades are logged here chronologically. Every buy and sell must be recorded 
 - 25th consecutive all-cash session in progress (24 closes carried in;
   today's open is the 25th cash session).
 - ClickUp ping suppressed (no stop triggered, no position trimmed).
+
+### 2026-06-25 EOD Thu — SESSION NOTE (no trades — PCE day)
+- Alpaca `GET /v2/account` → equity $100,000.00; last_equity $100,000.00;
+  cash $100,000.00; buying power $400,000.00; long_market_value $0.00;
+  ACTIVE (PA39FINFSDLL); PDT false; daytrade_count 0.
+- `GET /v2/positions` → `[]`. Zero open positions.
+- `GET /v2/orders?status=filled&after=2026-06-25T00:00:00Z` → `[]`.
+  Zero fills today; zero fills since inception 2026-05-12 (29 trading
+  sessions / 44 calendar days).
+- **Day P/L: 0.00%** (cash book). SPY: **+0.52%** (S&P 500 consolidated
+  close per TheStreet 6/25 wrap; Dow +0.65%, Nasdaq +0.24%).
+  **Relative: −0.52% vs SPY** — cash drag on a green post-PCE tape.
+- **28th consecutive all-cash session close.**
+- **PCE printed in-line** at 08:30 ET: headline +4.1% YoY / +0.4% MoM
+  (0.1pp cool on MoM); core +3.4% YoY / +0.3% MoM (in-line). Marginal
+  dovish tilt; not a regime shock. Micron blowout earnings led semis
+  on the post-print bid.
+- **The carried Tue 6/23 drafts ($12,500 across NVDA / AMD / SPY /
+  QQQ / QTUM / IONQ) were NOT executed in the 09:30–10:30 ET window.**
+  The binding-gate framework has now produced 28 cash closes through
+  its own named gate (PCE) clearing without execution. Path-decision
+  is **11 sessions overdue**.
+- Risk rules (−8% stop, +30% trim, +15%→7% trail tighten) all N/A —
+  zero open positions.
+- ClickUp end-of-day ping sent per standing rule (always ping at EOD
+  with portfolio value + day return + SPY return + trades + one
+  observation).
