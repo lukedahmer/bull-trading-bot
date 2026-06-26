@@ -34,6 +34,20 @@ Beat the S&P 500 (SPY) over the long term using a mix of thematic ETFs and high-
 - Cash floor relaxed to 5-10% (was 20%) — keep a little dry powder for dislocations, but stay heavily invested
 - Still respect the -8% hard stop and 10% trailing stop — aggressive sizing requires disciplined exits
 
+## Cash-Drag Escalator (added 2026-06-26 weekly review)
+- **Trigger**: cash ≥ 90% of equity for ≥ 4 consecutive trading weeks (≥ 20 sessions).
+- **Default action**: the next pre-market session must place a 5% starter on the highest-conviction name on the watchlist within the 09:30–10:30 ET window UNLESS an explicit, time-stamped, written named-blocker is documented in research_log.md (and ClickUp pinged) the same session.
+- **Named-blocker eligibility**: only a tier-1 macro print due THAT SESSION (CPI / PCE / NFP / FOMC) or a halted/blocked status on the target name. "Digesting prior print" / "waiting for next print" do NOT qualify.
+- **Watchdog**: every weekly review must restate the current cash-drag session count and whether the escalator was tripped.
+- Rationale: 29 cash sessions through 2026-06-26 with the named binding gate (PCE) cleared without execution demonstrated that the named-blocker framework on its own can produce indefinite drift; the escalator forces an action-or-document choice.
+
+## Drafts → Armed Order Rule (added 2026-06-26 weekly review)
+- A "trade idea" drafted in research_log.md does NOT become an executable order automatically.
+- Any draft carried > 1 trading session must be re-priced against the most recent close at the next pre-market run, AND either:
+  (a) submitted as a live Alpaca order (limit or market) within that session's execution window, or
+  (b) explicitly killed in the same pre-market run with the kill reason logged.
+- Carrying drafts forward as "still valid" indefinitely is the failure mode the Tue 6/23 → Thu 6/25 → Fri 6/26 sequence exposed. No more silent rolls.
+
 ## Small-Cap / High-Growth Research Mandate
 - Actively research smaller, less-covered names with large growth potential
 - Risk is acceptable if the thesis is sound and the upside is asymmetric
