@@ -4,6 +4,44 @@ Newest entries first.
 
 ---
 
+## 2026-06-26 02:32 ET — Pre-market sync (no trades)
+
+**Session:** Pre-market / overnight tick. Credentials now provisioned.
+
+**Market clock:** `is_open=false`. Next open 2026-06-26 09:30 ET (~7h out).
+Current time 02:32 ET — this is the overnight pre-market window, not the
+regular session open.
+
+**Account snapshot (Alpaca paper `PA39FINFSDLL`):**
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Positions: none
+- Open orders: none
+
+**Stop-loss sweep:** N/A — no open positions to evaluate.
+
+**Trade ideas drafted last session:** none (prior session was BLOCKED on
+credentials — see 2026-05-19 entry below). No carried-over ideas to
+execute.
+
+**Decision:** No trades placed.
+- Per strategy (`memory/strategy.md` §Decision workflow): pre-market runs
+  do not place trades — they draft ideas only.
+- Per strategy §Risk rules: market orders submitted now would queue for
+  the 09:30 ET open with unknown fill price — outside the documented
+  workflow.
+- No trade ideas exist in this log to act on.
+
+**ClickUp:** No notification sent — no trade placed, no stop triggered,
+no urgent catalyst surfaced.
+
+**Next session:** Run the full pre-market research workflow (Perplexity
+sonar-pro for movers / overnight news on watchlist / macro events),
+draft ideas using the strategy template, then revisit at the 09:30 open.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
