@@ -15,6 +15,191 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-27 Sat — Weekend pre-market prep for Mon 6/29; cash-drag escalator confirmed TRIPPED; NVDA #1 starter candidate re-validated; ideas drafted, NOT armed
+
+**Session:** Sat 6/27 weekend prep targeting Mon 6/29 pre-market open.
+Markets closed. Per strategy.md decision workflow: pulled live Alpaca
+account/positions, refreshed watchlist snapshots, ran web research on
+overnight news / macro / watchlist names. Draft-only run — no orders
+placed (per user instruction and strategy §27 — Mon pre-market is the
+execution window, not weekend).
+
+**Account snapshot (Alpaca, Sat post-close pull):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00 | sma $100,000.00 |
+  accrued_fees $0 | balance_asof 2026-06-26 | ACTIVE (PA39FINFSDLL);
+  PDT false; daytrade_count 0; options level 3.
+- `GET /v2/positions` → `[]` (empty — 29th cash close carries into Mon
+  6/29 pre-market as the 30th cash session if no execution).
+- `GET /v2/account/portfolio/history?period=1W&timeframe=1D` → equity
+  series flat at $100,000 across last 5 daily samples; base_value
+  $100,000 as of 2026-06-18.
+- **No fills since inception 2026-05-12** (46 calendar days / 29
+  trading sessions).
+
+**Watchlist snapshots (Alpaca IEX, Fri 6/26 daily bar — markets closed
+weekend, no fresh prints since):**
+
+| Sym | Fri 6/26 close | Thu 6/25 close | Day Δ% | Week Δ% | Status |
+|-----|---------------:|---------------:|-------:|--------:|--------|
+| SPY  | 729.35 | 733.33 | −0.54% | −2.00%  | in re-rated $725–$735 zone |
+| QQQ  | 705.62 | 716.31 | −1.49% | −4.40%  | through prior zone; tape leader to downside |
+| NVDA | 191.97 | 195.89 | −2.00% | −7.97%  | in correction; OpenAI/Broadcom "Jalapeño" overhang |
+| AMD  | 520.20 | 532.34 | −2.28% | −5.76%  | at re-rated $510–$525 zone low |
+| QTUM | 155.69 | 160.215| −2.82% | −7.61%  | below prior zone; quantum-theme drag |
+| IONQ | 49.16  | 50.595 | −2.83% | −15.74% | biggest weekly loser; Trump quantum EO catalyst intact |
+
+**Macro context (week of 6/22 → 6/26; forward week 6/29 → 7/3):**
+- **Fed (Wed 6/24 FOMC):** held funds rate at 3.50–3.75%; Chair Kevin
+  Warsh's first post-meeting presser read hawkish. Updated SEP shows
+  9 of 18 officials penciling at least one HIKE by year-end 2026 (only
+  1 cut). 2026 headline PCE forecast raised to 3.6%, core to 3.3%.
+  2-year UST hit a 1-year+ high on Wed. **Regime: hawkish; tech
+  carries the duration risk.**
+- **PCE (Thu 6/25):** headline +4.1% YoY / +0.4% MoM (0.1pp cooler
+  than consensus); core +3.4% YoY / +0.3% MoM (in-line). "No fresh
+  shock" — neither extended the hawkish FOMC nor unwound it. Tape
+  reacted positively (SPY +0.52%) led by Micron blowout earnings.
+- **Friday 6/26 selloff:** Nasdaq −1.0%-ish on the day capping a
+  −4.4% week. Narrative: OpenAI IPO-delay (NYT) + AI-tariff jitters
+  + correction in NVDA. Tape rotated out of AI-semi mega-cap.
+- **Week ahead (6/29 – 7/3 — 4 trading sessions; mkts CLOSED Fri 7/3):**
+  - Mon 6/29: **NO tier-1 US print.** Quiet. Dallas Fed Mfg 10:30 ET
+    (tier-3). **Pre-market execution window opens uncontested for the
+    Cash-Drag Escalator default-action.**
+  - Tue 6/30: China PMI / German CPI / UK GDP / BoJ Tankan overnight.
+  - Wed 7/1: ADP private payrolls 08:15 ET + ISM Mfg PMI 10:00 ET +
+    Eurozone HICP + BoE Bailey.
+  - **Thu 7/2: US NFP 08:30 ET (moved up 1 day from normal first-Fri
+    slot due to Independence Day).** Binding macro gate of the week.
+  - Fri 7/3: US markets CLOSED — Independence Day observed.
+
+**Key news (overnight + Fri post-close + weekend):**
+- **NVDA** — stock officially in CORRECTION (>10% off month high)
+  per CNBC; Morgan Stanley reiterated bullish despite peer weakness;
+  competitive overhang from OpenAI/Broadcom "Jalapeño" custom AI chip
+  unveil. After-hours Fri −1.0% to ~$193.78. Analyst consensus
+  Strong Buy; 12-mo avg PT ~$298.93 vs Fri close $191.97 (+55% implied).
+  No fresh held-name earnings risk (Q2 FY27 report mid-Aug+).
+- **AMD** — Fri close $521.58 (−2.06%); UBS raised PT to street-high
+  on Wed. Meta 6-GW MI450 deal anchors multi-year thesis. Trading
+  in $502–$525 intraday range. No earnings near-term.
+- **IONQ** — Fri close $49.16 (−2.83% day, −15.7% week). Trump signed
+  two quantum-computing executive orders on Mon 6/23 — sector
+  catalyst still in play; the week's drawdown is sentiment unwind
+  not thesis break. 2026 revenue guide $260–270M; $470M backlog.
+  Volume 67.8M vs 23.9M ADV signals washout interest. Northland
+  PT $70 / Space Force $39M / Clavis XG catalysts intact.
+- **QTUM** — Defiance Quantum ETF; +54% YTD through June (nearly 5x
+  SPY's +11% YTD). Equal-weighted ~70-80 names, 0.40% ER. Holds AI-
+  adjacent chip exposure. Sister fund QTUP renamed "Defiance Pure
+  Quantum ETF" effective 6/24 — no impact to QTUM mechanics.
+- **SPY / QQQ** — Fri 6/26 closes $729.35 / $705.62. BofA 2026 S&P
+  target 7,100; Citi 7,700. QQQ tickeron 3-mo projection $907–$1,005
+  (+27% — note: model output, not consensus). Both in / through
+  re-rated zones.
+- **No held-name catalysts:** book is cash; no positions to gap-risk
+  manage. No earnings, halts, or M&A on watchlist names over the
+  weekend.
+
+**Cash-drag escalator status (strategy.md rule, added 2026-06-26):**
+- Trigger thresholds: cash ≥ 90% equity for ≥ 20 consecutive sessions.
+- Current state: cash 100% × 29 sessions → **BOTH THRESHOLDS BREACHED.**
+- **Mon 6/29 default action (per rule):** place a 5% starter on the
+  highest-conviction watchlist name in the 09:30–10:30 ET execution
+  window UNLESS a tier-1 same-session named-blocker is documented.
+- **Named-blocker check Mon 6/29:** NONE eligible. CPI/PCE/NFP/FOMC
+  all absent Mon; NFP is Thu 7/2. Dallas Fed Mfg is tier-3, does NOT
+  qualify. **Default action is LIVE: execute Mon 6/29.**
+
+**Trade ideas drafted for Mon 6/29 pre-market (NOT armed — per user
+instruction this run is draft-only; arming + Alpaca POST happens in
+Mon 6/29 pre-market run within 09:30–10:30 ET window):**
+
+```
+Ticker: NVDA
+Direction: long (open new — starter)
+Thesis: AI-infra leader in correction; OpenAI/Broadcom Jalapeño is real
+  but does not breach the CUDA moat in any near-term-revenue-relevant
+  way. Q1 FY27 print ($81.6B / +85% YoY) thesis intact. Hawkish Fed
+  regime weighs on tech multiples but does not break the earnings
+  thesis. Cash-drag escalator forces the action; NVDA is rank-1 per
+  prior session due to RS leadership during Tue 6/23 selloff.
+Catalyst: technical reset off $200 ceiling; Aug Q2 FY27 print is the
+  next binding earnings event (out-of-window for this entry).
+Entry zone: $188–$194 (re-rated DOWN from $208–$215; Fri close $191.97
+  is IN ZONE).
+Stop: $176.61 (-8% from $192.00 midpoint).
+Target: $215 stage-1 (re-test prior zone); $230 stage-2 (+20% from
+  midpoint → trailing-stop rule engages).
+Size: 5% of equity ($5,000 ≈ 26 shares at $192) — starter per strategy
+  §28; honors Cash-Drag Escalator default-action floor.
+Confidence: 4/5.
+```
+
+```
+Ticker: AMD
+Direction: long (open new — starter)
+Thesis: UBS street-high PT raise + Meta 6-GW MI450 deal = multi-year
+  AI-accelerator runway. -5.76% week is a healthy reset, closed at
+  zone low. Less crowded than NVDA into the AI-overhang narrative;
+  diversifies AI-semi single-name risk vs NVDA-only.
+Catalyst: Meta MI450 ramp visibility; mid-Aug Q2 earnings (out-of-
+  window).
+Entry zone: $510–$525 (re-rated DOWN from $520–$535; Fri close $520.20
+  is IN ZONE).
+Stop: $477.21 (-8% from $518.71 midpoint).
+Target: $560 stage-1; $623 stage-2 (+20% → trail engages).
+Size: 5% of equity ($5,000 ≈ 10 shares at $520).
+Confidence: 3/5 (would be 4/5 except for hawkish-Fed multiple risk).
+```
+
+```
+Ticker: SPY
+Direction: long (open new — index leg)
+Thesis: index hedge against single-name AI-semi risk. Re-rated zone
+  $725–$735; Fri close $729.35 IN zone. Beta-1 anchor; reduces idio
+  risk while honoring the escalator action.
+Catalyst: post-AI-selloff mean reversion if Thu 7/2 NFP is "no
+  shock"; tactical re-rate if NFP hot (downside).
+Entry zone: $725–$735.
+Stop: $670.00 (-8% from $728 midpoint).
+Target: $760 (+4-5%; index targets are smaller).
+Size: 5% of equity ($5,000 ≈ 6 shares at $729) — second leg if NVDA
+  fills; third in priority.
+Confidence: 3/5.
+```
+
+**Pre-NFP positioning constraint (strategy.md):**
+- NFP is Thu 7/2 at 08:30 ET. No new entries within 30 min of print
+  (08:00–09:00 ET blackout). Mon 6/29 + Tue 6/30 entries must size at
+  lower end of starter band (5%); Wed 7/1 is the last pre-NFP entry
+  day with a 24-hour event-risk buffer.
+
+**Decision for Mon 6/29 pre-market run (next session):**
+1. **EXECUTE** Cash-Drag Escalator default-action: place 5% NVDA
+   starter (rank 1) in 09:30–10:30 ET window. Limit order at $192.50
+   or better. Stop ladder set to $176.61 GTC.
+2. If NVDA fills, evaluate AMD second leg same window (rank 2).
+3. SPY index leg reserved for Tue 6/30 if Mon executes cleanly and
+   IONQ / QTUM remain weak (avoid double quantum exposure mid-week
+   ahead of NFP).
+4. Kill the carried Tue 6/23 drafts formally (per Drafts→Armed Rule
+   added 2026-06-26 weekly review).
+5. Re-pull `/v2/snapshots` Mon 6/29 pre-market for fresh prices
+   (weekend may carry overnight gap risk Sun open).
+
+**ClickUp notification:** NOT sent this session. No urgent catalyst:
+- No held positions → nothing to halt-protect or earnings-gap manage.
+- No watchlist name gapped >5% on weekend news.
+- The Cash-Drag Escalator trip was already pinged via the Fri 6/26
+  weekly-review ClickUp message; no fresh state change requires a
+  duplicate ping. The Monday execution itself will trigger a ClickUp
+  ping per policy.
+
+---
+
 ### 2026-06-25 EOD Thu — PCE prints in-line; SPY +0.52% on Micron-beat post-print bid; 28th cash close; path-decision now 11 sessions overdue with the binding gate cleared
 
 **Session:** Thu 6/25 end-of-day per user EOD checklist. PCE day. The

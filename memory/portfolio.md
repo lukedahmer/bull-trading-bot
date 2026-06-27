@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-26 EOD Fri (Alpaca /v2/account + /v2/positions + /v2/orders?status=filled + /v2/account/portfolio/history + watchlist snapshots — weekly review pull)
+Last Updated: 2026-06-27 Sat weekend pre-market prep (Alpaca /v2/account + /v2/positions + /v2/account/portfolio/history + watchlist /v2/stocks/snapshots — Mon 6/29 prep pull; markets closed weekend so prices unchanged vs Fri 6/26 EOD)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -14,11 +14,11 @@ Last Updated: 2026-06-26 EOD Fri (Alpaca /v2/account + /v2/positions + /v2/order
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0); options level 3
-- Filled orders today: **none** | Filled orders since inception: **none** (0 fills, 29 trading sessions, 45 calendar days)
-- /v2/positions → **`[]`** at Fri 6/26 post-close pull.
+- Filled orders today: **none** (weekend; markets closed) | Filled orders since inception: **none** (0 fills, 29 trading sessions, 46 calendar days)
+- /v2/positions → **`[]`** at Sat 6/27 weekend pull (unchanged vs Fri 6/26 post-close).
 - /v2/orders?status=filled → **`[]`** (zero fills since inception 2026-05-12).
-- /v2/account/portfolio/history (1W, 1D) → equity series [100000, 100000, 100000, 100000]; profit_loss [0,0,0,0]; base value $100,000 as of 2026-06-18.
-- balance_asof: 2026-06-25
+- /v2/account/portfolio/history (1W, 1D) → equity series [100000, 100000, 100000, 100000, 100000]; profit_loss [0,0,0,0,0]; base value $100,000 as of 2026-06-18.
+- balance_asof: 2026-06-26
 
 ## Current Positions
 
@@ -58,7 +58,28 @@ Last Updated: 2026-06-26 EOD Fri (Alpaca /v2/account + /v2/positions + /v2/order
 - **Cash-drag escalator (strategy.md new rule) is now TRIPPED**: 29 cash sessions ≥ 20 session threshold AND cash 100% ≥ 90% threshold. Default-action clause: Mon 6/29 pre-market MUST place a 5% starter on the highest-conviction watchlist name in the 09:30–10:30 ET window UNLESS a same-session tier-1 named-blocker (NFP is Thu 7/2, not Mon) is documented.
 
 ## Notes from Last Session
-- **EOD 2026-06-26 (this run, Fri — weekly review):** Post-close pull.
+- **Sat 2026-06-27 (this run, weekend pre-market prep for Mon 6/29):**
+  Weekend pull. `GET /v2/account` → equity $100,000.00 | cash $100,000.00 |
+  long_market_value $0.00 | ACTIVE (PA39FINFSDLL). `GET /v2/positions` →
+  `[]`. `GET /v2/account/portfolio/history?period=1W` → flat $100k.
+  Watchlist `/v2/stocks/snapshots` → Fri 6/26 daily bars unchanged
+  (markets closed weekend): SPY 729.35, QQQ 705.62, NVDA 191.97,
+  AMD 520.20, QTUM 155.69, IONQ 49.16. **29th cash close carries
+  forward.** Web research: Fed regime hawkish post Wed FOMC (Warsh
+  presser, 9/18 dots see ≥1 hike); PCE Thu was no-fresh-shock;
+  Fri Nasdaq −1% capping −4.4% week on OpenAI-IPO-delay + AI-tariff
+  jitters; NVDA officially in correction; OpenAI/Broadcom Jalapeño
+  custom AI chip is a real overhang but does not breach CUDA moat;
+  AMD UBS street-high PT + Meta MI450 deal anchor; IONQ Trump
+  quantum EOs from Mon 6/23 still catalytic; QTUM ETF +54% YTD.
+  No held positions ⇒ no overnight gap risk to manage; no urgent
+  catalyst ⇒ no ClickUp ping this session. Three trade ideas
+  DRAFTED in research_log.md for Mon 6/29 execution: NVDA 5% rank 1
+  (entry $188–194, stop $176.61), AMD 5% rank 2 (entry $510–525,
+  stop $477.21), SPY 5% rank 3 (entry $725–735, stop $670.00).
+  **Cash-Drag Escalator default-action is LIVE for Mon 6/29:** no
+  tier-1 named-blocker (NFP is Thu 7/2), so default is EXECUTE.
+- **EOD 2026-06-26 (Fri — weekly review):** Post-close pull.
   `GET /v2/account` → equity $100,000.00 | cash $100,000.00 | last_equity
   $100,000.00 | long_market_value $0.00 | ACTIVE (PA39FINFSDLL).
   `GET /v2/positions` → `[]`. `GET /v2/orders?status=filled` → `[]` (zero
