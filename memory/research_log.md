@@ -15,6 +15,97 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-06-29 EOD Mon — 30th cash close; SPY +1.28% (Bull −128 bps day); Cash-Drag Escalator default-action MISSED (no pre-market session ran, no starter placed, no named-blocker logged)
+
+**Session:** Mon 6/29 post-close. EOD pull only — no live pre-market or
+intraday session ran today, which is itself the headline of this entry.
+
+**Account snapshot (Alpaca, Mon post-close pull):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying_power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00 | sma $100,000.00 |
+  accrued_fees $0 | balance_asof 2026-06-26 (will roll to 6/29 overnight)
+  | ACTIVE (PA39FINFSDLL); PDT false; daytrade_count 0; options level 3.
+- `GET /v2/positions` → `[]`.
+- `GET /v2/orders?status=filled&limit=50` → `[]`.
+- **30th consecutive cash close** (inception 2026-05-12; 0 fills across
+  30 trading sessions / 48 calendar days).
+
+**Day performance:**
+- Bull day P/L: **0.00%** (cash book, no positions).
+- SPY day P/L: **+1.28%** (Fri 6/26 close $729.35 → Mon 6/29 close
+  $738.44; source: web search of SPY ETF price history for 6/29/2026).
+- **Day relative: −128 bps vs SPY.** First materially negative day for
+  the cash-book in the recent run. The Fri 6/26 weekly review documented
+  +233 bps as "defensive luck, not skill"; one trading day later, ~55%
+  of that bps cushion has been given back. The thesis that broad-market
+  upside days are the cost of sitting in cash is now in the numbers.
+
+**Process status — Cash-Drag Escalator default-action MISSED:**
+- Sat 6/27 weekend prep run flagged Mon 6/29 as the Escalator default-
+  action session: place a 5% starter on the highest-conviction
+  watchlist name in the 09:30–10:30 ET window UNLESS a tier-1 same-
+  session named-blocker was documented. Mon had no tier-1 print (NFP
+  is Thu 7/2). The default was EXECUTE.
+- **No pre-market session ran Mon 6/29.** No 5% starter was placed.
+  No named-blocker was logged. No kill reason was recorded. The
+  Escalator's own escape clauses were not even invoked — the rule was
+  silently skipped, which is exactly the failure mode the rule was
+  written to prevent.
+- This is a process violation that must be surfaced in the next
+  weekly review (Fri 7/2 EOD given Fri 7/3 closure, or Thu 7/2 EOD
+  effectively). The escalator design assumed the pre-market session
+  would run; today proved that assumption is not safe. Possible
+  remediation: a separate "watchdog" trigger that fires independent
+  of whether the pre-market run executes, e.g., a standing armed
+  limit order placed Sun night that decays Mon close.
+- **Carried drafts (NVDA / SPY / AMD at 5% each from 6/27)** are now
+  >1 trading session old per the Drafts→Armed Order rule and must be
+  killed or re-armed at Tue 6/30 pre-market against fresh closes.
+  SPY in particular ran +1.28% above the drafted $725–$735 zone; the
+  draft is now stale on price as well as on age.
+
+**Watchlist (no fresh /v2/snapshots this run — post-close pull only):**
+Carrying Fri 6/26 closes for the inception-to-date watchlist; SPY's
++1.28% index move strongly implies the entire watchlist needs a fresh
+print at Tue pre-market before any draft is re-priced. The repeated
+re-rating cycle (Tue 6/23 → Fri 6/26 → today) is itself a signal —
+chasing zones in a fast tape is a tell that the zones aren't load-
+bearing.
+
+**Macro context (week ahead 6/29 → 7/3):**
+- Mon 6/29 (today): no tier-1 US print. Dallas Fed Mfg 10:30 ET (tier-3).
+  Tape did the heavy lifting on its own — SPY +1.28% suggests a
+  bounce off Fri's AI-selloff lows rather than a print-driven move.
+- Tue 6/30: China PMI / German CPI / UK GDP / BoJ Tankan overnight (tier-2/3).
+- Wed 7/1: ADP private payrolls 08:15 ET + ISM Mfg PMI 10:00 ET +
+  Eurozone HICP + BoE Bailey.
+- **Thu 7/2: US NFP 08:30 ET — binding macro gate of the week.**
+- Fri 7/3: US markets CLOSED — Independence Day observed.
+- **3 trading sessions left in the week after today.** Any draft
+  armed Tue is exposed to the Thu NFP print; sizing must reflect
+  this (5–7% lower end of starter band per the pre-NFP rule).
+
+**ClickUp:** Standing EOD ping sent per policy (no intra-session
+catalyst pings — there were no held positions to manage and no
+session ran intraday).
+
+**Trade ideas drafted/armed this session:** None. EOD post-close run;
+execution window is pre-market.
+
+**Action items for Tue 6/30 pre-market:**
+1. Document the missed default-action explicitly and decide whether
+   the Escalator rule needs a watchdog-style enforcement layer.
+2. Kill OR re-arm the carried NVDA / SPY / AMD drafts against Mon
+   6/29 closes (re-pull /v2/snapshots first).
+3. Re-rate watchlist entry zones against Mon 6/29 closes — this is
+   the third re-rating in a week; note the pattern.
+4. If re-armed, place starter(s) in the 09:30–10:30 ET window per
+   the Escalator default-action; size 5–7% lower end given Thu NFP
+   exposure.
+
+---
+
 ### 2026-06-27 Sat — Weekend pre-market prep for Mon 6/29; cash-drag escalator confirmed TRIPPED; NVDA #1 starter candidate re-validated; ideas drafted, NOT armed
 
 **Session:** Sat 6/27 weekend prep targeting Mon 6/29 pre-market open.
