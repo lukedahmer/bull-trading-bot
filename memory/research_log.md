@@ -4,6 +4,37 @@ Newest entries first.
 
 ---
 
+## 2026-07-01 — Market open (intraday)
+
+**Session:** Market-open intraday run. Credentials supplied in prompt.
+
+**Alpaca sync:** Successful.
+- Account ACTIVE, equity $100,000, cash $100,000, buying power $400,000.
+- Open positions: none.
+- Daytrade count 0, PDT flag false.
+
+**Stop-loss sweep:** No open positions — nothing to check.
+
+**Trade decision:** **No trades placed.**
+
+Rationale: strategy requires trades be sourced from research_log ideas
+that pass the checklist. The prior session (2026-05-19) drafted zero
+ideas due to missing credentials, and no pre-market research has been
+run today. Placing trades without an evaluated thesis, catalyst, entry
+zone, and confidence rating would violate the decision workflow. The
+watchlist (QTUM, IONQ, NVDA, AMD, SPY, QQQ) has not been researched for
+today's session — no premarket movers, macro events, or overnight news
+have been pulled.
+
+**ClickUp:** Not pinged — no trade placed, no stop triggered, no urgent
+catalyst known.
+
+**Next session:** Run the pre-market research workflow (Perplexity
+sonar-pro on watchlist + macro + movers) to draft ideas before the next
+intraday window.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
