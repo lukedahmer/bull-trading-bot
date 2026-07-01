@@ -4,6 +4,41 @@ Newest entries first.
 
 ---
 
+## 2026-07-01 — End of Day
+
+**Session:** Post-close daily wrap.
+
+**Account snapshot (Alpaca `/v2/account`):**
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Long market value: $0.00
+- Status: ACTIVE
+
+**Positions (`/v2/positions`):** None.
+
+**Filled orders today (`/v2/orders?status=filled`):** None.
+
+**Performance:**
+- Portfolio today: **0.00%** (fully in cash, no positions).
+- SPY today: **+0.08%** (close 747.28 vs prior close 746.65, per Alpaca
+  daily bars).
+- Alpha vs SPY: **-0.08%** (opportunity cost of sitting in cash on an
+  up-day for the index).
+
+**Observation:** Account remains uninvested from bootstrap. First
+successful Alpaca sync completed this session — credentials now
+functional. Next pre-market session should draft actual watchlist trade
+ideas per strategy.md workflow and begin deploying capital within the
+2% position-sizing rule.
+
+**Actions taken:**
+- Pulled Alpaca account, positions, filled orders.
+- Recomputed portfolio.md with live snapshot.
+- Sent ClickUp EOD ping.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
