@@ -4,6 +4,30 @@ Newest entries first.
 
 ---
 
+## 2026-07-02 — Midday risk check
+
+**Session:** Midday (Dexter).
+
+**Alpaca sync:** Successful. Account ACTIVE, equity $100,000.00, cash
+$100,000.00, buying power $400,000.00. `GET /v2/positions` returned an
+empty array — no open positions.
+
+**Risk actions evaluated:**
+- Hard stop (-8% from entry): N/A, no positions.
+- Trim winners at +30%: N/A, no positions.
+- Tighten trailing stop to 7% on +15% winners: N/A, no positions.
+- No new positions midday (strategy rule) — no major catalyst warrants
+  overriding the rule; nothing added.
+
+**ClickUp:** Not pinged — no stop triggered, no position trimmed.
+
+**Web search:** Not run — no held names to check for significant moves.
+
+**Next:** Wait for pre-market session to draft any new entries per
+strategy. Watchlist unchanged: QTUM, IONQ, NVDA, AMD, SPY, QQQ.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
