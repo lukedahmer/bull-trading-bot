@@ -18,6 +18,42 @@ All trades are logged here chronologically. Every buy and sell must be recorded 
 ## Trade History
 [Agent appends entries here after each trade]
 
+### 2026-07-02 Pre-market Thu — SESSION NOTE (no trades — NFP day; carried drafts KILLED for chase risk)
+- Alpaca `GET /v2/account` → equity $100,000.00; cash $100,000.00;
+  buying_power $400,000.00; long_market_value $0.00; ACTIVE
+  (PA39FINFSDLL); PDT false; daytrade_count 0.
+- `GET /v2/positions` → `[]`. Zero open positions.
+- `GET /v2/clock` → is_open=false at pull time (02:35 ET);
+  next_open 2026-07-02T09:30:00-04:00. Market has NOT opened at
+  the time of this run; NFP prints 08:30 ET; execution window
+  09:30–10:30 ET is 7 hours forward.
+- **No orders placed.** Three explicit reasons:
+  1. All three carried 6/27 drafts (NVDA/AMD/SPY at 5% each)
+     re-priced against Wed 7/1 closes ABOVE their drafted zones:
+     NVDA $197.54 vs $188–$194 zone (+1.83%); AMD $540.89 vs
+     $510–$525 zone (+3.03%); SPY $745.665 vs $725–$735 zone
+     (+1.45%). Per Drafts→Armed Order Rule (strategy §26),
+     option (b) applied: all three explicitly KILLED for chase
+     risk. Kill reasons logged in research_log 2026-07-02.
+  2. Today is US NFP day — the print at 08:30 ET is the binding
+     macro gate of the week (Fri 7/3 markets closed for
+     Independence Day). Per Cash-Drag Escalator rule (strategy
+     §25), NFP qualifies as a tier-1 same-session named-blocker;
+     Escalator default-action is DEFERRED with the block
+     explicitly documented (not silent-skipped as on Mon 6/29).
+  3. No fresh drafts drawn this session — the correct pre-market
+     response to stale-draft + macro-gate day is document + defer,
+     not scramble a new starter into NFP-reactive tape.
+- **Risk sweep** (empty book, all N/A): −8% hard cut, +30% trim-50%,
+  +15%→7% trail tighten. Task-template guardrails (max 10% single
+  position, min 20% cash floor) also non-binding at 100% cash.
+- **33rd consecutive cash open** (session-log gap: Tue 6/30 and Wed
+  7/1 unlogged; 30-close mark hit at Mon 6/29 EOD, +2 unlogged
+  closes = 32 carried; today opens the 33rd).
+- ClickUp ping suppressed per user task-template rule for this
+  session ("notify only if a trade was placed or stop loss
+  triggered"). Neither occurred.
+
 ### 2026-06-12 Midday Fri — SESSION NOTE (no trades)
 - Alpaca `GET /v2/positions` → `[]`. Zero open positions.
 - Account equity $100,000.00; cash $100,000.00; buying power $400,000.00.

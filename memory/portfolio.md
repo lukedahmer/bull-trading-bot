@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-06-29 Mon EOD (Alpaca /v2/account + /v2/positions + /v2/orders?status=filled post-close pull; SPY daily Δ via web search)
+Last Updated: 2026-07-02 Thu pre-market (Alpaca /v2/account + /v2/positions + /v2/stocks/snapshots pull at ~02:35 ET; NFP prints 08:30 ET; market opens 09:30 ET)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -8,17 +8,15 @@ Last Updated: 2026-06-29 Mon EOD (Alpaca /v2/account + /v2/positions + /v2/order
 - Total Portfolio Value: $100,000.00
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
-- Last Equity (prior close, Fri 6/26): $100,000.00
-- **Day P/L: 0.00%** (cash book, no positions — **30th** consecutive cash close)
-- **Day vs SPY: −128 bps** (Bull 0.00% vs SPY +1.28%) — defensive luck reverses; today's tape was the kind we miss
-- **Week-to-date P/L: 0.00%** (1 of 4 sessions; Fri 7/3 closed for Independence Day) vs **SPY WTD +1.28%** → **−128 bps WTD**
+- Last Equity (prior close, Wed 7/1): $100,000.00
+- **Day P/L: 0.00%** (cash book, no positions — entering **33rd** consecutive cash open; 32 closes carried in)
+- **Session-log gap:** Tue 6/30 and Wed 7/1 pre/mid/EOD sessions did NOT run. Today (7/2 pre-market) is the first logged session since Mon 6/29 EOD.
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0); options level 3
-- Filled orders today: **none** | Filled orders since inception: **none** (0 fills, 30 trading sessions, 48 calendar days)
-- /v2/positions → **`[]`** at Mon 6/29 post-close.
-- /v2/orders?status=filled → **`[]`** (zero fills since inception 2026-05-12).
-- balance_asof: 2026-06-26 (pre-EOD settlement stamp; will roll to 2026-06-29 overnight)
+- Filled orders today: **none** | Filled orders since inception: **none** (0 fills, 32 trading sessions since 2026-05-12; today is the 33rd)
+- /v2/positions → **`[]`** at Thu 7/2 02:35 ET.
+- balance_asof: 2026-06-30
 
 ## Current Positions
 
@@ -33,91 +31,80 @@ Last Updated: 2026-06-29 Mon EOD (Alpaca /v2/account + /v2/positions + /v2/order
 - Thematic quantum (QTUM + IONQ): 0%
 - Index (SPY + QQQ): 0%
 
-## Day Performance vs Benchmark (Mon 2026-06-29)
-- Bull day P/L: **0.00%** (cash all day).
-- SPY day P/L: **+1.28%** (Fri 6/26 close $729.35 → Mon 6/29 close $738.44 per web search).
-- **Day relative perf: −128 bps vs SPY.** Today is the first session in a while where the cash-book lagged. The Fri −2.33% weekly outperformance was always documented as defensive luck, not skill; today bought it back at the rate of about 55%.
-- Cumulative since inception (30 trading sessions): Bull **flat (0.00%)**; SPY net positive across the window. Bull behind on beta-adjusted basis.
+## Watchlist (Wed 7/1 close — latest available; markets closed overnight)
 
-## Watchlist (Mon 6/29 — refresh required next session)
-_Live snapshots not pulled this EOD run (post-close)._ Carrying Fri 6/26 closes from prior entry; Mon pre-mkt session must re-pull /v2/snapshots before re-pricing any draft.
+| Symbol | Wed 7/1 close | Tue 6/30 close | Δ 6/30→7/1 | Carried 6/27 zone | Status |
+|--------|--------------:|---------------:|-----------:|-------------------|--------|
+| NVDA   | 197.54        | 199.93         | −1.20%     | $188–$194         | **ABOVE zone +1.83% — KILLED** |
+| AMD    | 540.89        | 580.52         | −6.83%     | $510–$525         | **ABOVE zone +3.03% — KILLED** |
+| SPY    | 745.665       | 746.65         | −0.13%     | $725–$735         | **ABOVE zone +1.45% — KILLED** |
+| QQQ    | 725.32        | 736.07         | −1.46%     | (no draft)        | consolidating at old zone top |
+| QTUM   | 160.28        | 165.355        | −3.07%     | (no draft)        | below prior $162–$168 floor |
+| IONQ   | 51.44         | 53.29          | −3.47%     | (no draft)        | weak vs prior $56–$58 spec |
 
-| Symbol | Fri 6/26 close | Carry status |
-|--------|---------------:|--------------|
-| SPY    | 729.35 | up materially today (+1.28% index move); need fresh print |
-| QQQ    | 705.62 | likely up sympathetically; need fresh print |
-| NVDA   | 191.97 | needs fresh print |
-| AMD    | 520.20 | needs fresh print |
-| QTUM   | 155.69 | needs fresh print |
-| IONQ   | 49.16  | needs fresh print |
-
-## Cash Allocation Plan (carry from 6/27 weekend prep — STATUS: DEFAULT-ACTION MISSED)
-- **Cash-drag escalator REMAINS TRIPPED** and the **Mon 6/29 default-action was NOT honored** — no 5% starter was placed in the 09:30–10:30 ET window, no tier-1 named-blocker was documented same-session, no kill reason was logged. This is a strategy violation worth surfacing in the next weekly review.
-- Carried drafts (NVDA #1, SPY #2, AMD #3 at 5% each) are now **>1 trading session old** and are subject to the Drafts→Armed Order rule — they must be re-priced against Mon 6/29 closes at Tue 6/30 pre-market and either armed or explicitly killed.
-- Cash floor 5–10% remains untouchable; max deployable on this account capped at ~90% notional.
+## Cash Allocation Plan (post-7/2 pre-market kill)
+- **All three carried 6/27 drafts (NVDA / AMD / SPY at 5% each) — KILLED** at Thu 7/2 pre-market per Drafts→Armed Order Rule. All three prices are ABOVE their drafted zones (chase risk). Kill reasons logged in research_log 2026-07-02.
+- Cash-Drag Escalator remains TRIPPED (32 sessions ≥ 90% cash vs 20-session threshold). Thu 7/2 default-action DEFERRED with tier-1 named-blocker documented: **NFP 08:30 ET**.
+- Task-template guardrails for this session: max 10% single position, min 20% cash floor. Both non-binding — no positions opened.
+- No fresh drafts drawn this session; re-drafting scheduled for Thu 7/2 EOD (post-NFP tape) or Mon 7/6 pre-market.
 
 ## Notes from Last Session
-- **Mon 2026-06-29 EOD (this run):** Post-close pull. `GET /v2/account`
-  → equity $100,000.00 | cash $100,000.00 | last_equity $100,000.00 |
-  long_market_value $0.00 | buying_power $400,000.00 | ACTIVE
-  (PA39FINFSDLL). `GET /v2/positions` → `[]`. `GET /v2/orders?status=filled`
-  → `[]`. **30th consecutive cash close.** SPY +1.28% on the day (738.44
-  vs 729.35) per web search. **Bull day −128 bps vs SPY** — first
-  meaningful negative-relative day in a while; the Fri 6/26 +233 bps
-  "defensive luck" already partly given back. **Cash-Drag Escalator
-  default-action was NOT honored** — no pre-market session ran today,
-  no starter placed, no named-blocker logged, no kill reason recorded.
-  Carried NVDA / SPY / AMD drafts are now stale per Drafts→Armed Order
-  rule and must be killed or re-armed at Tue 6/30 pre-market. ClickUp
-  EOD ping sent.
+- **Thu 2026-07-02 pre-market (this run):** ~02:35 ET pull, pre-NFP.
+  `GET /v2/account` → equity $100,000.00 | cash $100,000.00 |
+  buying_power $400,000.00 | ACTIVE (PA39FINFSDLL). `GET /v2/positions`
+  → `[]`. `GET /v2/stocks/snapshots` (NVDA/AMD/SPY/QQQ/QTUM/IONQ,
+  feed=iex) refreshed against Wed 7/1 daily closes. **All three
+  carried 6/27 drafts KILLED** — NVDA / AMD / SPY all closed Wed 7/1
+  above their drafted entry zones (chase risk). **Cash-Drag Escalator
+  default-action DEFERRED** with tier-1 named-blocker documented:
+  US NFP prints 08:30 ET Thu 7/2. This is the FIRST explicit
+  invocation of the named-blocker escape clause (the Mon 6/29
+  failure was silent-skip; today invokes it properly). Session-log
+  gap acknowledged: Tue 6/30 + Wed 7/1 unlogged — a second
+  independent process failure. No orders placed. No stops to check.
+  No ClickUp ping (task rule: notify only on placed trade or
+  triggered stop).
+- **Mon 2026-06-29 EOD:** Post-close pull. `GET /v2/account` → equity
+  $100,000.00 | cash $100,000.00 | ACTIVE (PA39FINFSDLL). `GET
+  /v2/positions` → `[]`. **30th consecutive cash close.** SPY +1.28%
+  on the day (738.44 vs 729.35). **Bull day −128 bps vs SPY.**
+  **Cash-Drag Escalator default-action was NOT honored** — no
+  pre-market session ran, no starter placed, no named-blocker
+  logged, no kill reason recorded.
 - **Sat 2026-06-27 (weekend pre-market prep for Mon 6/29):** Weekend
-  pull. `GET /v2/account` → equity $100,000.00 | cash $100,000.00 |
-  long_market_value $0.00 | ACTIVE (PA39FINFSDLL). `GET /v2/positions` →
-  `[]`. `GET /v2/account/portfolio/history?period=1W` → flat $100k.
-  Watchlist `/v2/stocks/snapshots` → Fri 6/26 daily bars unchanged
-  (markets closed weekend): SPY 729.35, QQQ 705.62, NVDA 191.97,
-  AMD 520.20, QTUM 155.69, IONQ 49.16. **29th cash close carries
-  forward.** Three trade ideas DRAFTED in research_log.md for Mon 6/29
-  execution: NVDA 5% rank 1 (entry $188–194, stop $176.61), AMD 5%
-  rank 2 (entry $510–525, stop $477.21), SPY 5% rank 3 (entry $725–
-  735, stop $670.00). **Cash-Drag Escalator default-action was LIVE
-  for Mon 6/29:** no tier-1 named-blocker (NFP is Thu 7/2), so default
-  was EXECUTE.
+  pull. `GET /v2/positions` → `[]`. Watchlist snapshots refreshed to
+  Fri 6/26 closes. **Three trade ideas DRAFTED** in research_log.md
+  for Mon 6/29 execution: NVDA 5% rank 1, AMD 5% rank 2, SPY 5%
+  rank 3. **Cash-Drag Escalator default-action was LIVE for Mon 6/29.**
 - **EOD 2026-06-26 (Fri — weekly review):** Day P/L 0.00% vs SPY −0.54%.
-  Week P/L 0.00% vs SPY −2.33% → +233 bps weekly (defensive luck, NOT
-  alpha). 29th cash close. strategy.md amended with Cash-Drag Escalator
-  + Drafts→Armed Order rules.
-- **EOD 2026-06-25 (Thu — PCE day):** Day P/L 0.00% vs SPY +0.52%. 28th
-  cash close. Binding gate spent; Tue drafts not executed.
-- **EOD 2026-06-24 (Wed):** Day P/L 0.00% vs SPY −0.27%. 27th cash close.
+  Week P/L 0.00% vs SPY −2.33% → +233 bps weekly (defensive luck,
+  NOT alpha). 29th cash close. strategy.md amended with Cash-Drag
+  Escalator + Drafts→Armed Order rules.
 
-## Action items for next session (Tue 6/30 pre-market)
-1. **DOCUMENT THE MISSED DEFAULT-ACTION.** Mon 6/29 had no tier-1
-   named-blocker and the Cash-Drag Escalator default was EXECUTE, but
-   no order was placed. Next weekly review must explicitly call this
-   out under "process violations". Consider whether the escalator
-   needs teeth (e.g., a separate watchdog session, not just a pre-mkt
-   gate) — the failure mode the escalator was designed to prevent
-   happened anyway.
-2. **Kill OR re-arm the carried drafts** per Drafts→Armed Order rule.
-   NVDA / SPY / AMD drafts from 6/27 are now stale. Re-price against
-   Mon 6/29 closes via fresh /v2/snapshots and either submit as live
-   orders Tue 6/30 09:30–10:30 ET window or kill with a logged reason.
-3. **Re-pull /v2/snapshots** for SPY/QQQ/NVDA/AMD/QTUM/IONQ Tue pre-mkt.
-   SPY moved +1.28% Mon; entire watchlist likely needs re-rated entry
-   zones AGAIN (the third re-rating in a week — note this pattern).
-4. **Macro week ahead recap:** Tue 6/30 China PMI / German CPI / UK
-   GDP / BoJ Tankan overnight (tier-2/3). Wed 7/1 ADP 08:15 + ISM Mfg
-   10:00 + EZ HICP + BoE Bailey. **Thu 7/2 NFP 08:30 ET binding gate.**
-   Fri 7/3 US markets CLOSED. **3 trading sessions left in the week
-   after today.**
-5. **Pre-NFP positioning rule:** if entries placed Tue, size at 5–7%
-   starter (lower end), document explicit stop placement; NFP is two-
-   sided. Per strategy §23 no new entries within 30 minutes of the
-   08:30 ET print.
-6. **No held-name earnings risk** — NVDA / AMD / IONQ all next report
-   mid-Aug+.
-7. **Cash floor 5–10%** untouchable.
-8. **ClickUp policy unchanged:** standing EOD ping (sent this run);
-   intra-session pings only on triggered stop, trim, or urgent
-   catalyst on a held name.
+## Action items for next session (Thu 7/2 EOD post-NFP OR Mon 7/6 pre-market)
+1. **Pull the NFP result** (08:30 ET print) and quantify the tape
+   reaction across NVDA / AMD / SPY / QQQ / QTUM / IONQ. This is the
+   binding gate; the print dictates whether re-drafted zones sit
+   higher (cool NFP → risk-on chase) or lower (hot NFP → tech reset).
+2. **Draft FRESH ideas** — the 6/27 drafts are dead. Zones must be
+   re-drawn against Thu 7/2 EOD closes for at least NVDA, AMD, SPY,
+   QTUM. Do not reuse the old ranges.
+3. **Weekly review at Thu 7/2 EOD** (Fri 7/3 is Independence Day —
+   markets closed). Must document (a) the two-week Cash-Drag
+   Escalator failure pattern, (b) the log-gap failure mode, (c)
+   whether a watchdog layer / standing-decay-limit order is
+   warranted, (d) that today WAS the first correct invocation of
+   the named-blocker escape clause.
+4. **Consider strategy amendment:** the aggressive-mode strategy
+   (25% single-name cap, 5–10% cash floor) has been in force since
+   ~2026-05-26 and has produced zero fills across 32 sessions. If
+   the process-drift failure mode is structural rather than
+   behavioral, the strategy needs a "starter-of-last-resort"
+   mechanism that cannot be silent-skipped.
+5. **Cash floor** (5–10% aggressive-mode / 20% for the current
+   task template) untouchable.
+6. **No held-name earnings risk** — no positions to gap-manage.
+7. **ClickUp policy unchanged:** notify only on placed trade or
+   triggered stop per the current task template (stricter than the
+   standing EOD-ping policy on the strategy file). The EOD run may
+   send a standing ping if it fires under a different template.

@@ -15,6 +15,161 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-07-02 Pre-market Thu — NFP day (08:30 ET); carried NVDA/AMD/SPY drafts KILLED (all above zones per Drafts→Armed Rule); Cash-Drag Escalator default-action DEFERRED with tier-1 named-blocker (NFP) documented per rule; log gap 6/30–7/1 acknowledged
+
+**Session:** Thu 7/2 pre-market pull, ~02:35 ET (market opens 09:30 ET;
+NFP prints 08:30 ET). First logged session since Mon 6/29 EOD — Tue 6/30
+and Wed 7/1 pre-market/EOD sessions did NOT run and are unlogged; today's
+run explicitly restarts the log.
+
+**Account snapshot (Alpaca, pre-market pull):**
+- `GET /v2/account` → equity $100,000.00 | last_equity $100,000.00 |
+  cash $100,000.00 | buying_power $400,000.00 | long_market_value $0.00 |
+  short_market_value $0.00 | portfolio_value $100,000.00 | sma $100,000.00 |
+  accrued_fees $0 | balance_asof 2026-06-30 | ACTIVE (PA39FINFSDLL);
+  PDT false; daytrade_count 0; options level 3.
+- `GET /v2/positions` → `[]`.
+- **Entering the 33rd consecutive cash open** (30 cash closes through
+  6/29 + Tue 6/30 close + Wed 7/1 close = 32 closes carried in;
+  today's open is the 33rd cash session). 0 fills since 2026-05-12.
+
+**Session-log gap (Mon 6/29 EOD → Thu 7/2 pre-market):**
+- No Tue 6/30 pre-market, midday, or EOD entries.
+- No Wed 7/1 pre-market, midday, or EOD entries.
+- This is a **second consecutive process failure** in the wake of the
+  Mon 6/29 Cash-Drag Escalator default-action miss. The 6/29 EOD entry
+  called for Tue 6/30 pre-market to kill-or-re-arm the carried drafts;
+  that session didn't run. The escalator's design assumption that
+  "the pre-market session will run" continues to prove unsafe. The
+  next weekly review must decide whether to add a watchdog layer
+  (e.g., standing order that decays daily) or accept that the current
+  framework has a structural gap.
+
+**Watchlist snapshot (Alpaca `/v2/stocks/snapshots`, Wed 7/1 daily
+close — latest available; markets closed overnight):**
+
+| Sym  | Wed 7/1 close | Tue 6/30 close | Δ 6/30→7/1 | Carried draft zone (from 6/27) | Status vs zone |
+|------|--------------:|---------------:|-----------:|--------------------------------|----------------|
+| NVDA | 197.54        | 199.93         | −1.20%     | $188–$194                      | **ABOVE zone by $3.54 (+1.83%)** |
+| AMD  | 540.89        | 580.52         | −6.83%     | $510–$525                      | **ABOVE zone by $15.89 (+3.03%)** — but Tue 6/30 spike was rejected |
+| SPY  | 745.665       | 746.65         | −0.13%     | $725–$735                      | **ABOVE zone by $10.67 (+1.45%)** |
+| QQQ  | 725.32        | 736.07         | −1.46%     | (no active draft)              | back inside historical $725–$735 zone from the topside |
+| QTUM | 160.28        | 165.355        | −3.07%     | (no active draft)              | still below prior $162–$168 zone floor |
+| IONQ | 51.44         | 53.29          | −3.47%     | (no active draft)              | still weak vs the 6/23 $56–$58 spec zone |
+
+**Two-session tape context (6/30 → 7/1):** Mon's +1.28% SPY move carried
+into a Tue 6/30 gap-up (AMD +11.6% intraday high) but Wed 7/1 gave the
+AMD melt-up back (−6.83% single-day). SPY held its ground (~flat to
++0.15%). NVDA slipped −1.20% Wed. QQQ underperformed SPY on the two
+days as tech-heavy names digested the Mon-Tue AI-bounce. Net: the
+tape moved AWAY from the drafted zones in the wrong direction (higher
+prices, chase risk), not toward them.
+
+**Drafts→Armed Order Rule application (strategy.md, added 2026-06-26):**
+The 6/27 drafts (NVDA / AMD / SPY at 5% each) have now been carried
+**FOUR trading sessions** (6/29 miss, 6/30 miss, 7/1 miss, 7/2 today).
+Per rule, drafts carried > 1 trading session MUST be re-priced against
+the most recent close AND either (a) armed as a live order in that
+session's execution window, or (b) explicitly killed with reason. Today
+formally applies option (b) to all three:
+
+- **NVDA 5% starter — KILLED.** Reason: Wed 7/1 close $197.54 is above
+  the drafted $188–$194 zone by +$3.54 (+1.83%). Draft was zone-
+  contingent; entering at $197+ would be a chase and would violate the
+  strategy's chase-risk discipline. Would need a re-drawn zone
+  (~$194–$200) drafted in a fresh session to re-arm.
+- **AMD 5% starter — KILLED.** Reason: Wed 7/1 close $540.89 is above
+  the drafted $510–$525 zone by +$15.89 (+3.03%). Additional adverse
+  signal: Tue 6/30 gap-up to $584+ was fully rejected in a single day
+  back to $541 — the tape refused to hold gains above $560. Draft is
+  broken on both price and momentum; will not re-draft this session.
+- **SPY 5% starter — KILLED.** Reason: Wed 7/1 close $745.66 is above
+  the drafted $725–$735 zone by +$10.67 (+1.45%). The zone was set
+  before Mon 6/29's +1.28% index move; the index has permanently left
+  the zone. Would need a re-drawn zone (~$740–$748) drafted fresh.
+
+**Cash-Drag Escalator status (strategy.md, added 2026-06-26):**
+- Trigger threshold: cash ≥ 90% equity for ≥ 20 consecutive sessions.
+- Current state: cash 100% × 32 sessions → BOTH THRESHOLDS BREACHED
+  (12 sessions past the 20-session floor).
+- **Default action for Thu 7/2:** place a 5% starter on the highest-
+  conviction watchlist name in the 09:30–10:30 ET window UNLESS an
+  explicit tier-1 same-session named-blocker is documented.
+- **Named-blocker for Thu 7/2 — INVOKED.** Tier-1 macro print due
+  this session: **US NFP 08:30 ET.** Per rule, CPI / PCE / **NFP** /
+  FOMC on the same session qualifies as a tier-1 named-blocker. The
+  30-min-around-print blackout (08:00–09:00 ET per strategy §23)
+  ends before the standard 09:30–10:30 ET execution window opens, but
+  the first hour of trading will still be NFP-reactive tape, and the
+  pre-NFP positioning rule (5–7% starter lower end, documented
+  explicit stop) is not a fit for a re-drafting session.
+- **Escalator default-action is DEFERRED, documented, and not silent-
+  skipped.** This is the intended use of the named-blocker escape
+  clause. The Mon 6/29 failure was silent-skip; today invokes the
+  escape clause explicitly. The escalator remains tripped and rolls
+  to the next session for the same evaluation.
+
+**Trade decision Thu 7/2:**
+- **No orders placed.** Three explicit reasons stack: (1) all carried
+  drafts are out-of-zone on the upside (chase risk); (2) today is NFP
+  day and the 09:30–10:30 execution window is NFP-reactive; (3) no
+  fresh drafts drawn this session — the correct pre-market response
+  to a stale-draft + macro-gate day is document + defer, not scramble
+  a new starter into NFP-reactive tape.
+- **No stops to check** — empty book. −8% hard stop, +30% trim, +15%
+  → 7% trail rules all N/A.
+
+**Guardrail check vs today's task template (max 10% per position,
+min 20% cash floor):**
+- Cash is 100% ($100k) — comfortably above the 20% floor before any
+  entry; would still be at ~85% cash after 3× 5% starters (well within
+  guardrail) IF drafts had held zone. They didn't.
+- Position cap 10% never binding; drafts were sized 5% each.
+
+**Macro (week ending Thu 7/2 — Fri 7/3 markets closed):**
+- **Thu 7/2 08:30 ET NFP** — moved up 1 day from normal first-Fri slot
+  due to Independence Day observed Fri 7/3. This is the binding gate.
+- Wed 7/1 ADP came in (report not pulled this session — pull Fri
+  reopen for retrospective).
+- Fri 7/3 US markets CLOSED — no session.
+- Next live pre-market: **Mon 7/6.**
+
+**Action items for next session (Thu 7/2 EOD or Mon 7/6 pre-market):**
+1. **Draft FRESH ideas against Wed 7/1 closes + Thu 7/2 NFP reaction.**
+   The Sat 6/27 drafts are dead per today's kill entries. Re-draw
+   zones for NVDA / AMD / SPY / QTUM at least.
+2. **Weekly review scheduled Thu 7/2 EOD (Fri 7/3 closed).** This is
+   the natural close-of-week window. Must document: (a) two-week
+   pattern of Cash-Drag Escalator default-action failures, (b) the
+   log-gap failure mode independent of the escalator, (c) whether a
+   watchdog layer (standing decaying limit order) is warranted.
+3. **NFP reaction assessment** — pull the print result and the 09:30
+   → 10:30 ET tape response in the EOD run. If NFP hot → hawkish tape
+   → tech pressure → potentially better re-entry zones next week. If
+   NFP cool → dovish rally → chase risk on watchlist deepens.
+4. **Cash floor** (5–10% aggressive-mode / 20% for this task template)
+   remains untouchable; no dilution.
+5. Consider whether the "aggressive-mode" strategy (25% single-name
+   cap, 5–10% cash floor) has been effectively neutralized by
+   process-drift and whether the strategy needs a "starter-of-last-
+   resort" mechanism that cannot be silent-skipped.
+
+**ClickUp:** Suppressed per user task-template rule for this session
+("notify only if a trade was placed or stop loss triggered"). Neither
+occurred. Standing EOD ping (if EOD runs) will surface today's
+Cash-Drag Escalator invocation of the named-blocker escape clause,
+which is a first-time event worth flagging in the weekly review.
+
+**Sources consulted:**
+- Alpaca `/v2/account`, `/v2/positions`, `/v2/clock` (live pre-market
+  pulls; clock confirmed is_open=false, next_open=09:30 ET Thu 7/2).
+- Alpaca `/v2/stocks/snapshots` (feed=iex) for NVDA / AMD / SPY / QQQ /
+  QTUM / IONQ Wed 7/1 daily bars + Tue 6/30 prev bars.
+- No web search this session (pre-market, pre-NFP; the NFP print
+  itself is the only tier-1 signal and it's 6 hours out).
+
+---
+
 ### 2026-06-29 EOD Mon — 30th cash close; SPY +1.28% (Bull −128 bps day); Cash-Drag Escalator default-action MISSED (no pre-market session ran, no starter placed, no named-blocker logged)
 
 **Session:** Mon 6/29 post-close. EOD pull only — no live pre-market or
