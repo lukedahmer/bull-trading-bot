@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-07-02 Thu pre-market (Alpaca /v2/account + /v2/positions + /v2/stocks/snapshots pull at ~02:35 ET; NFP prints 08:30 ET; market opens 09:30 ET)
+Last Updated: 2026-07-02 Thu pre-market SUPPLEMENTAL (web-research pass added on top of the ~02:35 ET Alpaca pull; account state re-verified unchanged; NFP prints 08:30 ET; market opens 09:30 ET)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -49,7 +49,23 @@ Last Updated: 2026-07-02 Thu pre-market (Alpaca /v2/account + /v2/positions + /v
 - No fresh drafts drawn this session; re-drafting scheduled for Thu 7/2 EOD (post-NFP tape) or Mon 7/6 pre-market.
 
 ## Notes from Last Session
-- **Thu 2026-07-02 pre-market (this run):** ~02:35 ET pull, pre-NFP.
+- **Thu 2026-07-02 pre-market SUPPLEMENTAL (this run):** Web-research
+  pass invoked to fill the news-scan gap the 02:35 ET Alpaca-only run
+  documented. Account re-pull → equity $100,000.00 | cash 100% |
+  positions `[]` (unchanged). Watchlist news scanned for NVDA (Palantir
+  sovereign-AI collab, PT $301 avg vs $197 spot), AMD (no earnings
+  today; **Advancing AI 2026 event Jul 22–23**; Q2 print Aug 4;
+  −6.83% Wed reset in a +154% YTD run), IONQ (Q1 revenue +755% YoY;
+  Northland PT $70; Cambridge 256-qubit sale), QTUM (Trump $2B
+  quantum push tailwind; +51% YTD), SPY/QQQ (no name-specific news;
+  hyperscaler capex $650B+ intact). Macro: **NFP consensus ~100–113K,
+  U/E 4.3%;** Fed dot plot has shifted toward possible 2026 rate HIKE
+  under Chair Warsh (hawkish tape risk on a hot print). Five
+  **candidate** drafts logged for post-NFP re-price (IONQ 3%, QTUM 5%,
+  NVDA 5%, AMD 3–5%, SPY 5%) — **none armed**, all subject to
+  Drafts→Armed re-price at Thu 7/2 EOD or Mon 7/6 pre-market. No orders
+  placed. No stops to check. No urgent catalyst → no ClickUp.
+- **Thu 2026-07-02 pre-market (02:35 ET run):** ~02:35 ET pull, pre-NFP.
   `GET /v2/account` → equity $100,000.00 | cash $100,000.00 |
   buying_power $400,000.00 | ACTIVE (PA39FINFSDLL). `GET /v2/positions`
   → `[]`. `GET /v2/stocks/snapshots` (NVDA/AMD/SPY/QQQ/QTUM/IONQ,

@@ -15,6 +15,206 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-07-02 Pre-market Thu (SUPPLEMENTAL) — pre-NFP web-research pass; consensus ~100–113K jobs, U/E 4.3%; watchlist news scan (NVDA/AMD/QTUM/IONQ/SPY/QQQ); no fresh drafts armed; no ClickUp (no urgent catalyst)
+
+**Session:** Second Thu 7/2 pre-market pass, invoked to fill the
+web-research gap the ~02:35 ET run explicitly noted (that run consulted
+Alpaca only). Market still closed at pull time; NFP prints 08:30 ET;
+execution window opens 09:30 ET.
+
+**Account (re-pull, unchanged from 02:35 ET pass):**
+- `GET /v2/account` → equity $100,000.00 | cash $100,000.00 |
+  buying_power $400,000.00 | ACTIVE (PA39FINFSDLL) | balance_asof
+  2026-06-30 | PDT false | daytrade_count 0.
+- `GET /v2/positions` → `[]`. Still cash-only. 33rd consecutive cash
+  open.
+- `GET /v2/stocks/snapshots?symbols=NVDA,AMD,QTUM,IONQ,SPY,QQQ`
+  refreshed — Wed 7/1 daily bars confirmed; latest trades stamped
+  ~19:59–20:15 UTC 7/1 (post-close print). No live pre-market prints
+  yet in the Alpaca feed at pull time.
+
+**Watchlist prices at pull (Wed 7/1 daily close, unchanged from 02:35):**
+- NVDA 197.54 (prev 199.93, −1.20%). Web quote agrees $197.58.
+- AMD 540.89 (prev 580.52, **−6.83%** — sharp reversal of Tue 6/30
+  melt-up which reached $584+ intraday high $563.90 Wed).
+- QTUM 160.28 (prev 165.36, −3.07%).
+- IONQ 51.44 (prev 53.29, −3.47%).
+- SPY 745.665 (prev 746.65, −0.13%). QQQ 725.32 (prev 736.07, −1.46%).
+- Net two-day tape: SPY held, QQQ / semis / quantum all softened.
+  Rotation OUT of high-multiple tech into the broader tape.
+
+**Macro — NFP is the whole ballgame today:**
+- **US Non-Farm Payrolls 08:30 ET** — moved up from Fri 7/3 (July 4
+  observed close). Consensus centering **~100–113K jobs** vs 172K
+  prior (May); unemployment rate expected **unchanged at 4.3%**.
+  Kraken/mitrade previews and FinancialJuice NFP prep confirm the
+  range. Any print outside ~80K–140K is a market-mover.
+- **Fed backdrop:** dot plot has shifted toward a possible **2026 rate
+  HIKE** under Chair Warsh (per mitrade preview). Hawkish tilt is the
+  live risk — a hot NFP would validate it and pressure long-duration
+  / high-multiple tech (NVDA, IONQ, QTUM). A cool print would relieve
+  it and re-fuel the AI trade.
+- **Wed 7/1 ADP** print occurred; not pulled retrospectively this
+  session (kept lightweight because NFP is the binding signal).
+- Fri 7/3 US markets CLOSED (Independence Day observed). Next live
+  session: Mon 7/6 pre-market.
+- Warsh's first FOMC meeting minutes: **Wed 7/8** (dot-plot detail).
+  June CPI: **Tue 7/14**. Next FOMC decision: **Wed 7/29**.
+
+**Overnight watchlist news (web search):**
+- **NVDA ($197.58).** Strategic collab with Palantir to deliver an
+  intelligent engine for running NVIDIA AI and Nemotron open models
+  in sovereign environments (announced this cycle — bullish for
+  sovereign-AI TAM narrative). Analyst consensus Strong Buy: 58 buy
+  / 1 sell; 12-mo avg PT **$301.62** (range $180–$500). Wayve (NVDA-
+  backed UK AV startup) launching $85M employee tender at $8.5B
+  valuation — small ecosystem positive. Stock is 4.74% off recent
+  highs on a 10-day 7-down-3-up drift. No held-name risk (we hold 0).
+- **AMD ($540.89).** No earnings today; Q2 report **Aug 4**. **AI
+  event 'Advancing AI 2026' Jul 22–23** in San Francisco is the next
+  identified catalyst. Q1 2026 (May 5 release): revenue $10.3B, GM
+  53%, EPS $0.84; stock briefly popped to $352 after-hours and then
+  ripped to $580+ intra-quarter. **Wed 7/1's −6.83% single-day drop
+  from $580.52 → $540.89 is the biggest single-day drawdown in the
+  YTD +154% run.** The Tue 6/30 push to $584+ was fully rejected in
+  one session — bulls could not hold the breakout.
+- **QTUM ($160.28).** ETF NAV $164.97 as of 6/30; NA $5.7B AUM;
+  **YTD +51.37%.** Federal tailwind: Commerce Dept **$2B CHIPS R&D**
+  for 9 quantum companies announced in May (IBM $1B for quantum
+  foundry; GlobalFoundries $375M). QTUM holds 85 names spanning
+  quantum HW + ML SW + semis — Bull's cleanest exposure vehicle to
+  the theme.
+- **IONQ ($51.44).** Q1 2026 record GAAP revenue **$64.7M (+755%
+  YoY)**, cash **$3.1B**, full-year guide raised to $260–270M. Sold
+  first chip-based **256-qubit system** to University of Cambridge;
+  published fault-tolerant blueprint. **Jun 17: Clavis XG Multiplex**
+  (metro-network quantum security) launched. **Northland raised PT
+  to $70** from $55 on Jun 22 (implies ~36% upside from $51.44).
+  Zacks Rank #4 (Sell) offsets — high cash burn vs revenue.
+- **SPY ($745.66) / QQQ ($725.32).** No index-specific news; concentration
+  in top-10 QQQ ~47% is the structural risk. AI capex tailwind still
+  intact — hyperscalers on track for **$650B+ 2026 AI infra spend**.
+- **No held-name earnings today.** No positions to gap-manage. No
+  halts. **No pre-market gap >5%** on any watchlist name detected in
+  the Alpaca snapshot pull.
+
+**Pre-market movers scan (broad tape):**
+- AeroVironment (AVAV) — $500M DoD contract announced late 7/1.
+- Sable Offshore (SOC) — +40%+ on financing update.
+- Palantir (PLTR) — grinding near $116; one of 2026's more punished AI
+  winners. Adjacent to NVDA collab news; not on Bull's watchlist.
+- None of these are on the core watchlist and none warrant a chase
+  entry pre-NFP.
+
+**Trade ideas drafted (NOT armed — held for post-NFP re-price):**
+
+The 02:35 ET run killed the three carried 6/27 drafts (NVDA / AMD /
+SPY) for chase risk. This supplemental pass drafts **candidate**
+zones for post-NFP evaluation ONLY. None are armed — the Drafts→
+Armed rule requires next-session re-pricing, and today's execution
+window is NFP-reactive. Explicit intent: **park these for Thu 7/2
+EOD or Mon 7/6 pre-market to re-price against the actual print +
+tape response.**
+
+1. **IONQ — post-NFP dip-add, speculative starter**
+   - Direction: long (starter)
+   - Thesis: revenue up 755% YoY, $3.1B cash, Northland $70 PT
+     (+36%), 256-qubit shipping. Quantum federal-money tailwind
+     (Commerce $2B) is directional. Current $51 is closer to a
+     dislocation than a chase.
+   - Catalyst: fault-tolerant milestones, DoD/DoE follow-on orders,
+     next-quarter print.
+   - Entry zone (candidate, re-price post-NFP): **$48–$52**
+   - Stop: −8% from fill = ~$44 hard.
+   - Target: $65–$70 (aligns to Northland PT).
+   - Size: **3%** (small-cap discipline, aggressive-mode small-cap
+     range 3–7%).
+   - Confidence: 3/5. Zacks #4 Sell is the offsetting negative.
+2. **QTUM — post-NFP theme starter, diversified expression**
+   - Direction: long (starter)
+   - Thesis: cleanest whole-basket exposure to the quantum trade;
+     51%+ YTD; $5.7B AUM; 85 holdings dilute single-name blow-up
+     risk. Federal money is a multi-year tailwind.
+   - Catalyst: Google/IBM/MSFT roadmap milestones continue landing.
+   - Entry zone (candidate): **$156–$162** (Wed 7/1 close $160.28
+     sits inside this).
+   - Stop: −8% ~$147.
+   - Target: $180–$200 range.
+   - Size: **5%.**
+   - Confidence: 4/5. Broader/safer than IONQ alone.
+3. **NVDA — post-NFP re-entry, high-conviction starter**
+   - Direction: long (starter)
+   - Thesis: sovereign-AI narrative expanding (Palantir collab);
+     Strong Buy analyst tape ($301 avg PT vs $197 spot ~53% upside);
+     10-day drift has already reset momentum.
+   - Catalyst: sovereign-AI deal cadence, next earnings (~mid-Aug),
+     any NFP-cool-print rate-relief.
+   - Entry zone (candidate): **$192–$198** — the KILLED 6/27 zone
+     ($188–$194) has been re-drawn +$4 to reflect the Wed 7/1 tape.
+   - Stop: −8% ~$182.
+   - Target: $240 initial; $301 medium-term (analyst avg).
+   - Size: **5% starter,** with room to add to 15% on confirmation.
+   - Confidence: 4/5.
+4. **AMD — post-NFP DIP-buy watch (do not chase)**
+   - Direction: long (starter) IF the −6.83% Wed 7/1 candle finds
+     a base near $520–$540 on NFP-day tape.
+   - Thesis: MI350/AI-datacenter demand intact; Advancing AI event
+     Jul 22–23 is the near-term catalyst; YTD +154% run has now
+     given a real pullback.
+   - Catalyst: Advancing AI 2026 event Jul 22–23; Q2 print Aug 4.
+   - Entry zone (candidate): **$520–$540.** Only trigger if the tape
+     holds this range on NFP day; a hot NFP flush that breaks $510
+     invalidates and re-drafts lower.
+   - Stop: −8% from fill.
+   - Target: $600 retest; $680 stretch.
+   - Size: **3–5% starter.**
+   - Confidence: 3/5. Recency of the Wed rejection is a real risk.
+5. **SPY — post-NFP index starter (defensive breadth)**
+   - Direction: long (starter)
+   - Thesis: keep the benchmark represented; if concentration in
+     top-10 QQQ (~47%) becomes the story post-NFP, SPY is the safer
+     broad-tape expression.
+   - Catalyst: broader breadth improvement post-NFP.
+   - Entry zone (candidate): **$740–$748** (Wed 7/1 close $745.66
+     sits inside).
+   - Stop: −8% ~$685.
+   - Target: benchmark track (no absolute target).
+   - Size: **5% starter.**
+   - Confidence: 3/5.
+
+**Trade decision Thu 7/2 (this pass):**
+- **No orders placed this session.** Candidate drafts above are held
+  for post-NFP re-price; the Drafts→Armed rule requires re-pricing
+  next session, and the correct next session is either the Thu 7/2
+  EOD run (post-print, post-tape) or Mon 7/6 pre-market. Arming
+  starters into a pre-NFP tape violates the 30-min-around-tier-1-
+  print blackout in strategy §23.
+- **No stops to check** — empty book. Hard-stop / trim / trail rules
+  all N/A.
+- Cash-Drag Escalator status unchanged from 02:35 ET pass: DEFERRED
+  with NFP as tier-1 named-blocker, per rule.
+
+**ClickUp:** **Suppressed.** No urgent catalyst per strategy §7 and
+the task-template rule: (a) no held-name earnings today; (b) no held
+names period; (c) no halts; (d) NFP is scheduled and quantified in
+advance, not a shock; (e) no watchlist pre-market gap >5%. The
+standing EOD ping (if EOD runs) is the correct venue for surfacing
+today's outcome.
+
+**Sources consulted (web search this pass):**
+- CNBC / Yahoo / Nasdaq quote pages for NVDA, AMD, IONQ, QTUM, SPY,
+  QQQ (Wed 7/1 close + intraday range confirmations).
+- 24/7 Wall St. — QTUM catalysts / Trump $2B quantum push write-up.
+- Defiance ETFs — QTUM fund page (AUM, NAV, YTD).
+- Motley Fool / heygotrade — IONQ 2026 outlook / quantum ETF
+  landscape.
+- TradingKey / mitrade / FinancialJuice / Kraken — NFP previews
+  and Fed rate-hike-2026 dot-plot commentary.
+- Capital.com — AMD Advancing AI 2026 preview + Q1 recap.
+- Investor.nvidia.com / TipRanks — NVDA collab + Wayve tender.
+
+---
+
 ### 2026-07-02 Pre-market Thu — NFP day (08:30 ET); carried NVDA/AMD/SPY drafts KILLED (all above zones per Drafts→Armed Rule); Cash-Drag Escalator default-action DEFERRED with tier-1 named-blocker (NFP) documented per rule; log gap 6/30–7/1 acknowledged
 
 **Session:** Thu 7/2 pre-market pull, ~02:35 ET (market opens 09:30 ET;
