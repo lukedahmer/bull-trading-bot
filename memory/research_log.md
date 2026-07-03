@@ -4,6 +4,40 @@ Newest entries first.
 
 ---
 
+## 2026-07-03 — End of Day (Market Closed — Independence Day observed)
+
+**Session:** Post-market / end-of-day.
+
+**Market status:** US equity markets closed today. July 4, 2026 falls on
+Saturday, so Friday July 3 is the observed federal holiday. Next trading
+session: Monday, July 6, 2026.
+
+**Alpaca snapshot (pulled at close):**
+- Equity: $100,000.00
+- Last equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Positions: none
+- Filled orders today: none
+- Balance as-of: 2026-07-02
+
+**Today's performance:**
+- Portfolio return: 0.00% (no positions, no trades, market closed)
+- SPY: N/A — did not trade today
+- Relative performance vs SPY: N/A
+
+**Observations:**
+- Bull is still at the fresh-account starting equity ($100k paper). No
+  positions have been initiated to date.
+- With Monday's re-open following a long holiday weekend, watch for
+  gap-open volatility on watchlist names (QTUM, IONQ, NVDA, AMD, SPY,
+  QQQ) driven by weekend news flow.
+
+**Next session:** Pre-market Monday 2026-07-06 — resume the normal
+pre-market checklist per strategy.md.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
