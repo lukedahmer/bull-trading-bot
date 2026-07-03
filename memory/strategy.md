@@ -12,9 +12,17 @@ own checklist.
 
 ## Position sizing
 - Default new position: 2% of account equity at entry.
+- Half-size starter (1%) for names trading >50x sales (currently IONQ).
 - Max single-position weight: 10% of equity.
 - Max sector weight (e.g. semis NVDA+AMD+QTUM+IONQ combined): 40% of equity.
+- **Speculative bucket cap (added 2026-07-03):** QTUM + IONQ combined ≤ 15%
+  of equity. Reflects ~95x-sales quantum valuations and 1.5–2x SPY beta on
+  drawdown days.
 - Cash floor: never deploy below 10% cash.
+- **Anti-dormancy rule (added 2026-07-03):** if the account holds 100% cash
+  for 5 consecutive trading sessions, mechanically place a 2% SPY starter
+  on the next session's open to break drift. Rule is disabled once any
+  position exists.
 
 ## Risk rules
 - Hard stop: -8% from entry on any single name.
@@ -25,7 +33,7 @@ own checklist.
 - No options, no leverage, no shorting in this account.
 
 ## Decision workflow (pre-market)
-1. Read memory files: strategy, portfolio, trade_log, research_log.
+1. Read memory files: strategy, portfolio, trade_log, research_log, weekly_review.
 2. Pull Alpaca account + positions.
 3. Research via Perplexity (sonar-pro):
    - Pre-market movers
