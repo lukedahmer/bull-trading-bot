@@ -4,6 +4,37 @@ Newest entries first.
 
 ---
 
+## 2026-07-03 — Market-open run (NO-OP)
+
+**Session:** "Market just opened" routine fired at 02:32 ET.
+
+**Actual market state:** Alpaca `/v2/clock` returned `is_open=false`,
+`next_open=2026-07-06T09:30:00-04:00`. July 3 2026 is a Friday and the
+NYSE is closed for Independence Day (observed, since July 4 falls on
+Saturday). The routine's premise that the market was open was incorrect.
+
+**Account sync:** Equity $100,000, cash $100,000, buying power $400,000,
+zero open positions. First successful Alpaca sync since bootstrap;
+portfolio.md updated.
+
+**Stop-loss sweep:** No positions held → nothing to check.
+
+**Trade ideas evaluated:** None available. research_log has no drafted
+ideas; the strategy pre-market workflow explicitly requires ideas to be
+drafted (step 4) before any entry run places them. Fabricating entries
+here would violate the checklist.
+
+**Actions taken:**
+- Alpaca `/v2/account` and `/v2/positions` fetched — logged above.
+- No orders placed.
+- No trailing stops set.
+- No ClickUp ping (no trade, no stop trigger, no urgent catalyst).
+
+**Next unblocker:** A pre-market run (with Perplexity access) needs to
+populate trade ideas here before the next market-open entry attempt.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
