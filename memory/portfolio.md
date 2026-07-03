@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-07-02 Thu pre-market SUPPLEMENTAL (web-research pass added on top of the ~02:35 ET Alpaca pull; account state re-verified unchanged; NFP prints 08:30 ET; market opens 09:30 ET)
+Last Updated: 2026-07-03 Fri pre-market (Independence Day observed; market CLOSED all session; NFP printed Thu 7/2 at +57K vs 100–113K consensus — dovish miss; Thu 7/2 tape closed with semi/quantum flush and SPY resilience; 4 candidate drafts re-priced against Thu 7/2 closes for Mon 7/6 arming, 1 KILLED for invalidation trip)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -8,15 +8,16 @@ Last Updated: 2026-07-02 Thu pre-market SUPPLEMENTAL (web-research pass added on
 - Total Portfolio Value: $100,000.00
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
-- Last Equity (prior close, Wed 7/1): $100,000.00
-- **Day P/L: 0.00%** (cash book, no positions — entering **33rd** consecutive cash open; 32 closes carried in)
-- **Session-log gap:** Tue 6/30 and Wed 7/1 pre/mid/EOD sessions did NOT run. Today (7/2 pre-market) is the first logged session since Mon 6/29 EOD.
+- Last Equity (prior close, Thu 7/2): $100,000.00
+- **Day P/L: 0.00%** (cash book, no positions — **34th** consecutive cash open; 33 closes carried in)
+- **Session-log gap:** Thu 7/2 EOD did NOT run — the weekly review scheduled at 7/2 EOD (per 7/2 SUPPLEMENTAL action items) is missing. Fourth documented log-gap in ~two weeks (Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD). See research_log 2026-07-03 for weekend escalation.
+- **Market status TODAY (Fri 7/3):** CLOSED all session — Independence Day observed (July 4 is Sat). `GET /v2/clock` → `is_open=false`; `next_open 2026-07-06T09:30:00-04:00`. **No execution possible any hour today.**
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
-- Pattern Day Trader: false (day-trade count 0); options level 3
-- Filled orders today: **none** | Filled orders since inception: **none** (0 fills, 32 trading sessions since 2026-05-12; today is the 33rd)
-- /v2/positions → **`[]`** at Thu 7/2 02:35 ET.
-- balance_asof: 2026-06-30
+- Pattern Day Trader: false (day-trade count 0); options level 3 (unused per strategy)
+- Filled orders today: **none** | Filled orders since inception: **none** (0 fills, 33 trading sessions since 2026-05-12; today is 34th session opened but market closed)
+- /v2/positions → **`[]`** at Fri 7/3 ~06:07 ET.
+- balance_asof: 2026-07-02
 
 ## Current Positions
 
@@ -31,25 +32,52 @@ Last Updated: 2026-07-02 Thu pre-market SUPPLEMENTAL (web-research pass added on
 - Thematic quantum (QTUM + IONQ): 0%
 - Index (SPY + QQQ): 0%
 
-## Watchlist (Wed 7/1 close — latest available; markets closed overnight)
+## Watchlist (Thu 7/2 close — actual Alpaca 1Day bars, feed=iex)
 
-| Symbol | Wed 7/1 close | Tue 6/30 close | Δ 6/30→7/1 | Carried 6/27 zone | Status |
-|--------|--------------:|---------------:|-----------:|-------------------|--------|
-| NVDA   | 197.54        | 199.93         | −1.20%     | $188–$194         | **ABOVE zone +1.83% — KILLED** |
-| AMD    | 540.89        | 580.52         | −6.83%     | $510–$525         | **ABOVE zone +3.03% — KILLED** |
-| SPY    | 745.665       | 746.65         | −0.13%     | $725–$735         | **ABOVE zone +1.45% — KILLED** |
-| QQQ    | 725.32        | 736.07         | −1.46%     | (no draft)        | consolidating at old zone top |
-| QTUM   | 160.28        | 165.355        | −3.07%     | (no draft)        | below prior $162–$168 floor |
-| IONQ   | 51.44         | 53.29          | −3.47%     | (no draft)        | weak vs prior $56–$58 spec |
+| Symbol | Thu 7/2 close | Wed 7/1 close | Δ 7/1→7/2 | 7/2 intraday low | Post-7/2 draft zone | Status |
+|--------|---------------:|---------------:|-----------:|------------------:|---------------------|--------|
+| NVDA   | 194.51        | 197.54        | −1.53%     | 192.35            | $192–$198           | **HOLD-LIVE for Mon 7/6** (inside zone) |
+| AMD    | 518.25        | 540.89        | −4.19%     | **506.33**        | $520–$540 (killed)  | **KILLED** — $510 invalidation broken intraday |
+| SPY    | 744.86        | 745.665       | −0.11%     | 740.04            | $740–$748           | **HOLD-LIVE for Mon 7/6** (inside zone) |
+| QQQ    | 712.53        | 725.32        | −1.76%     | 707.61            | (no draft)          | tracking; SPY preferred index expression |
+| QTUM   | 155.13        | 160.28        | −3.21%     | 153.62            | $148–$156 (re-drawn)| **HOLD-LIVE for Mon 7/6** (re-priced from $156–$162) |
+| IONQ   | 49.165        | 51.44         | −4.42%     | 48.19             | $48–$52             | **HOLD-LIVE for Mon 7/6** (inside zone, lower end) |
 
-## Cash Allocation Plan (post-7/2 pre-market kill)
-- **All three carried 6/27 drafts (NVDA / AMD / SPY at 5% each) — KILLED** at Thu 7/2 pre-market per Drafts→Armed Order Rule. All three prices are ABOVE their drafted zones (chase risk). Kill reasons logged in research_log 2026-07-02.
-- Cash-Drag Escalator remains TRIPPED (32 sessions ≥ 90% cash vs 20-session threshold). Thu 7/2 default-action DEFERRED with tier-1 named-blocker documented: **NFP 08:30 ET**.
-- Task-template guardrails for this session: max 10% single position, min 20% cash floor. Both non-binding — no positions opened.
-- No fresh drafts drawn this session; re-drafting scheduled for Thu 7/2 EOD (post-NFP tape) or Mon 7/6 pre-market.
+## Cash Allocation Plan (arm on Mon 7/6 pre-market, contingent on gap check + weekend headlines)
+- **Four candidate drafts survive** the 7/2-close re-price and are HOLD-LIVE for Mon 7/6 pre-market arming as limit orders in the 09:30–10:30 ET Cash-Drag Escalator window:
+  - **IONQ 3%** (~$3,000, ~61 sh at $49). Stop $45.24. Target $65–$70. Zacks #4 Sell is the offset.
+  - **QTUM 5%** (~$5,000, ~32 sh at $155). Stop $142.72. Target $180–$200. Cleanest quantum-theme wrapper.
+  - **NVDA 5%** (~$5,000, ~26 sh at $194). Stop $178.95. Target $240 initial / $301 consensus PT. Room to add to 15% on confirmation.
+  - **SPY 5%** (~$5,000, ~7 sh at $744). Stop $684.87. Benchmark leg.
+- **Aggregate Mon 7/6 deploy target: 18% ($18,000)** → 82% cash remaining, well above aggressive-mode 5–10% floor.
+- Sector split: semis 5% (NVDA), thematic quantum 8% (QTUM+IONQ), index 5% (SPY).
+- **Single-name cap 25% respected** (max 5% starter on any name).
+- **AMD KILLED** — the drafted $520–$540 zone included a "$510 breaks = invalidate" condition; Thu 7/2 intraday low $506.33 tripped it. Re-drafting requires a fresh base candle in $490–$510 and is queued for Mon 7/6 EOD or Tue 7/7 pre-market, NOT for the Mon 7/6 open.
+- **Contingency to abort all Mon 7/6 arms:** any of (a) SPY/QQQ gap-open > 2% down, (b) fresh weekend Meta/hyperscaler capex-cut headline, (c) Kospi/SK Hynix down another 5%+ in Sunday-night Asia session.
+- **Cash-Drag Escalator** (strategy §25): TRIPPED (33-session count carried). Today's default-action is BLOCKED by market closure — documented per rule. Mon 7/6 pre-market is the next operative session; the 4-starter Monday plan above IS the escalator response for that session.
 
 ## Notes from Last Session
-- **Thu 2026-07-02 pre-market SUPPLEMENTAL (this run):** Web-research
+- **Fri 2026-07-03 pre-market (this run):** ~06:07 ET pull. Market CLOSED
+  (July 4 observed). Account re-verified: equity $100,000.00 | cash 100%
+  | positions `[]` (33 closes / 34 sessions since 2026-05-12). Pulled
+  actual Thu 7/2 daily closes via Alpaca 1Day bars — NVDA 194.51 (−1.53%),
+  AMD 518.25 (−4.19%, low 506.33 — INVALIDATED), SPY 744.86 (−0.11%),
+  QQQ 712.53 (−1.76%), QTUM 155.13 (−3.21%), IONQ 49.17 (−4.42%). NFP
+  **printed +57K vs consensus 100–113K** (dovish miss); U/R ticked
+  down to 4.2%; 2Y −3.5bps to 4.13%. Tape driver was the **Meta AI-
+  capex cloud story** → SK Hynix −14.5% / Samsung −9.1% / Kospi −7.9%
+  (emergency halt). US semis rolled in sympathy (NVDA −1.5%, AMD −4%).
+  Applied Drafts→Armed Rule to five 7/2 candidates: **AMD KILLED**
+  ($510 invalidation broken intraday); **QTUM re-priced $156–$162 →
+  $148–$156** (marginal below-zone miss); **NVDA / SPY / IONQ HOLD-
+  LIVE** (all inside zones). Aggregate Mon 7/6 arm plan: 18% deploy
+  across 4 names, 82% cash. Fourth session-log gap flagged (Thu 7/2
+  EOD missing). No orders placed (market closed). No stops to check
+  (empty book). **No ClickUp ping** — market closure + no held names
+  + narrative-shift-not-emergency on Meta story. Weekend headline
+  monitoring queued for Sun-night Asia session + Meta/hyperscaler
+  capex commentary.
+- **Thu 2026-07-02 pre-market SUPPLEMENTAL:** Web-research
   pass invoked to fill the news-scan gap the 02:35 ET Alpaca-only run
   documented. Account re-pull → equity $100,000.00 | cash 100% |
   positions `[]` (unchanged). Watchlist news scanned for NVDA (Palantir
@@ -97,30 +125,34 @@ Last Updated: 2026-07-02 Thu pre-market SUPPLEMENTAL (web-research pass added on
   NOT alpha). 29th cash close. strategy.md amended with Cash-Drag
   Escalator + Drafts→Armed Order rules.
 
-## Action items for next session (Thu 7/2 EOD post-NFP OR Mon 7/6 pre-market)
-1. **Pull the NFP result** (08:30 ET print) and quantify the tape
-   reaction across NVDA / AMD / SPY / QQQ / QTUM / IONQ. This is the
-   binding gate; the print dictates whether re-drafted zones sit
-   higher (cool NFP → risk-on chase) or lower (hot NFP → tech reset).
-2. **Draft FRESH ideas** — the 6/27 drafts are dead. Zones must be
-   re-drawn against Thu 7/2 EOD closes for at least NVDA, AMD, SPY,
-   QTUM. Do not reuse the old ranges.
-3. **Weekly review at Thu 7/2 EOD** (Fri 7/3 is Independence Day —
-   markets closed). Must document (a) the two-week Cash-Drag
-   Escalator failure pattern, (b) the log-gap failure mode, (c)
-   whether a watchdog layer / standing-decay-limit order is
-   warranted, (d) that today WAS the first correct invocation of
-   the named-blocker escape clause.
-4. **Consider strategy amendment:** the aggressive-mode strategy
-   (25% single-name cap, 5–10% cash floor) has been in force since
-   ~2026-05-26 and has produced zero fills across 32 sessions. If
-   the process-drift failure mode is structural rather than
-   behavioral, the strategy needs a "starter-of-last-resort"
-   mechanism that cannot be silent-skipped.
-5. **Cash floor** (5–10% aggressive-mode / 20% for the current
-   task template) untouchable.
-6. **No held-name earnings risk** — no positions to gap-manage.
-7. **ClickUp policy unchanged:** notify only on placed trade or
-   triggered stop per the current task template (stricter than the
-   standing EOD-ping policy on the strategy file). The EOD run may
-   send a standing ping if it fires under a different template.
+## Action items for next session (Mon 7/6 pre-market)
+1. **Sunday-night Asia session watch** (Kospi open ~19–20 ET Sun). SK
+   Hynix / Samsung follow-through is the tell on whether the Meta
+   AI-capex reset extends. Down another 5%+ Sunday → arm NOTHING at
+   Mon 7/6 open; wait for 09:30–10:30 tape stabilization.
+2. **Weekend headline scan.** Specifically: Meta cloud detail, OpenAI/
+   Anthropic/Google capex commentary, any hyperscaler guidance
+   walk-back. Any of these amplifies Thursday's rout and requires
+   re-killing at least NVDA at the Mon pre-market run.
+3. **Arm the 4 HOLD-LIVE limit orders** in the 09:30–10:30 ET window,
+   contingent on: no >2% gap at open, no fresh capex-cut headline,
+   AMD invalidation not spreading (IONQ still >$46, QTUM still >$146,
+   NVDA still >$182, SPY still >$720). Order type: LIMIT at zone
+   midpoint. Sizes: IONQ 3%, QTUM 5%, NVDA 5%, SPY 5% = 18%.
+4. **AMD re-draft queued** for Mon 7/6 EOD or Tue 7/7 pre-market — NOT
+   for Mon open. Requires a fresh base candle in $490–$510 and a
+   rejection wick before any zone can be re-drawn.
+5. **Weekly review** proper — hold at Fri 7/3 EOD (no tape moved) or
+   Mon 7/6 EOD. Must document (a) the 4-session log-gap pattern
+   (Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD), (b) the
+   structural (not behavioral) failure-mode risk, (c) whether a
+   watchdog / standing-decay-limit-order mechanism should be added
+   to strategy.md.
+6. **Cash floor** (5–10% aggressive-mode) — 82% cash after the 18%
+   Monday deploy leaves ample room; untouchable.
+7. **No held-name earnings risk** — no positions to gap-manage into
+   Monday. First held-name earnings gate is not identified yet;
+   Q2 season kicks off mid-July (banks first, AMD Aug 4).
+8. **ClickUp policy unchanged** for this task template: notify only
+   on placed trade or triggered stop. Weekly-review EOD ping remains
+   the standing rule under the strategy §7 EOD template if it fires.
