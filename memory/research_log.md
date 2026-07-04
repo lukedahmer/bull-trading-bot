@@ -15,6 +15,268 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-07-04 Sat — WEEKEND / MARKET CLOSED (Independence Day proper). Meta "Compute" cloud pivot RE-FRAMED as constructive (Meta +9% Tue 7/1 on the story); Kospi / Samsung / SK Hynix REBOUNDED Fri 7/3 (Samsung +6.82%, SK Hynix +4.6%, Kospi ~+3%); NFP dovish confirmation (Sep hike off table, Oct still in play); EU tariff deadline hit TODAY (tariff-shock risk into Mon); 4-starter Mon 7/6 arm plan (IONQ 3% / QTUM 5% / NVDA 5% / SPY 5% = 18%) held intact; no ClickUp (no urgent catalyst).
+
+**Session:** Sat 2026-07-04 weekend research pass. US pre-market window
+on a weekend / federal holiday — no live tape, no execution possible.
+`GET /v2/clock` from Fri 7/3 pass still valid: `next_open
+2026-07-06T09:30:00-04:00`. Sun-night Asia is the next live tape event
+(~19:00–20:00 ET Sun for Kospi open).
+
+**Account (Alpaca GET /v2/account, pulled this session):**
+- equity **$100,000.00** | cash **$100,000.00** | buying_power
+  $400,000.00 | long_market_value $0.00 | short_market_value $0.00 |
+  ACTIVE (PA39FINFSDLL) | PDT false | daytrade_count 0 | balance_asof
+  **2026-07-02** (unchanged — Fri 7/3 holiday didn't move settlement) |
+  options level 3 (unused).
+- `GET /v2/positions` → `[]`. **34th consecutive cash open**, now with
+  a weekend added on top. No fills since inception 2026-05-12.
+- Cash-Drag Escalator: TRIPPED. Today's default-action BLOCKED by
+  weekend / holiday closure (self-evident tier-1 blocker). Mon 7/6
+  09:30 ET is the next operative window.
+
+**Weekend headline scan — the three action-item watches from Fri 7/3:**
+
+**1. Meta AI-capex story — RE-FRAMED as CONSTRUCTIVE, not destructive.**
+The Thu 7/2 Asian semi rout was a market misread of a Tue 7/1
+Bloomberg / CNBC story that Meta is standing up an AI-cloud business
+("**Meta Compute**") to sell excess AI compute to third parties —
+directly competing with AWS Bedrock / Azure / GCP / CoreWeave.
+- **Meta stock closed +9% on the Tue 7/1 announcement** — market's
+  INITIAL read on the story was CONSTRUCTIVE (Meta monetizing the AI
+  capex investment).
+- **Meta capex guidance for 2026 was RAISED,** not cut: prior range
+  $115–$135B → new range **$125–$145B**. Excess capacity is being
+  monetized as revenue, not deleveraged out of.
+- Business is led by infrastructure head Santosh Janardhan, Meta
+  Superintelligence Labs' Daniel Gross, and president Dina Powell
+  McCormick. Two options under evaluation: (a) hosted model access
+  (AWS Bedrock-style, including Muse Spark), (b) raw compute rental
+  (CoreWeave-style).
+- **The Thu 7/2 Asia rout was the second-order read** — "if a
+  hyperscaler has excess compute to resell, the marginal buyer of
+  HBM / NVDA / hyperscaler racks may be closer to saturation." That's
+  a **positioning shakeout on a demand-mix concern, not a
+  demand-destruction event.**
+- Read-through for NVDA / AMD / SK Hynix / Samsung: near-term HBM
+  order-book noise, but the AI infrastructure spend curve is
+  unchanged — capex was RAISED across the board. Samsung Securities
+  analyst Kim Joong-han: "computing power remains in an absolute
+  shortage." Meta itself may still be short capacity as AI demand
+  keeps rising.
+- **Verdict:** the Meta story is a **narrative rotation**, not a
+  narrative break. Downgrade the Thu 7/2 semi-rout probability from
+  "trend reset" to "one-day flush."
+
+**2. Asia follow-through Fri 7/3 — bounce, not extension.**
+- **Samsung Electronics +6.82% to 305,500 KRW** on Fri 7/3 (per
+  Invezz coverage).
+- **SK Hynix +4.6% to 2,289,000 KRW** (recovering roughly a third
+  of Thu's −14.5% flush).
+- **Kospi ~+2.9% to ~7,869.84.**
+- Korean brokerages pushed back on the Meta read: multiple sell-side
+  notes reasserted the HBM shortage thesis and reiterated buy on
+  SK Hynix into Q2 print.
+- **Verdict:** the "Sunday-night Asia down 5%+ = abort all Mon 7/6
+  arms" contingency (portfolio.md action-item #1 for Mon 7/6) is
+  MATERIALLY DE-RISKED heading into Sun. Full reset requires a
+  Sunday-night gap-down of ~5%+ from Fri 7/3 close, which is a
+  higher bar than "extend the rout."
+
+**3. Fresh capex-cut / hyperscaler guidance walk-back headlines —
+NONE FOUND.**
+- OpenAI, Anthropic, Google, Microsoft, Amazon — no weekend capex
+  walk-back headlines through the scan window.
+- No hyperscaler Q2 pre-announcement or negative earnings pre-warn.
+- Motley Fool / Futurum / Bloomberg all writing the story as
+  "Meta $135B AI capex 2026" — capex UP, not down. Futurum "AI
+  Capex 2026: The $690B Infrastructure Sprint" reiterates the
+  aggregate hyperscaler-capex line (still $650B+).
+- **Verdict:** the "fresh weekend capex-cut headline = abort" trigger
+  (portfolio.md action-item #1 contingency b for Mon 7/6) is NOT
+  tripped.
+
+**Macro re-check — NFP after-print re-verified:**
+- Confirmed print: **+57K jobs (June 2026)** vs Dow Jones consensus
+  **~115K**; unemployment rate **4.2%** (below 4.3% consensus);
+  April/May revised −74K combined (Apr → 148K, May → 129K).
+- **2Y Treasury yield −3.5 bps to 4.13%**. Short end priced OUT a
+  September Fed HIKE; October hike still marginal in CME FedWatch.
+  (Under Warsh regime the risk asymmetry is HIKE not cut; a dovish
+  NFP is unambiguously risk-on for high-multiple long-duration tech.)
+- **Fed Chair Kevin Warsh at ECB Sintra forum Tue 7/1:** "inflation
+  remains too elevated even as Fed officials have become more
+  open-minded about AI and its implications for being deflationary."
+  Hawkish framing. Committed to bringing inflation to 2% ("missed
+  for five years, going to fix that"). Nine of 18 FOMC members
+  project a 2026 HIKE per the June dot plot.
+- **Verdict:** dovish NFP + hawkish Warsh = mixed backdrop. The tape
+  is torn between the actual data (labor softening = no hike) and
+  Fed rhetoric (hike still on the table). Range-bound bias, not
+  trend-break bias. Supports the 4-starter Monday arm plan.
+
+**New macro overhang — EU tariff deadline TODAY (Sat 7/4):**
+- Trump gave the EU until **July 4 (US 250th birthday)** to fully
+  implement its trade deal or face "much higher tariffs" — deadline
+  falls TODAY. Weekend outcome not yet reported in news scan window.
+- Separate track: USMCA renewal being pulled Jul 1 (Trump admin
+  starting a decade of amendment negotiations instead of renewal).
+- Section 122 across-the-board 10% tariff authority **expires
+  Jul 24, 2026** unless extended by Congress. Court of International
+  Trade ruled against the tariffs May 7; decision under appeal;
+  tariffs still being collected pending appeal.
+- **New Monday contingency:** if EU tariffs jump this weekend, add
+  a fourth abort trigger to the Mon 7/6 arm plan — European exporter
+  stress + retaliation risk are direct spillover paths to SPY /
+  QQQ / semis. Monitor Sunday evening.
+
+**Watchlist news pass — no material fresh news beyond what Fri 7/3
+covered. Delta since Fri:**
+- **NVDA ($194.51 as of 7/2 close).** No fresh weekend company news.
+  Analyst consensus **Strong Buy** (38 of 61 firms) / **12-month PT
+  $301.62** (implied +55% upside from spot). Next earnings **Aug 26,
+  2026** — no near-term earnings risk. FY26 revenue $215.94B (+65.5%
+  YoY); Q2 FY27 guide **$91B ± 2%** (above $87.2B consensus).
+  Structural setup intact.
+- **AMD ($518.25 as of 7/2 close, KILL still stands).** **Advancing
+  AI 2026 event Jul 22–23** is the biggest single-name catalyst on
+  the watchlist across the next three weeks. Confirmed partner-
+  ecosystem reveal (MI450 series, EPYC Venice CPUs, Pensando Vulcano
+  AI NICs in the Helios reference design). **Lisa Su on record:
+  "lead customer forecasts now exceeding our initial plans"** with
+  Helios shipments ramping H2 2026. OpenAI 6GW MI450 buildout begins
+  H2 2026. Q2 print **Aug 4**. AMD is a two-catalyst name (Jul 22–23
+  event + Aug 4 earnings) — re-draft target zone $490–$510 remains
+  queued for a base-candle read post-Jul 6.
+- **IONQ ($49.17 as of 7/2 close).** **NEW: Archer Materials
+  partnership Jul 1** — US$1.5M joint study for on-shore quantum
+  computer deployment in Australia (regulated-sector focus, fraud-
+  detection ML using IonQ's trapped-ion hardware). Small deal, but
+  the third IonQ commercial-partnership headline in a month (Cambridge
+  256-qubit sale, Clavis XG launch, Archer). Analyst consensus
+  Strong Buy, 12-month PT **$69.31** (+41% upside). 2026 revenue guide
+  raised to **$260–$270M**. Zacks Rank #4 (Sell) is the offset — the
+  bear case is the SkyWater M&A regulatory drag and dilution risk.
+- **QTUM ($155.13 as of 7/2 close).** Federal $2B May 2026 Commerce/
+  NIST quantum-R&D program (IBM $1B, GlobalFoundries $375M, D-Wave /
+  Rigetti / Infleqtion ~$100M each) is the structural tailwind.
+  IonQ NOT in the direct-investment list but is a top-10 holding
+  in QTUM. Fund holds 89 names; top 5: Arqit Quantum 2.08%, Horizon
+  Quantum 2.03%, Quantinuum 1.53%, Micron 1.43%, Applied Materials
+  1.42%. **52-week range 89.23 → 170.00**; 7/2 close sits in the
+  middle of the range. Re-drawn zone $148–$156 (from Fri 7/3 log)
+  puts entry at the lower-quartile of the range.
+- **SPY ($744.86) / QQQ ($712.53).** No index-specific fresh news.
+  Sector rotation Wed 7/1: XLK −2.57% / XLF +2.18% — tech
+  profit-taking into financials on the back of Fed stress-test
+  bank buybacks and dividend hikes. AI infrastructure spend forecast
+  for 2026 still **$650B+** (Motley Fool / Futurum). **Meta Platforms
+  and Netflix led tech gains Wed 7/1 (AI/ad-tech initiatives).**
+  Intel −9.03% Wed 7/1 despite Cantor PT upgrade (execution-risk
+  overhang). Chip cohort softening was already underway before the
+  Meta cloud story.
+
+**Macro calendar — next 10 sessions (dates re-verified):**
+- **Mon 7/6:** ISM Services (June, 10:00 ET). First live tape
+  post-holiday. Cash-Drag Escalator default-action window is 09:30–
+  10:30 ET (before ISM print — order arm should complete before
+  10:00 ET).
+- **Wed 7/8:** **FOMC minutes** (June 17 meeting — Warsh's first as
+  chair). Key detail: dot-plot dispersion, dissent count, task-force
+  language. Hike-bias language on release would compress tech
+  multiples.
+- **Mon 7/13:** Q2 earnings season begins.
+- **Tue 7/14:** Bank earnings kick off — **JPM (Q2 EPS consensus
+  $5.44 vs $4.96 y/y, revenue $48.7B, +8.5% y/y)**, Citi, Wells Fargo,
+  Goldman Sachs, Bank of America, Morgan Stanley. No held-name risk
+  (empty book), but SPY / QQQ direction 7/14–7/16 will be
+  bank-print-driven.
+- **Tue 7/14:** **US CPI (June)** — first CPI print after Warsh's
+  hawkish June meeting. HIGH tape-move risk. Any of our 4 Mon 7/6
+  arms will be into the 7/14 CPI print with ~48 hours' window.
+- **Wed 7/22 – Thu 7/23:** **AMD Advancing AI 2026 event** — MI450 /
+  Helios ecosystem reveal. Watchlist-only for now (AMD KILLED); if
+  the re-drafted $490–$510 base zone triggers Mon 7/6–Tue 7/7, the
+  event becomes a size-up catalyst.
+- **Wed 7/29:** FOMC decision (July meeting).
+- **Mon 8/4:** AMD Q2 earnings.
+- **Tue 8/26:** NVDA Q2 earnings (out of window but flagged for
+  arm-plan hold-time budgeting).
+
+**Trade decisions — Sat 7/4 weekend pass:**
+
+**No changes to the 4-starter Mon 7/6 arm plan.** The weekend
+headline scan de-risks two of the three abort contingencies (Asia
+rebound, no fresh capex-cut) and neither trips the third (Sunday
+Asia gap-down not yet observable). The plan carried from Fri 7/3
+stands:
+
+| Idea | Size | Zone | Stop | Target | Conf | Status |
+|------|-----:|------|-----:|--------|-----:|--------|
+| **IONQ** long starter | 3% (~$3,000, ~61 sh @ $49) | $48–$52 | $45.24 (−8%) | $65–$70 | 3/5 | HOLD-LIVE for Mon 7/6 |
+| **QTUM** long starter | 5% (~$5,000, ~32 sh @ $155) | $148–$156 (re-drawn) | $142.72 (−8%) | $180–$200 | 4/5 | HOLD-LIVE for Mon 7/6 |
+| **NVDA** long starter | 5% (~$5,000, ~26 sh @ $194) | $192–$198 | $178.95 (−8%) | $240 → $301 (PT) | 4/5 | HOLD-LIVE for Mon 7/6 |
+| **SPY** long starter | 5% (~$5,000, ~7 sh @ $744) | $740–$748 | $684.87 (−8%) | benchmark track | 4/5 | HOLD-LIVE for Mon 7/6 |
+
+**Aggregate Mon 7/6 deploy: 18% ($18,000)** → 82% cash post-arm,
+well above the 5–10% aggressive-mode floor. Sector split: semis 5%
+(NVDA), thematic quantum 8% (QTUM+IONQ), broad index 5% (SPY).
+Single-name cap 25% respected. **AMD KILL still stands** — no
+re-arm without a fresh $490–$510 base candle.
+
+**Idea in the queue (NOT armed):**
+- **AMD re-entry.** Advancing AI 2026 event Jul 22–23 is the primary
+  catalyst; MI450 hyperscaler traction (OpenAI 6GW) is the thesis;
+  Q2 print Aug 4 is the second leg. Re-draft target zone $490–$510
+  contingent on a base candle post-Mon 7/6 open. Sizing: 5% starter,
+  room to scale to 10% into the event if the base holds.
+
+**Risk sweep (empty book):** −8% hard cut, +30% trim-50%, +15%→7%
+trail tighten all N/A. No held-name earnings gap risk (nothing held).
+
+**ClickUp:** **SUPPRESSED.** Reasoning:
+- Task-template rule: notify only on placed trade or triggered stop.
+  Neither occurred (market closed all weekend).
+- Strategy §7 urgent-catalyst check: (a) no held-name earnings;
+  (b) no held names; (c) no halts; (d) no macro shock over the
+  weekend to date; (e) no watchlist gap >5% (no pre-market session
+  possible on a full weekend); (f) EU tariff deadline is TODAY but
+  no confirmed shock outcome yet — will re-check Sun evening.
+- The Sat 7/4 update is **status-quo positive** for the Mon 7/6 plan
+  — pinging on "everything's still fine" would burn attention and
+  degrade the signal value of future pings.
+
+**Action items for Sun-night check-in / Mon 7/6 pre-market:**
+1. **Sun 7/5 ~19:00 ET Asia open watch.** Kospi opening print vs
+   Fri 7/3 7,869.84 close. Down another 3%+ → downgrade all 4
+   Mon arms to "wait 30 min post-open." Down 5%+ → abort all arms,
+   wait to Tue.
+2. **Sun 7/5 evening EU tariff outcome check.** If Trump admin
+   announces higher EU tariffs effective this week, add a fourth
+   contingency: SPY / QQQ / European-exporter direct-exposure
+   re-check at Mon 7/6 pre-market.
+3. **Mon 7/6 pre-market:** re-pull Alpaca account (verify cash still
+   $100k), re-price the 4 candidate zones against Sun-night futures
+   and any Mon pre-market prints, arm the 4 limit orders in the
+   09:30–10:30 ET Cash-Drag Escalator window (order type: LIMIT at
+   zone midpoint), then EOD post-fill reconciliation.
+4. **AMD re-draft:** post-Mon 7/6 open, read the AMD tape for a base
+   candle in $490–$510; if formed, draft a fresh entry zone for Tue
+   7/7 pre-market arming ahead of the Jul 22–23 event.
+5. **Weekly review** still owed — hold at Mon 7/6 EOD (aligns to
+   trading-week end since 7/3 was closed). Document the 4-session
+   log-gap pattern (Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2
+   EOD) and the fix candidate (standing-decay limit-order automation
+   / pre-market watchdog).
+6. **FOMC minutes Wed 7/8** — will drive Wed intraday tape. If arms
+   fill Mon 7/6, plan Wed 7/8 for a stop-check pass at 14:00 ET
+   (release time) and 14:30 ET (post-release digest).
+7. **CPI Tue 7/14** — first held-position macro test if arms fill.
+   Any position underwater by more than −4% pre-CPI should be
+   trim-considered rather than defended into the print.
+
+---
+
 ### 2026-07-03 Pre-market Fri — MARKET CLOSED (Independence Day observed). NFP printed +57K vs 100–113K consensus (dovish miss); AMD invalidation trip; NVDA/SPY/IONQ candidate zones held; QTUM $0.87 below zone (marginal); Meta AI-capex cloud story is Monday's tape driver; no ClickUp (no urgent catalyst).
 
 **Session:** 2026-07-03 pre-market Fri, ~06:07 ET pull. US equity and

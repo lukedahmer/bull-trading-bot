@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-07-03 Fri pre-market (Independence Day observed; market CLOSED all session; NFP printed Thu 7/2 at +57K vs 100–113K consensus — dovish miss; Thu 7/2 tape closed with semi/quantum flush and SPY resilience; 4 candidate drafts re-priced against Thu 7/2 closes for Mon 7/6 arming, 1 KILLED for invalidation trip)
+Last Updated: 2026-07-04 Sat weekend research pass (Independence Day proper; market CLOSED all weekend; Asia rebounded Fri 7/3 — Samsung +6.82%, SK Hynix +4.6%, Kospi ~+3%; Meta "Compute" cloud pivot re-framed as constructive not destructive; NFP dovish confirmation absorbed; EU tariff deadline hit TODAY as new overhang; 4-starter Mon 7/6 arm plan (IONQ/QTUM/NVDA/SPY = 18%) held intact from Fri 7/3 log)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -9,15 +9,15 @@ Last Updated: 2026-07-03 Fri pre-market (Independence Day observed; market CLOSE
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
 - Last Equity (prior close, Thu 7/2): $100,000.00
-- **Day P/L: 0.00%** (cash book, no positions — **34th** consecutive cash open; 33 closes carried in)
-- **Session-log gap:** Thu 7/2 EOD did NOT run — the weekly review scheduled at 7/2 EOD (per 7/2 SUPPLEMENTAL action items) is missing. Fourth documented log-gap in ~two weeks (Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD). See research_log 2026-07-03 for weekend escalation.
-- **Market status TODAY (Fri 7/3):** CLOSED all session — Independence Day observed (July 4 is Sat). `GET /v2/clock` → `is_open=false`; `next_open 2026-07-06T09:30:00-04:00`. **No execution possible any hour today.**
+- **Day P/L: 0.00%** (cash book, no positions — **34th** consecutive cash open; Fri 7/3 was holiday close, Sat 7/4 is weekend — no new sessions elapsed)
+- **Session-log gap:** Thu 7/2 EOD still missing (4-session gap: Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD). See research_log 2026-07-04 for weekend confirmation of the pending weekly review.
+- **Market status TODAY (Sat 7/4):** CLOSED all session — Independence Day proper (weekend). `GET /v2/clock` still shows `next_open 2026-07-06T09:30:00-04:00` from the Fri 7/3 pull. **No execution possible until Mon 7/6 09:30 ET.**
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0); options level 3 (unused per strategy)
-- Filled orders today: **none** | Filled orders since inception: **none** (0 fills, 33 trading sessions since 2026-05-12; today is 34th session opened but market closed)
-- /v2/positions → **`[]`** at Fri 7/3 ~06:07 ET.
-- balance_asof: 2026-07-02
+- Filled orders today: **none** | Filled orders since inception: **none** (0 fills, 33 trading sessions since 2026-05-12; 34th session was Fri 7/3 holiday close; today Sat 7/4 is weekend)
+- /v2/positions → **`[]`** at Sat 7/4 weekend pull (also `[]` at Fri 7/3 ~06:07 ET).
+- balance_asof: 2026-07-02 (unchanged — Fri 7/3 closed, no settlement move)
 
 ## Current Positions
 
@@ -57,7 +57,31 @@ Last Updated: 2026-07-03 Fri pre-market (Independence Day observed; market CLOSE
 - **Cash-Drag Escalator** (strategy §25): TRIPPED (33-session count carried). Today's default-action is BLOCKED by market closure — documented per rule. Mon 7/6 pre-market is the next operative session; the 4-starter Monday plan above IS the escalator response for that session.
 
 ## Notes from Last Session
-- **Fri 2026-07-03 pre-market (this run):** ~06:07 ET pull. Market CLOSED
+- **Sat 2026-07-04 weekend research pass (this run):** Weekend pull.
+  Market CLOSED all weekend (Independence Day proper). Account re-
+  verified: equity $100,000.00 | cash 100% | positions `[]` (Fri 7/3
+  holiday didn't move state). Weekend headline scan cleared: (a)
+  Kospi / Samsung / SK Hynix REBOUNDED Fri 7/3 — Samsung +6.82%,
+  SK Hynix +4.6%, Kospi ~+3% to 7,869.84, materially de-risking the
+  "Sunday gap-down 5%+" abort contingency; (b) Meta "Compute" cloud
+  narrative re-framed as CONSTRUCTIVE — Meta +9% on the Tue 7/1
+  story, capex RAISED to $125–$145B (from $115–$135B), Meta selling
+  excess AI compute as revenue not deleveraging out of it; (c) no
+  fresh hyperscaler capex-cut headlines from OpenAI / Anthropic /
+  Google / Microsoft / Amazon over the weekend; (d) NFP dovish print
+  confirmed (57K vs ~115K consensus, U/R 4.2%, 2Y −3.5bps to 4.13%);
+  (e) NEW overhang: **EU tariff deadline hit TODAY** — Trump gave the
+  EU until July 4 to fully implement the trade deal or face "much
+  higher tariffs"; weekend outcome not yet confirmed, monitor Sun
+  evening. **No changes to the 4-starter Mon 7/6 arm plan** (IONQ 3%,
+  QTUM 5%, NVDA 5%, SPY 5% = 18% deploy). AMD KILL still stands.
+  IONQ Archer Materials $1.5M partnership announced Jul 1 noted (small
+  deal, but third IonQ commercial headline in a month). No orders
+  placed (market closed). No stops to check (empty book). **No
+  ClickUp ping** — weekend headline flow is status-quo positive for
+  the Monday plan; no held-name emergency; no watchlist gap >5%
+  possible on a weekend close.
+- **Fri 2026-07-03 pre-market:** ~06:07 ET pull. Market CLOSED
   (July 4 observed). Account re-verified: equity $100,000.00 | cash 100%
   | positions `[]` (33 closes / 34 sessions since 2026-05-12). Pulled
   actual Thu 7/2 daily closes via Alpaca 1Day bars — NVDA 194.51 (−1.53%),
@@ -125,34 +149,44 @@ Last Updated: 2026-07-03 Fri pre-market (Independence Day observed; market CLOSE
   NOT alpha). 29th cash close. strategy.md amended with Cash-Drag
   Escalator + Drafts→Armed Order rules.
 
-## Action items for next session (Mon 7/6 pre-market)
-1. **Sunday-night Asia session watch** (Kospi open ~19–20 ET Sun). SK
-   Hynix / Samsung follow-through is the tell on whether the Meta
-   AI-capex reset extends. Down another 5%+ Sunday → arm NOTHING at
-   Mon 7/6 open; wait for 09:30–10:30 tape stabilization.
-2. **Weekend headline scan.** Specifically: Meta cloud detail, OpenAI/
-   Anthropic/Google capex commentary, any hyperscaler guidance
-   walk-back. Any of these amplifies Thursday's rout and requires
-   re-killing at least NVDA at the Mon pre-market run.
-3. **Arm the 4 HOLD-LIVE limit orders** in the 09:30–10:30 ET window,
+## Action items for next session (Sun-night check-in / Mon 7/6 pre-market)
+1. **Sun 7/5 ~19:00 ET Asia open watch** (Kospi open ~19–20 ET Sun).
+   Reference: Fri 7/3 Kospi close 7,869.84. Down another 3%+ →
+   downgrade all 4 Mon arms to "wait 30 min post-open." Down 5%+ →
+   abort all arms, wait to Tue.
+2. **Sun 7/5 evening EU tariff outcome check** (new overhang). If
+   Trump admin announces higher EU tariffs effective this week, add
+   a fourth abort contingency: SPY / QQQ / European-exporter
+   direct-exposure re-check at Mon 7/6 pre-market. Retaliation risk
+   is the direct spillover to semis.
+3. **Weekend headline scan — largely COMPLETE this session.**
+   - Asia rebound Fri 7/3 confirmed → contingency (a) de-risked
+   - Meta narrative re-framed constructive → contingency (b) not tripped
+   - No fresh hyperscaler capex walk-back → contingency (b) not tripped
+   Residual watch: Sun evening EU tariff, hyperscaler weekend pressers.
+4. **Arm the 4 HOLD-LIVE limit orders** in the 09:30–10:30 ET window,
    contingent on: no >2% gap at open, no fresh capex-cut headline,
-   AMD invalidation not spreading (IONQ still >$46, QTUM still >$146,
-   NVDA still >$182, SPY still >$720). Order type: LIMIT at zone
-   midpoint. Sizes: IONQ 3%, QTUM 5%, NVDA 5%, SPY 5% = 18%.
-4. **AMD re-draft queued** for Mon 7/6 EOD or Tue 7/7 pre-market — NOT
-   for Mon open. Requires a fresh base candle in $490–$510 and a
-   rejection wick before any zone can be re-drawn.
-5. **Weekly review** proper — hold at Fri 7/3 EOD (no tape moved) or
-   Mon 7/6 EOD. Must document (a) the 4-session log-gap pattern
-   (Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD), (b) the
-   structural (not behavioral) failure-mode risk, (c) whether a
-   watchdog / standing-decay-limit-order mechanism should be added
-   to strategy.md.
-6. **Cash floor** (5–10% aggressive-mode) — 82% cash after the 18%
+   AMD invalidation not spreading, no EU-tariff shock (IONQ still
+   >$46, QTUM still >$146, NVDA still >$182, SPY still >$720).
+   Order type: LIMIT at zone midpoint. Sizes: IONQ 3%, QTUM 5%,
+   NVDA 5%, SPY 5% = 18%.
+5. **AMD re-draft queued** for Mon 7/6 EOD or Tue 7/7 pre-market —
+   NOT for Mon open. Requires a fresh base candle in $490–$510 and
+   a rejection wick before any zone can be re-drawn. Advancing AI
+   2026 event Jul 22–23 is the target catalyst.
+6. **Weekly review** proper — hold at Mon 7/6 EOD (Fri 7/3 was
+   closed; Sat 7/4 is weekend; Mon EOD aligns to trading-week end).
+   Must document (a) the 4-session log-gap pattern (Tue 6/30 pre,
+   Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD), (b) the structural (not
+   behavioral) failure-mode risk, (c) whether a watchdog /
+   standing-decay-limit-order mechanism should be added to
+   strategy.md.
+7. **Cash floor** (5–10% aggressive-mode) — 82% cash after the 18%
    Monday deploy leaves ample room; untouchable.
-7. **No held-name earnings risk** — no positions to gap-manage into
-   Monday. First held-name earnings gate is not identified yet;
-   Q2 season kicks off mid-July (banks first, AMD Aug 4).
-8. **ClickUp policy unchanged** for this task template: notify only
-   on placed trade or triggered stop. Weekly-review EOD ping remains
-   the standing rule under the strategy §7 EOD template if it fires.
+8. **No held-name earnings risk** — no positions to gap-manage into
+   Monday. Q2 earnings kickoff: banks Tue 7/14 (JPM/Citi/WF/GS/BAC/MS),
+   CPI Tue 7/14, AMD Q2 Aug 4, NVDA Q2 Aug 26.
+9. **ClickUp policy unchanged** for this task template: notify only
+   on placed trade, triggered stop, or urgent catalyst (halted held
+   name / macro shock / >5% gap on held name). Weekly-review EOD ping
+   remains standing under strategy §7.
