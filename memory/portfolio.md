@@ -1,6 +1,6 @@
 # Portfolio State
 
-Last Updated: 2026-07-04 Sat weekend research pass (Independence Day proper; market CLOSED all weekend; Asia rebounded Fri 7/3 — Samsung +6.82%, SK Hynix +4.6%, Kospi ~+3%; Meta "Compute" cloud pivot re-framed as constructive not destructive; NFP dovish confirmation absorbed; EU tariff deadline hit TODAY as new overhang; 4-starter Mon 7/6 arm plan (IONQ/QTUM/NVDA/SPY = 18%) held intact from Fri 7/3 log)
+Last Updated: 2026-07-05 Sun evening pre-Mon check-in (market CLOSED all weekend; **EU tariff deal IMPLEMENTED on July 4 deadline — abort contingency (c) CLEARED, 15% EU→US / 0% US→EU regime in force**; Kospi Fri 7/3 close revised UP to +5.76% (Sat log undercounted); no weekend catalyst / halt / earnings-preannounce on watchlist; Fri 7/3 was full NYSE close (not shortened); 4-starter Mon 7/6 arm plan (IONQ 3% / QTUM 5% / NVDA 5% / SPY 5% = 18%) INTACT with 2 of 3 aborts cleared)
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -9,15 +9,15 @@ Last Updated: 2026-07-04 Sat weekend research pass (Independence Day proper; mar
 - Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
 - Long Market Value: $0.00 | Short Market Value: $0.00
 - Last Equity (prior close, Thu 7/2): $100,000.00
-- **Day P/L: 0.00%** (cash book, no positions — **34th** consecutive cash open; Fri 7/3 was holiday close, Sat 7/4 is weekend — no new sessions elapsed)
-- **Session-log gap:** Thu 7/2 EOD still missing (4-session gap: Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD). See research_log 2026-07-04 for weekend confirmation of the pending weekly review.
-- **Market status TODAY (Sat 7/4):** CLOSED all session — Independence Day proper (weekend). `GET /v2/clock` still shows `next_open 2026-07-06T09:30:00-04:00` from the Fri 7/3 pull. **No execution possible until Mon 7/6 09:30 ET.**
+- **Day P/L: 0.00%** (cash book, no positions — **35th** consecutive cash open; Fri 7/3 holiday close, Sat 7/4 + Sun 7/5 weekend — no new sessions elapsed)
+- **Session-log gap:** Thu 7/2 EOD still missing (4-session gap: Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD). Weekly review still owed for Mon 7/6 EOD.
+- **Market status TODAY (Sun 7/5):** CLOSED — weekend. `GET /v2/clock` this session: `is_open: false`, `next_open 2026-07-06T09:30:00-04:00`. **No execution possible until Mon 7/6 09:30 ET (~13.5 hours out).**
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
 - Pattern Day Trader: false (day-trade count 0); options level 3 (unused per strategy)
-- Filled orders today: **none** | Filled orders since inception: **none** (0 fills, 33 trading sessions since 2026-05-12; 34th session was Fri 7/3 holiday close; today Sat 7/4 is weekend)
-- /v2/positions → **`[]`** at Sat 7/4 weekend pull (also `[]` at Fri 7/3 ~06:07 ET).
-- balance_asof: 2026-07-02 (unchanged — Fri 7/3 closed, no settlement move)
+- Filled orders today: **none** | Filled orders since inception: **none** (0 fills, 35 trading sessions since 2026-05-12 counting Fri 7/3 holiday; today Sun 7/5 is weekend)
+- /v2/positions → **`[]`** at Sun 7/5 evening pull (also `[]` at Sat 7/4 weekend + Fri 7/3 ~06:07 ET).
+- balance_asof: 2026-07-02 (unchanged — Fri 7/3 closed + weekend, no settlement move)
 
 ## Current Positions
 
@@ -53,11 +53,37 @@ Last Updated: 2026-07-04 Sat weekend research pass (Independence Day proper; mar
 - Sector split: semis 5% (NVDA), thematic quantum 8% (QTUM+IONQ), index 5% (SPY).
 - **Single-name cap 25% respected** (max 5% starter on any name).
 - **AMD KILLED** — the drafted $520–$540 zone included a "$510 breaks = invalidate" condition; Thu 7/2 intraday low $506.33 tripped it. Re-drafting requires a fresh base candle in $490–$510 and is queued for Mon 7/6 EOD or Tue 7/7 pre-market, NOT for the Mon 7/6 open.
-- **Contingency to abort all Mon 7/6 arms:** any of (a) SPY/QQQ gap-open > 2% down, (b) fresh weekend Meta/hyperscaler capex-cut headline, (c) Kospi/SK Hynix down another 5%+ in Sunday-night Asia session.
+- **Contingency to abort all Mon 7/6 arms** (Sun 7/5 status noted):
+  - (a) SPY/QQQ gap-open > 2% down at Mon open → **CHECK AT MON PRE-MARKET**
+  - (b) Fresh Meta / hyperscaler capex-cut headline → **CLEARED** (no weekend headlines; Meta capex RAISED $10B)
+  - (c) EU tariff shock (Sat 7/4 add) → **CLEARED** — deal implemented on schedule; 15% EU→US, 0% US→EU regime in force
+  - (d) Kospi / SK Hynix down 5%+ in Sun-night Asia session → **RESIDUAL** — Kospi Fri 7/3 closed +5.76%; mechanical hurdle now high but still watch ~19–20 ET Sun open
 - **Cash-Drag Escalator** (strategy §25): TRIPPED (33-session count carried). Today's default-action is BLOCKED by market closure — documented per rule. Mon 7/6 pre-market is the next operative session; the 4-starter Monday plan above IS the escalator response for that session.
 
 ## Notes from Last Session
-- **Sat 2026-07-04 weekend research pass (this run):** Weekend pull.
+- **Sun 2026-07-05 evening pre-Mon check-in (this run):** Weekend pull.
+  Market CLOSED. Account re-verified: equity $100,000.00 | cash 100% |
+  positions `[]` | clock next_open 2026-07-06T09:30-04:00. Two key
+  updates from the Sat 7/4 pass: **(1) EU tariff deal was IMPLEMENTED
+  on schedule** — the EU published the enacting texts in its official
+  journal ahead of Trump's Jul 4 250th-birthday deadline; deal terms
+  in force (15% on most EU exports to US, 0% US industrial goods to
+  EU); no "much higher" Trump snap-back, no EU retaliation. Abort
+  contingency (c) added Sat is now **CLEARED** without triggering.
+  **(2) Kospi Fri 7/3 close revised UP** — CNBC live-updates confirm
+  +5.76% (Sat log undercounted at ~2.9%); Nikkei +1.47%, Hang Seng
+  +1.28%, ASX +1.37%. Even Sun-night −3% Kospi would land ~2.8% above
+  Thu post-rout low. Also confirmed Fri 7/3 was a FULL NYSE close
+  (Independence Day observed), not a shortened session; Thu 7/2 index
+  closes were SPX +0.49%, Nasdaq +0.40%, Dow +0.46% record, RUT −0.39%.
+  Weekend headline scan on watchlist names: NVDA org hire (Parker →
+  Field Ops), AMD Motley Fool "big month" piece + Jul 22–23 Advancing
+  AI event confirmed, IONQ nothing new post-Archer, QTUM nothing new,
+  SPY/QQQ nothing name-specific. **4-starter Mon 7/6 arm plan
+  intact.** No orders placed (market closed). No stops to check (empty
+  book). **No ClickUp ping** — no urgent catalyst; contingency-cleared
+  updates are status-quo positive and do not warrant a phone banner.
+- **Sat 2026-07-04 weekend research pass:** Weekend pull.
   Market CLOSED all weekend (Independence Day proper). Account re-
   verified: equity $100,000.00 | cash 100% | positions `[]` (Fri 7/3
   holiday didn't move state). Weekend headline scan cleared: (a)
@@ -149,27 +175,27 @@ Last Updated: 2026-07-04 Sat weekend research pass (Independence Day proper; mar
   NOT alpha). 29th cash close. strategy.md amended with Cash-Drag
   Escalator + Drafts→Armed Order rules.
 
-## Action items for next session (Sun-night check-in / Mon 7/6 pre-market)
-1. **Sun 7/5 ~19:00 ET Asia open watch** (Kospi open ~19–20 ET Sun).
-   Reference: Fri 7/3 Kospi close 7,869.84. Down another 3%+ →
-   downgrade all 4 Mon arms to "wait 30 min post-open." Down 5%+ →
-   abort all arms, wait to Tue.
-2. **Sun 7/5 evening EU tariff outcome check** (new overhang). If
-   Trump admin announces higher EU tariffs effective this week, add
-   a fourth abort contingency: SPY / QQQ / European-exporter
-   direct-exposure re-check at Mon 7/6 pre-market. Retaliation risk
-   is the direct spillover to semis.
-3. **Weekend headline scan — largely COMPLETE this session.**
-   - Asia rebound Fri 7/3 confirmed → contingency (a) de-risked
-   - Meta narrative re-framed constructive → contingency (b) not tripped
-   - No fresh hyperscaler capex walk-back → contingency (b) not tripped
-   Residual watch: Sun evening EU tariff, hyperscaler weekend pressers.
-4. **Arm the 4 HOLD-LIVE limit orders** in the 09:30–10:30 ET window,
+## Action items for next session (Mon 7/6 pre-market)
+1. **Sun 7/5 ~19:00 ET Asia open watch** (Kospi open ~19–20 ET Sun) —
+   still owed but now a lower-stakes check. Reference: Fri 7/3 Kospi
+   close +5.76% (7,869.84 or thereabouts per CNBC). Down 3%+ Sun-night
+   → downgrade Mon arms to "wait 30 min post-open." Down 5%+ → abort
+   all arms, wait to Tue.
+2. **Sun 7/5 evening EU tariff outcome check → RESOLVED** (Sun evening
+   pass). EU implemented deal on schedule; no snap-back; no retaliation.
+   No fourth abort contingency needed.
+3. **Weekend headline scan — COMPLETE this session (Sun 7/5).**
+   - EU tariff resolved cleanly → contingency (c) cleared
+   - Kospi Fri 7/3 close revised up to +5.76% → contingency (d) further de-risked
+   - Meta / hyperscaler capex → still no walk-back → contingency (b) still cleared
+   - No watchlist halt / earnings preannounce / management shakeup
+4. **Arm the 4 HOLD-LIVE limit orders** in the 09:30–10:00 ET window,
    contingent on: no >2% gap at open, no fresh capex-cut headline,
-   AMD invalidation not spreading, no EU-tariff shock (IONQ still
-   >$46, QTUM still >$146, NVDA still >$182, SPY still >$720).
-   Order type: LIMIT at zone midpoint. Sizes: IONQ 3%, QTUM 5%,
-   NVDA 5%, SPY 5% = 18%.
+   AMD invalidation not spreading (IONQ still >$46, QTUM still >$146,
+   NVDA still >$182, SPY still >$720). EU-tariff shock branch dropped
+   (deal implemented). Order type: LIMIT at zone midpoint. Sizes:
+   IONQ 3%, QTUM 5%, NVDA 5%, SPY 5% = 18%. Execute before ISM
+   Services PMI 10:00 ET print.
 5. **AMD re-draft queued** for Mon 7/6 EOD or Tue 7/7 pre-market —
    NOT for Mon open. Requires a fresh base candle in $490–$510 and
    a rejection wick before any zone can be re-drawn. Advancing AI
