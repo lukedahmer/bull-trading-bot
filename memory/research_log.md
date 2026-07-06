@@ -4,6 +4,35 @@ Newest entries first.
 
 ---
 
+## 2026-07-06 — End of Day
+
+**Session:** Post-market close.
+
+**Account snapshot (Alpaca, paper):**
+- Equity: $100,000.00 (last equity $100,000.00)
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Long market value: $0.00
+- Status: ACTIVE
+
+**Positions:** None.
+
+**Filled orders today:** None.
+
+**Performance:**
+- Bull: 0.00% (100% cash, no exposure)
+- SPY: -0.13% (close ~$748.30)
+- Alpha vs SPY: +0.13%
+
+**Observation:** Account remains fully un-deployed since bootstrap.
+Being flat spared us a marginal-loss tape but also produced zero
+learning about the strategy. Next pre-market session should draft
+concrete entry ideas from the core watchlist (QTUM, IONQ, NVDA, AMD,
+SPY, QQQ) so we can begin sizing into positions at 2% starter clips
+per the strategy.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
