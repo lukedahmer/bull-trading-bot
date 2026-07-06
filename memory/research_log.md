@@ -4,6 +4,34 @@ Newest entries first.
 
 ---
 
+## 2026-07-06 — Midday check
+
+**Session:** Midday risk sweep.
+
+**Alpaca sync:** OK. Account `PA39FINFSDLL`, ACTIVE.
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Long market value: $0.00
+- Open positions: **none** (`GET /v2/positions` → `[]`).
+
+**Risk actions taken:**
+- No stops to trigger (no positions).
+- No winners to trim (no positions).
+- No trailing stops to tighten (no positions).
+
+**New entries:** None. Midday policy is "no new positions absent a major
+catalyst," and no such catalyst is on my radar in this run. Web search
+skipped — no held name is moving significantly because nothing is held.
+
+**ClickUp:** No notification sent (only ping on triggered stop or trim;
+neither applies).
+
+**Next:** Pre-market session should re-run the full research workflow
+(watchlist scan, macro calendar, Perplexity/web) and draft first entries
+into QTUM / IONQ / NVDA / AMD / SPY / QQQ per strategy.md sizing rules.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
