@@ -4,6 +4,35 @@ Newest entries first.
 
 ---
 
+## 2026-07-06 02:32 ET — Market-open session (no-op)
+
+**Session:** Prompt said "the market just opened," but Alpaca `/v2/clock`
+reports `is_open: false`, `next_open: 2026-07-06T09:30:00-04:00`. Current
+time is ~02:32 ET, so the market is not open yet.
+
+**Account snapshot (Alpaca):**
+- Equity: $100,000.00
+- Cash: $100,000.00
+- Buying power: $400,000.00
+- Positions: none
+
+**Actions taken:**
+- Pulled `/v2/account` and `/v2/positions` — creds working, fresh paper
+  account, zero holdings.
+- Reviewed `research_log.md` for trade ideas — none pending (only the
+  2026-05-19 bootstrap-blocker entry, no drafted ideas).
+- No trades placed: no ideas in the log to act on, and strategy §
+  "Decision workflow" requires researched ideas — no fabrication.
+- No stop-loss checks needed — zero open positions.
+- No ClickUp ping — no trade placed, no stop triggered.
+- Synced `portfolio.md` with the fresh Alpaca snapshot.
+
+**Next session:**
+- Run the pre-market research workflow (Perplexity movers / macro /
+  watchlist) to seed trade ideas before the 09:30 ET open.
+
+---
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
