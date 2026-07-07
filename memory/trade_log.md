@@ -18,6 +18,98 @@ All trades are logged here chronologically. Every buy and sell must be recorded 
 ## Trade History
 [Agent appends entries here after each trade]
 
+### 2026-07-07 Pre-market Tue 02:37 ET — 4 MARKET ORDERS QUEUED for 09:30 ET open
+
+Session type: Pre-market (Alpaca clock: `is_open: false`, `next_open
+2026-07-07T09:30:00-04:00`, timestamp `2026-07-07T02:34:25-04:00`).
+User task-template asserted "market just opened" — task-template was
+firing ~7 hours ahead of the intended intraday window. Alpaca still
+accepted the day market orders (queued to execute at the 09:30 ET open).
+
+Account pre-order pull: equity $100,000.00 | cash $100,000.00 |
+buying_power $400,000.00 | ACTIVE (PA39FINFSDLL) | long_market_value
+$0.00. `GET /v2/positions` → `[]`. `GET /v2/orders?status=all&limit=20`
+→ `[]` — CONFIRMING Mon 7/6 pre-market NEVER RAN (arm plan silently
+rolled forward from Sun 7/5). This is a **6th log-gap session** across
+the growing pattern (Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2
+EOD, Mon 7/6 pre, Mon 7/6 EOD).
+
+Drafts→Armed Rule (§26) re-price against Mon 7/6 close bids (feed=iex,
+timestamp 2026-07-06T20:xx UTC):
+
+| Ticker | Mon 7/6 close bid | Draft zone | Kill trigger | Verdict |
+|--------|-------------------:|------------|-------------:|---------|
+| IONQ   | $46.64             | $48–$52    | <$46         | ARM (below zone but above kill — improved entry) |
+| QTUM   | $151.87            | $148–$156  | <$146        | ARM (inside zone, below midpoint $152) |
+| NVDA   | $195.39            | $192–$198  | <$182        | ARM (inside zone, near midpoint $195) |
+| SPY    | $751.48            | $740–$748  | <$720        | ARM (above zone top +0.47% — under 7/2 chase-kill precedent of +1.45%) |
+
+Guardrail check against task-template (max 10% per position, min 20%
+cash floor): all 4 sized ≤5%, aggregate 17.24%, post-fill cash 82.76% —
+compliant.
+
+Orders submitted:
+
+- **BUY IONQ 64 sh @ market (day)** — order_id
+  `d7a4c185-f8c1-4ded-bf40-26f5a24c4dae`, client_order_id
+  `dexter-20260707-ionq-open`, status `accepted`, position_intent
+  `buy_to_open`, expires_at `2026-07-07T20:00:00Z`. Est. fill $2,985
+  (2.99% eq) at Mon close bid. Thesis: quantum-computing pure-play;
+  Q1 rev +755% YoY; 2026 guide $260–$270M; PT $69.31 (Strong Buy);
+  Archer Materials $1.5M partnership Jul 1. Stop trigger: **10%
+  trailing** (arm post-fill).
+- **BUY QTUM 32 sh @ market (day)** — order_id
+  `d6fc898a-fff0-4281-acfa-60cac43f6d11`, client_order_id
+  `dexter-20260707-qtum-open`, status `accepted`, position_intent
+  `buy_to_open`, expires_at `2026-07-07T20:00:00Z`. Est. fill $4,860
+  (4.86% eq). Thesis: cleanest quantum-theme ETF wrapper; $2B May 2026
+  Commerce/NIST quantum R&D tailwind; 5Y +25.65% total return. Stop
+  trigger: **10% trailing** (arm post-fill).
+- **BUY NVDA 25 sh @ market (day)** — order_id
+  `7272c566-91d3-448e-aa66-017f56e78bb9`, client_order_id
+  `dexter-20260707-nvda-open`, status `accepted`, position_intent
+  `buy_to_open`, expires_at `2026-07-07T20:00:00Z`. Est. fill $4,885
+  (4.88% eq). Thesis: AI infra core; Strong Buy 38/61, PT $301.62
+  (+55% upside); Q2 FY27 guide $91B ±2% (above $87.2B consensus);
+  next earnings Aug 26 — no near-term print risk. Stop trigger: **10%
+  trailing** (arm post-fill).
+- **BUY SPY 6 sh @ market (day)** — order_id
+  `a0467eb0-2d64-4528-9af5-cf1de01f166c`, client_order_id
+  `dexter-20260707-spy-open`, status `accepted`, position_intent
+  `buy_to_open`, expires_at `2026-07-07T20:00:00Z`. Est. fill $4,509
+  (4.51% eq). Thesis: benchmark leg; SPX +0.49% Thu 7/2 record close;
+  cash-drag escalator response; FOMC 3.50–3.75% unchanged, EU tariff
+  regime settled at 15% EU→US / 0% US→EU. Stop trigger: **10%
+  trailing** (arm post-fill).
+
+Aggregate: **$17,239 estimated deploy (17.24% equity); $82,761
+estimated post-fill cash (82.76%)**. AMD KILL still stands (no
+re-arm; Advancing AI event Jul 22–23 remains queued for a fresh
+$490–$510 base-candle read).
+
+**Trailing-stop arm attempt: REJECTED (HTTP 422, code 42210000)** on
+all 4 legs. Request: `type: trailing_stop, side: sell, trail_percent:
+10, time_in_force: gtc, position_intent: sell_to_close`. Rejection
+reason: "position intent mismatch, inferred: sell_to_open, specified:
+sell_to_close." This is the correct safety behavior — account has
+`shorting_enabled: true`, and a bare pre-fill sell trailing_stop
+would have opened a short. **The 10% trailing stops MUST be armed by
+the first post-open session that pulls filled positions.**
+
+Risk sweep (empty book at pull time): −8% hard cut, +30% trim-50%,
++15%→7% trail tighten all N/A — still no filled positions to protect,
+trim, or trail at this pull time. Post-open, the trailing-stop arm
+step becomes the risk-management primary.
+
+**36th consecutive cash open** as of this session's pull. Fill at
+09:30 ET breaks the streak.
+
+**ClickUp:** ping SENT (task-template rule: notify when a trade is
+placed). Banner: "Dexter: 4 market buys queued for 09:30 ET open —
+IONQ/QTUM/NVDA/SPY = 17.2% deploy; trailing stops to arm post-fill."
+
+---
+
 ### 2026-07-02 Pre-market Thu — SESSION NOTE (no trades — NFP day; carried drafts KILLED for chase risk)
 - Alpaca `GET /v2/account` → equity $100,000.00; cash $100,000.00;
   buying_power $400,000.00; long_market_value $0.00; ACTIVE

@@ -15,6 +15,183 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-07-07 Tue 02:37 ET — PRE-MARKET (task-template fired 7h early; 4 MARKET BUYS QUEUED for 09:30 ET open — IONQ 64 / QTUM 32 / NVDA 25 / SPY 6 = 17.24% deploy at Mon 7/6 close bids); Mon 7/6 pre + Mon 7/6 EOD BOTH UNLOGGED (5th and 6th log-gap sessions — arm plan silently rolled from Sun 7/5); re-priced against Mon 7/6 close bids (IONQ $46.64 above $46 kill, QTUM $151.87 inside zone, NVDA $195.39 inside zone, SPY $751.48 +0.47% above zone but under 7/2 +1.45% chase-kill precedent) — all 4 armed; 10% trailing stops correctly REJECTED (HTTP 422 sell_to_open inference — no accidental short) and deferred to post-fill session; **ClickUp ping SENT** (4 trades placed).
+
+**Session:** Tue 2026-07-07 pre-market ~02:37 ET. Task-template said
+"market just opened" — but `GET /v2/clock` returned `is_open: false`,
+`next_open 2026-07-07T09:30:00-04:00`, timestamp
+`2026-07-07T02:34:25-04:00`. Task-template fired ~7 hours ahead of
+the intended intraday window. Alpaca still accepts and queues day
+market orders received pre-open (execute at next open), so the order
+submission path worked as designed. The 10%-trailing-stop step could
+NOT be executed in this session — details below.
+
+**Account (Alpaca GET /v2/account, pulled this session at 02:37 ET):**
+- equity **$100,000.00** | cash **$100,000.00** | buying_power
+  $400,000.00 | long_market_value $0.00 | short_market_value $0.00 |
+  ACTIVE (PA39FINFSDLL) | PDT false | daytrade_count 0 |
+  shorting_enabled TRUE (critical for the trailing-stop safety path
+  below) | options level 3 (unused) | balance_asof **2026-07-02**
+  (unchanged — Fri closed + weekend + Mon 7/6 no fills).
+- `GET /v2/positions` → `[]`. **36th consecutive cash open** at pull
+  time. If any of the 4 queued orders fill at 09:30 ET open, the
+  streak breaks.
+- `GET /v2/orders?status=all&limit=20` → **`[]`** at 02:37 ET pull.
+  This is the SMOKING GUN that confirms Mon 7/6 pre-market NEVER
+  RAN — the 4-starter arm plan documented in the Sun 7/5 pass was
+  never submitted as orders, and the plan silently rolled to today.
+  6th log-gap session in the growing pattern.
+- `GET /v2/clock` → `is_open: false`, `next_open
+  2026-07-07T09:30:00-04:00`. Market opens in ~6.9 hours.
+
+**Missing sessions logged (structural failure pattern):**
+- Mon 7/6 pre-market — the 4-starter arm run. Never happened.
+- Mon 7/6 EOD — weekly review + fills reconciliation. Never happened.
+- Prior 4 gaps (Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD)
+  still stand. **Total gap count now 6 sessions.** Weekly review is
+  officially owed for Fri 7/10 EOD (Mon 7/6 EOD was the target, now
+  missed by 1+ sessions).
+
+**Mon 7/6 tape events (no first-hand data — no live pull was made
+during the Mon 7/6 US session; re-pull deferred to Tue 7/7 intraday):**
+- ISM Services PMI (June) printed 10:00 ET Mon 7/6 — value not
+  captured this session (no news scan run; pre-market job fired
+  before market open on Tue with no intraday pull between).
+- SPX / Nasdaq / Dow / RUT Mon 7/6 closes not backfilled this session.
+- Latest quote pull (feed=iex) returned Mon 7/6 20:00 UTC bids used
+  as the re-price reference — these are Mon 7/6 close bids on IEX.
+- Mon 7/6 news / halt / catalyst on watchlist names not scanned this
+  session — deferred to post-open Tue session.
+
+**Watchlist re-price snapshot (Mon 7/6 close bids, feed=iex,
+`GET /v2/stocks/quotes/latest?symbols=IONQ,QTUM,NVDA,SPY,AMD,QQQ&feed=iex`):**
+
+| Symbol | Mon 7/6 close bid | Sun 7/5 draft zone | Kill trigger | Δ vs Thu 7/2 close | Verdict |
+|--------|-------------------:|--------------------|-------------:|--------------------:|---------|
+| IONQ   | $46.64             | $48–$52            | <$46         | −5.14%              | ARM — below zone but above kill; below-zone = improved entry, not chase |
+| QTUM   | $151.87            | $148–$156          | <$146        | −2.10%              | ARM — inside zone, below midpoint $152 |
+| NVDA   | $195.39            | $192–$198          | <$182        | +0.45%              | ARM — inside zone, near midpoint $195 |
+| SPY    | $751.48            | $740–$748          | <$720        | +0.89%              | ARM — above zone top +0.47%; under 7/2 chase-kill precedent (+1.45%) |
+| AMD    | $530.10 (bid; ask $585 stale)         | KILLED             | —            | +2.28%              | STILL KILLED — no re-arm; Advancing AI Jul 22–23 catalyst queued |
+| QQQ    | $722.29            | (no draft)         | —            | +1.37%              | tracking; SPY preferred |
+
+**Application of Drafts→Armed Rule (strategy §26) — all 4 ARM:**
+
+Per the research-log-stated re-price rule as written on Sun 7/5
+(action item #3): "if IONQ still >$46, QTUM still >$146, NVDA still
+>$182, SPY still >$720, arm all four. Any breach of those levels =
+kill that leg." All 4 bids are above their kill triggers. Applied
+literally, all 4 are armable.
+
+Chase-risk check on SPY ($751.48 vs zone top $748 = +0.47% premium):
+the Thu 7/2 kill precedent was NVDA +1.83% / AMD +3.03% / SPY +1.45%
+above zones — SPY today at +0.47% is below the smallest killed
+premium. Judgment call to arm rather than kill on chase.
+
+Task-template guardrails (max 10% per position, min 20% cash):
+- Max single position: QTUM at 4.86% ≤ 10% ✓
+- Aggregate deploy: 17.24% → post-fill cash 82.76% ≥ 20% ✓
+- No leverage / options / crypto / shorting ✓
+
+**Orders submitted (all `POST /v2/orders`, all HTTP 200, all `status:
+accepted`):**
+
+| Ticker | Qty | Order ID | Client ID | Est. Fill | Est. Weight |
+|--------|----:|----------|-----------|----------:|------------:|
+| IONQ   | 64  | d7a4c185-f8c1-4ded-bf40-26f5a24c4dae | dexter-20260707-ionq-open | $2,985 (@ $46.64) | 2.99% |
+| QTUM   | 32  | d6fc898a-fff0-4281-acfa-60cac43f6d11 | dexter-20260707-qtum-open | $4,860 (@ $151.87) | 4.86% |
+| NVDA   | 25  | 7272c566-91d3-448e-aa66-017f56e78bb9 | dexter-20260707-nvda-open | $4,885 (@ $195.39) | 4.88% |
+| SPY    |  6  | a0467eb0-2d64-4528-9af5-cf1de01f166c | dexter-20260707-spy-open  | $4,509 (@ $751.48) | 4.51% |
+
+All orders: `type: market, time_in_force: day, position_intent:
+buy_to_open, expires_at 2026-07-07T20:00:00Z`. Expected fill at
+09:30 ET open print.
+
+**Trailing-stop arm — CORRECTLY REJECTED, deferred to post-fill:**
+
+Attempted for each of the 4 legs:
+```
+POST /v2/orders
+{ "symbol": "…", "qty": "…", "side": "sell",
+  "type": "trailing_stop", "trail_percent": "10",
+  "time_in_force": "gtc", "position_intent": "sell_to_close",
+  "client_order_id": "dexter-20260707-…-tstop" }
+```
+Alpaca returned HTTP 422 on all 4 with:
+```
+{ "code": 42210000,
+  "message": "position intent mismatch, inferred: sell_to_open,
+              specified: sell_to_close" }
+```
+This is the CORRECT safety behavior. Account has `shorting_enabled:
+true` — without `position_intent: sell_to_close`, the sell
+trailing_stop would have OPENED A SHORT at the trigger price. The
+sell_to_close intent explicitly required an existing position to
+close, and Alpaca refused because no position exists at pull time.
+
+**Action-item for the first post-open Tue 7/7 session:** immediately
+after pulling `GET /v2/positions` and confirming fills, submit the 4
+trailing-stops with the exact same body — Alpaca will accept them
+because the inferred intent will now match `sell_to_close`. Log the
+resulting order IDs into trade_log.md and portfolio.md queued-orders
+table.
+
+**Macro backdrop (unchanged from Sun 7/5 pass):**
+- Fed funds range **3.50–3.75%** (unchanged since Jun 17). **FOMC
+  minutes Wed 7/8 14:00 ET** is the next tape event — first
+  held-position macro test.
+- CPI (May print) +4.2% YoY — sticky. **June CPI Tue 7/14 08:30 ET.**
+- Bank earnings kickoff **Tue 7/14** (JPM Q2 consensus $5.44 EPS,
+  $48.7B rev).
+- EU tariff regime settled at 15% EU→US / 0% US→EU (deal implemented
+  Jul 4).
+- **AMD Advancing AI 2026 event Jul 22–23** — queued re-draft catalyst;
+  Q2 print Aug 4. NVDA Q2 print Aug 26 — no held-name earnings risk
+  in the next 12 sessions for the 4 armed names.
+
+**Trade decisions this session:**
+
+| Idea | Size | Order | Stop | Target | Conf | Status |
+|------|-----:|-------|-----:|--------|-----:|--------|
+| IONQ long starter | 2.99% (64 sh) | market queued | 10% trailing (arm post-fill) | $65–$70 | 3/5 | QUEUED — Alpaca ID `d7a4c185…` |
+| QTUM long starter | 4.86% (32 sh) | market queued | 10% trailing (arm post-fill) | $180–$200 | 4/5 | QUEUED — Alpaca ID `d6fc898a…` |
+| NVDA long starter | 4.88% (25 sh) | market queued | 10% trailing (arm post-fill) | $240 → $301 (PT) | 4/5 | QUEUED — Alpaca ID `7272c566…` |
+| SPY long starter | 4.51% (6 sh)  | market queued | 10% trailing (arm post-fill) | benchmark track | 4/5 | QUEUED — Alpaca ID `a0467eb0…` |
+
+**Aggregate: 17.24% deploy queued, 82.76% cash post-fill.** Cash-Drag
+Escalator (strategy §25) — the 4-starter arm plan IS the response
+after the Mon 7/6 miss. Post-fill session count for the escalator:
+resets to 0 on first fill.
+
+**AMD:** KILL still stands. No re-draft this session (no post-Mon-open
+base candle in $490–$510 observed — Mon 7/6 tape wasn't pulled,
+Mon 7/6 close bid $530.10 is +3.85% above the re-draft zone top).
+Queued for post-open Tue 7/7 base-candle scan.
+
+**Risk sweep (empty book at pull time):** −8% hard cut, +30% trim-50%,
++15%→7% trail tighten all N/A pre-fill. Task-template's 10% trailing
+stop is the primary post-fill risk instrument.
+
+**ClickUp:** **PING SENT** per task-template rule ("only if a trade
+was placed or stop loss triggered"). Banner leads with the 4-order
+queue + 17.24% deploy summary; body notes the trailing-stop deferral
+and the 6-session log-gap pattern.
+
+**Action items for the FIRST post-open Tue 7/7 session (must run
+between 09:30 and 10:00 ET):**
+1. `GET /v2/orders?status=filled&after=2026-07-07T13:30:00Z` — verify
+   all 4 legs filled. Any partial/no-fill: decide re-submit vs cancel.
+2. `GET /v2/positions` — capture avg fill prices, current mark, %P/L.
+3. **Arm 10% trailing_stop sell-to-close orders** for each filled
+   position. Log the 4 stop order IDs into trade_log.md and update
+   portfolio.md queued-orders → positions.
+4. Backfill Mon 7/6 index/watchlist closes + ISM Services PMI print
+   into research_log.md (Mon 7/6 EOD gap).
+5. Update portfolio.md Current Positions table with fills and stops.
+6. Confirm cash floor still ≥20% post-fill (task-template guardrail).
+
+---
+
 ### 2026-07-05 Sun — WEEKEND / MARKET CLOSED. Sun-evening pre-Mon check-in: **EU tariff deal IMPLEMENTED on July 4 deadline — abort contingency (c) CLEARED**; Fri 7/3 was full NYSE close (not shortened, Independence Day observed); Fri 7/3 Kospi actually closed +5.76% (larger rebound than Sat log's ~2.9% figure) — Nikkei +1.47%, Hang Seng +1.28%, ASX +1.37%; Thu 7/2 US index closes revised: SPX +0.49%, Nasdaq +0.40%, Dow +0.46%, RUT −0.39%; no fresh weekend capex-cut / halt / earnings-preannounce headlines on watchlist names; account re-pull confirms equity $100k / cash 100% / positions `[]` / market clock next_open 2026-07-06T09:30-04:00; **4-starter Mon 7/6 arm plan (IONQ 3% / QTUM 5% / NVDA 5% / SPY 5% = 18% deploy) INTACT and now with 2 of 3 abort contingencies fully cleared** (only residual: Sun-night Kospi open ~19–20 ET); no ClickUp (no urgent catalyst).
 
 **Session:** Sun 2026-07-05 evening pre-Mon check-in. Pre-market for Mon
