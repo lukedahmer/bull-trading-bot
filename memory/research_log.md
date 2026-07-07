@@ -15,6 +15,162 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-07-07 Tue 06:04 ET — PRE-MARKET SUPPLEMENTAL (2nd pre-market pull today; verify queued orders + fill the 02:37 news-scan gap; NO new orders, NO ClickUp)
+
+**Session:** Tue 2026-07-07 pre-market ~06:04 ET. Second pre-market run
+of the day, 3h27m after the 02:37 ET arm run. Purpose: (a) verify the 4
+queued orders are still live and unchanged, (b) do the pre-market
+news / macro scan the 02:37 arm session flagged as deferred to a later
+pre-market pass, (c) confirm no urgent catalyst has emerged that would
+warrant cancelling any queued leg or an additional ClickUp ping. **No
+new orders placed. No trailing stops armed (still no filled positions
+to close against — same HTTP 422 safety path stands until fills print
+at 09:30 ET).**
+
+**Account (Alpaca `GET /v2/account`, pulled this session at 06:04 ET):**
+- equity **$100,000.00** | cash **$100,000.00** | buying_power
+  $382,518.06 | long_market_value $0.00 | short_market_value $0.00 |
+  portfolio_value $100,000.00 | ACTIVE (PA39FINFSDLL) | PDT false |
+  shorting_enabled true (still — the trailing-stop rejection path is
+  unchanged) | options level 3 (unused) | balance_asof **2026-07-02**
+  (still unchanged — no fills between).
+- `GET /v2/positions` → **`[]`**. **37th consecutive cash open** at
+  pull time (streak breaks at 09:30 ET open if any of the 4 fills).
+- `GET /v2/clock` → `is_open: false`, `next_open
+  2026-07-07T09:30:00-04:00`, `timestamp
+  2026-07-07T06:04:24-04:00`. Market opens in ~3h26m.
+
+**Queued-orders verification (`GET /v2/orders?status=all&limit=30`):**
+
+| Ticker | Order ID | Client ID | Qty | Type | TIF | Status this pull | Expires |
+|--------|----------|-----------|----:|------|-----|------------------|---------|
+| IONQ | d7a4c185-f8c1-4ded-bf40-26f5a24c4dae | dexter-20260707-ionq-open | 64 | market | day | **new** | 2026-07-07T20:00:00Z |
+| QTUM | d6fc898a-fff0-4281-acfa-60cac43f6d11 | dexter-20260707-qtum-open | 32 | market | day | **new** | 2026-07-07T20:00:00Z |
+| NVDA | 7272c566-91d3-448e-aa66-017f56e78bb9 | dexter-20260707-nvda-open | 25 | market | day | **new** | 2026-07-07T20:00:00Z |
+| SPY  | a0467eb0-2d64-4528-9af5-cf1de01f166c | dexter-20260707-spy-open  |  6 | market | day | **new** | 2026-07-07T20:00:00Z |
+
+All 4 orders are **unchanged** from the 02:37 arm run: no cancels, no
+replaces, no partial fills, no rejects. `submitted_at`s all
+2026-07-07T08:00:41 UTC (=04:00:41 ET — post-created-at re-submit at
+Alpaca's cutover, expected for pre-open queued day orders). Expected
+fill at 09:30 ET open print.
+
+**Macro backdrop (news / futures / calendar scan — fills the 02:37 gap):**
+- **Mon 2026-07-06 close (US):** Dow Jones **closed above 53,000 for
+  the first time** in a broad tech / semi-led rally. Retail sentiment
+  across SPY / QQQ / DIA is "extremely bullish" (Kiplinger / TheStreet
+  reporting). This resolves the Mon 7/6 EOD data gap that the 02:37
+  session flagged as unbackfilled.
+- **Tue 2026-07-07 pre-market futures (early morning ET):** S&P 500
+  futures −0.25% to −0.30%, Nasdaq-100 futures ~ −1% (some of Monday's
+  tech gains cooling), Dow futures roughly flat. Modest gap-down
+  setup. **Under the 2% gap-down abort trigger** in the Sun 7/5 arm
+  plan — no contingency-abort action required. Orders stay live.
+- **Nasdaq-100 reconstitution:** SpaceX reported as **added to the
+  Nasdaq-100 pre-open today (2026-07-07)** — mild mechanical
+  rebalance flow through QQQ. Not a trade catalyst on our watchlist
+  directly, but worth flagging for QQQ tape-noise expectation at open.
+- **Macro calendar this week:**
+  - **Wed 2026-07-08 14:00 ET — FOMC minutes release.** Strategy §Risk
+    rules require no new entries in the 30-min band around FOMC. The
+    band applies to **tomorrow's** session, not today's queued
+    open-fills. No adjustment to today's orders needed.
+  - **No CPI / PPI / NFP on the 2026-07-07 tape.** NFP already
+    printed Thu 7/3 (57k dovish miss, U/R 4.2% — already logged).
+    CPI is Tue 7/14. Earnings season starts mid-July (JPM/Citi/WF/GS
+    Tue 7/14, no held-name earnings inside 30 sessions).
+- **Cross-currents / adjacencies:** Memory / DRAM sector rallying on
+  SK Hynix Nasdaq-IPO buzz and Samsung Q2 preview. Anthropic's
+  reported $15B Australian data-center investment adds to the
+  hyperscaler-capex-still-strong narrative that reversed the Meta-
+  capex-cloud story Thu 7/2. Broadcom + Apple multi-year deal (from
+  Mon 7/6 pre-market, AVGO +4%) is the fresh semi-narrative tell —
+  reinforces the AI-infra thesis broadly and is a **negative-mix**
+  data point for NVDA specifically (custom ASIC share taking).
+
+**Watchlist headline scan (Tue 7/7 pre-market — all incremental, none
+urgent enough to alter the queued orders):**
+- **NVDA (~$194–$198 range):** Denied reports of Kyber next-gen
+  AI-server delays — roadmap intact per official statement. Still
+  ~81% AI-chip market share. **YTD only ~+3–4%** — laggard vs
+  peers. Broadcom's Alphabet + Meta + Apple custom-ASIC narrative is
+  eating the NVDA growth story, which is the main overhang on the
+  chase-mean-reversion thesis for our starter. Q2 earnings ~Aug 26.
+  **No held-name emergency; queued 25-share buy stays.**
+- **AMD (~$530 bid Mon 7/6 close; near record ~$558 mid-June):**
+  **+142% YTD**, market cap has touched $900B. Data-center revenue
+  +57% Q1. MI450 hyperscaler pipeline anchored by Meta remains the
+  driver. **Still KILLED for us** — no chase; queued Advancing AI
+  Jul 22–23 event is the next re-arm decision window.
+- **IONQ (~$46.64 bid Mon 7/6 close):** Sell-side avg target ~$69
+  (Strong Buy consensus, +41% implied upside). Cambridge 256-qubit
+  Tempo sale (first commercial-scale system) and Archer Materials
+  US$1.5M partnership (Jul 1) are the two supporting prints. But:
+  **stock was −26.1% in June 2026** on valuation + operating-loss
+  concerns — the chart is not clean, and IONQ is the highest-vol
+  name in the queued list. **Below-zone entry (−5.14% vs Thu 7/2
+  close) is the improved-entry take, not a stop-in-the-face-of-
+  weakness take, but volatility-in-fill risk on the 64-share market
+  order is real.** Not urgent enough to cancel.
+- **QTUM (ETF, ~$151.87 bid Mon 7/6 close):** No single-name
+  overnight catalyst; tracks IONQ / RGTI / QUBT / D-Wave. **+51%
+  YTD.** Cleanest quantum-theme wrapper for the sleeve — the
+  32-share leg is the safe-anchor pair to the IONQ single-name bet.
+- **SPY (~$751.48 bid Mon 7/6 close):** Dow above 53k / SPX at
+  or near ATH. QQQ in mild corrective consolidation but long-term
+  uptrend intact. AI-capex narrative controlling. **Bullish tape,
+  6-share starter is a benchmark leg.**
+- **QQQ (~$722.29 bid Mon 7/6 close):** Tracked, not held. SpaceX
+  add today = mechanical rebalance flow noise expected. SPY is our
+  index expression.
+
+**Urgent-catalyst check (would trigger fresh ClickUp ping this session):**
+- Held name earnings surprise? — N/A (no positions yet).
+- Held name halted? — N/A.
+- Watchlist gap >5%? — **No.** Futures are −0.25 to −1% — nothing
+  sharp on our 4 legs.
+- Macro shock? — **No.** FOMC minutes are tomorrow's story, not
+  today's.
+- Queued orders in trouble? — **No.** All 4 `status: new`, no
+  cancels, no rejects, no partial fills.
+- **Decision: no ClickUp ping this session.** The 02:37 arm-run
+  ping already covered the "4 trades queued" catalyst per the
+  task-template "notify on placed trade" rule. This 06:04 pull is
+  a status-quo verify with news-scan attached; the user's routine
+  says silence when the run comes up empty on urgent catalysts.
+
+**Trade ideas this session:** **NONE.** All 4 open-fill legs are
+already armed from 02:37. The Sun 7/5 plan's AMD re-arm remains
+queued for a post-open session with a base candle in $490–$510 (or
+into the Advancing AI Jul 22–23 event window). No new watchlist
+additions today.
+
+**Guardrails re-verified for the queued orders (task-template rules):**
+- Max 10% per position: QTUM at 4.88% ≤ 10% ✓
+- Aggregate deploy 17.24% → post-fill cash 82.76% ≥ 20% floor ✓
+- No leverage / options / crypto / shorting ✓
+- Sector caps (strategy §): semis (NVDA) 4.88% ≤ 40% cap ✓;
+  thematic quantum (IONQ+QTUM) 7.85% ≤ 40% cap ✓
+
+**Action items for next session (Tue 7/7 intraday, post-09:30 ET):**
+Unchanged from the 02:37 entry. In priority order:
+1. Verify fills on all 4 queued orders (`GET /v2/orders?status=filled
+   &after=2026-07-07T13:30:00Z` + `GET /v2/positions`). Confirm avg
+   fill prices vs Mon 7/6 close bids ($46.64 / $151.87 / $195.39 /
+   $751.48). Thin-liquidity risk on IONQ.
+2. Arm 10% trailing stops (`type: trailing_stop, side: sell,
+   trail_percent: 10, time_in_force: gtc, position_intent:
+   sell_to_close`) for each filled position IMMEDIATELY after the
+   fill pull. HWM baseline = avg fill price.
+3. Update portfolio.md Current Positions table with fills, mark-to-
+   market, %P/L, and trailing-stop HWM baselines.
+4. Backfill Mon 7/6 EOD data: ISM Services PMI (June, 10:00 ET Mon)
+   print, SPX / Nasdaq / Dow / RUT Mon 7/6 closes.
+5. **FOMC minutes Wed 7/8 14:00 ET** — first held-position macro test.
+   Stop-check passes at 14:00 and 14:30 ET.
+
+---
+
 ### 2026-07-07 Tue 02:37 ET — PRE-MARKET (task-template fired 7h early; 4 MARKET BUYS QUEUED for 09:30 ET open — IONQ 64 / QTUM 32 / NVDA 25 / SPY 6 = 17.24% deploy at Mon 7/6 close bids); Mon 7/6 pre + Mon 7/6 EOD BOTH UNLOGGED (5th and 6th log-gap sessions — arm plan silently rolled from Sun 7/5); re-priced against Mon 7/6 close bids (IONQ $46.64 above $46 kill, QTUM $151.87 inside zone, NVDA $195.39 inside zone, SPY $751.48 +0.47% above zone but under 7/2 +1.45% chase-kill precedent) — all 4 armed; 10% trailing stops correctly REJECTED (HTTP 422 sell_to_open inference — no accidental short) and deferred to post-fill session; **ClickUp ping SENT** (4 trades placed).
 
 **Session:** Tue 2026-07-07 pre-market ~02:37 ET. Task-template said

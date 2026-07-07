@@ -1,6 +1,8 @@
 # Portfolio State
 
-Last Updated: 2026-07-07 Tue pre-market ~02:37 ET — **4 market buy orders QUEUED for 09:30 ET open** (IONQ 64 sh, QTUM 32 sh, NVDA 25 sh, SPY 6 sh = $17,238 / 17.24% deploy expected at Mon 7/6 close bids); Mon 7/6 pre-market/EOD both UNLOGGED (5th and 6th log-gap sessions — Mon arm plan NEVER ARMED); re-priced Sun 7/5 draft zones vs Mon 7/6 close bids (feed=iex) — all 4 above their kill-triggers (IONQ $46.64 > $46, QTUM $151.87 > $146, NVDA $195.39 > $182, SPY $751.48 > $720), so per the stated re-price rule ALL 4 armed; **SPY $751 is +0.47% above zone top $748** but under the +1.45% chase-kill precedent from 7/2, so armed rather than killed; **AMD KILL still stands** (no re-arm); 10% trailing stops attempted with `position_intent: sell_to_close` and correctly REJECTED (HTTP 422 — no position to close, safe — no accidental short); trailing stops to be armed by first post-open session that sees filled positions; **ClickUp ping sent** (4 trades placed queued for open).
+Last Updated: 2026-07-07 Tue pre-market SUPPLEMENTAL ~06:04 ET — 2nd pre-market pull of the day (3.5 h after 02:37 arm run). **All 4 queued orders VERIFIED still `status: new`** on `GET /v2/orders?status=all&limit=30` (IONQ / QTUM / NVDA / SPY IDs unchanged, `expires_at 2026-07-07T20:00:00Z`, execute at 09:30 ET open); positions still `[]`; equity/cash unchanged at $100k/$100k. Filled the pre-market **news-scan gap** the 02:37 session flagged — see today's supplemental research_log entry: NDX / SPX futures modestly red (S&P −0.25 to −0.30%, Nasdaq-100 −1%), Dow futures ~flat off Mon record 53k close; **FOMC minutes Wed 7/8** (30-min no-entry band applies tomorrow, not today); SpaceX added to Nasdaq-100 pre-open today = mild rebalance flow through QQQ; watchlist headlines all incremental (NVDA denied Kyber delay, AVGO/AAPL multi-year deal from Mon 7/6, AMD +142% YTD extended, IONQ Cambridge Tempo sale + Archer partnership already logged); **no urgent catalyst → no additional ClickUp ping** (02:37 ping already sent for queued trades). Prior header preserved below.
+
+Prior header (2026-07-07 ~02:37 ET arm run): **4 market buy orders QUEUED for 09:30 ET open** (IONQ 64 sh, QTUM 32 sh, NVDA 25 sh, SPY 6 sh = $17,238 / 17.24% deploy expected at Mon 7/6 close bids); Mon 7/6 pre-market/EOD both UNLOGGED (5th and 6th log-gap sessions — Mon arm plan NEVER ARMED); re-priced Sun 7/5 draft zones vs Mon 7/6 close bids (feed=iex) — all 4 above their kill-triggers (IONQ $46.64 > $46, QTUM $151.87 > $146, NVDA $195.39 > $182, SPY $751.48 > $720), so per the stated re-price rule ALL 4 armed; **SPY $751 is +0.47% above zone top $748** but under the +1.45% chase-kill precedent from 7/2, so armed rather than killed; **AMD KILL still stands** (no re-arm); 10% trailing stops attempted with `position_intent: sell_to_close` and correctly REJECTED (HTTP 422 — no position to close, safe — no accidental short); trailing stops to be armed by first post-open session that sees filled positions; **ClickUp ping sent** (4 trades placed queued for open).
 
 ## Account Summary
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
@@ -75,7 +77,28 @@ Last Updated: 2026-07-07 Tue pre-market ~02:37 ET — **4 market buy orders QUEU
 - **Cash-Drag Escalator** (strategy §25): TRIPPED (33-session count carried). Today's default-action is BLOCKED by market closure — documented per rule. Mon 7/6 pre-market is the next operative session; the 4-starter Monday plan above IS the escalator response for that session.
 
 ## Notes from Last Session
-- **Tue 2026-07-07 pre-market ~02:37 ET (this run) — 4 QUEUED ORDERS.**
+- **Tue 2026-07-07 pre-market SUPPLEMENTAL ~06:04 ET (this run) — verify + news scan, no orders.**
+  Second pre-market pull of the day. `GET /v2/clock` → `is_open: false`,
+  `next_open 2026-07-07T09:30:00-04:00`, `timestamp 2026-07-07T06:04:24-04:00`
+  — market opens in ~3.4 h. `GET /v2/account` → equity $100,000.00, cash
+  $100,000.00, buying_power $382,518.06, long_market_value $0.00,
+  balance_asof still 2026-07-02. `GET /v2/positions` → `[]` (37th cash
+  open at this pull time — flips if fills print at 09:30 ET). `GET
+  /v2/orders?status=all&limit=30` → **all 4 orders from 02:37 ET STILL
+  ACTIVE** (`status: new`, unchanged qty, `expires_at
+  2026-07-07T20:00:00Z`); no cancels, no partial fills, no new orders.
+  Consumed the news-scan the 02:37 session flagged as deferred — see
+  today's supplemental research_log entry for detail. Highlights: futures
+  softer (SPX −0.25 to −0.30%, NDX −1%) after Mon 7/6 Dow record close
+  above 53,000; SpaceX added to Nasdaq-100 pre-open today (mild QQQ
+  rebalance flow); FOMC minutes Wed 7/8 14:00 ET is the near-term macro
+  test (30-min no-entry band applies TOMORROW); AVGO/AAPL multi-year deal
+  announced Mon 7/6 was the semi-narrative-shift catalyst that lifted
+  AVGO ~+4% pre-market Mon; NVDA/AMD/IONQ/QTUM headline flow all
+  incremental, no held-name emergency and no watchlist gap >5%. No
+  changes to queued orders. No ClickUp ping (02:37 already pinged for
+  the queued trades; no fresh urgent catalyst since).
+- **Tue 2026-07-07 pre-market ~02:37 ET — 4 QUEUED ORDERS.**
   Ran under the user's daily "market just opened" task-template, but
   Alpaca `GET /v2/clock` returned `is_open: false`, `next_open
   2026-07-07T09:30:00-04:00`, timestamp `2026-07-07T02:34:25-04:00` —
