@@ -4,6 +4,37 @@ Newest entries first.
 
 ---
 
+## 2026-07-07 — Midday risk check
+
+**Session:** Midday.
+
+**Alpaca account:** Equity $99,850.19; cash $82,728.63 (82.85%);
+long market value $17,121.56 (17.15%). Account ACTIVE.
+
+**Positions:**
+- IONQ 64 @ $47.86 → $45.30 (-5.36%; -7.3% today)
+- NVDA 25 @ $192.21 → $195.18 (+1.55%)
+- QTUM 32 @ $153.20 → $151.81 (-0.91%)
+- SPY 6 @ $750.06 → $747.35 (-0.36%)
+
+**Risk actions:** None taken.
+- No position ≤ -8% (hard stop).
+- No position ≥ +30% (trim).
+- No position ≥ +15% (trail-tighten).
+
+**IONQ move check (web search):** IONQ ~-7% intraday appears tied to a
+broader quantum / growth pullback (context: IONQ -26.1% in June;
+sector-wide profit-taking after strong Q1 results). No company-specific
+adverse catalyst identified. Position remains above hard stop; hold.
+
+**New entries:** None. Rules bar midday adds without a major catalyst.
+
+**ClickUp ping:** None (no stop triggered, no trim executed).
+
+---
+
+## 2026-05-19 — Pre-market (BLOCKED)
+
 ## 2026-05-19 — Pre-market (BLOCKED)
 
 **Session:** Pre-market bootstrap.
