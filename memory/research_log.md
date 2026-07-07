@@ -15,6 +15,125 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-07-07 Tue ~16:00 ET — END OF DAY (first live-fill day; 4 legs held; day −0.12%; SPY −0.55%; alpha +0.43%)
+
+**Session:** Tue 2026-07-07 post-close wrap-up. Third pull of the day
+(after 02:37 arm run, 06:04 supplemental). The 4 queued orders from
+02:37 filled at 09:30 ET open, so this is the **first EOD session
+since inception with a real book to score** rather than a 100%-cash
+snapshot.
+
+**Account (Alpaca `GET /v2/account`, pulled EOD):**
+- equity **$99,878.82** | last_equity $100,000.00 | day P/L **−$121.18 / −0.12%**
+- cash $82,728.63 | long_market_value $17,150.19 | short_market_value $0.00
+- portfolio_value $99,878.82 | buying_power $378,935.05 | non_marginable_buying_power $91,303.72
+- initial_margin $8,575.10 | maintenance_margin $5,145.06 | SMA $100,000.00
+- ACTIVE (PA39FINFSDLL) | PDT false | shorting_enabled true (unused) | options level 3 (unused)
+- balance_asof **2026-07-06** (advanced from 2026-07-02 stamp seen this morning)
+
+**Benchmark — SPY today:** from the SPY position payload,
+`lastday_price 751.28 → current_price 747.16`, so **SPY closed
+−0.548%** on the session. Bull returned −0.12% → **day alpha
++0.43% vs SPY**. Web-check the SPY move on the next pre-market pass
+if a third-party confirmation is wanted; the built-in Alpaca
+lastday/current pair is authoritative for the account's own scoring.
+
+**Positions (`GET /v2/positions` — 4 rows, all long):**
+
+| Ticker | Qty | Avg Entry | Current | Mkt Value | Cost Basis | Unrealized P/L | P/L % | Change today | Hard stop |
+|--------|----:|----------:|--------:|----------:|-----------:|---------------:|-------:|-------------:|----------:|
+| IONQ | 64 | $47.8628 | $45.66 | $2,922.24 | $3,063.22 | −$140.98 | −4.60% | −6.57% | $44.03 |
+| NVDA | 25 | $192.21 | $196.46 | $4,911.50 | $4,805.25 | +$106.25 | +2.21% | +0.47% | $176.83 |
+| QTUM | 32 | $153.2044 | $151.07 | $4,834.24 | $4,902.54 | −$68.30 | −1.39% | −3.74% | $140.95 |
+| SPY  |  6 | $750.06 | $747.16 | $4,482.96 | $4,500.36 | −$17.40 | −0.39% | −0.55% | $690.06 |
+
+Sector weights (post-fill): semis/quantum bucket **12.68%** (well
+under 40% cap), SPY 4.49%, cash **82.83%** (well over 10% strategy
+floor / 20% task floor). No name is within 3% of its −8% hard stop;
+IONQ closest at 3.6% cushion. No +10% break-even-stop trigger hit
+(NVDA closest at +2.21%). No +20% aggressive-trail trigger.
+
+**Trade activity (`GET /v2/orders?status=filled&limit=50`) — 4 fills, all today, all buy_to_open:**
+- 13:30:08 UTC — SPY  6  @ $750.06         → $4,500.36 notional
+- 13:34:52 UTC — IONQ 64 @ $47.862812      → $3,063.22 notional
+- 13:35:41 UTC — NVDA 25 @ $192.209999     → $4,805.25 notional
+- 13:36:01 UTC — QTUM 32 @ $153.204374     → $4,902.54 notional
+- Total deploy $17,271.37 (17.29% of pre-fill equity). No closes, no stops fired.
+
+**Fill vs Mon 7/6 close-bid estimate (arm-run reconciliation):**
+- SPY $750.06 vs $751.48 est → −0.19% (better)
+- NVDA $192.21 vs $195.39 est → −1.63% (better)
+- QTUM $153.20 vs $151.87 est → +0.88% (worse)
+- IONQ $47.86 vs $46.64 est → **+2.62% (worse — gapped up at open ~2.6% and this leg was arguably chased)**
+
+Aggregate slippage on the basket = +0.19% vs estimate ($17,271.37 vs
+$17,238.65) — negligible. The IONQ chase is the main learning: the
+02:37 arm-run rule as written re-priced against Mon close bids, but
+Mon close bid is not the open print; a limit-with-cap tactic (armed
+at midpoint with a hard "no chase >+1%" cap) would have avoided the
+$0.98/share slippage. Filing for the tactic-refinement backlog.
+
+**Intraday narrative:**
+- Book opened long the moment SPY hit at 09:30:08 ET; the other 3 legs
+  filled inside 6 minutes.
+- **Semis mixed:** NVDA ran +$4.25 (avg $192.21 → $196.46, +2.21%)
+  against a broadly red tape. QTUM softened −1.39% despite the NVDA
+  bid — quantum-theme correlation to NVDA is weak intraday, and the
+  ETF's IONQ leg dragged.
+- **IONQ was the funnel:** −6.57% on the day per the position's
+  change_today field ($48.87 lastday → $45.66 current), which puts
+  our fill (mid-morning at $47.86) at about the intraday midpoint.
+  The −$3.21 slide from lastday_price is bigger than the −$2.20 slide
+  from our fill — we entered ~$1 off the highs.
+- **SPY −0.55% / QQQ softness** aligns with the futures-red pre-market
+  read from the 06:04 ET supplemental; the NDX −1% pre-market call
+  was a decent lead indicator.
+- **Macro:** no NFP/CPI/PPI print today; FOMC minutes land Wed 7/8
+  14:00 ET — the 30-min no-entry band applies tomorrow around that
+  release for any name we already hold (SPY qualifies as index).
+
+**Watchlist status EOD:**
+- **NVDA** — HELD 4.92%, +2.21% on the day. Room to add to 15% on
+  confirmation per the arm plan.
+- **AMD** — still KILLED. Advancing AI event Jul 22–23. Re-draft trigger
+  is a fresh $490–$510 base candle; monitoring only.
+- **QTUM** — HELD 4.84%, −1.39%.
+- **IONQ** — HELD 2.93%, −4.60%. Closest name to the −8% hard stop
+  ($44.03). Watch item; if opens softer tomorrow, tighten focus.
+- **SPY** — HELD 4.49%, −0.39%.
+- **QQQ** — not held; SPY remains the preferred index expression.
+
+**Risk-management action items (queued for Wed 7/8 pre-market):**
+1. **Arm 10% trailing stops (GTC, sell_to_close)** on all 4 legs.
+   Alpaca will now accept them because positions are held; the pre-fill
+   HTTP 422 no longer applies. Order-log entries: IONQ trail from
+   $45.66 = $41.09 protective floor; NVDA trail from $196.46 = $176.81;
+   QTUM trail from $151.07 = $135.96; SPY trail from $747.16 = $672.44.
+2. **Reconcile trailing vs strategy hard-stop:** strategy §Risk rules
+   uses −8% from entry as the hard cut. Task-template uses −10%
+   trailing from high-water. Both fire; the strategy hard-stop is
+   tighter on IONQ (−8% from entry $47.8628 = $44.03 vs 10% trailing
+   from current $45.66 = $41.09), so IONQ hard-stop at $44.03 is the
+   effective floor unless / until it prints a new high.
+3. **FOMC minutes Wed 7/8 14:00 ET** — no new entries in the 30-min
+   band per strategy §Risk rules; no held-name earnings gate active.
+4. **Weekly review rolled to Tue 7/7 EOD** per the Mon 7/6 miss.
+   Committing this session as the weekly-review touch point; separate
+   weekly_review.md pass can copy-paste this EOD entry.
+
+**Session-log discipline:** this EOD session ran to completion —
+pull → score → memory update → commit → ClickUp ping. That closes
+one of the 6 documented gap sessions (Tue 6/30 pre, Wed 7/1 pre,
+Wed 7/1 EOD, Thu 7/2 EOD, Mon 7/6 pre, Mon 7/6 EOD). Structural
+issue behind the gaps is task-template misfire timing (the 02:37 ET
+"market just opened" firing), not agent behavior — noted for
+harness follow-up.
+
+**ClickUp:** EOD ping SENT (task-template rule: "always send an end
+of day ClickUp notification").
+
+---
+
 ### 2026-07-07 Tue 06:04 ET — PRE-MARKET SUPPLEMENTAL (2nd pre-market pull today; verify queued orders + fill the 02:37 news-scan gap; NO new orders, NO ClickUp)
 
 **Session:** Tue 2026-07-07 pre-market ~06:04 ET. Second pre-market run

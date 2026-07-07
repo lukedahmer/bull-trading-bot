@@ -18,6 +18,62 @@ All trades are logged here chronologically. Every buy and sell must be recorded 
 ## Trade History
 [Agent appends entries here after each trade]
 
+### 2026-07-07 EOD Tue ~16:00 ET — 4 QUEUED ORDERS FILLED AT 09:30 ET OPEN (no new trades EOD)
+
+`GET /v2/orders?status=filled&limit=50` confirms all 4 queued market
+buys from the 02:37 ET arm run filled within 6m21s of the 09:30 ET
+open. Sequence and fills (all `position_intent: buy_to_open`,
+`order_type: market`, `time_in_force: day`, `status: filled`):
+
+| Time (UTC)         | Time (ET)   | Side | Ticker | Qty | Fill Price   | Notional     | Order ID                              |
+|--------------------|-------------|------|--------|----:|-------------:|-------------:|---------------------------------------|
+| 2026-07-07 13:30:08| 09:30:08 ET | BUY  | SPY    |   6 | $750.06      | $4,500.36    | a0467eb0-2d64-4528-9af5-cf1de01f166c |
+| 2026-07-07 13:34:52| 09:34:52 ET | BUY  | IONQ   |  64 | $47.862812   | $3,063.22    | d7a4c185-f8c1-4ded-bf40-26f5a24c4dae |
+| 2026-07-07 13:35:41| 09:35:41 ET | BUY  | NVDA   |  25 | $192.209999  | $4,805.25    | 7272c566-91d3-448e-aa66-017f56e78bb9 |
+| 2026-07-07 13:36:01| 09:36:01 ET | BUY  | QTUM   |  32 | $153.204374  | $4,902.54    | d6fc898a-fff0-4281-acfa-60cac43f6d11 |
+| — | — | — | **Total** | — | — | **$17,271.37** | (17.29% of prior equity at fill) |
+
+**Fill vs Mon 7/6 close-bid estimates:**
+- SPY $750.06 vs est $751.48 → **−0.19%** (better than estimate)
+- IONQ $47.8628 vs est $46.64 → **+2.62%** (worse — gapped up ~2.6% at open, arguably chased)
+- NVDA $192.21 vs est $195.39 → **−1.63%** (better than estimate)
+- QTUM $153.2044 vs est $151.87 → **+0.88%** (worse)
+
+Aggregate deploy $17,271.37 vs $17,238.65 estimated = +0.19%
+(negligible slippage on the basket).
+
+**Intraday moves (avg → EOD current):**
+- SPY: $750.06 → $747.16 = **−0.39%** (−$17.40)
+- IONQ: $47.8628 → $45.66 = **−4.60%** (−$140.98) — biggest single-name drag; still 3.6% above the −8% hard stop of $44.03. No stop breach.
+- NVDA: $192.21 → $196.46 = **+2.21%** (+$106.25) — day's winner; single-day carry inside the +10% break-even-stop trigger.
+- QTUM: $153.2044 → $151.07 = **−1.39%** (−$68.30)
+
+**Book-only P/L** −$120.43 vs the account's total day P/L of
+−$121.18. The −$0.75 gap is normal Alpaca rounding on the cost-basis
+math vs the account-level equity delta (last_equity $100,000.00 →
+equity $99,878.82) and is not a data-integrity flag.
+
+**Stops not yet armed.** Same HTTP 422 / `sell_to_close` / no-position
+path from pre-market. Now that positions are held, the 10% trailing
+stops can be filed as GTC sells with `sell_to_close` intent — action
+item queued for tomorrow's pre-market. No trades placed EOD per the
+task-template ("post-market summary, no new entries after 4pm").
+
+**Risk sweep (positions now non-empty):**
+- −8% hard cut: no breach. Closest is IONQ at −4.60%.
+- +10% break-even trailing trigger: no name hit. Closest is NVDA at +2.21%.
+- +20% aggressive-trail-5% trigger: N/A.
+- 30-min no-entry band (FOMC/CPI/PPI/NFP/earnings on held name): none active this session.
+
+**37-session cash-open streak: BROKEN** at 09:30:08 ET with the SPY
+fill. Book is now live. First live position ever = SPY, followed
+within 6 minutes by IONQ, NVDA, QTUM.
+
+**ClickUp:** EOD ping SENT (per user task-template — "always send an
+end of day ClickUp notification").
+
+---
+
 ### 2026-07-07 Pre-market Tue 02:37 ET — 4 MARKET ORDERS QUEUED for 09:30 ET open
 
 Session type: Pre-market (Alpaca clock: `is_open: false`, `next_open

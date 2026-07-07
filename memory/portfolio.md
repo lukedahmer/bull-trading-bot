@@ -1,52 +1,53 @@
 # Portfolio State
 
-Last Updated: 2026-07-07 Tue pre-market SUPPLEMENTAL ~06:04 ET — 2nd pre-market pull of the day (3.5 h after 02:37 arm run). **All 4 queued orders VERIFIED still `status: new`** on `GET /v2/orders?status=all&limit=30` (IONQ / QTUM / NVDA / SPY IDs unchanged, `expires_at 2026-07-07T20:00:00Z`, execute at 09:30 ET open); positions still `[]`; equity/cash unchanged at $100k/$100k. Filled the pre-market **news-scan gap** the 02:37 session flagged — see today's supplemental research_log entry: NDX / SPX futures modestly red (S&P −0.25 to −0.30%, Nasdaq-100 −1%), Dow futures ~flat off Mon record 53k close; **FOMC minutes Wed 7/8** (30-min no-entry band applies tomorrow, not today); SpaceX added to Nasdaq-100 pre-open today = mild rebalance flow through QQQ; watchlist headlines all incremental (NVDA denied Kyber delay, AVGO/AAPL multi-year deal from Mon 7/6, AMD +142% YTD extended, IONQ Cambridge Tempo sale + Archer partnership already logged); **no urgent catalyst → no additional ClickUp ping** (02:37 ping already sent for queued trades). Prior header preserved below.
+Last Updated: 2026-07-07 Tue **END OF DAY** ~16:00 ET — **All 4 queued orders FILLED at cash open 09:30 ET**. Portfolio ended day at **$99,878.82** (−$121.18 / **−0.12%**) vs prior close $100,000.00; **SPY closed −0.55%** ($751.28 → $747.16), so day **alpha +0.43% vs SPY**. Book: 4 open longs = $17,150.19 (17.17% deployed), cash $82,728.63 (82.83%). Winners: **NVDA +2.21%** (avg $192.21 → $196.46, +$106.25). Watch: **IONQ −4.60%** (avg $47.8628 → $45.66, −$140.98) — still 3.6% above the −8% hard-stop line at $44.03. QTUM −1.39%, SPY −0.39%. **First live fills in 37 sessions** — the cash-open streak broke as designed at 09:30 ET. **No new trades placed EOD; no stops tripped.** ClickUp EOD ping sent (per task-template rule). Prior header preserved below.
+
+Prior header (2026-07-07 Tue pre-market SUPPLEMENTAL ~06:04 ET — 2nd pre-market pull of the day, 3.5 h after 02:37 arm run). **All 4 queued orders VERIFIED still `status: new`** on `GET /v2/orders?status=all&limit=30` (IONQ / QTUM / NVDA / SPY IDs unchanged, `expires_at 2026-07-07T20:00:00Z`, execute at 09:30 ET open); positions still `[]`; equity/cash unchanged at $100k/$100k. Filled the pre-market **news-scan gap** the 02:37 session flagged — see today's supplemental research_log entry: NDX / SPX futures modestly red (S&P −0.25 to −0.30%, Nasdaq-100 −1%), Dow futures ~flat off Mon record 53k close; **FOMC minutes Wed 7/8** (30-min no-entry band applies tomorrow, not today); SpaceX added to Nasdaq-100 pre-open today = mild rebalance flow through QQQ; watchlist headlines all incremental (NVDA denied Kyber delay, AVGO/AAPL multi-year deal from Mon 7/6, AMD +142% YTD extended, IONQ Cambridge Tempo sale + Archer partnership already logged); **no urgent catalyst → no additional ClickUp ping** (02:37 ping already sent for queued trades). Prior header preserved below.
 
 Prior header (2026-07-07 ~02:37 ET arm run): **4 market buy orders QUEUED for 09:30 ET open** (IONQ 64 sh, QTUM 32 sh, NVDA 25 sh, SPY 6 sh = $17,238 / 17.24% deploy expected at Mon 7/6 close bids); Mon 7/6 pre-market/EOD both UNLOGGED (5th and 6th log-gap sessions — Mon arm plan NEVER ARMED); re-priced Sun 7/5 draft zones vs Mon 7/6 close bids (feed=iex) — all 4 above their kill-triggers (IONQ $46.64 > $46, QTUM $151.87 > $146, NVDA $195.39 > $182, SPY $751.48 > $720), so per the stated re-price rule ALL 4 armed; **SPY $751 is +0.47% above zone top $748** but under the +1.45% chase-kill precedent from 7/2, so armed rather than killed; **AMD KILL still stands** (no re-arm); 10% trailing stops attempted with `position_intent: sell_to_close` and correctly REJECTED (HTTP 422 — no position to close, safe — no accidental short); trailing stops to be armed by first post-open session that sees filled positions; **ClickUp ping sent** (4 trades placed queued for open).
 
-## Account Summary
+## Account Summary (EOD Tue 2026-07-07)
 - Starting Capital: ~$100,000 (Alpaca paper, opened 2026-05-12)
-- Current Cash: $100,000.00 (pre-fill; expected ~$82,761 post-open fills at Mon close bids)
-- Total Portfolio Value: $100,000.00 (pre-fill)
-- Buying Power: $400,000.00 (intraday 4x); Reg-T $200,000.00 (not used per strategy)
-- Long Market Value: $0.00 pre-fill | Short Market Value: $0.00
+- Current Cash: **$82,728.63** (82.83% of equity — well above 20% task floor and 10% strategy floor)
+- Total Portfolio Value / Equity: **$99,878.82**
+- Buying Power: $378,935.05 (intraday 4x); Reg-T $182,607.45 (unused per strategy); non-marginable BP $91,303.72
+- Long Market Value: **$17,150.19** | Short Market Value: $0.00
 - Last Equity (prior close, Mon 7/6): $100,000.00
-- **Day P/L: 0.00%** (pre-open pull — no fills yet)
-- **Session-log gap grew:** Thu 7/2 EOD + Mon 7/6 pre + Mon 7/6 EOD all still missing (6-session gap now: Tue 6/30 pre, Wed 7/1 pre, Wed 7/1 EOD, Thu 7/2 EOD, Mon 7/6 pre, Mon 7/6 EOD). **Weekly review Mon 7/6 EOD MISSED — rolls to Tue 7/7 EOD.**
-- **Market status TODAY (Tue 7/7 ~02:37 ET pre-market):** CLOSED — pre-market. `GET /v2/clock` this session: `is_open: false`, `next_open 2026-07-07T09:30:00-04:00`, timestamp `2026-07-07T02:34:25-04:00`. **User task-template said "market just opened"; per Alpaca clock, market opens in ~7 hours.** Market orders were still accepted (Alpaca queues day market orders received while closed and executes at next open).
+- **Day P/L: −$121.18 / −0.12%** vs prior close
+- **SPY today: −0.55%** (751.28 → 747.16, from Alpaca lastday_price on the SPY position) → **Day alpha vs SPY: +0.43%**
+- Initial margin: $8,575.10 | Maintenance margin: $5,145.06 | SMA $100,000 | Accrued fees $0
+- Market status EOD Tue 7/7 (~16:00 ET): CLOSED — regular session ended. Cash open 09:30 ET filled all 4 queued orders within 6 minutes and 20 seconds of the bell.
 - Account Status: ACTIVE — no trading/transfer blocks
 - Account Number: PA39FINFSDLL
-- Pattern Day Trader: false (day-trade count 0); options level 3 (unused per strategy); shorting_enabled: true (reason `position_intent: sell_to_close` was used on the trailing-stop attempt — see note above)
-- Filled orders today: **none yet** (4 queued) | Filled orders since inception: **none** (0 fills across 36 trading sessions since 2026-05-12; Mon 7/6 counts as 36th cash open — plan never armed)
-- `GET /v2/positions` → **`[]`** at 02:37 ET pre-open pull.
-- `GET /v2/orders?status=all&limit=20` → **`[]`** at 02:37 ET pre-open pull, confirming Mon 7/6 arm never happened.
-- balance_asof: 2026-07-02 (still unchanged since Thu 7/2 — Fri closed + weekend + Mon 7/6 no fills)
+- Pattern Day Trader: false (day-trade count 0); options level 3 (unused); shorting_enabled: true (unused)
+- Filled orders today: **4** (IONQ 64, QTUM 32, NVDA 25, SPY 6 — all `market/day/buy_to_open`, all filled between 13:30:08–13:36:01 UTC = 09:30:08–09:36:01 ET)
+- Filled orders since inception: **4** (all today — the 37-session cash-open streak broke at 09:30 ET)
+- `GET /v2/positions` → **4 positions** (see table below)
+- `GET /v2/orders?status=filled&limit=50` → **4 filled orders** (all today's opens; no closes, no stops, no trims)
+- balance_asof: **2026-07-06** (advanced from 2026-07-02 as expected — pre-market pull was still on 7/2 stamp; EOD pull now reflects the 7/6 settlement day)
 
-## Current Positions (pre-fill; queued orders below)
+## Current Positions (EOD Tue 2026-07-07 — all 4 queued orders FILLED at cash open)
 
-| Symbol | Shares | Avg Entry | Current Price | P&L % | Stop Loss | Thesis |
-|--------|--------|-----------|---------------|--------|-----------|--------|
-| —      | —      | —         | —             | —      | —         | —      |
+| Symbol | Shares | Avg Entry | Current Price | Market Value | Unrealized P/L | P&L % | Weight | Hard Stop (−8%) | Thesis |
+|--------|-------:|----------:|---------------:|--------------:|----------------:|-------:|-------:|-----------------:|--------|
+| IONQ   | 64     | $47.8628  | $45.66         | $2,922.24     | −$140.98        | −4.60% | 2.93%  | $44.03           | Quantum pure-play, high-beta. Cushion to stop: ~3.6%. **Watch item.** |
+| NVDA   | 25     | $192.21   | $196.46        | $4,911.50     | +$106.25        | +2.21% | 4.92%  | $176.83          | AI infra core; day's winner. Room to add to 15% on confirmation. |
+| QTUM   | 32     | $153.2044 | $151.07        | $4,834.24     | −$68.30         | −1.39% | 4.84%  | $140.95          | Cleanest quantum-theme ETF wrapper. |
+| SPY    |  6     | $750.06   | $747.16        | $4,482.96     | −$17.40         | −0.39% | 4.49%  | $690.06          | Benchmark leg. |
+| **Total** | — | — | — | **$17,150.19** | **−$120.43** | **−0.70%** book-only | **17.17%** | — | — |
 
-## Queued Orders (submitted 2026-07-07 02:37 ET, execute at 09:30 ET open)
+- Position-level check: max single-name weight **4.92% (NVDA) ≤ 10% cap** ✓
+- Semis / quantum bucket (NVDA + QTUM + IONQ) = **$12,667.98 / 12.68%** ≤ 40% sector cap ✓
+- Cash floor: **82.83% ≥ 10%** strategy floor and ≥ 20% task floor ✓
+- **No trailing stops armed yet.** Task-template `type: trailing_stop / trail_percent: 10 / gtc / sell_to_close` was rejected pre-fill this morning (HTTP 422, safety); needs to be re-attempted now that positions are held. **Action item queued for tomorrow's pre-market** (10% trailing GTC on all 4 legs) — deferred out of this EOD run because no trades are placed EOD per today's task template.
+- Hard-stop coverage: no name is within 3% of its −8% hard stop; IONQ is the closest at 3.6% cushion; no −8% breach and no +10% / +20% trailing-tighten trigger hit yet.
 
-| Symbol | Side | Qty | Type | TIF | Order ID | Client Order ID | Est. Fill ($) | Est. Weight | Trailing Stop |
-|--------|------|----:|------|-----|----------|-----------------|--------------:|------------:|---------------|
-| IONQ   | buy  | 64  | market | day | d7a4c185-f8c1-4ded-bf40-26f5a24c4dae | dexter-20260707-ionq-open | ~$2,985 (@ $46.64) | ~2.99% | 10% GTC — arm post-fill |
-| QTUM   | buy  | 32  | market | day | d6fc898a-fff0-4281-acfa-60cac43f6d11 | dexter-20260707-qtum-open | ~$4,860 (@ $151.87) | ~4.86% | 10% GTC — arm post-fill |
-| NVDA   | buy  | 25  | market | day | 7272c566-91d3-448e-aa66-017f56e78bb9 | dexter-20260707-nvda-open | ~$4,885 (@ $195.39) | ~4.88% | 10% GTC — arm post-fill |
-| SPY    | buy  |  6  | market | day | a0467eb0-2d64-4528-9af5-cf1de01f166c | dexter-20260707-spy-open  | ~$4,509 (@ $751.48) | ~4.51% | 10% GTC — arm post-fill |
-| **Total** | — | — | — | — | — | — | **~$17,239** | **~17.24%** | — |
-
-- Guardrail check: max single position 4.88% ≤ 10% task cap ✓ | expected cash post-fill 82.76% ≥ 20% task floor ✓ | no leverage / no options / no shorts / no crypto.
-- Sector split (post-fill): quantum-theme (QTUM+IONQ) ~7.85%, semis (NVDA) ~4.88%, broad index (SPY) ~4.51% — well under the 40% sector cap from strategy §Position sizing.
-
-## Sector exposure (pre-fill / post-fill projection)
-- Cash: 100% pre-fill → ~82.76% post-fill
-- Equities: 0% pre-fill → ~17.24% post-fill
-- Semis (NVDA + AMD): 0% pre-fill → ~4.88% post-fill (NVDA only; AMD still KILLED)
-- Thematic quantum (QTUM + IONQ): 0% pre-fill → ~7.85% post-fill
-- Index (SPY + QQQ): 0% pre-fill → ~4.51% post-fill (SPY only)
+## Sector exposure (EOD)
+- Cash: **82.83%**
+- Equities: **17.17%**
+- Semis (NVDA + AMD): **4.92%** (NVDA only; AMD still KILLED — Advancing AI event Jul 22–23 queued for a fresh $490–$510 base-candle read)
+- Thematic quantum (QTUM + IONQ): **7.77%**
+- Index (SPY + QQQ): **4.49%** (SPY only)
 
 ## Watchlist (Thu 7/2 close — actual Alpaca 1Day bars, feed=iex)
 
