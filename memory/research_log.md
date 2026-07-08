@@ -15,6 +15,38 @@ Running log of market research, news, and analysis done each session.
 
 ## Research History
 
+### 2026-07-08 Wed ~04:25 UTC — INFRASTRUCTURE OVERHAUL (interactive maintenance session, no research pass)
+
+Root-cause fix session run by the account owner via an interactive
+Claude Code session. No market research done; no entries or exits. What
+changed and why every future session should care:
+
+1. **Stops armed.** All 4 legs now carry 10% trailing stops (GTC,
+   `sell_to_close`) — see trade_log 2026-07-08. The HTTP 422 lesson is
+   codified in CLAUDE.md ("Order Execution Protocol"): never place a
+   `sell_to_close` stop before the entry fills; verify stop coverage
+   (positions vs open orders) at the start of every session.
+2. **Schedule fixed.** The five routines were firing at wrong UTC times
+   — "Market Open" ran at 06:30 UTC (01:30 CT, market closed, BEFORE
+   the day's pre-market research), which caused the 37-session cash-open
+   streak. New crons (UTC): pre-market 0 11, market open 35 13
+   (5 min after the bell), midday 0 17, close 10 20, weekly Fri 0 21.
+   These are UTC and will shift 1h local when US DST ends in November.
+3. **Memory chain fixed.** Sessions were pushing memory to one-off
+   `claude/*` branches (~130 orphans accumulated; at least 6 "log-gap"
+   sessions lost). CLAUDE.md and every routine file now mandate
+   `git pull --rebase origin main && git push origin HEAD:main`.
+4. **Secrets migration started.** Prompts no longer embed API keys;
+   sessions read env vars first, `secrets.md` as fallback. Owner still
+   needs to rotate keys and set env secrets, then `secrets.md` gets
+   deleted.
+5. **Naming unified to "Bull"** (was inconsistently "Dexter" in
+   CLAUDE.md/README and trigger names).
+
+**Watch items for next scheduled session (pre-market 11:00 UTC today):**
+FOMC minutes today Wed 7/8 (30-min no-entry band applies); IONQ closest
+to its hard stop (−4.5%, stop $44.03); AMD KILL still stands.
+
 ### 2026-07-07 Tue ~16:00 ET — END OF DAY (first live-fill day; 4 legs held; day −0.12%; SPY −0.55%; alpha +0.43%)
 
 **Session:** Tue 2026-07-07 post-close wrap-up. Third pull of the day

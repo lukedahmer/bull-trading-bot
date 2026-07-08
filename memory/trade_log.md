@@ -18,6 +18,27 @@ All trades are logged here chronologically. Every buy and sell must be recorded 
 ## Trade History
 [Agent appends entries here after each trade]
 
+### 2026-07-08 Wed ~04:25 UTC (pre-market) — PROTECTIVE STOPS ARMED on all 4 legs (maintenance session, no entries/exits)
+
+The action item queued at 2026-07-07 EOD is done: 10% trailing stops
+(GTC, `sell_to_close`) accepted on all 4 open positions. Placed from an
+interactive maintenance session (not a scheduled run) while overhauling
+the routine infrastructure — see research_log 2026-07-08 entry.
+
+| Ticker | Qty | Type | Trail | TIF | Status | Order ID |
+|--------|----:|------|------:|-----|--------|----------|
+| SPY    |   6 | trailing_stop sell | 10% | gtc | new | dcb21849-32af-4f8c-9dbf-b0d36ca6ed7d |
+| IONQ   |  64 | trailing_stop sell | 10% | gtc | new | fbdbf653-0437-4cb8-80cd-e0f4a237431b |
+| NVDA   |  25 | trailing_stop sell | 10% | gtc | new | c158255e-034c-43d5-a3bd-54534ab94fc9 |
+| QTUM   |  32 | trailing_stop sell | 10% | gtc | new | 5a752e84-ec38-432e-a137-3c14aef4df25 |
+
+**Caveat for future sessions:** IONQ's 10% trail floor (~$41.1 off its
+current high-water mark) sits BELOW the −8%-from-entry hard stop at
+$44.03. The trailing order is the safety net only — the −8% hard-stop
+rule must still be enforced in-session (sell at market if breached).
+NVDA's trail (~$176.8 from current HWM) happens to coincide with its
+hard stop $176.83.
+
 ### 2026-07-07 EOD Tue ~16:00 ET — 4 QUEUED ORDERS FILLED AT 09:30 ET OPEN (no new trades EOD)
 
 `GET /v2/orders?status=filled&limit=50` confirms all 4 queued market
