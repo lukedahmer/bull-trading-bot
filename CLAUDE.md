@@ -30,7 +30,12 @@ The five old "Dexter - *" Routines (kickoff prompt starts with "You are Dexter" 
 4. **COMMIT TO MAIN** — see the Git rule below. Memory only exists if it lands on `main`.
 
 ## Git Rule (CRITICAL — memory persistence depends on this)
-Every scheduled session clones `main`. If your memory updates land anywhere else, the next session never sees them and the chain of context breaks (this caused 6+ "log-gap" sessions and 130+ orphaned branches in May–July 2026).
+The bot's live state is the `main` branch. If your memory updates land anywhere else, the next session never sees them and the chain of context breaks (this caused 6+ "log-gap" sessions and 130+ orphaned branches in May–July 2026).
+
+- **At session start**, before reading memory files, make sure you're reading the latest state — your clone may be based on a stale branch:
+  ```
+  git fetch origin main && git reset --hard origin/main
+  ```
 
 - Commit your changes, then push them **directly to `main`**:
   ```
